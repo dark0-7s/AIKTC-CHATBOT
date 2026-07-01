@@ -1,0 +1,506 @@
+{
+  "school_name": "School of Pharmacy (SoP)",
+  "dte_code": "PH3439",
+  "autonomous": true,
+  "dean": {
+    "name": "Dr. Shariq Syed",
+    "designation": "Dean, School of Pharmacy",
+    "qualification": "M.Pharm, Ph.D.",
+    "experience": "17 yrs",
+    "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+  },
+  "affiliated_to": "University of Mumbai",
+  "accreditation": "NAAC accredited, ISO 9001:2015 certified, Pharmacy Council of India approved",
+  "vision": "To be the most sought after academic, research and practice based School of Pharmacy that others would wish to emulate.",
+  "mission": "Creating Exuberant Pharmaceutical Professionals.",
+  "mission_elements": [
+    "To implement the Outcome Based Education (OBE) model to conform to our belief 'Students Learn What We Teach'.",
+    "To encourage and upgrade teachers for innovative teaching skills, research and practice in Pharmacy.",
+    "To provide necessary facility, machinery, equipment, atmosphere and ambience that would enable quality academics, research and practice in Pharmacy.",
+    "To create an eco-system for professional competition and reward mechanism.",
+    "To prepare and encourage students for direction and career of their choice. Be it higher studies, entrepreneurship, employment, research and innovations."
+  ],
+  "programs_offered": {
+    "dpharm": {
+      "duration": "2 years",
+      "intake": 60
+    },
+    "bpharm": {
+      "duration": "4 years",
+      "intake": 100
+    },
+    "mpharm": {
+      "specialization": "Pharmacology",
+      "duration": "2 years",
+      "intake": 10
+    }
+  },
+  "admission_process": {
+    "dpharm": "H.S.C. with PCB / M or equivalent examination.",
+    "bpharm_first_year": "H.S.C. in PCB / M or equivalent with at least 45% marks & Non-Zero MHT-CET / Non-Zero Positive NEET Score.",
+    "bpharm_direct_second_year": "Passed Diploma in Pharmacy with at least 45% marks.",
+    "mpharm": "B.Pharm with at least 55% marks & Non-Zero Positive GPAT Score."
+  },
+  "placements": {
+    "highlights": [
+      "3 students placed at D-Mart Pvt. Ltd. (Pharmacy), Mumbai.",
+      "6 students placed at Zeno Health, Mumbai.",
+      "4 students placed as Pharmacist Counsellors at Trumed Pvt. Ltd.",
+      "3 students started their own start-up."
+    ],
+    "skill_development": [
+      "38 S.Y.D.Pharm students completed Coursera project on resume and cover letter building.",
+      "43 students completed three-month internships in community pharmacy."
+    ]
+  },
+  "labs": [
+    "Pharmacology Lab",
+    "Pharmacognosy Lab",
+    "Pharmaceutical Chemistry Lab",
+    "Pharma Analysis Lab"
+  ],
+  "library": "Access to central KRRC library with extensive pharmaceutical resources.",
+  "campus": {
+    "area_acres": 10.5,
+    "established_year": 2011
+  },
+  "scholarships": "Same as engineering school \u2013 DTE Minority, EBC, Central Govt, State Reserved, Girls scholarship (page 52).",
+  "contact": {
+    "admission_pharmacy": "+91 70219 29084",
+    "email": "aiktc.newpanvel@aiktc.ac.in",
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai \u2013 410206"
+  },
+  "fees": {
+    "academic_year": "2025-26",
+    "programs": {
+      "dpharm": {
+        "program_type": "Diploma in Pharmacy (D.Pharm)",
+        "duration_years": 2,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 60000,
+            "development_fees": 0,
+            "total_fees": 60000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 60000,
+            "development_fees": 0,
+            "total_fees": 60000
+          }
+        ]
+      },
+      "bpharm": {
+        "program_type": "B.Pharm (Pharmacy)",
+        "duration_years": 4,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 94942,
+            "development_fees": 12058,
+            "total_fees": 107000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 86222,
+            "development_fees": 10778,
+            "total_fees": 97000
+          },
+          {
+            "year": 3,
+            "tuition_fees": 68323,
+            "development_fees": 8677,
+            "total_fees": 77000
+          },
+          {
+            "year": 4,
+            "tuition_fees": 68323,
+            "development_fees": 8677,
+            "total_fees": 77000
+          }
+        ]
+      },
+      "mpharm": {
+        "program_type": "M.Pharm (Pharmacology)",
+        "duration_years": 2,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 100000,
+            "development_fees": 10000,
+            "total_fees": 110000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 100000,
+            "development_fees": 10000,
+            "total_fees": 110000
+          }
+        ]
+      }
+    },
+    "notes": "Fees approved by Fees Regulating Authority (FRA), Maharashtra."
+  },
+  "refund_policy": {
+    "policy": "Same as engineering school. If cancellation before cut-off date: full refund minus Rs. 1,000 processing fee. After cut-off: no refund except security deposit.",
+    "source": "Prospectus 2025, Page 53"
+  },
+  "departments": [
+    {
+      "code": "BPHARM",
+      "name": "Bachelor of Pharmacy",
+      "duration": "4 years",
+      "intake": 100,
+      "dean": {
+        "name": "Dr. Shariq Syed",
+        "designation": "Dean, School of Pharmacy",
+        "qualification": "M.Pharm, Ph.D. (USA)",
+        "experience": "17 years",
+        "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+      },
+      "vision": "To be the most sought after academic, research and practice based School of Pharmacy that others would wish to emulate.",
+      "mission": "Creating Exuberant Pharmaceutical Professionals.",
+      "labs": [
+        {
+          "name": "Biotechnology Lab",
+          "location": "Room A-302, SOP Second Floor",
+          "description": "Area: 81 sq.m. | Equipped with microscopes, autoclave, incubator, BOD incubator, refrigerator, and laminar air flow (LAF) hood."
+        },
+        {
+          "name": "Machine Room",
+          "location": "Room A-104, SOP Ground Floor",
+          "description": "Area: 84 sq.m. | Cost: \u20b930 Lakhs | Industrial pilot plant section equipped for mixing, sieving, milling, granulating, and QC testing."
+        },
+        {
+          "name": "Pharmaceutics Lab-II",
+          "location": "Room A-303, SOP Second Floor",
+          "description": "Area: 83 sq.m. | Cost: \u20b91.5 Lakhs | Equipped with hot air oven, electrical balances, microscopes, hot plates, and mechanical stirrers."
+        },
+        {
+          "name": "Pharmaceutics Lab",
+          "location": "Room A-103, SOP Ground Floor",
+          "description": "Area: 83 sq.m. | Fully equipped with instruments required for core pharmaceutics and cosmetics practicals."
+        },
+        {
+          "name": "Pharmaceutical Analysis Lab",
+          "location": "Room A-304, SOP Second Floor",
+          "description": "Area: 83 sq.m. | Equipped with laboratory ovens, UV cabinet, water distillation unit, balance, and safety eye wash station."
+        },
+        {
+          "name": "Pharmaceutical Chemistry Lab-II",
+          "location": "Room A-305, SOP Second Floor",
+          "description": "Area: 83 sq.m. | Features Godrej fume hood, triple beam balance, hot plate, muffle furnace, and conductivity meter."
+        },
+        {
+          "name": "Pharmacology Lab",
+          "location": "SOP Building",
+          "description": "Equipped with physiographs, organ baths, and simulated software for animal experiments and testing."
+        },
+        {
+          "name": "Pharmacognosy Lab",
+          "location": "SOP Building",
+          "description": "Equipped for extraction of crude drugs, botanical analysis, microscopical evaluation, and identification of medicinal plants."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Shariq Syed",
+          "designation": "Dean",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "17 yrs",
+          "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+        },
+        {
+          "name": "Dr. Mirza Anwar Baig",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "17 yrs",
+          "image_url": "/images/pharmacy/mpharm/anwar_baig.jpg"
+        },
+        {
+          "name": "Dr. Imran Sheikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "15.5 yrs"
+        },
+        {
+          "name": "Prof. Ajaaz A. S. Kutub Ali",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "19.7 yrs"
+        },
+        {
+          "name": "Prof. Saba Shaikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "10.5 yrs"
+        },
+        {
+          "name": "Prof. Jayshree Patil",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "14.3 yrs"
+        },
+        {
+          "name": "Prof. Maria Lal",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "11 yrs"
+        },
+        {
+          "name": "Dr. Madhuri Gaikwad",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Dr. Mirza Salman Baig",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "11.5 yrs"
+        },
+        {
+          "name": "Prof. Bhagyashree Patil",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "14 yrs"
+        },
+        {
+          "name": "Prof. Reshma Yerunkar",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "6.2 yrs"
+        },
+        {
+          "name": "Prof. Foorkan Fakki",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "5 yrs"
+        },
+        {
+          "name": "Dr. Maryam Qureshi",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "7.2 yrs"
+        },
+        {
+          "name": "Prof. Mohammad Shoeb Qazi",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "12.5 yrs"
+        },
+        {
+          "name": "Prof. Prerana Sanas",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "10.6 yrs"
+        },
+        {
+          "name": "Prof. Poonam Nikam",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "5 yrs"
+        },
+        {
+          "name": "Prof. Vaishali Chavan",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "6.4 yrs"
+        },
+        {
+          "name": "Prof. Ayesha Shaikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "3 yrs"
+        },
+        {
+          "name": "Prof. Tahsin Attar",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "9.3 yrs"
+        },
+        {
+          "name": "Prof. Ziyaul Haque S. Ahmad",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Tabreshkan Pathan",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "1.5 yrs"
+        },
+        {
+          "name": "Prof. Mohammad A. Shaikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "6.6 yrs"
+        },
+        {
+          "name": "Prof. Karthika Gouthaman",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "5 yrs"
+        },
+        {
+          "name": "Prof. Aatif Shaikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "3.5 yrs"
+        },
+        {
+          "name": "Prof. Rashmin Aklekar",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "3.5 yrs"
+        },
+        {
+          "name": "Prof. Dr. Abusufyan Shaikh",
+          "designation": "Associate Professor",
+          "qualification": "M.Pharm, Ph.D.",
+          "experience": "15 yrs"
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Mr. Mohammed Zaid Khan",
+        "designation": "Medical Business Associate, GSK Pharmaceuticals Ltd.",
+        "quote": "My time at AIKTC was enriched by the outstanding infrastructure and top-notch facilities. The well-equipped laboratories provided hands-on learning experiences that complemented theoretical knowledge perfectly."
+      },
+      "homepage_url": "https://aiktc.ac.in/bachelor-of-pharmacy/",
+      "labs_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bachelor-of-pharmacy-labs/",
+      "staff_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bachelor-of-pharmacy-staff/",
+      "achievements_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bpharm-students-achievements/",
+      "placements_url": "https://aiktc.ac.in/bachelor-of-pharmacy/training-and-placement-cell/",
+      "co_curricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/co-curricular-bpharm/",
+      "extracurricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/extracurricular-bpharm/",
+      "nss_url": "https://aiktc.ac.in/bachelor-of-pharmacy/nss-activities-bpharm/"
+    },
+    {
+      "code": "DPHARM",
+      "name": "Diploma in Pharmacy",
+      "duration": "2 years",
+      "intake": 60,
+      "hod": {
+        "name": "Dr. Abusufyan Shaikh",
+        "designation": "HOD & Associate Professor",
+        "qualification": "M. Pharm, Ph.D.",
+        "experience": "15 years",
+        "image_url": "/images/pharmacy/dpharm/abusufyan_shaikh.png"
+      },
+      "vision": "To be the most sought after academic, research and practice-based department of diploma pharmacy that others would wish to emulate.",
+      "mission": "Creating exuberant pharmaceutical professionals.",
+      "mission_elements": [
+        "To implement the Outcome Based Education (OBE) model.",
+        "To encourage innovative teaching skills, research and practice.",
+        "To provide necessary facilities for quality academic research.",
+        "To create ecosystem for professional competition and lifelong learning.",
+        "To prepare students for higher studies, entrepreneurship, employment, research."
+      ],
+      "labs": [
+        {
+          "name": "Biotechnology Lab",
+          "location": "SOP Building",
+          "description": "Equipped with basic microbiological testing kits, autoclaves, and incubators."
+        },
+        {
+          "name": "Pharmaceutics Lab",
+          "location": "SOP Building",
+          "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs."
+        },
+        {
+          "name": "Pharmaceutical Chemistry Lab",
+          "location": "SOP Building",
+          "description": "Equipped for inorganic/organic chemistry synthesis, qualitative analysis, and titration setups."
+        },
+        {
+          "name": "Pharmacology Lab",
+          "location": "SOP Building",
+          "description": "Features anatomical models, charts, and basic organ bath setups for practical instruction."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Abusufyan Shaikh",
+          "designation": "HOD & Associate Professor",
+          "qualification": "M. Pharm, Ph.D.",
+          "experience": "15 yrs",
+          "image_url": "/images/pharmacy/dpharm/abusufyan_shaikh.png"
+        },
+        {
+          "name": "Lect. Nazilahayat Kasu",
+          "designation": "Lecturer",
+          "qualification": "B. Pharm.",
+          "experience": "7 yrs"
+        },
+        {
+          "name": "Lect. Sakina Khan",
+          "designation": "Lecturer",
+          "qualification": "B. Pharm.",
+          "experience": "7 yrs"
+        },
+        {
+          "name": "Lec. Hanif Dhuru",
+          "designation": "Lecturer",
+          "qualification": "B. Pharm.",
+          "experience": "6 yrs"
+        },
+        {
+          "name": "Lect. Shaikh Ansari",
+          "designation": "Lecturer",
+          "qualification": "B. Pharm.",
+          "experience": "6 yrs"
+        },
+        {
+          "name": "Lec. Annie Mathew",
+          "designation": "Lecturer",
+          "qualification": "M. Pharm.",
+          "experience": "16 yrs"
+        },
+        {
+          "name": "Lect. Ayesha Shaikh",
+          "designation": "Lecturer",
+          "qualification": "M. Pharm.",
+          "experience": "1 yr"
+        }
+      ],
+      "achievements": [
+        "Organized National-Level Quiz Competition.",
+        "Two student groups awarded \u20b92 Lakhs in Maharashtra State Students Innovation Challenge.",
+        "Three students started their own start-up."
+      ],
+      "alumni_testimonial": {
+        "name": "Mr. Raju Madan Yadav",
+        "designation": "Pharmacist Customer Support, TrueMeds",
+        "quote": "The solid academic foundation, hands-on training, and continuous mentorship I received during my D.Pharm program played a crucial role in shaping my career."
+      },
+      "homepage_url": "https://aiktc.ac.in/diploma-in-pharmacy/"
+    },
+    {
+      "code": "MPHARM",
+      "name": "Master of Pharmacy in Pharmacology",
+      "duration": "2 years",
+      "intake": 10,
+      "hod_reference": "Under the purview of Dr. Abusufyan Shaikh and Dr. Shariq Syed (Dean)",
+      "eligibility": "B.Pharm with at least 55% marks and Non-Zero Positive GPAT Score.",
+      "labs": [
+        {
+          "name": "Advanced Pharmacology Lab",
+          "location": "SOP Building",
+          "description": "High-performance research laboratory equipped with micro-centrifuge, modern spectrophotometers, and organ baths."
+        },
+        {
+          "name": "M.Pharm Research Lab",
+          "location": "SOP Building",
+          "description": "Dedicated to postgraduate research projects, advanced formulation design, and analytical testing."
+        }
+      ],
+      "faculty": "Same as B.Pharm faculty; specialized guides for M.Pharm students as per university norms.",
+      "homepage_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/",
+      "staff_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/faculties/",
+      "academic_calendar_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/academic-calendar/",
+      "timetable_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/mpharm-time-table/"
+    }
+  ]
+}

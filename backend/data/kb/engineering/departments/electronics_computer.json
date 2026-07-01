@@ -1,0 +1,113 @@
+{
+  "code": "ECS",
+  "name": "Electronics and Computer Science (Erstwhile Electronics & Telecommunication Engineering)",
+  "intake": 60,
+  "duration": "4 years (B.Tech)",
+  "established_year": "2020-21",
+  "hod": {
+    "name": "Prof. Bandanawaz Kotiyal",
+    "designation": "HOD",
+    "qualification": "M.Tech (Digital Communication)",
+    "experience": "24 years",
+    "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+  },
+  "vision": "To be the most sought after academic, research and practice based department of Electronics and Computer Science Engineering that others would wish to emulate.",
+  "mission": "Creating Exuberant Electronics and Computer Science Engineering Professionals.",
+  "labs": [
+    {
+      "name": "Analog Circuit Design Lab",
+      "location": "Room 318, Second Floor",
+      "description": "Cost: \u20b914.22 Lakh | Equipped with Aplab 38038 CROs, function generators, and analog components for circuit analysis and testing."
+    },
+    {
+      "name": "Signal Processing and Computation Lab",
+      "location": "Room 317, Second Floor",
+      "description": "Cost: \u20b923.9 Lakh | Powered by Lenovo workstations running software tools for signal processing, modeling, and simulation."
+    },
+    {
+      "name": "Embedded Lab",
+      "location": "Room 313, Second Floor",
+      "description": "Cost: \u20b918.5 Lakh | Equipped with Falcon 16-channel logic analyzers, microcontroller kits, and IDE interfaces for system design."
+    },
+    {
+      "name": "Communication Lab",
+      "location": "Room 312, Second Floor",
+      "description": "Cost: \u20b914.6 Lakh | Equipped with Aplab 3MHz function generators, modulation/demodulation kits, and RF testing equipment."
+    },
+    {
+      "name": "Network and Simulation Lab",
+      "location": "Room 311, Second Floor",
+      "description": "Cost: \u20b926.9 Lakh | Features Dell Optiplex workstations running networking and simulation tools (Cisco Packet Tracer, NS2)."
+    },
+    {
+      "name": "Microwave Engineering Lab",
+      "location": "Room 310, Second Floor",
+      "description": "Cost: \u20b915.03 Lakh | Equipped with Hameg Germany HMS3010 Spectrum Analyzers, waveguide setups, and microwave trainers."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Prof. Bandanawaz Kotiyal",
+      "designation": "HOD",
+      "qualification": "M.Tech (Digital Comm.)",
+      "experience": "24 yrs",
+      "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+    },
+    {
+      "name": "Dr. Geeta Desai",
+      "designation": "Associate Professor",
+      "qualification": "M.E., Ph.D.",
+      "experience": "21 yrs"
+    },
+    {
+      "name": "Dr. Riyaz Pathan",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (EXTC), Ph.D.",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Prof. Shahin Athavani",
+      "designation": "Assistant Professor",
+      "qualification": "M.E., Ph.D.*",
+      "experience": "24 yrs"
+    },
+    {
+      "name": "Prof. Kashif Kazmi",
+      "designation": "Assistant Professor",
+      "qualification": "ME (EXTC Engg.)",
+      "experience": "5 yrs"
+    },
+    {
+      "name": "Prof. Ganasekaran A.",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (PC & I)",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Umar Masumdar",
+      "designation": "Assistant Professor",
+      "qualification": "M.E.",
+      "experience": null
+    },
+    {
+      "name": "Prof. Ismaeel Shaikh",
+      "designation": "Teaching Assistant",
+      "qualification": "M.Tech.",
+      "experience": null
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Siraj Patel",
+    "designation": "Security Associate and IT Operations Consultant at Cipherbeam Technologies",
+    "quote": "The dedicated faculty, industry-aligned curriculum, and hands-on learning through labs, workshops, and internships helped me build strong technical skills."
+  },
+  "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/",
+  "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/electronics-and-computer-science-labs/",
+  "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/electronics-and-computer-science-staff/",
+  "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-syllabus/",
+  "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-time-table/",
+  "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-academic-calendar/",
+  "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-events/",
+  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-alumni/",
+  "placements_url": "https://soet.aiktc.ac.in/ecs-placements/"
+}

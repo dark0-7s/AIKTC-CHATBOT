@@ -1,0 +1,113 @@
+{
+  "code": "ECE",
+  "name": "Electrical & Computer Engineering (Erstwhile Electrical Engineering)",
+  "intake": 60,
+  "duration": "4 years (B.Tech)",
+  "hod": {
+    "name": "Dr. Shaikh Afzal N. A.",
+    "designation": "HOD & Associate Professor",
+    "qualification": "M.E. (Electronics), Ph.D.",
+    "experience": "24 years",
+    "image_url": "/images/engineering/ece/afzal_nehal_ahmed_shaikh.avif"
+  },
+  "vision": "To be the most sought after academic, research and practice based department of Electrical & Computer Engineering that others would wish to emulate.",
+  "mission": "Creating Exuberant Electrical & Computer Engineering Professionals.",
+  "labs": [
+    {
+      "name": "Research & Project Lab",
+      "location": "Room B-306, Second Floor",
+      "description": "Cost: \u20b92,74,040 | Equipped with advanced computer systems and projector for research, hardware design, and student capstone projects."
+    },
+    {
+      "name": "Network Lab",
+      "location": "Room B-307, Second Floor",
+      "description": "Cost: \u20b95,75,493 | Features 22 computer stations running Ubuntu, equipped with SCILAB, MATLAB, and open source PCB design software."
+    },
+    {
+      "name": "Digital Electronics Lab",
+      "location": "Room B-309, Second Floor",
+      "description": "Cost: \u20b94,95,753 | Features bridge rectifiers, thyristors, light dimmers, muffle furnaces, m-c-s kits, and 555 timer timing circuit analyzers."
+    },
+    {
+      "name": "Electrical Machine Lab",
+      "location": "Room B-103, Ground Floor",
+      "description": "Cost: \u20b929,33,548 | Equipped with VFD control panel, 3-phase lamp banks, thyristor DC supplies, resistive loads, and retardation test setups."
+    },
+    {
+      "name": "Switch Gear & Protection Lab",
+      "location": "Room B-305, Second Floor",
+      "description": "Cost: \u20b916,27,518 | State-of-the-art workstations for distance, differential, over-current, and motor protection systems demonstration."
+    },
+    {
+      "name": "Basics of Electrical Engineering Lab",
+      "location": "Room B-303, Second Floor",
+      "description": "Cost: \u20b911,16,380 | Contains Norton/Thevenin/Superposition theorem kits, AC circuits testing, and gate logic circuit boards."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Dr. Shaikh Afzal N. A.",
+      "designation": "HOD & Associate Professor",
+      "qualification": "M.E. (Electronics), Ph.D.",
+      "experience": "24 yrs",
+      "image_url": "/images/engineering/ece/afzal_nehal_ahmed_shaikh.avif"
+    },
+    {
+      "name": "Prof. Shraddha Hule",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Power Elect. & Drives)",
+      "experience": "11 yrs"
+    },
+    {
+      "name": "Prof. Yakub H. Khan",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech (Drives & Control)",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Prof. Khan Mohsin A.",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (EXTC), (Ph.D.)*",
+      "experience": "15 yrs"
+    },
+    {
+      "name": "Prof. Shameer Shaikh",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (EPS), Ph.D.*",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Shradha Kumawat",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Power System)",
+      "experience": "4 yrs"
+    },
+    {
+      "name": "Prof. Pritika Patil",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Control System)",
+      "experience": "9 yrs"
+    },
+    {
+      "name": "Prof. Sheeba Naaz Ansari",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech.(CE)",
+      "experience": "3 yrs"
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Fayyaz Ahmed Shaikh",
+    "cgpi": 8.62,
+    "quote": "I owe my success to the department's exceptional teaching and career support. Industry-relevant projects and workshops enhanced my problem-solving skills."
+  },
+  "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/",
+  "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/electrical-engineering-labs/",
+  "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/electrical-engineering-staff/",
+  "syllabus_url": "https://soet.aiktc.ac.in/ee-syllabus/",
+  "timetable_url": "https://soet.aiktc.ac.in/ee-time-table/",
+  "academic_calendar_url": "https://soet.aiktc.ac.in/ee-academic-calendar/",
+  "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-events/",
+  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-alumni/",
+  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-electrical-engineering-admissions/",
+  "placements_url": "https://soet.aiktc.ac.in/ece-placement-details/"
+}

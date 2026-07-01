@@ -1,0 +1,42 @@
+{
+  "academic_year": "2025-26",
+  "programs": {
+    "btech": {
+      "program_type": "B.Tech (Engineering)",
+      "duration_years": 4,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 96444, "development_fees": 12056, "total_fees": 108500 },
+        { "year": 2, "tuition_fees": 87556, "development_fees": 10944, "total_fees": 98500 },
+        { "year": 3, "tuition_fees": 79859, "development_fees": 10141, "total_fees": 90000 },
+        { "year": 4, "tuition_fees": 79859, "development_fees": 10141, "total_fees": 90000 }
+      ]
+    },
+    "mtech": {
+      "program_type": "M.Tech",
+      "duration_years": 2,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 95574, "development_fees": 12426, "total_fees": 108000 },
+        { "year": 2, "tuition_fees": 97605, "development_fees": 12395, "total_fees": 110000 }
+      ]
+    },
+    "bsc_it": {
+      "program_type": "B.Sc.IT",
+      "duration_years": 3,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 43000, "development_fees": 0, "total_fees": 43000 },
+        { "year": 2, "tuition_fees": 43000, "development_fees": 0, "total_fees": 43000 },
+        { "year": 3, "tuition_fees": 43000, "development_fees": 0, "total_fees": 43000 }
+      ]
+    },
+    "phd": {
+      "program_type": "Ph.D. (Civil Engineering)",
+      "duration_years": 3,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 100000, "development_fees": 0, "total_fees": 100000 },
+        { "year": 2, "tuition_fees": 100000, "development_fees": 0, "total_fees": 100000 },
+        { "year": 3, "tuition_fees": 100000, "development_fees": 0, "total_fees": 100000 }
+      ]
+    }
+  },
+  "notes": "Fees approved by Fees Regulating Authority (FRA), Maharashtra."
+}

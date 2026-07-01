@@ -1,0 +1,73 @@
+{
+  "code": "CSDS",
+  "name": "Computer Science & Engineering (Data Science)",
+  "intake": 60,
+  "duration": "4 years (B.Tech)",
+  "hod": {
+    "name": "Dr. Tabassum Maktum",
+    "designation": "HOD & Assistant Professor",
+    "qualification": "Ph.D. (CSE)",
+    "experience": "22 years"
+  },
+  "vision": "To be the most sought after academic, research and practice based department of Computer Science & Engineering (Data Science) that others would wish to emulate.",
+  "mission": "Creating Exuberant Computer Science & Engineering (Data Science) Professionals.",
+  "labs": [
+    {
+      "name": "Data Engineering Lab",
+      "location": "Room 405, Third Floor",
+      "description": "Configured for database systems, data warehousing, and ETL pipeline design."
+    },
+    {
+      "name": "Machine Learning Lab",
+      "location": "Room 406, Third Floor",
+      "description": "Optimized for modeling, analysis, and deploying ML pipelines on modern CPU/GPU setups."
+    },
+    {
+      "name": "Data Visualization Lab",
+      "location": "Room 407, Third Floor",
+      "description": "Equipped with data visualization tools (Tableau, PowerBI, Python libraries) to model and present insights."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Dr. Tabassum Maktum",
+      "designation": "HOD & Assistant Professor",
+      "qualification": "Ph.D. (CSE)",
+      "experience": "22 yrs"
+    },
+    {
+      "name": "Prof. Shahegul Afroz",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (CSE-WE)",
+      "experience": "8 yrs"
+    },
+    {
+      "name": "Prof. Renuka Chimankare",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (EE) & (Ph.D.)*",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Prof. Mohd. Imran Akhtar",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech.",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Zeeshan Zainuddin Khan",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (CSE)",
+      "experience": "10 yrs",
+      "image_url": "/images/engineering/ds/zeeshan_zainuddin_khan.avif"
+    }
+  ],
+  "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/",
+  "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-faculty/",
+  "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-syllabus/",
+  "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-time-table/",
+  "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-academic-calendar/",
+  "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-events/",
+  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-data-science-admissions/",
+  "activities_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-activities/",
+  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-achievements/"
+}

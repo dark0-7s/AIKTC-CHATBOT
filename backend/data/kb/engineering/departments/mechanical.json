@@ -1,0 +1,156 @@
+{
+  "code": "MECH",
+  "name": "Mechanical Engineering",
+  "intake": 60,
+  "duration": "4 years (B.Tech)",
+  "hod": {
+    "name": "Prof. Zakir Ansari",
+    "designation": "HOD",
+    "qualification": "M.Tech (Mech.), (Ph.D)*",
+    "experience": "26 years",
+    "email": "zakir.ansari@aiktc.ac.in",
+    "image_url": "/images/engineering/mechanical/zakir_ansari.avif"
+  },
+  "vision": "To be the most sought after academic, research and practice based department of Mechanical Engineering that others would wish to emulate.",
+  "mission": "Creating Exuberant Mechanical Engineering Professionals.",
+  "labs": [
+    {
+      "name": "Drawing Hall",
+      "location": "Room B-211, First Floor",
+      "description": "Cost: \u20b98,69,706 | Equipped with Godrej drawing tables and drawing drafting boards for engineering graphics courses."
+    },
+    {
+      "name": "Heat Transfer and Refrigeration and Air Conditioning Lab",
+      "location": "Room B-112, Ground Floor",
+      "description": "Cost: \u20b99,14,712 | Features air conditioning test rigs, heat exchanger apparatus, and thermal conduction setups."
+    },
+    {
+      "name": "Theory of Machines and Mechanical Vibrations Lab",
+      "location": "Room B-216, First Floor",
+      "description": "Cost: \u20b93,13,829 | Contains kinematic pair models, gyroscope setups, governor apparatus, and vibration analyzers."
+    },
+    {
+      "name": "CAD/CAM Lab",
+      "location": "Room B-209, First Floor",
+      "description": "Cost: \u20b928,51,507 | Equipped with HP laserjet printers, CAD workstations, and design software (ANSYS, SolidWorks, AutoCAD)."
+    },
+    {
+      "name": "Thermal Engineering and I.C. Engine Lab",
+      "location": "Room B-110, Ground Floor",
+      "description": "Cost: \u20b917,23,479 | Features sectional working models of 2-stroke diesel engines and multi-cylinder petrol engine test rigs."
+    },
+    {
+      "name": "Mechatronics Lab",
+      "location": "Room B-113, Ground Floor",
+      "description": "Cost: \u20b915,78,308 | Equipped with hydraulic/pneumatic trainer kits, PLC modules, and sensors integration boards."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Prof. Javed Kazi",
+      "designation": "Assistant Professor",
+      "qualification": "M.E.(CAD/CAM+Robotics)",
+      "experience": "12 yrs"
+    },
+    {
+      "name": "Dr. Md. Asif I. Gandhi",
+      "designation": "Associate Professor",
+      "qualification": "M.E. (Production), Ph.D",
+      "experience": "27 yrs"
+    },
+    {
+      "name": "Prof. Mohammad Jawed",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Mfg. Sys Engg.)",
+      "experience": "23 yrs"
+    },
+    {
+      "name": "Prof. Zakir Ansari",
+      "designation": "HOD",
+      "qualification": "M.Tech (Mech.), (Ph.D)*",
+      "experience": "26 yrs",
+      "image_url": "/images/engineering/mechanical/zakir_ansari.avif"
+    },
+    {
+      "name": "Prof. Ghazi Altamash A.",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech (CAD/CAM)",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Atul Meshram",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Manufacturing), (Ph.D)*",
+      "experience": "25 yrs"
+    },
+    {
+      "name": "Prof. Nawaz Motiwala",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Machine Design), (Ph.D)*",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Momin Nafee",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (CAD/CAM+Robotics)",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Momin Mohd Z. M. I.",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (CAD/CAM+Robotics)",
+      "experience": "21 yrs"
+    },
+    {
+      "name": "Prof. Rahul Thavai",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Machine Design), (Ph.D)*",
+      "experience": "12 yrs"
+    },
+    {
+      "name": "Prof. Rizwan Mohd Sharif",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Mfg. Sys Engg.)",
+      "experience": "15 yrs"
+    },
+    {
+      "name": "Prof. Shaikh Saad Abdul L.",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech. (Machine Design)",
+      "experience": "12 yrs"
+    },
+    {
+      "name": "Prof. Yusuf Khan",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech. (Machine Design)(Ph.D)*",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Karve Amruta Rahul",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. (Heat Power Engg.)",
+      "experience": "10 yrs"
+    },
+    {
+      "name": "Prof. Ashfaq Jamkhandikar",
+      "designation": "Assistant Professor",
+      "qualification": "M.E (Product Design & Development)",
+      "experience": "12 yrs"
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Junaid Mohsin Choulge",
+    "cgpi": 8.75,
+    "quote": "Every project, presentation, and practical experience added value to my academic and personal development."
+  },
+  "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/",
+  "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-labs/",
+  "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-staff/",
+  "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-syllabus/",
+  "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-time-table/",
+  "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-academic-calendar/",
+  "events_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-events/",
+  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-alumni/",
+  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-mechanical-engineering-admissions/",
+  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-achievements/"
+}

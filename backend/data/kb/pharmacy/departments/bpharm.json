@@ -1,0 +1,230 @@
+{
+  "code": "BPHARM",
+  "name": "Bachelor of Pharmacy",
+  "duration": "4 years",
+  "intake": 100,
+  "dean": {
+    "name": "Dr. Shariq Syed",
+    "designation": "Dean, School of Pharmacy",
+    "qualification": "M.Pharm, Ph.D. (USA)",
+    "experience": "17 years",
+    "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+  },
+  "vision": "To be the most sought after academic, research and practice based School of Pharmacy that others would wish to emulate.",
+  "mission": "Creating Exuberant Pharmaceutical Professionals.",
+  "labs": [
+    {
+      "name": "Biotechnology Lab",
+      "location": "Room A-302, SOP Second Floor",
+      "description": "Area: 81 sq.m. | Equipped with microscopes, autoclave, incubator, BOD incubator, refrigerator, and laminar air flow (LAF) hood."
+    },
+    {
+      "name": "Machine Room",
+      "location": "Room A-104, SOP Ground Floor",
+      "description": "Area: 84 sq.m. | Cost: \u20b930 Lakhs | Industrial pilot plant section equipped for mixing, sieving, milling, granulating, and QC testing."
+    },
+    {
+      "name": "Pharmaceutics Lab-II",
+      "location": "Room A-303, SOP Second Floor",
+      "description": "Area: 83 sq.m. | Cost: \u20b91.5 Lakhs | Equipped with hot air oven, electrical balances, microscopes, hot plates, and mechanical stirrers."
+    },
+    {
+      "name": "Pharmaceutics Lab",
+      "location": "Room A-103, SOP Ground Floor",
+      "description": "Area: 83 sq.m. | Fully equipped with instruments required for core pharmaceutics and cosmetics practicals."
+    },
+    {
+      "name": "Pharmaceutical Analysis Lab",
+      "location": "Room A-304, SOP Second Floor",
+      "description": "Area: 83 sq.m. | Equipped with laboratory ovens, UV cabinet, water distillation unit, balance, and safety eye wash station."
+    },
+    {
+      "name": "Pharmaceutical Chemistry Lab-II",
+      "location": "Room A-305, SOP Second Floor",
+      "description": "Area: 83 sq.m. | Features Godrej fume hood, triple beam balance, hot plate, muffle furnace, and conductivity meter."
+    },
+    {
+      "name": "Pharmacology Lab",
+      "location": "SOP Building",
+      "description": "Equipped with physiographs, organ baths, and simulated software for animal experiments and testing."
+    },
+    {
+      "name": "Pharmacognosy Lab",
+      "location": "SOP Building",
+      "description": "Equipped for extraction of crude drugs, botanical analysis, microscopical evaluation, and identification of medicinal plants."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Dr. Shariq Syed",
+      "designation": "Dean",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "17 yrs",
+      "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+    },
+    {
+      "name": "Dr. Mirza Anwar Baig",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "17 yrs",
+      "image_url": "/images/pharmacy/mpharm/anwar_baig.jpg"
+    },
+    {
+      "name": "Dr. Imran Sheikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "15.5 yrs"
+    },
+    {
+      "name": "Prof. Ajaaz A. S. Kutub Ali",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "19.7 yrs"
+    },
+    {
+      "name": "Prof. Saba Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "10.5 yrs"
+    },
+    {
+      "name": "Prof. Jayshree Patil",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "14.3 yrs"
+    },
+    {
+      "name": "Prof. Maria Lal",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "11 yrs"
+    },
+    {
+      "name": "Dr. Madhuri Gaikwad",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Dr. Mirza Salman Baig",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "11.5 yrs"
+    },
+    {
+      "name": "Prof. Bhagyashree Patil",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "14 yrs"
+    },
+    {
+      "name": "Prof. Reshma Yerunkar",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "6.2 yrs"
+    },
+    {
+      "name": "Prof. Foorkan Fakki",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "5 yrs"
+    },
+    {
+      "name": "Dr. Maryam Qureshi",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "7.2 yrs"
+    },
+    {
+      "name": "Prof. Mohammad Shoeb Qazi",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "12.5 yrs"
+    },
+    {
+      "name": "Prof. Prerana Sanas",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "10.6 yrs"
+    },
+    {
+      "name": "Prof. Poonam Nikam",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "5 yrs"
+    },
+    {
+      "name": "Prof. Vaishali Chavan",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "6.4 yrs"
+    },
+    {
+      "name": "Prof. Ayesha Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "3 yrs"
+    },
+    {
+      "name": "Prof. Tahsin Attar",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "9.3 yrs"
+    },
+    {
+      "name": "Prof. Ziyaul Haque S. Ahmad",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Tabreshkan Pathan",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "1.5 yrs"
+    },
+    {
+      "name": "Prof. Mohammad A. Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "6.6 yrs"
+    },
+    {
+      "name": "Prof. Karthika Gouthaman",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "5 yrs"
+    },
+    {
+      "name": "Prof. Aatif Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "3.5 yrs"
+    },
+    {
+      "name": "Prof. Rashmin Aklekar",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "3.5 yrs"
+    },
+    {
+      "name": "Prof. Dr. Abusufyan Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "M.Pharm, Ph.D.",
+      "experience": "15 yrs"
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Mr. Mohammed Zaid Khan",
+    "designation": "Medical Business Associate, GSK Pharmaceuticals Ltd.",
+    "quote": "My time at AIKTC was enriched by the outstanding infrastructure and top-notch facilities. The well-equipped laboratories provided hands-on learning experiences that complemented theoretical knowledge perfectly."
+  },
+  "homepage_url": "https://aiktc.ac.in/bachelor-of-pharmacy/",
+  "labs_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bachelor-of-pharmacy-labs/",
+  "staff_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bachelor-of-pharmacy-staff/",
+  "achievements_url": "https://aiktc.ac.in/bachelor-of-pharmacy/bpharm-students-achievements/",
+  "placements_url": "https://aiktc.ac.in/bachelor-of-pharmacy/training-and-placement-cell/",
+  "co_curricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/co-curricular-bpharm/",
+  "extracurricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/extracurricular-bpharm/",
+  "nss_url": "https://aiktc.ac.in/bachelor-of-pharmacy/nss-activities-bpharm/"
+}

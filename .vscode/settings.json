@@ -1,0 +1,16 @@
+{
+  "python.analysis.exclude": [
+    "C:/__pyrefly_virtual__/**",
+    "**/__pyrefly_virtual__/**"
+  ],
+  "python.linting.ignorePatterns": [
+    "C:/__pyrefly_virtual__/**",
+    "**/__pyrefly_virtual__/**"
+  ],
+  "search.exclude": {
+    "**/__pyrefly_virtual__": true
+  },
+  "files.exclude": {
+    "**/__pyrefly_virtual__": true
+  }
+}

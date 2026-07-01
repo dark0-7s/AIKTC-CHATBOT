@@ -1,0 +1,26 @@
+{
+  "academic_year": "2025-26",
+  "programs": {
+    "darch": {
+      "program_type": "Diploma in Architecture (D.Arch)",
+      "duration_years": 3,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 45000, "development_fees": 0, "total_fees": 45000 },
+        { "year": 2, "tuition_fees": 45000, "development_fees": 0, "total_fees": 45000 },
+        { "year": 3, "tuition_fees": 45000, "development_fees": 0, "total_fees": 45000 }
+      ]
+    },
+    "barch": {
+      "program_type": "B.Arch (Architecture)",
+      "duration_years": 5,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 81105,  "development_fees": 9895,  "total_fees": 91000  },
+        { "year": 2, "tuition_fees": 88731,  "development_fees": 11269, "total_fees": 100000 },
+        { "year": 3, "tuition_fees": 88731,  "development_fees": 11269, "total_fees": 100000 },
+        { "year": 4, "tuition_fees": 125110, "development_fees": 15890, "total_fees": 141000 },
+        { "year": 5, "tuition_fees": 125110, "development_fees": 15890, "total_fees": 141000 }
+      ]
+    }
+  },
+  "notes": "Fees approved by Fees Regulating Authority (FRA), Maharashtra."
+}

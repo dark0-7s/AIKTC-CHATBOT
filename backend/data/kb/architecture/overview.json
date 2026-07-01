@@ -1,0 +1,61 @@
+{
+  "school_name": "School of Architecture (SoA)",
+  "dte_code": "AR3439",
+  "coa_code": "MH55",
+  "dean": {
+    "name": "Prof. Raj Mhatre",
+    "designation": "Dean, School of Architecture",
+    "qualification": "B.Arch., M.Sc(UK), M.Arch.(PM)",
+    "experience": "30 yrs",
+    "image_url": "/images/architecture/barch/raj_mhatre.jpg"
+  },
+  "affiliated_to": "University of Mumbai",
+  "accreditation": "Council of Architecture (COA) approved",
+  "vision": "To be the most sought after academic, research and practice based school of Architecture that others would wish to emulate.",
+  "mission": "Creating Exuberant Architectural Professionals.",
+  "mission_elements": [
+    "To train professionals to conceptualize, plan, design and detail built environment and spaces for human habitation.",
+    "To foster understanding of private and semi-public realms within socio-economic, legal and ethical framework.",
+    "To train designers to meet new environmental challenges for sustainable lifestyles.",
+    "To create a sound base in architectural technologies.",
+    "To foster creativity and lateral thinking between different fields of design.",
+    "To inculcate a sound base of architectural theory and history.",
+    "To understand relationships with liberal arts, sociology, economics and science."
+  ],
+  "programs_offered": {
+    "darch": { "duration": "3 years", "intake": 40 },
+    "barch": { "duration": "5 years", "intake": 40 }
+  },
+  "admission_process": {
+    "darch": "Passed 10th Std./SSC examination or its equivalent, with at least 35% aggregate marks.",
+    "barch": "H.S.C. in PCM / Diploma with Mathematics & Qualifying score in NATA / JEE (Paper 2)."
+  },
+  "events_and_workshops": [
+    "Karyashala on Engendering Cities (June 2024)",
+    "Film Making Workshop by Film Club (August 2024)",
+    "Kolloquy Internship Seminar (August 2024)",
+    "Art Club Inaugural Exhibition (August 2024)",
+    "Parents-Teachers Meet & Felicitation (August 2024)",
+    "Literature and Music Club Jamming Session (August 2024)",
+    "Professional Practice Visit to UASPL, Belapur (August 2024)",
+    "Theatre and Fashion Club – Styling Session (October 2024)",
+    "Tie & Dye Workshop (September 2024)",
+    "First Year Induction Program (September 2024)",
+    "SMC Sessions on Exam Stress & Interpersonal Skills",
+    "Study Tour to Bhuj and Ahmedabad (January 2025)",
+    "Karyashala Academic Kickstarter to DD-1 & DD-2",
+    "Dawat-e-Iftar (March 2025)",
+    "Kemu Iyer Design Competition (January 2025)",
+    "MASH-UP weeklong event"
+  ],
+  "library": "Access to central KRRC library with architecture resources.",
+  "campus": {
+    "area_acres": 10.5,
+    "established_year": 2011
+  },
+  "contact": {
+    "admission_architecture": "+91 81047 79747",
+    "email": "aiktc.newpanvel@aiktc.ac.in",
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai – 410206"
+  }
+}

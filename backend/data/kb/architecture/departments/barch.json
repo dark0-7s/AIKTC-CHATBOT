@@ -1,0 +1,154 @@
+{
+  "code": "BARCH",
+  "name": "Bachelor of Architecture",
+  "duration": "5 years",
+  "intake": 40,
+  "description": "Architecture is the art and science of designing buildings and structures. The 5-year course includes Basic Course (1st\u20133rd year) and Advanced Course (4th\u20135th year).",
+  "eligibility": "H.S.C. in PCM / Diploma with Mathematics & Qualifying score in NATA / JEE (Paper 2).",
+  "vision": "To be the most sought after academic, research and practice based school of Architecture that others would wish to emulate.",
+  "mission": "Creating Exuberant Architectural Professionals.",
+  "labs": [
+    {
+      "name": "Design Studio",
+      "location": "SOA Building",
+      "description": "Spacious drafting rooms equipped with professional drawing boards, parallel rulers, and ergonomically designed seating."
+    },
+    {
+      "name": "Building Construction Lab",
+      "location": "SOA Building",
+      "description": "Displays various construction details, materials assembly models, structural joints, and miniature scale structures."
+    },
+    {
+      "name": "Climatology Lab",
+      "location": "SOA Building",
+      "description": "Equipped with solar scope, lux meters, wind anemometers, and thermometers for environmental and climate-responsive design analysis."
+    },
+    {
+      "name": "Computer Aided Design (CAD) Lab",
+      "location": "SOA Building",
+      "description": "Workstations running CAD, Revit, SketchUp, Photoshop, and 3D modeling programs for digital representation."
+    },
+    {
+      "name": "Model Making Workshop",
+      "location": "SOA Building",
+      "description": "Equipped with laser cutters, hot wire foam cutters, and wood/plastic working tools for 3D physical models creation."
+    },
+    {
+      "name": "Material Museum",
+      "location": "SOA Building",
+      "description": "A comprehensive repository of construction materials, cladding specimens, paint finishes, hardware, and structural elements."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Prof. Raj Mhatre",
+      "designation": "Dean",
+      "qualification": "B.Arch., M.Sc(UK), M.Arch.(PM)",
+      "experience": "30 yrs",
+      "image_url": "/images/architecture/barch/raj_mhatre.jpg"
+    },
+    {
+      "name": "Prof. Poonam Mhatre",
+      "designation": "Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "38 yrs"
+    },
+    {
+      "name": "Prof. Yatish Chavan",
+      "designation": "Design chair",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "20 yrs"
+    },
+    {
+      "name": "Prof. Soudhesh Kolambekar",
+      "designation": "Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "19 yrs"
+    },
+    {
+      "name": "Prof. Insha Shaikh",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "14 yrs"
+    },
+    {
+      "name": "Prof. Suvidha Sagave",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "16 yrs"
+    },
+    {
+      "name": "Prof. Parag Mohan Rawool",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "13 yrs"
+    },
+    {
+      "name": "Prof. Sandeepkumar Prajapati",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "8 yrs"
+    },
+    {
+      "name": "Prof. Saddam Sayyed",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "5 yrs"
+    },
+    {
+      "name": "Prof. Sarah Ginwale",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "7 yrs"
+    },
+    {
+      "name": "Prof. Teena Pathan",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "27 yrs"
+    },
+    {
+      "name": "Prof. Parvathi Chavan",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "11 yrs"
+    },
+    {
+      "name": "Prof. Rajat Sonawane",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "20 yrs"
+    },
+    {
+      "name": "Prof. Apurva Deshpande",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "15 yrs"
+    },
+    {
+      "name": "Prof. Amit Kadam",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "9 yrs"
+    },
+    {
+      "name": "Prof. Bhagyashri Kadu",
+      "designation": "Associate Professor",
+      "qualification": "B.Arch., M.Arch.(PM)",
+      "experience": "9 yrs"
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Khot Sharabil Simab",
+    "designation": "Principal Architect, BIN KHOT ARCHITECTS",
+    "quote": "My five years at AIKTC laid the strongest foundation for who I am today as an architect. The mentors pushed my limits, and countless late nights turned sketches into reality."
+  },
+  "homepage_url": "https://aiktc.ac.in/bachelor-of-architecture/",
+  "staff_url": "https://aiktc.ac.in/bachelor-of-architecture/bachelor-of-architecture-staff/",
+  "admission_url": "https://aiktc.ac.in/bachelor-of-architecture-admissions/",
+  "achievements_url": "https://aiktc.ac.in/bachelor-of-architecture/bachelor-of-architecture-achievements/",
+  "co_curricular_url": "https://aiktc.ac.in/bachelor-of-architecture/barch-co-curricular/",
+  "infrastructure_url": "https://aiktc.ac.in/bachelor-of-architecture/barch-infrastructure/",
+  "studios_url": "https://aiktc.ac.in/bachelor-of-architecture/bachelor-of-architecture-studios/",
+  "events_url": "https://aiktc.ac.in/bachelor-of-architecture/events/"
+}

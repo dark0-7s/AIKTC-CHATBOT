@@ -1,0 +1,63 @@
+{
+  "school_name": "School of Pharmacy (SoP)",
+  "dte_code": "PH3439",
+  "autonomous": true,
+  "dean": {
+    "name": "Dr. Shariq Syed",
+    "designation": "Dean, School of Pharmacy",
+    "qualification": "M.Pharm, Ph.D.",
+    "experience": "17 yrs",
+    "image_url": "/images/pharmacy/bpharm/shariq_syed.jpg"
+  },
+  "affiliated_to": "University of Mumbai",
+  "accreditation": "NAAC accredited, ISO 9001:2015 certified, Pharmacy Council of India approved",
+  "vision": "To be the most sought after academic, research and practice based School of Pharmacy that others would wish to emulate.",
+  "mission": "Creating Exuberant Pharmaceutical Professionals.",
+  "mission_elements": [
+    "To implement the Outcome Based Education (OBE) model to conform to our belief 'Students Learn What We Teach'.",
+    "To encourage and upgrade teachers for innovative teaching skills, research and practice in Pharmacy.",
+    "To provide necessary facility, machinery, equipment, atmosphere and ambience that would enable quality academics, research and practice in Pharmacy.",
+    "To create an eco-system for professional competition and reward mechanism.",
+    "To prepare and encourage students for direction and career of their choice. Be it higher studies, entrepreneurship, employment, research and innovations."
+  ],
+  "programs_offered": {
+    "dpharm": { "duration": "2 years", "intake": 60 },
+    "bpharm": { "duration": "4 years", "intake": 100 },
+    "mpharm": { "specialization": "Pharmacology", "duration": "2 years", "intake": 10 }
+  },
+  "admission_process": {
+    "dpharm": "H.S.C. with PCB / M or equivalent examination.",
+    "bpharm_first_year": "H.S.C. in PCB / M or equivalent with at least 45% marks & Non-Zero MHT-CET / Non-Zero Positive NEET Score.",
+    "bpharm_direct_second_year": "Passed Diploma in Pharmacy with at least 45% marks.",
+    "mpharm": "B.Pharm with at least 55% marks & Non-Zero Positive GPAT Score."
+  },
+  "placements": {
+    "highlights": [
+      "3 students placed at D-Mart Pvt. Ltd. (Pharmacy), Mumbai.",
+      "6 students placed at Zeno Health, Mumbai.",
+      "4 students placed as Pharmacist Counsellors at Trumed Pvt. Ltd.",
+      "3 students started their own start-up."
+    ],
+    "skill_development": [
+      "38 S.Y.D.Pharm students completed Coursera project on resume and cover letter building.",
+      "43 students completed three-month internships in community pharmacy."
+    ]
+  },
+  "labs": [
+    "Pharmacology Lab",
+    "Pharmacognosy Lab",
+    "Pharmaceutical Chemistry Lab",
+    "Pharma Analysis Lab"
+  ],
+  "library": "Access to central KRRC library with extensive pharmaceutical resources.",
+  "campus": {
+    "area_acres": 10.5,
+    "established_year": 2011
+  },
+  "scholarships": "Same as engineering school – DTE Minority, EBC, Central Govt, State Reserved, Girls scholarship (page 52).",
+  "contact": {
+    "admission_pharmacy": "+91 70219 29084",
+    "email": "aiktc.newpanvel@aiktc.ac.in",
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai – 410206"
+  }
+}

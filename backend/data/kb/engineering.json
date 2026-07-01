@@ -1,0 +1,1148 @@
+{
+  "school_name": "School of Engineering & Technology (SoET)",
+  "dte_code": "EN3439",
+  "autonomous": true,
+  "affiliated_to": "University of Mumbai",
+  "dean": {
+    "name": "Dr. Rajendra Magar",
+    "designation": "Dean, School of Engineering & Technology",
+    "qualification": "Ph.D, M.E, B.E",
+    "image_url": "/images/people/rajendra_magar.jpg"
+  },
+  "accreditation": "NAAC accredited, ISO 9001:2015 certified",
+  "vision": "To be the most sought after Technical Campus that others would wish to emulate.",
+  "mission": "Creating Exuberant Technical Professionals",
+  "mission_elements": [
+    "To implement the Outcome Based Education (OBE) Model to conform to our belief 'Students Learn What We Teach'.",
+    "To encourage and upgrade teachers for innovative teaching skills, research and practice.",
+    "To provide necessary facility, machinery, equipment, atmosphere and ambience that would enable quality academics, research and practice.",
+    "To create an eco-system for professional competition, lifelong learning and reward mechanism.",
+    "To prepare and encourage students for societal welfare activities, higher studies, entrepreneurship, employment, research and innovations to become a complete Human Resource."
+  ],
+  "programs_offered": {
+    "btech": {
+      "duration": "4 years",
+      "total_intake": 510,
+      "specializations": [
+        "Civil Engineering",
+        "Computer Engineering",
+        "Computer Science & Engineering (AIML)",
+        "Computer Science & Engineering (Data Science)",
+        "Electrical & Computer Engineering",
+        "Electronics and Computer Science",
+        "Mechanical Engineering"
+      ]
+    },
+    "mtech": {
+      "duration": "2 years",
+      "total_intake": 60,
+      "specializations": [
+        "Construction Engineering & Management",
+        "Structural Engineering",
+        "Computer Engineering"
+      ]
+    },
+    "phd": {
+      "field": "Civil Engineering",
+      "intake": 10
+    },
+    "bsc_it": {
+      "duration": "3 years",
+      "intake": 60
+    }
+  },
+  "admission_process": {
+    "first_year_btech": "H.S.C. in PCM or equivalent with at least 45% marks & Non-Zero MHT-CET / Non-Zero Positive JEE MAIN score. OR Diploma in Engineering & Technology with at least 45% marks.",
+    "direct_second_year": "Passed Diploma in Engineering & Technology / B.Sc. Degree / D.Voc. with at least 45% marks.",
+    "mtech": "B.E. in relevant field with at least 50% marks & obtained score in GATE.",
+    "cap_process": "Centralized Admission Process (CAP) through CET Cell Maharashtra. Multiple rounds with option form submission, seat allotment, and reporting to institute.",
+    "institute_level": "Vacant seats after CAP Round IV are filled via institute-level merit list and advertisement."
+  },
+  "placements": {
+    "placement_cell": "Training & Placement Cell with placement officer and departmental coordinators.",
+    "activities": [
+      "Soft Skills & Aptitude Training",
+      "Seminars, Special Lectures, Career Guidance Programmes",
+      "Entrepreneurship Development Programmes",
+      "On/Off Campus Recruitment",
+      "Industrial Training and Industrial Visits"
+    ],
+    "recruiters_partial_list": [
+      "TCS",
+      "Jaro Education Pvt. Ltd.",
+      "Tech Stelwart",
+      "Ospider"
+    ]
+  },
+  "incubation_centre": {
+    "head": "Prof. Abdul Majid Ansari",
+    "highlights": {
+      "startups_incubated": 67,
+      "registered_startups": 13,
+      "funding_secured": "86+ lakhs",
+      "valuation_exceeds": "2 crores",
+      "paid_internships": 80,
+      "dbt_disbursed": "18+ lakhs",
+      "recognized_as": "Chanakya Training Partner"
+    }
+  },
+  "library": {
+    "name": "Knowledge Resources & Relay Centre (KRRC)",
+    "area_sqft": 9633.7,
+    "volumes": 25627,
+    "titles": 8192,
+    "national_journals": 70,
+    "international_journals": 14,
+    "e_resources": [
+      "ASCE",
+      "Videeya eBooks",
+      "Springer eBooks"
+    ],
+    "ndli_member": true,
+    "anti_plagiarism_tool": true,
+    "website": "www.aiktlibrary.org"
+  },
+  "campus": {
+    "area_acres": 10.5,
+    "built_up_sqft": 315000,
+    "established_year": 2011
+  },
+  "scholarships": {
+    "dte_minority": "Rs. 50,000 per student",
+    "ebc": "50% tuition fees",
+    "central_government": "Merit Cum Means Scholarship",
+    "minority_affairs": "Schemes available",
+    "state_reserved": "50% for OBC, 100% for SC/ST/NT",
+    "girls": "100% tuition fees"
+  },
+  "contact": {
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai \u2013 410206",
+    "phone": "+91 91371 23439",
+    "admission_engineering": "+91 81043 63070",
+    "email": "aiktc.newpanvel@aiktc.ac.in",
+    "admissions_email": "admissions@aiktc.ac.in",
+    "website": "www.aiktc.ac.in"
+  },
+  "fees": {
+    "academic_year": "2025-26",
+    "programs": {
+      "btech": {
+        "program_type": "B.Tech (Engineering)",
+        "duration_years": 4,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 96444,
+            "development_fees": 12056,
+            "total_fees": 108500
+          },
+          {
+            "year": 2,
+            "tuition_fees": 87556,
+            "development_fees": 10944,
+            "total_fees": 98500
+          },
+          {
+            "year": 3,
+            "tuition_fees": 79859,
+            "development_fees": 10141,
+            "total_fees": 90000
+          },
+          {
+            "year": 4,
+            "tuition_fees": 79859,
+            "development_fees": 10141,
+            "total_fees": 90000
+          }
+        ]
+      },
+      "mtech": {
+        "program_type": "M.Tech",
+        "duration_years": 2,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 95574,
+            "development_fees": 12426,
+            "total_fees": 108000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 97605,
+            "development_fees": 12395,
+            "total_fees": 110000
+          }
+        ]
+      },
+      "bsc_it": {
+        "program_type": "B.Sc.IT",
+        "duration_years": 3,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 43000,
+            "development_fees": 0,
+            "total_fees": 43000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 43000,
+            "development_fees": 0,
+            "total_fees": 43000
+          },
+          {
+            "year": 3,
+            "tuition_fees": 43000,
+            "development_fees": 0,
+            "total_fees": 43000
+          }
+        ]
+      },
+      "phd": {
+        "program_type": "Ph.D. (Civil Engineering)",
+        "duration_years": 3,
+        "annual_fees": [
+          {
+            "year": 1,
+            "tuition_fees": 100000,
+            "development_fees": 0,
+            "total_fees": 100000
+          },
+          {
+            "year": 2,
+            "tuition_fees": 100000,
+            "development_fees": 0,
+            "total_fees": 100000
+          },
+          {
+            "year": 3,
+            "tuition_fees": 100000,
+            "development_fees": 0,
+            "total_fees": 100000
+          }
+        ]
+      }
+    },
+    "notes": "Fees approved by Fees Regulating Authority (FRA), Maharashtra."
+  },
+  "refund_policy": {
+    "policy": "If the candidate cancels admission on or before the last date specified by the Competent Authority, the Institute shall refund the entire fees after deducting Rs. 1,000 towards processing charges. After the cut-off date, no refund except Security Deposit and Caution Money Deposit.",
+    "notice_reference": "Prospectus 2025, Page 53"
+  },
+  "departments": [
+    {
+      "code": "BSIT",
+      "name": "Bachelor of Science in Information Technology",
+      "intake": 60,
+      "duration": "3 years",
+      "eligibility": "H.S.C. (XII Std.) with Mathematics & Statistics",
+      "programme_coordinator": {
+        "name": "Prof. Tabrez Khan",
+        "designation": "Programme Coordinator",
+        "qualification": "M.E. (Computer Engineering)",
+        "experience": "20 years",
+        "image_url": "/images/engineering/bscit/tabrez_khan.avif"
+      },
+      "faculty": [
+        {
+          "name": "Prof. Tabrez Khan",
+          "designation": "Programme Coordinator",
+          "qualification": "M.E. (Comp. Engg.)",
+          "experience": "20 yrs",
+          "image_url": "/images/engineering/bscit/tabrez_khan.avif"
+        },
+        {
+          "name": "Dr. Faimida Sayyad",
+          "designation": "Assistant Professor",
+          "qualification": "B.Sc., M.Sc., Ph.D",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Mr. Tufail Ahmed Khan",
+          "designation": "Lecturer",
+          "qualification": "CCNA, M.Sc (IT)",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Mr. Vasimoddin Shaikh",
+          "designation": "Lecturer",
+          "qualification": "MCA",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Mr. Quraishi Mohd. Arif",
+          "designation": "Lecturer",
+          "qualification": "M.Sc. (IT)",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Mr. Ansari Zakauallah M. M.",
+          "designation": "Lecturer",
+          "qualification": "M.Sc. (IT)",
+          "experience": "2 yrs"
+        },
+        {
+          "name": "Mr. Anwar Patel",
+          "designation": "Lecturer",
+          "qualification": "M.Sc. (IT), Ph.D*",
+          "experience": "3 yrs"
+        }
+      ],
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/bscit-faculty/",
+      "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/bscit-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/bscit-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/bscit-academic-calendar/",
+      "admission_url": "https://soet.aiktc.ac.in/bsc-it-admission/",
+      "exams_url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/bscit-exam/",
+      "labs": [
+        {
+          "name": "IT Programming Lab",
+          "location": "Room 408, Third Floor",
+          "description": "Designed for scripting, object-oriented programming, and web development practices."
+        },
+        {
+          "name": "Database Lab",
+          "location": "Room 409, Third Floor",
+          "description": "Equipped with RDBMS and NoSQL database management tools for data retrieval and modeling."
+        },
+        {
+          "name": "Software Development Lab",
+          "location": "Room 410, Third Floor",
+          "description": "Dedicated to software engineering principles, testing methodologies, and project-based learning."
+        }
+      ]
+    },
+    {
+      "code": "CIVIL",
+      "name": "Civil Engineering",
+      "intake": 30,
+      "duration": "4 years (B.Tech)",
+      "postgraduate": {
+        "mtech_specializations": [
+          "Construction Engineering & Management",
+          "Structural Engineering"
+        ],
+        "phd_available": true
+      },
+      "hod": {
+        "name": "Dr. Fauwaz Parkar",
+        "designation": "HOD & Associate Professor",
+        "qualification": "M.E. (Construction Management), Ph.D",
+        "experience": "15 years",
+        "image_url": "/images/engineering/civil/fauwaz_parkar.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Civil Engineering that others would wish to emulate.",
+      "mission": "Creating Exuberant Civil Engineering Professionals.",
+      "labs": [
+        {
+          "name": "Fluid Mechanics Lab",
+          "location": "Room B-102, Ground Floor",
+          "description": "Equipped with hydraulic tilting flume, Pelton wheel and Francis turbine test rigs, wind tunnel, and momentum/viscosity apparatus."
+        },
+        {
+          "name": "Engineering Geology Lab",
+          "location": "Room A-202, Second Floor",
+          "description": "Features a collection of approximately 550 mineral and rock samples, including metallic/non-metallic minerals and various rock types."
+        },
+        {
+          "name": "Surveying Lab",
+          "location": "Room B-105, Ground Floor",
+          "description": "Equipped with modern surveying instruments including Total Stations, Theodolites, Auto/Tilting/Dumpy levels, GPS devices, and plane tables."
+        },
+        {
+          "name": "Civil Engineering Project Lab",
+          "location": "Room B-311, Third Floor",
+          "description": "Equipped with specialized design and analysis software including AutoCAD, Revit, Tekla Structures, Primavera, and Gram++ GIS."
+        },
+        {
+          "name": "Transportation Engineering Lab",
+          "location": "Room B-106, Ground Floor",
+          "description": "Equipped with ductility, impact, and abrasion testing machines, Marshall stability apparatus, and standard penetrometers."
+        },
+        {
+          "name": "Geotechnical Engineering Lab",
+          "location": "Room B-107, Ground Floor",
+          "description": "Equipped for Tri-axial shear, direct shear, unconfined compression, vane shear, consolidation, CBR, and soil permeability testing."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Fauwaz Parkar",
+          "designation": "HOD & Associate Professor",
+          "qualification": "M.E. (Constrg. Mgmt.), Ph.D",
+          "experience": "15 yrs",
+          "image_url": "/images/engineering/civil/fauwaz_parkar.avif"
+        },
+        {
+          "name": "Dr. Girish Mahajan",
+          "designation": "Associate Professor",
+          "qualification": "M.E. (Constrg. Mgmt.), Ph.D",
+          "experience": "24 yrs"
+        },
+        {
+          "name": "Dr. Dada Patil",
+          "designation": "Associate Professor",
+          "qualification": "M.E. (Constrg. Mgmt.), Ph.D",
+          "experience": "21 yrs"
+        },
+        {
+          "name": "Prof. Dhaval Shah",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Environment) (Ph.D)*",
+          "experience": "27 yrs"
+        },
+        {
+          "name": "Dr. Prabha Joshi",
+          "designation": "Assistant Professor",
+          "qualification": "Ph.D. (Geology)",
+          "experience": "14 yrs"
+        },
+        {
+          "name": "Prof. Junaid Maste",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Hawelkar Shoukin",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "16 yrs"
+        },
+        {
+          "name": "Prof. Junaid Siddiqui",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "15 yrs"
+        },
+        {
+          "name": "Prof. Firoz Nadaf",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Tehsin Kazi",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Umesh Jadhav",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Prathmesh Gawde",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Dr. Rohan Dasgupta",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "14 yrs"
+        },
+        {
+          "name": "Prof. Irfan Nalband",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Irfan Shaikh",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Structures), (Ph.D)*",
+          "experience": "8 yrs"
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Khan Sohail Mohammed Ashfaque",
+        "batch": "B.E. Civil 2024",
+        "cgpi": 8.57,
+        "quote": "The faculty were supportive, and the lab facilities were excellent for practical learning. The college provided a strong foundation and helped me grow both technically and personally."
+      },
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/",
+      "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-engineering-labs/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-engineering-staff/",
+      "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-events/",
+      "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-alumni/",
+      "admission_url": "https://soet.aiktc.ac.in/bachelor-of-civil-engineering-admissions/"
+    },
+    {
+      "code": "COMP",
+      "name": "Computer Engineering",
+      "intake": 120,
+      "duration": "4 years (B.Tech)",
+      "hod": {
+        "name": "Prof. Tabrez Khan",
+        "designation": "HOD",
+        "qualification": "M.E. (Computer Engineering)",
+        "experience": "21 years",
+        "image_url": "/images/engineering/co/tabrez_khan.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Computer Engineering that others would wish to emulate.",
+      "mission": "Creating Exuberant Computer Engineering Professionals.",
+      "labs": [
+        {
+          "name": "Machine Learning Lab",
+          "location": "Room 401, Third Floor",
+          "description": "Area: 112 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+        },
+        {
+          "name": "Data Engineering Lab",
+          "location": "Room 402, Third Floor",
+          "description": "Area: 80 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+        },
+        {
+          "name": "Software Engineering Lab",
+          "location": "Room 413, Third Floor",
+          "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Artificial Intelligence Lab",
+          "location": "Room 414, Third Floor",
+          "description": "Area: 80 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Systems Programming Lab",
+          "location": "Room 415, Third Floor",
+          "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Cloud Computing Lab",
+          "location": "Room 416, Third Floor",
+          "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Database and Analytics Lab",
+          "location": "Room 417, Third Floor",
+          "description": "Area: 104 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Project Lab",
+          "location": "Room 418, Third Floor",
+          "description": "Area: 145 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Programming Paradigms Lab",
+          "location": "Room 419, Third Floor",
+          "description": "Area: 77 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Electronics and Signal Processing Lab",
+          "location": "Room 420, Third Floor",
+          "description": "Area: 77 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        },
+        {
+          "name": "Network and Security Lab",
+          "location": "Room 421, Third Floor",
+          "description": "Area: 97 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Prof. Tabrez Khan",
+          "designation": "HOD",
+          "qualification": "M.E. (Comp. Engg.)",
+          "experience": "21 yrs",
+          "image_url": "/images/engineering/co/tabrez_khan.avif"
+        },
+        {
+          "name": "Dr. Muhib Anwar Lambay",
+          "designation": "Assistant Professor",
+          "qualification": "B.E., M.Tech, Ph.D.",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Prof. Irfan Jamkhandikar",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. Comp. Engg.",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Abdul Majid Ansari",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech (CSE)",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Prof. Safa Sadruddin",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech, (Ph.D)*",
+          "experience": "14 yrs"
+        },
+        {
+          "name": "Prof. Mukhtar Ansari",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech, (Ph.D)*",
+          "experience": "15 yrs"
+        },
+        {
+          "name": "Prof. Nusrat Jahan",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech (CSE)",
+          "experience": "4 yrs"
+        },
+        {
+          "name": "Prof. Samreen Banu Kazi",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech (CSE)",
+          "experience": "4 yrs"
+        },
+        {
+          "name": "Prof. Rehaal Qureshi",
+          "designation": "Teaching Assistant",
+          "qualification": "(M.E. Comp. Engg.)*",
+          "experience": "9 yrs"
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Khan Arshad Abdulla",
+        "cgpi": 9.43,
+        "quote": "The Computer Engineering Department at AIKTC is a matter of deep pride and gratitude for me. Those formative years laid a solid foundation for both my professional journey and personal development."
+      },
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/",
+      "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-labs/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-staff/",
+      "syllabus_url": "https://soet.aiktc.ac.in/co-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/co-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/co-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/co-events/",
+      "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-alumni/"
+    },
+    {
+      "code": "CSAIML",
+      "name": "Computer Science & Engineering (Artificial Intelligence and Machine Learning)",
+      "intake": 120,
+      "duration": "4 years (B.Tech)",
+      "hod": {
+        "name": "Dr. Salim Shaikh",
+        "designation": "HOD & Associate Professor",
+        "qualification": "Ph.D. (Computer Engineering)",
+        "experience": "17 years",
+        "image_url": "/images/engineering/aiml/salim_shaikh.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Computer Science & Engineering (AIML) that others would wish to emulate.",
+      "mission": "Creating Exuberant Computer Science & Engineering (AIML) Professionals.",
+      "labs": [
+        {
+          "name": "AI/ML Lab",
+          "location": "Room 403, Third Floor",
+          "description": "High-performance systems optimized for training neural networks, deep learning models, and running heuristic algorithms."
+        },
+        {
+          "name": "High Performance Computing Lab",
+          "location": "Room 404, Third Floor",
+          "description": "Equipped with multi-core workstations and parallel processing tools for intensive compute workloads and large dataset operations."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Salim Shaikh",
+          "designation": "HOD & Associate Professor",
+          "qualification": "Ph.D. (Com. Engg.)",
+          "experience": "17 yrs",
+          "image_url": "/images/engineering/aiml/salim_shaikh.avif"
+        },
+        {
+          "name": "Prof. Vishal Gotarane",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Ph.D.)*",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Saima Sayyed",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Comp.)",
+          "experience": "6 yrs"
+        },
+        {
+          "name": "Prof. Kirti Thakur",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (IT)",
+          "experience": "14 yrs"
+        },
+        {
+          "name": "Prof. Shafique Shaikh",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech. (CSE)",
+          "experience": "24 yrs"
+        }
+      ],
+      "additional_features": [
+        "Outcome-Based Education (OBE) model",
+        "Project-based learning, hackathons, AI innovation challenges",
+        "State-of-the-art AI/ML software tools"
+      ],
+      "homepage_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/",
+      "staff_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-faculty/",
+      "syllabus_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-events/",
+      "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-aiml-admissions/"
+    },
+    {
+      "code": "CSDS",
+      "name": "Computer Science & Engineering (Data Science)",
+      "intake": 60,
+      "duration": "4 years (B.Tech)",
+      "hod": {
+        "name": "Dr. Tabassum Maktum",
+        "designation": "HOD & Assistant Professor",
+        "qualification": "Ph.D. (CSE)",
+        "experience": "22 years"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Computer Science & Engineering (Data Science) that others would wish to emulate.",
+      "mission": "Creating Exuberant Computer Science & Engineering (Data Science) Professionals.",
+      "labs": [
+        {
+          "name": "Data Engineering Lab",
+          "location": "Room 405, Third Floor",
+          "description": "Configured for database systems, data warehousing, and ETL pipeline design."
+        },
+        {
+          "name": "Machine Learning Lab",
+          "location": "Room 406, Third Floor",
+          "description": "Optimized for modeling, analysis, and deploying ML pipelines on modern CPU/GPU setups."
+        },
+        {
+          "name": "Data Visualization Lab",
+          "location": "Room 407, Third Floor",
+          "description": "Equipped with data visualization tools (Tableau, PowerBI, Python libraries) to model and present insights."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Tabassum Maktum",
+          "designation": "HOD & Assistant Professor",
+          "qualification": "Ph.D. (CSE)",
+          "experience": "22 yrs"
+        },
+        {
+          "name": "Prof. Shahegul Afroz",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (CSE-WE)",
+          "experience": "8 yrs"
+        },
+        {
+          "name": "Prof. Renuka Chimankare",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (EE) & (Ph.D.)*",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Prof. Mohd. Imran Akhtar",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech.",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Zeeshan Zainuddin Khan",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (CSE)",
+          "experience": "10 yrs",
+          "image_url": "/images/engineering/ds/zeeshan_zainuddin_khan.avif"
+        }
+      ],
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-faculty/",
+      "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-events/",
+      "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-data-science-admissions/",
+      "activities_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-activities/",
+      "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-achievements/"
+    },
+    {
+      "code": "ECE",
+      "name": "Electrical & Computer Engineering (Erstwhile Electrical Engineering)",
+      "intake": 60,
+      "duration": "4 years (B.Tech)",
+      "hod": {
+        "name": "Dr. Shaikh Afzal N. A.",
+        "designation": "HOD & Associate Professor",
+        "qualification": "M.E. (Electronics), Ph.D.",
+        "experience": "24 years",
+        "image_url": "/images/engineering/ece/afzal_nehal_ahmed_shaikh.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Electrical & Computer Engineering that others would wish to emulate.",
+      "mission": "Creating Exuberant Electrical & Computer Engineering Professionals.",
+      "labs": [
+        {
+          "name": "Research & Project Lab",
+          "location": "Room B-306, Second Floor",
+          "description": "Cost: \u20b92,74,040 | Equipped with advanced computer systems and projector for research, hardware design, and student capstone projects."
+        },
+        {
+          "name": "Network Lab",
+          "location": "Room B-307, Second Floor",
+          "description": "Cost: \u20b95,75,493 | Features 22 computer stations running Ubuntu, equipped with SCILAB, MATLAB, and open source PCB design software."
+        },
+        {
+          "name": "Digital Electronics Lab",
+          "location": "Room B-309, Second Floor",
+          "description": "Cost: \u20b94,95,753 | Features bridge rectifiers, thyristors, light dimmers, muffle furnaces, m-c-s kits, and 555 timer timing circuit analyzers."
+        },
+        {
+          "name": "Electrical Machine Lab",
+          "location": "Room B-103, Ground Floor",
+          "description": "Cost: \u20b929,33,548 | Equipped with VFD control panel, 3-phase lamp banks, thyristor DC supplies, resistive loads, and retardation test setups."
+        },
+        {
+          "name": "Switch Gear & Protection Lab",
+          "location": "Room B-305, Second Floor",
+          "description": "Cost: \u20b916,27,518 | State-of-the-art workstations for distance, differential, over-current, and motor protection systems demonstration."
+        },
+        {
+          "name": "Basics of Electrical Engineering Lab",
+          "location": "Room B-303, Second Floor",
+          "description": "Cost: \u20b911,16,380 | Contains Norton/Thevenin/Superposition theorem kits, AC circuits testing, and gate logic circuit boards."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Shaikh Afzal N. A.",
+          "designation": "HOD & Associate Professor",
+          "qualification": "M.E. (Electronics), Ph.D.",
+          "experience": "24 yrs",
+          "image_url": "/images/engineering/ece/afzal_nehal_ahmed_shaikh.avif"
+        },
+        {
+          "name": "Prof. Shraddha Hule",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Power Elect. & Drives)",
+          "experience": "11 yrs"
+        },
+        {
+          "name": "Prof. Yakub H. Khan",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech (Drives & Control)",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Prof. Khan Mohsin A.",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (EXTC), (Ph.D.)*",
+          "experience": "15 yrs"
+        },
+        {
+          "name": "Prof. Shameer Shaikh",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (EPS), Ph.D.*",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Shradha Kumawat",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Power System)",
+          "experience": "4 yrs"
+        },
+        {
+          "name": "Prof. Pritika Patil",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Control System)",
+          "experience": "9 yrs"
+        },
+        {
+          "name": "Prof. Sheeba Naaz Ansari",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech.(CE)",
+          "experience": "3 yrs"
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Fayyaz Ahmed Shaikh",
+        "cgpi": 8.62,
+        "quote": "I owe my success to the department's exceptional teaching and career support. Industry-relevant projects and workshops enhanced my problem-solving skills."
+      },
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/",
+      "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/electrical-engineering-labs/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/electrical-engineering-staff/",
+      "syllabus_url": "https://soet.aiktc.ac.in/ee-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/ee-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/ee-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-events/",
+      "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-alumni/",
+      "admission_url": "https://soet.aiktc.ac.in/bachelor-of-electrical-engineering-admissions/",
+      "placements_url": "https://soet.aiktc.ac.in/ece-placement-details/"
+    },
+    {
+      "code": "ECS",
+      "name": "Electronics and Computer Science (Erstwhile Electronics & Telecommunication Engineering)",
+      "intake": 60,
+      "duration": "4 years (B.Tech)",
+      "established_year": "2020-21",
+      "hod": {
+        "name": "Prof. Bandanawaz Kotiyal",
+        "designation": "HOD",
+        "qualification": "M.Tech (Digital Communication)",
+        "experience": "24 years",
+        "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Electronics and Computer Science Engineering that others would wish to emulate.",
+      "mission": "Creating Exuberant Electronics and Computer Science Engineering Professionals.",
+      "labs": [
+        {
+          "name": "Analog Circuit Design Lab",
+          "location": "Room 318, Second Floor",
+          "description": "Cost: \u20b914.22 Lakh | Equipped with Aplab 38038 CROs, function generators, and analog components for circuit analysis and testing."
+        },
+        {
+          "name": "Signal Processing and Computation Lab",
+          "location": "Room 317, Second Floor",
+          "description": "Cost: \u20b923.9 Lakh | Powered by Lenovo workstations running software tools for signal processing, modeling, and simulation."
+        },
+        {
+          "name": "Embedded Lab",
+          "location": "Room 313, Second Floor",
+          "description": "Cost: \u20b918.5 Lakh | Equipped with Falcon 16-channel logic analyzers, microcontroller kits, and IDE interfaces for system design."
+        },
+        {
+          "name": "Communication Lab",
+          "location": "Room 312, Second Floor",
+          "description": "Cost: \u20b914.6 Lakh | Equipped with Aplab 3MHz function generators, modulation/demodulation kits, and RF testing equipment."
+        },
+        {
+          "name": "Network and Simulation Lab",
+          "location": "Room 311, Second Floor",
+          "description": "Cost: \u20b926.9 Lakh | Features Dell Optiplex workstations running networking and simulation tools (Cisco Packet Tracer, NS2)."
+        },
+        {
+          "name": "Microwave Engineering Lab",
+          "location": "Room 310, Second Floor",
+          "description": "Cost: \u20b915.03 Lakh | Equipped with Hameg Germany HMS3010 Spectrum Analyzers, waveguide setups, and microwave trainers."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Prof. Bandanawaz Kotiyal",
+          "designation": "HOD",
+          "qualification": "M.Tech (Digital Comm.)",
+          "experience": "24 yrs",
+          "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+        },
+        {
+          "name": "Dr. Geeta Desai",
+          "designation": "Associate Professor",
+          "qualification": "M.E., Ph.D.",
+          "experience": "21 yrs"
+        },
+        {
+          "name": "Dr. Riyaz Pathan",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (EXTC), Ph.D.",
+          "experience": "17 yrs"
+        },
+        {
+          "name": "Prof. Shahin Athavani",
+          "designation": "Assistant Professor",
+          "qualification": "M.E., Ph.D.*",
+          "experience": "24 yrs"
+        },
+        {
+          "name": "Prof. Kashif Kazmi",
+          "designation": "Assistant Professor",
+          "qualification": "ME (EXTC Engg.)",
+          "experience": "5 yrs"
+        },
+        {
+          "name": "Prof. Ganasekaran A.",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (PC & I)",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Umar Masumdar",
+          "designation": "Assistant Professor",
+          "qualification": "M.E.",
+          "experience": null
+        },
+        {
+          "name": "Prof. Ismaeel Shaikh",
+          "designation": "Teaching Assistant",
+          "qualification": "M.Tech.",
+          "experience": null
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Siraj Patel",
+        "designation": "Security Associate and IT Operations Consultant at Cipherbeam Technologies",
+        "quote": "The dedicated faculty, industry-aligned curriculum, and hands-on learning through labs, workshops, and internships helped me build strong technical skills."
+      },
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/",
+      "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/electronics-and-computer-science-labs/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/electronics-and-computer-science-staff/",
+      "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-events/",
+      "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-alumni/",
+      "placements_url": "https://soet.aiktc.ac.in/ecs-placements/"
+    },
+    {
+      "code": "MECH",
+      "name": "Mechanical Engineering",
+      "intake": 60,
+      "duration": "4 years (B.Tech)",
+      "hod": {
+        "name": "Prof. Zakir Ansari",
+        "designation": "HOD",
+        "qualification": "M.Tech (Mech.), (Ph.D)*",
+        "experience": "26 years",
+        "email": "zakir.ansari@aiktc.ac.in",
+        "image_url": "/images/engineering/mechanical/zakir_ansari.avif"
+      },
+      "vision": "To be the most sought after academic, research and practice based department of Mechanical Engineering that others would wish to emulate.",
+      "mission": "Creating Exuberant Mechanical Engineering Professionals.",
+      "labs": [
+        {
+          "name": "Drawing Hall",
+          "location": "Room B-211, First Floor",
+          "description": "Cost: \u20b98,69,706 | Equipped with Godrej drawing tables and drawing drafting boards for engineering graphics courses."
+        },
+        {
+          "name": "Heat Transfer and Refrigeration and Air Conditioning Lab",
+          "location": "Room B-112, Ground Floor",
+          "description": "Cost: \u20b99,14,712 | Features air conditioning test rigs, heat exchanger apparatus, and thermal conduction setups."
+        },
+        {
+          "name": "Theory of Machines and Mechanical Vibrations Lab",
+          "location": "Room B-216, First Floor",
+          "description": "Cost: \u20b93,13,829 | Contains kinematic pair models, gyroscope setups, governor apparatus, and vibration analyzers."
+        },
+        {
+          "name": "CAD/CAM Lab",
+          "location": "Room B-209, First Floor",
+          "description": "Cost: \u20b928,51,507 | Equipped with HP laserjet printers, CAD workstations, and design software (ANSYS, SolidWorks, AutoCAD)."
+        },
+        {
+          "name": "Thermal Engineering and I.C. Engine Lab",
+          "location": "Room B-110, Ground Floor",
+          "description": "Cost: \u20b917,23,479 | Features sectional working models of 2-stroke diesel engines and multi-cylinder petrol engine test rigs."
+        },
+        {
+          "name": "Mechatronics Lab",
+          "location": "Room B-113, Ground Floor",
+          "description": "Cost: \u20b915,78,308 | Equipped with hydraulic/pneumatic trainer kits, PLC modules, and sensors integration boards."
+        }
+      ],
+      "faculty": [
+        {
+          "name": "Prof. Javed Kazi",
+          "designation": "Assistant Professor",
+          "qualification": "M.E.(CAD/CAM+Robotics)",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Dr. Md. Asif I. Gandhi",
+          "designation": "Associate Professor",
+          "qualification": "M.E. (Production), Ph.D",
+          "experience": "27 yrs"
+        },
+        {
+          "name": "Prof. Mohammad Jawed",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Mfg. Sys Engg.)",
+          "experience": "23 yrs"
+        },
+        {
+          "name": "Prof. Zakir Ansari",
+          "designation": "HOD",
+          "qualification": "M.Tech (Mech.), (Ph.D)*",
+          "experience": "26 yrs",
+          "image_url": "/images/engineering/mechanical/zakir_ansari.avif"
+        },
+        {
+          "name": "Prof. Ghazi Altamash A.",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech (CAD/CAM)",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Atul Meshram",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Manufacturing), (Ph.D)*",
+          "experience": "25 yrs"
+        },
+        {
+          "name": "Prof. Nawaz Motiwala",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Machine Design), (Ph.D)*",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Momin Nafee",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (CAD/CAM+Robotics)",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Momin Mohd Z. M. I.",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (CAD/CAM+Robotics)",
+          "experience": "21 yrs"
+        },
+        {
+          "name": "Prof. Rahul Thavai",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Machine Design), (Ph.D)*",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Rizwan Mohd Sharif",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Mfg. Sys Engg.)",
+          "experience": "15 yrs"
+        },
+        {
+          "name": "Prof. Shaikh Saad Abdul L.",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech. (Machine Design)",
+          "experience": "12 yrs"
+        },
+        {
+          "name": "Prof. Yusuf Khan",
+          "designation": "Assistant Professor",
+          "qualification": "M.Tech. (Machine Design)(Ph.D)*",
+          "experience": "13 yrs"
+        },
+        {
+          "name": "Prof. Karve Amruta Rahul",
+          "designation": "Assistant Professor",
+          "qualification": "M.E. (Heat Power Engg.)",
+          "experience": "10 yrs"
+        },
+        {
+          "name": "Prof. Ashfaq Jamkhandikar",
+          "designation": "Assistant Professor",
+          "qualification": "M.E (Product Design & Development)",
+          "experience": "12 yrs"
+        }
+      ],
+      "alumni_testimonial": {
+        "name": "Junaid Mohsin Choulge",
+        "cgpi": 8.75,
+        "quote": "Every project, presentation, and practical experience added value to my academic and personal development."
+      },
+      "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/",
+      "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-labs/",
+      "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-staff/",
+      "syllabus_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-syllabus/",
+      "timetable_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-time-table/",
+      "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-academic-calendar/",
+      "events_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-events/",
+      "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-alumni/",
+      "admission_url": "https://soet.aiktc.ac.in/bachelor-of-mechanical-engineering-admissions/",
+      "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-achievements/"
+    }
+  ]
+}

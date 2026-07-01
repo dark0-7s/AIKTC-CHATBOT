@@ -1,0 +1,100 @@
+{
+    "overall": {
+        "total_placements": 310,
+        "highest_package_lpa": 6.0,
+        "average_package_lpa": 2.2
+    },
+    "branch_wise": {
+        "Mechanical Engineering": {
+            "count": 60,
+            "highest_package": 4.5,
+            "average_package": 2.13
+        },
+        "Civil Engineering": {
+            "count": 20,
+            "highest_package": 2.5,
+            "average_package": 1.64
+        },
+        "Electronics and Telecommunication Engineering": {
+            "count": 58,
+            "highest_package": 4.8,
+            "average_package": 1.82
+        },
+        "Electrical Engineering": {
+            "count": 36,
+            "highest_package": 2.5,
+            "average_package": 2.21
+        },
+        "Computer Engineering": {
+            "count": 45,
+            "highest_package": 6.0,
+            "average_package": 3.35
+        },
+        "Pharmacy": {
+            "count": 65,
+            "highest_package": 3.36,
+            "average_package": 2.15
+        },
+        "ELECTRICAL AND ELECTRONICS": {
+            "count": 21,
+            "highest_package": 2.4,
+            "average_package": 2.1
+        },
+        "MECHANICAL": {
+            "count": 4,
+            "highest_package": 2.5,
+            "average_package": 1.62
+        },
+        "First Year Engineering": {
+            "count": 1,
+            "highest_package": 1.2,
+            "average_package": 1.2
+        }
+    },
+    "year_wise": {
+        "2024": 45,
+        "2023": 3
+    },
+    "top_recruiters": [
+        {
+            "company": "Suchi Pvt Ltd",
+            "count": 26
+        },
+        {
+            "company": "Kosmics Engineer Ltd",
+            "count": 22
+        },
+        {
+            "company": "Vashe Integrated",
+            "count": 22
+        },
+        {
+            "company": "Green World",
+            "count": 13
+        },
+        {
+            "company": "Treese Pvt Ltd",
+            "count": 12
+        },
+        {
+            "company": "Intellect Bizware",
+            "count": 9
+        },
+        {
+            "company": "Tikona",
+            "count": 8
+        },
+        {
+            "company": "Neelam Health Care Pvt Ltd",
+            "count": 7
+        },
+        {
+            "company": "Reliance Jio",
+            "count": 7
+        },
+        {
+            "company": "Qspider Campus",
+            "count": 7
+        }
+    ]
+}

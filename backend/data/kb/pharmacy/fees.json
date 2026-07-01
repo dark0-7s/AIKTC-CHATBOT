@@ -1,0 +1,32 @@
+{
+  "academic_year": "2025-26",
+  "programs": {
+    "dpharm": {
+      "program_type": "Diploma in Pharmacy (D.Pharm)",
+      "duration_years": 2,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 60000, "development_fees": 0, "total_fees": 60000 },
+        { "year": 2, "tuition_fees": 60000, "development_fees": 0, "total_fees": 60000 }
+      ]
+    },
+    "bpharm": {
+      "program_type": "B.Pharm (Pharmacy)",
+      "duration_years": 4,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 94942, "development_fees": 12058, "total_fees": 107000 },
+        { "year": 2, "tuition_fees": 86222, "development_fees": 10778, "total_fees": 97000 },
+        { "year": 3, "tuition_fees": 68323, "development_fees": 8677,  "total_fees": 77000 },
+        { "year": 4, "tuition_fees": 68323, "development_fees": 8677,  "total_fees": 77000 }
+      ]
+    },
+    "mpharm": {
+      "program_type": "M.Pharm (Pharmacology)",
+      "duration_years": 2,
+      "annual_fees": [
+        { "year": 1, "tuition_fees": 100000, "development_fees": 10000, "total_fees": 110000 },
+        { "year": 2, "tuition_fees": 100000, "development_fees": 10000, "total_fees": 110000 }
+      ]
+    }
+  },
+  "notes": "Fees approved by Fees Regulating Authority (FRA), Maharashtra."
+}

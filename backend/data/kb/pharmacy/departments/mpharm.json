@@ -1,0 +1,25 @@
+{
+  "code": "MPHARM",
+  "name": "Master of Pharmacy in Pharmacology",
+  "duration": "2 years",
+  "intake": 10,
+  "hod_reference": "Under the purview of Dr. Abusufyan Shaikh and Dr. Shariq Syed (Dean)",
+  "eligibility": "B.Pharm with at least 55% marks and Non-Zero Positive GPAT Score.",
+  "labs": [
+    {
+      "name": "Advanced Pharmacology Lab",
+      "location": "SOP Building",
+      "description": "High-performance research laboratory equipped with micro-centrifuge, modern spectrophotometers, and organ baths."
+    },
+    {
+      "name": "M.Pharm Research Lab",
+      "location": "SOP Building",
+      "description": "Dedicated to postgraduate research projects, advanced formulation design, and analytical testing."
+    }
+  ],
+  "faculty": "Same as B.Pharm faculty; specialized guides for M.Pharm students as per university norms.",
+  "homepage_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/",
+  "staff_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/faculties/",
+  "academic_calendar_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/academic-calendar/",
+  "timetable_url": "https://aiktc.ac.in/m-pharm-in-pharmacology/mpharm-time-table/"
+}

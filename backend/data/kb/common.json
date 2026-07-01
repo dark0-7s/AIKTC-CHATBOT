@@ -1,0 +1,63 @@
+{
+  "name": "Anjuman-I-Islam's Kalsekar Technical Campus",
+  "short_name": "AIKTC",
+  "address": "Sector 16, Khanda Colony, New Panvel, Navi Mumbai – 410206",
+  "website": "www.aiktc.ac.in",
+  "virtual_tour_url": "https://www.youtube.com/watch?v=UP75aVsNqOU&t=1s",
+  "prospectus_url": "https://aiktc.ac.in/wp-content/uploads/2025/10/AIKTC-Prospectus-2025.pdf",
+  "timing": "8:00 AM – 5:00 PM, Monday to Saturday",
+  "established": 2010,
+  "approved_by": [
+    "AICTE",
+    "DTE Maharashtra",
+    "PCI (Pharmacy)",
+    "COA (Architecture)"
+  ],
+  "affiliated_to": "University of Mumbai",
+  "director": {
+    "name": "Dr. Ramjan Khatik",
+    "initials": "RK",
+    "qualification": "PhD · M.E.",
+    "experience": "25 years",
+    "email": "director@aiktc.ac.in",
+    "phone": "022-2745-0001",
+    "image_url": "/images/people/Dr-Ramzan-Khatik-Director.jpg"
+  },
+  "principal": {
+    "name": "Dr. Mohd. Mukhtar",
+    "initials": "MM",
+    "qualification": "PhD · M.E.",
+    "experience": "18 years",
+    "email": "principal@aiktc.ac.in",
+    "phone": "022-2745-0002",
+    "image_url": null
+  },
+  "contacts": {
+    "Admissions Office (Engineering)": "+91 81043 63070 · admissions@aiktc.ac.in · Mon–Sat 9 AM–5 PM",
+    "Admissions Office (Pharmacy)": "+91 70219 29084 · admissions@aiktc.ac.in · Mon–Sat 9 AM–5 PM",
+    "Admissions Office (Architecture)": "+91 81047 79747 · admissions@aiktc.ac.in · Mon–Sat 9 AM–5 PM",
+    "General Enquiry": "+91 91371 23439 · info@aiktc.ac.in",
+    "WhatsApp": "+91 91371 23439",
+    "Address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai - 410206"
+  },
+  "important_dates": {
+    "mhtcet_2025": "April–May 2025 (verify on cetcell.mahacet.org)",
+    "cap_round1": "July 2025 (verify on mahacet.org)",
+    "admission_last_date": "August 2025 (verify on dte.maharashtra.gov.in)"
+  },
+  "anti_ragging": "Zero tolerance policy. Report at 1800-180-5522 or anti.ragging@aiktc.ac.in",
+  "hostel": {
+    "available": true,
+    "boys_capacity": 200,
+    "girls_capacity": 150,
+    "fees_per_year": 85000,
+    "mess_per_month": 4500,
+    "facilities": [
+      "24/7 security",
+      "WiFi",
+      "Laundry",
+      "Common room",
+      "Medical room"
+    ]
+  }
+}

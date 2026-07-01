@@ -1,0 +1,142 @@
+{
+  "code": "COMP",
+  "name": "Computer Engineering",
+  "intake": 120,
+  "duration": "4 years (B.Tech)",
+  "hod": {
+    "name": "Prof. Tabrez Khan",
+    "designation": "HOD",
+    "qualification": "M.E. (Computer Engineering)",
+    "experience": "21 years",
+    "image_url": "/images/engineering/co/tabrez_khan.avif"
+  },
+  "vision": "To be the most sought after academic, research and practice based department of Computer Engineering that others would wish to emulate.",
+  "mission": "Creating Exuberant Computer Engineering Professionals.",
+  "labs": [
+    {
+      "name": "Machine Learning Lab",
+      "location": "Room 401, Third Floor",
+      "description": "Area: 112 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+    },
+    {
+      "name": "Data Engineering Lab",
+      "location": "Room 402, Third Floor",
+      "description": "Area: 80 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+    },
+    {
+      "name": "Software Engineering Lab",
+      "location": "Room 413, Third Floor",
+      "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Artificial Intelligence Lab",
+      "location": "Room 414, Third Floor",
+      "description": "Area: 80 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Systems Programming Lab",
+      "location": "Room 415, Third Floor",
+      "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Cloud Computing Lab",
+      "location": "Room 416, Third Floor",
+      "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Database and Analytics Lab",
+      "location": "Room 417, Third Floor",
+      "description": "Area: 104 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Project Lab",
+      "location": "Room 418, Third Floor",
+      "description": "Area: 145 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Programming Paradigms Lab",
+      "location": "Room 419, Third Floor",
+      "description": "Area: 77 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Electronics and Signal Processing Lab",
+      "location": "Room 420, Third Floor",
+      "description": "Area: 77 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    },
+    {
+      "name": "Network and Security Lab",
+      "location": "Room 421, Third Floor",
+      "description": "Area: 97 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Prof. Tabrez Khan",
+      "designation": "HOD",
+      "qualification": "M.E. (Comp. Engg.)",
+      "experience": "21 yrs",
+      "image_url": "/images/engineering/co/tabrez_khan.avif"
+    },
+    {
+      "name": "Dr. Muhib Anwar Lambay",
+      "designation": "Assistant Professor",
+      "qualification": "B.E., M.Tech, Ph.D.",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Prof. Irfan Jamkhandikar",
+      "designation": "Assistant Professor",
+      "qualification": "M.E. Comp. Engg.",
+      "experience": "12 yrs"
+    },
+    {
+      "name": "Prof. Abdul Majid Ansari",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech (CSE)",
+      "experience": "17 yrs"
+    },
+    {
+      "name": "Prof. Safa Sadruddin",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech, (Ph.D)*",
+      "experience": "14 yrs"
+    },
+    {
+      "name": "Prof. Mukhtar Ansari",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech, (Ph.D)*",
+      "experience": "15 yrs"
+    },
+    {
+      "name": "Prof. Nusrat Jahan",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech (CSE)",
+      "experience": "4 yrs"
+    },
+    {
+      "name": "Prof. Samreen Banu Kazi",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech (CSE)",
+      "experience": "4 yrs"
+    },
+    {
+      "name": "Prof. Rehaal Qureshi",
+      "designation": "Teaching Assistant",
+      "qualification": "(M.E. Comp. Engg.)*",
+      "experience": "9 yrs"
+    }
+  ],
+  "alumni_testimonial": {
+    "name": "Khan Arshad Abdulla",
+    "cgpi": 9.43,
+    "quote": "The Computer Engineering Department at AIKTC is a matter of deep pride and gratitude for me. Those formative years laid a solid foundation for both my professional journey and personal development."
+  },
+  "homepage_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/",
+  "labs_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-labs/",
+  "staff_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-staff/",
+  "syllabus_url": "https://soet.aiktc.ac.in/co-syllabus/",
+  "timetable_url": "https://soet.aiktc.ac.in/co-time-table/",
+  "academic_calendar_url": "https://soet.aiktc.ac.in/co-academic-calendar/",
+  "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/co-events/",
+  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-alumni/"
+}

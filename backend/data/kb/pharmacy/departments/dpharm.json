@@ -1,0 +1,100 @@
+{
+  "code": "DPHARM",
+  "name": "Diploma in Pharmacy",
+  "duration": "2 years",
+  "intake": 60,
+  "hod": {
+    "name": "Dr. Abusufyan Shaikh",
+    "designation": "HOD & Associate Professor",
+    "qualification": "M. Pharm, Ph.D.",
+    "experience": "15 years",
+    "image_url": "/images/pharmacy/dpharm/abusufyan_shaikh.png"
+  },
+  "vision": "To be the most sought after academic, research and practice-based department of diploma pharmacy that others would wish to emulate.",
+  "mission": "Creating exuberant pharmaceutical professionals.",
+  "mission_elements": [
+    "To implement the Outcome Based Education (OBE) model.",
+    "To encourage innovative teaching skills, research and practice.",
+    "To provide necessary facilities for quality academic research.",
+    "To create ecosystem for professional competition and lifelong learning.",
+    "To prepare students for higher studies, entrepreneurship, employment, research."
+  ],
+  "labs": [
+    {
+      "name": "Biotechnology Lab",
+      "location": "SOP Building",
+      "description": "Equipped with basic microbiological testing kits, autoclaves, and incubators."
+    },
+    {
+      "name": "Pharmaceutics Lab",
+      "location": "SOP Building",
+      "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs."
+    },
+    {
+      "name": "Pharmaceutical Chemistry Lab",
+      "location": "SOP Building",
+      "description": "Equipped for inorganic/organic chemistry synthesis, qualitative analysis, and titration setups."
+    },
+    {
+      "name": "Pharmacology Lab",
+      "location": "SOP Building",
+      "description": "Features anatomical models, charts, and basic organ bath setups for practical instruction."
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Dr. Abusufyan Shaikh",
+      "designation": "HOD & Associate Professor",
+      "qualification": "M. Pharm, Ph.D.",
+      "experience": "15 yrs",
+      "image_url": "/images/pharmacy/dpharm/abusufyan_shaikh.png"
+    },
+    {
+      "name": "Lect. Nazilahayat Kasu",
+      "designation": "Lecturer",
+      "qualification": "B. Pharm.",
+      "experience": "7 yrs"
+    },
+    {
+      "name": "Lect. Sakina Khan",
+      "designation": "Lecturer",
+      "qualification": "B. Pharm.",
+      "experience": "7 yrs"
+    },
+    {
+      "name": "Lec. Hanif Dhuru",
+      "designation": "Lecturer",
+      "qualification": "B. Pharm.",
+      "experience": "6 yrs"
+    },
+    {
+      "name": "Lect. Shaikh Ansari",
+      "designation": "Lecturer",
+      "qualification": "B. Pharm.",
+      "experience": "6 yrs"
+    },
+    {
+      "name": "Lec. Annie Mathew",
+      "designation": "Lecturer",
+      "qualification": "M. Pharm.",
+      "experience": "16 yrs"
+    },
+    {
+      "name": "Lect. Ayesha Shaikh",
+      "designation": "Lecturer",
+      "qualification": "M. Pharm.",
+      "experience": "1 yr"
+    }
+  ],
+  "achievements": [
+    "Organized National-Level Quiz Competition.",
+    "Two student groups awarded \u20b92 Lakhs in Maharashtra State Students Innovation Challenge.",
+    "Three students started their own start-up."
+  ],
+  "alumni_testimonial": {
+    "name": "Mr. Raju Madan Yadav",
+    "designation": "Pharmacist Customer Support, TrueMeds",
+    "quote": "The solid academic foundation, hands-on training, and continuous mentorship I received during my D.Pharm program played a crucial role in shaping my career."
+  },
+  "homepage_url": "https://aiktc.ac.in/diploma-in-pharmacy/"
+}
