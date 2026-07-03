@@ -715,4 +715,70 @@ def kb_to_markdown(kb: dict) -> str:
     if kb.get("activities"):
         lines.extend(_render_activities(kb["activities"]))
 
+    # ── CAP Section ──────────────────────────────────────────────
+    cap = kb.get("cap", {})
+    if cap:
+        lines.append("\n---\n## CAP (Centralised Admission Process) – Maharashtra State")
+        lines.append(f"**{cap.get('meta', {}).get('notice_title', '')}**")
+        lines.append(f"**⚠️ {cap.get('meta', {}).get('disclaimer', '')}**")
+        lines.append(f"Source: {cap.get('meta', {}).get('source', '')}")
+
+        # Schedule
+        schedule = cap.get("schedule", [])
+        if schedule:
+            lines.append("\n### Provisional Schedule 2026‑27")
+            lines.append("| Activity | Start Date | End Date |")
+            lines.append("|----------|------------|----------|")
+            for s in schedule:
+                lines.append(f"| {s.get('activity', '')} | {s.get('start', '')} | {s.get('end', '')} |")
+
+        # Documents
+        docs = cap.get("documents_required", [])
+        if docs:
+            lines.append("\n### Required Documents")
+            for d in docs:
+                note = f" – {d['note']}" if d.get('note') else ""
+                lines.append(f"- **{d['name']}**{note}")
+
+        # Eligibility (keep brief)
+        lines.append("\n### Eligibility (Summary)")
+        elig = cap.get("eligibility", {})
+        lines.append(f"- General: {elig.get('general', '')}")
+        # Add just the most common pathways
+        if "maharashtra_pcm" in elig:
+            lines.append(f"- Maharashtra PCM: {elig['maharashtra_pcm'].get('min_marks', '')} in PCM, non‑zero MHT‑CET or JEE Main score.")
+        if "all_india_oms" in elig:
+            lines.append(f"- All India (OMS): Same academic eligibility; no reserved category relaxation. JEE Main or MHT‑CET required.")
+
+        # Registration Fee
+        fees = cap.get("registration_fee", {})
+        if fees:
+            lines.append("\n### Registration Fee")
+            lines.append(f"- MHT‑CET registered candidates: {fees.get('mhtcet_2026_registered', 'N/A')}")
+            lines.append(f"- JEE/NEET (General): {fees.get('jee_neet_non_mhtcet_general', 'N/A')}")
+            lines.append(f"- JEE/NEET (Reserved): {fees.get('jee_neet_non_mhtcet_reserved', 'N/A')}")
+            lines.append(f"Payment: {fees.get('mode', '')}")
+
+        # Verification Modes
+        vmodes = cap.get("verification_modes", {})
+        if vmodes:
+            lines.append("\n### Document Verification")
+            lines.append(f"- **E‑Scrutiny:** {vmodes.get('e_scrutiny', '')}")
+            lines.append(f"- **Physical Scrutiny:** {vmodes.get('physical_scrutiny', '')}")
+
+        # Key Instructions (only top 3)
+        instructions = cap.get("important_instructions", [])
+        if instructions:
+            lines.append("\n### Key Instructions")
+            for instr in instructions[:3]:
+                lines.append(f"- {instr}")
+
+        # Helpline
+        helpline = cap.get("helpline", {})
+        if helpline:
+            lines.append("\n### Helpline & Official Site")
+            phones = helpline.get("phone", [])
+            phone_str = ", ".join(phones) if isinstance(phones, list) else str(phones)
+            lines.append(f"Phone: {phone_str} | Email: {helpline.get('email', '')} | Website: {helpline.get('website', '')}")
+
     return "\n".join(lines)

@@ -33,6 +33,10 @@ from fastapi.security import (
     HTTPBearer,
 )
 
+from prompt.extraction import CUTOFF_EXTRACTION_PROMPT, FACULTY_EXTRACTION_PROMPT, COMMON_EXTRACTION_PROMPT
+from llm.gemini_client import call_gemini
+from engine.aliases import DEPARTMENT_ALIASES, CATEGORY_ALIASES
+
 from config import settings
 from engine.verdict import reload_cutoffs
 from kb.loader import load_and_merge_kb
@@ -829,3 +833,105 @@ async def dashboard_feedback(
         })
 
     return {"data": data}
+# ==============================================================================
+# SMART KB UPLOAD
+# ==============================================================================
+@router.post(
+    "/upload/smart",
+    summary="Smart KB Upload (MVP)",
+    description="Extracts structured KB data from raw text using Gemini.",
+)
+async def upload_smart_kb(
+    type: str = Form(...),
+    file: UploadFile = File(...),
+    _: HTTPAuthorizationCredentials = Depends(verify_bearer_token)
+):
+    """
+    1. Read raw text from the uploaded file.
+    2. Prompt Gemini to extract structured JSON.
+    3. Validate extracted data against schema.
+    4. Return proposed JSON and validation errors.
+    """
+    if type not in ["cutoffs", "faculty", "common"]:
+        raise HTTPException(status_code=400, detail="Invalid extraction type")
+        
+    try:
+        content_bytes = await file.read()
+        raw_text = content_bytes.decode('utf-8', errors='replace')
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to read file: {str(e)}")
+        
+    if type == "cutoffs":
+        prompt_template = CUTOFF_EXTRACTION_PROMPT
+    elif type == "faculty":
+        prompt_template = FACULTY_EXTRACTION_PROMPT
+    else:
+        prompt_template = COMMON_EXTRACTION_PROMPT
+        
+    prompt = prompt_template.replace("{raw_text}", raw_text)
+    
+    prompt_data = {
+        "contents": [
+            {
+                "role": "user",
+                "parts": [{"text": prompt}]
+            }
+        ],
+        "generationConfig": {
+            "responseMimeType": "application/json"
+        }
+    }
+    
+    response = await call_gemini(prompt_data)
+    if not response or 'candidates' not in response:
+        raise HTTPException(status_code=500, detail="Gemini API failed to process the request.")
+        
+    try:
+        response_text = response['candidates'][0]['content']['parts'][0]['text']
+        extracted_data = json.loads(response_text)
+    except Exception as e:
+        logger.error(f"Failed to parse Gemini JSON: {e}\n{response}")
+        raise HTTPException(status_code=500, detail="Gemini returned invalid JSON.")
+        
+    errors = []
+    warnings = []
+    
+    # Validation
+    if type == "cutoffs":
+        if "cutoffs" not in extracted_data:
+            errors.append("Missing 'cutoffs' root key in JSON.")
+        else:
+            for i, entry in enumerate(extracted_data["cutoffs"]):
+                branch = entry.get("branch", "")
+                if branch not in DEPARTMENT_ALIASES:
+                    errors.append(f"Row {i+1}: Unknown department code '{branch}'")
+                cat = entry.get("category", "")
+                if cat not in CATEGORY_ALIASES:
+                    errors.append(f"Row {i+1}: Unknown category '{cat}'")
+                unit = entry.get("cutoff_unit", "")
+                if unit not in ("percentile", "marks"):
+                    errors.append(f"Row {i+1}: cutoff_unit must be 'percentile' or 'marks'")
+                cutoff = entry.get("cutoff", -1)
+                if not isinstance(cutoff, (int, float)) or cutoff < 0:
+                    errors.append(f"Row {i+1}: Invalid cutoff number.")
+                if unit == "percentile" and cutoff > 100:
+                    errors.append(f"Row {i+1}: Percentile cutoff > 100")
+                    
+    elif type == "faculty":
+        if "faculty" not in extracted_data:
+            errors.append("Missing 'faculty' root key in JSON.")
+        else:
+            for i, f in enumerate(extracted_data["faculty"]):
+                if not f.get("name"):
+                    errors.append(f"Row {i+1}: Missing faculty name.")
+                    
+    elif type == "common":
+        if not extracted_data.get("director"):
+            errors.append("Missing 'director' info.")
+            
+    return {
+        "proposed_data": extracted_data,
+        "validation_errors": errors,
+        "warnings": warnings
+    }
+

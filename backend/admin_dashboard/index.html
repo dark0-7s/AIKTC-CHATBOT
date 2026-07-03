@@ -1750,5 +1750,197 @@ loadTopics();
     </div> <!-- /.content-wrapper -->
   </main> <!-- /.main-content -->
 </div> <!-- /.app-container -->
+
+<!-- SMART UPLOAD MODAL -->
+<style>
+.modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+  display: none; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-overlay.active { display: flex; animation: fadeIn 0.3s; }
+.modal-content {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius); width: 90%; max-width: 800px;
+  max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;
+}
+.modal-header {
+  padding: 20px; border-bottom: 1px solid var(--border-color);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.modal-body { padding: 20px; overflow-y: auto; flex: 1; }
+.modal-footer {
+  padding: 20px; border-top: 1px solid var(--border-color);
+  display: flex; justify-content: flex-end; gap: 12px;
+}
+.validation-error { color: var(--danger); font-size: 13px; margin-bottom: 8px; }
+.validation-warning { color: var(--warning); font-size: 13px; margin-bottom: 8px; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+
+<div class="modal-overlay" id="smart-upload-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 style="margin:0"><i class="ti ti-wand"></i> AI Smart Import</h3>
+      <button onclick="closeSmartUploadModal()" style="background:transparent;border:none;color:white;cursor:pointer;"><i class="ti ti-x" style="font-size:24px"></i></button>
+    </div>
+    <div class="modal-body">
+      <div id="smart-upload-step1">
+        <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Upload raw text files (TXT, CSV) and Gemini will automatically extract and format the data.</p>
+        <div class="filter-group" style="margin-bottom:16px;">
+          <label>Data Type</label>
+          <select id="smart-upload-type">
+            <option value="cutoffs">Cutoffs</option>
+            <option value="faculty">Faculty & Labs</option>
+            <option value="common">Common Info (Contacts, Director)</option>
+          </select>
+        </div>
+        <div class="filter-group" style="margin-bottom:16px;">
+          <label>File (txt/csv)</label>
+          <input type="file" id="smart-upload-file" accept=".txt,.csv">
+        </div>
+        <div class="filter-group">
+          <label>Target Path (e.g. cutoffs.csv or engineering.json)</label>
+          <input type="text" id="smart-upload-path" placeholder="engineering.json">
+        </div>
+      </div>
+      
+      <div id="smart-upload-step2" style="display:none;">
+        <h4 style="margin-bottom:12px">Extraction Preview</h4>
+        <div id="smart-validation-box" style="margin-bottom:16px;background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;"></div>
+        <pre id="smart-preview-data" style="background:rgba(0,0,0,0.3);padding:12px;border-radius:8px;font-size:12px;max-height:300px;overflow-y:auto;white-space:pre-wrap;"></pre>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeSmartUploadModal()">Cancel</button>
+      <button class="btn btn-primary" id="btn-smart-process" onclick="processSmartUpload()">Extract Data</button>
+      <button class="btn btn-success" id="btn-smart-approve" style="display:none;" onclick="approveSmartUpload()">Approve & Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let smartExtractedData = null;
+
+function openSmartUploadModal() {
+  document.getElementById('smart-upload-step1').style.display = 'block';
+  document.getElementById('smart-upload-step2').style.display = 'none';
+  document.getElementById('btn-smart-process').style.display = 'inline-flex';
+  document.getElementById('btn-smart-approve').style.display = 'none';
+  document.getElementById('smart-upload-file').value = '';
+  document.getElementById('smart-upload-modal').classList.add('active');
+}
+
+function closeSmartUploadModal() {
+  document.getElementById('smart-upload-modal').classList.remove('active');
+}
+
+async function processSmartUpload() {
+  const fileInput = document.getElementById('smart-upload-file');
+  const type = document.getElementById('smart-upload-type').value;
+  if (!fileInput.files.length) return showToast("Please select a file", "error");
+  
+  const formData = new FormData();
+  formData.append('file', fileInput.files[0]);
+  formData.append('type', type);
+  
+  const btn = document.getElementById('btn-smart-process');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading-spinner"></span> Extracting...';
+  
+  try {
+    const resp = await fetch('/api/admin/upload/smart', {
+      method: 'POST',
+      body: formData,
+      credentials: 'include'
+    });
+    
+    const data = await resp.json();
+    if (resp.ok) {
+      smartExtractedData = data.proposed_data;
+      
+      document.getElementById('smart-upload-step1').style.display = 'none';
+      document.getElementById('smart-upload-step2').style.display = 'block';
+      
+      const vBox = document.getElementById('smart-validation-box');
+      vBox.innerHTML = '';
+      let hasErrors = false;
+      
+      if (data.validation_errors && data.validation_errors.length > 0) {
+        hasErrors = true;
+        data.validation_errors.forEach(e => {
+          vBox.innerHTML += `<div class="validation-error"><i class="ti ti-alert-triangle"></i> ${e}</div>`;
+        });
+      } else {
+        vBox.innerHTML = '<div style="color:var(--success);"><i class="ti ti-check"></i> Validation passed</div>';
+      }
+      
+      if (data.warnings && data.warnings.length > 0) {
+        data.warnings.forEach(w => {
+          vBox.innerHTML += `<div class="validation-warning"><i class="ti ti-info-circle"></i> ${w}</div>`;
+        });
+      }
+      
+      let previewText = JSON.stringify(smartExtractedData, null, 2);
+      if (type === 'cutoffs' && smartExtractedData.cutoffs) {
+         previewText = "school,branch,category,year,cutoff,cutoff_unit\n";
+         smartExtractedData.cutoffs.forEach(c => {
+             previewText += `${c.school},${c.branch},${c.category},${c.year},${c.cutoff},${c.cutoff_unit}\n`;
+         });
+         smartExtractedData = previewText; // Save as CSV string
+      }
+      
+      document.getElementById('smart-preview-data').textContent = previewText;
+      
+      btn.style.display = 'none';
+      const approveBtn = document.getElementById('btn-smart-approve');
+      approveBtn.style.display = 'inline-flex';
+      approveBtn.disabled = hasErrors;
+      
+    } else {
+      showToast(data.detail || "Extraction failed", "error");
+    }
+  } catch (e) {
+    showToast("Error processing file", "error");
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = 'Extract Data';
+  }
+}
+
+async function approveSmartUpload() {
+  const path = document.getElementById('smart-upload-path').value;
+  if (!path) return showToast("Please specify Target Path", "error");
+  
+  const content = typeof smartExtractedData === 'string' ? smartExtractedData : JSON.stringify(smartExtractedData, null, 2);
+  
+  const btn = document.getElementById('btn-smart-approve');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading-spinner"></span> Saving...';
+  
+  try {
+    const resp = await fetch('/api/admin/kb/file', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: path, content: content }),
+      credentials: 'include'
+    });
+    
+    if (resp.ok) {
+      showToast("Smart Import successful!");
+      closeSmartUploadModal();
+      loadKBTree();
+    } else {
+      const d = await resp.json();
+      showToast(d.detail || "Failed to save file", "error");
+    }
+  } catch (e) {
+    showToast("Save error", "error");
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = 'Approve & Save';
+  }
+}
+</script>
 </body>
 </html>

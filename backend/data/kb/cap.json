@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "notice_title": "B.E. / B. Tech. (4 Years) & Integrated M.E. / M. Tech. (5 Years) Admission 2026-27",
+    "source": "CET Cell Mumbai, Notice No. TED 1226/C.R.07/CAP/BE/Admission Notice No: 1/2026/1582, dated July 2, 2026",
+    "disclaimer": "All dates are provisional. Please verify on www.mahacet.org. Schedules may change."
+  },
+  "schedule": [
+    {
+      "activity": "Online Registration & Uploading of Documents",
+      "start": "02-07-2026",
+      "end": "12-07-2026 (up to 5:00 PM)"
+    },
+    {
+      "activity": "Document Verification & Application Confirmation (E-Scrutiny / Physical Scrutiny)",
+      "start": "03-07-2026",
+      "end": "13-07-2026 (up to 5:00 PM)"
+    },
+    {
+      "activity": "Display of Provisional Merit List",
+      "start": "-",
+      "end": "15-07-2026"
+    },
+    {
+      "activity": "Submission of Grievances (for corrections in provisional merit list)",
+      "start": "16-07-2026",
+      "end": "18-07-2026 (up to 5:00 PM)"
+    },
+    {
+      "activity": "Display of Final Merit List",
+      "start": "-",
+      "end": "20-07-2026"
+    },
+    {
+      "activity": "Option Form, CAP Allotment & Reporting Schedule",
+      "start": "-",
+      "end": "Will be declared shortly"
+    }
+  ],
+  "documents_required": [
+    {
+      "name": "CET / JEE Marksheet 2026",
+      "note": "MHT-CET or JEE Main or NEET scorecard as applicable."
+    },
+    {
+      "name": "HSC (10+2) Marksheet",
+      "note": ""
+    },
+    {
+      "name": "SSC (10th) Marksheet",
+      "note": ""
+    },
+    {
+      "name": "HSC College Leaving Certificate",
+      "note": "Transfer / Leaving certificate from last institution."
+    },
+    {
+      "name": "Student Domicile Certificate",
+      "note": "For Maharashtra State candidates."
+    },
+    {
+      "name": "Nationality Certificate",
+      "note": "Required only if Indian nationality is not mentioned in Leaving Certificate."
+    },
+    {
+      "name": "Provisional Eligibility Certificate",
+      "note": "Mandatory for OMS candidates and Diploma holders."
+    },
+    {
+      "name": "Gap Certificate",
+      "note": "If there is a gap in education after 10+2."
+    },
+    {
+      "name": "Caste Certificate",
+      "note": "For reserved candidates."
+    },
+    {
+      "name": "Caste Validity Certificate",
+      "note": "SC/ST need Tribe Validity; others need Caste Validity."
+    },
+    {
+      "name": "Non-Creamy Layer Certificate",
+      "note": "For OBC/SBC/SEBC/VJ-NT - valid up to 31-03-2027."
+    },
+    {
+      "name": "Migration Certificate",
+      "note": "For OMS candidates from other boards/universities."
+    },
+    {
+      "name": "Declaration Affidavit for Minority",
+      "note": "If religion not mentioned in Leaving Certificate."
+    },
+    {
+      "name": "Aadhar Card",
+      "note": ""
+    },
+    {
+      "name": "Father's Income Certificate (2025-26)",
+      "note": "For EBC students."
+    },
+    {
+      "name": "ABC ID (APAAR ID) Registration Printout",
+      "note": "As per government directive."
+    }
+  ],
+  "eligibility": {
+    "general": "Candidate must be an Indian citizen and have passed 10+2 (or equivalent) from a recognised board.",
+    "maharashtra_pcm": {
+      "title": "Standard PCM (for all 29 major engineering disciplines)",
+      "subjects": "Physics + Mathematics + one of Chemistry / Biotechnology / Biology / Technical Vocational / CS / IT / Informatics Practices / Agriculture / Engineering Graphics / Business Studies / Electronics / Entrepreneurship.",
+      "min_marks": "45% (40% for reserved/EWS/PWD Maharashtra State candidates) in PCM group.",
+      "entrance": "Must have appeared in MHT-CET 2026 (PCM) and obtained non-zero score. JEE Main 2026 non-zero positive score preferred."
+    },
+    "maharashtra_pcb": {
+      "title": "For specific disciplines (Agriculture, Biotech, Food, etc.)",
+      "subjects": "Physics + Chemistry + one of Mathematics / Biology / etc.",
+      "min_marks": "45% (40% for reserved/EWS/PWD Maharashtra State candidates).",
+      "entrance": "Appeared in MHT-CET 2026 (PCM/PCB/PCMB) with non-zero score, OR non-zero positive score in JEE Main 2026, OR non-zero positive score in NEET-UG 2026."
+    },
+    "diploma_lateral": "Passed 3-year Diploma in Engineering with 45% (40% for reserved) OR 3-year D.Voc. in same/allied sector.",
+    "all_india_oms": "Same academic eligibility as Maharashtra candidates. Must have valid JEE Main or MHT-CET score. No reserved category relaxation for OMS candidates.",
+    "nri_oci_pio": "Refer to https://fn.mahacet.org/ for dedicated admission process.",
+    "jk_ladakh_migrants": "Register online and get application confirmed at SPCE, Mumbai. Approach institutes directly for quota seats.",
+    "orphan_transgender": "Reservation / fee concessions as per Government Resolutions.",
+    "defence": "As per Ministry of Defence guidelines dated 21 May 2018."
+  },
+  "registration_fee": {
+    "mhtcet_2026_registered": "NIL",
+    "jee_neet_non_mhtcet_general": "\u20b9 1300/- (General / OMS / J&K Migrant)",
+    "jee_neet_non_mhtcet_reserved": "\u20b9 1000/- (Maharashtra Reserved / EWS / PWD / Orphan / Transgender)",
+    "mode": "Online only (Credit/Debit Card, NetBanking, UPI). Non-refundable."
+  },
+  "verification_modes": {
+    "e_scrutiny": "Fully online. Upload documents, get verified remotely. If errors, re-upload. No visit required.",
+    "physical_scrutiny": "Visit selected Facilitation Centre with originals + photocopies. Verification done on the spot."
+  },
+  "important_instructions": [
+    "Keep your registered mobile number active - all OTPs and updates are sent to it.",
+    "Make at least 7 sets of document photocopies and keep 5 passport-size photos ready.",
+    "Reserved category candidates must produce all original certificates (caste, validity, non-creamy layer). Without them, they will be treated as General category.",
+    "If you submitted a receipt for validity/NCL/EWS certificate, you must upload the original and submit it to the admitted institute before the final reporting date of the fourth CAP round, or admission will be cancelled.",
+    "Physical scrutiny candidates must visit the Facilitation Centre in person for grievance resolution.",
+    "Read the schedule carefully and complete each step within deadlines. Late applications will be rejected."
+  ],
+  "helpline": {
+    "phone": ["+91-9175108612", "18002098851"],
+    "timing": "10:00 AM - 6:00 PM",
+    "website": "www.mahacet.org",
+    "email": "cetcell@mahacet.org"
+  }
+}

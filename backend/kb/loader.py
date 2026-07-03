@@ -52,7 +52,7 @@ logger = logging.getLogger("aiktc.kb.loader")
 MODULAR_SCHOOLS = ("engineering", "pharmacy", "architecture")
 
 # Flat files loaded at root level
-ROOT_FILES = ("common", "activities", "placements_stats")
+ROOT_FILES = ("common", "activities", "placements_stats", "cap")
 
 
 # ─────────────────────────────────────────────────────────────────────────────

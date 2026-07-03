@@ -8,21 +8,12 @@
         "sports": [
           "Cricket",
           "Football",
-          "Volleyball",
-          "Box Cricket",
-          "Relay Races",
-          "Discus Throw",
-          "Shot Put",
-          "Tug of War"
+          "Volleyball"
         ],
         "cultural_creative": [
           "Short Film Showcase (Film Club)",
           "Vernacular Speech",
-          "Rangoli",
-          "Mehndi",
-          "Lipin Art",
-          "Vlog Creation",
-          "Inter-Departmental Cooking Competitions"
+          "Rangoli"
         ],
         "technical": [
           "Code challenges",
@@ -37,15 +28,11 @@
     {
       "name": "Programmers Club",
       "department": "Department of Computer Engineering",
-      "description": "A student-driven tech community committed to promoting programming languages, building web/mobile applications, and cultivating an active hacking and open-source culture.",
+      "description": "A student-driven tech community committed to promoting programming languages, building web/mobile...",
       "activities": [
         "Coding workshops & bootcamps",
         "Open-source contribution guidance",
-        "Hosts the Algorithm Hackathon",
-        "SIH (Smart India Hackathon) internal qualifiers",
-        "Hacktoon (First-year exclusive hackathon)",
-        "Expert Talk on DS with focus on Placement",
-        "One-Day Workshop on 'Unlocking AI: A Deep Dive into Information Retrieval, Machine Learning, NLP, and Big Data in Healthcare'"
+        "Hosts the Algorithm Hackathon"
       ],
       "events": [
         {
@@ -59,20 +46,18 @@
       ],
       "achievements": [
         "First-place and runner-up positions at regional hackathons",
-        "Gold (1st Rank) in Hammer Throw Event at University of Mumbai Inter Collegiate Athletic Meet 2024-25 Mumbai City Zone (Women)",
-        "4th Rank in Inter Zonal Athletic Competition 2024-25 (University of Mumbai)"
+        "Gold (1st Rank) in Hammer Throw Event at University of Mumbai Inter Collegiate Athletic Meet 2024-25 Mumbai City Zone (Women)"
       ],
       "source_url": "https://soet.aiktc.ac.in/"
     },
     {
       "name": "DataNexus Club",
       "department": "Department of CSE (Data Science)",
-      "description": "A specialized interest data science club focusing on Data Science, Big Data Engineering, and Artificial Intelligence models. Proudly affiliated as a student chapter of the Society for Data Science (S4DS).",
+      "description": "A specialized interest data science club focusing on Data Science, Big Data Engineering, and Arti...",
       "activities": [
         "Workshops on Power BI, Python, and Cloud services",
         "Nexathon machine learning hackathon",
-        "Inauguration of S4DS & Data Nexus Club",
-        "Workshop on Fundamentals of Data Science"
+        "Inauguration of S4DS & Data Nexus Club"
       ],
       "events": [
         {
@@ -80,40 +65,20 @@
           "date": "February 26, 2026"
         },
         {
-          "name": "PowerBI Workshop – A Day of Data & Insights",
+          "name": "PowerBI Workshop \u2013 A Day of Data & Insights",
           "date": "February 16, 2026"
-        },
-        {
-          "name": "Samsung Innovation Campus",
-          "date": "October 2, 2025"
-        },
-        {
-          "name": "Inauguration of S4DS & Data Nexus Club",
-          "date": "September 10, 2025"
-        },
-        {
-          "name": "PREPIT (Intensive interview preparation and training program for DS/ML)",
-          "date": "Upcoming"
         }
       ],
       "achievements": [
-        "Amrut Patankar won 3rd Prize (₹1000) at the 'Battle of Pivot' Startup Pitching Competition held at Vasantdada Patil College.",
-        "Sana Zakir Shaikh, Talha Siddique and Amrut Patankar achieved first prize at the Technical Paper Presentation held at Pillai HOC College of Engineering & Technology (2026).",
-        "Spark-a-thon - 1st Place (2026) won by Sana Zakir Shaikh, Amrut Bhagwan Patankar, and Talha Siddique.",
-        "Top 10 at KJ Somaiya College Hackathon.",
-        "1st Runner-Up at Smart India Hackathon 2025 (National level, Govt. of India) won by Afreen Imam and Tasmiya Fatma.",
-        "Sana Zakir Shaikh, Amrut Patankar, and Talha Siddique selected for Final Round in Mumbai Hacks 24-Hour Hackathon (Top 500 out of 3000, National level).",
-        "Sana Zakir Shaikh, Amrut Patankar, and Talha Siddique won First Prize at Pillai University (CTFC) Conference (Call for Papers).",
-        "Hajwani Mueez Sajjad Mehtab won First Place in Debate Competition on Engineer's Day (September 15, 2025).",
-        "Dhanse Rida Zahir won First Position in Jawahar Bal Manch All India Painting Competition.",
-        "Sayed Fazilat Fatima, Mohd Safwan Shafiyulla, Shaikh Amaan Tausif, Mohd Alfaiz Samani won Smart India Hackathon (Internal Round)."
+        "Amrut Patankar won 3rd Prize (\u20b91000) at the 'Battle of Pivot' Startup Pitching Competition held at Vasantdada Patil College.",
+        "Sana Zakir Shaikh, Talha Siddique and Amrut Patankar achieved first prize at the Technical Paper Presentation held at Pillai HOC College of Engineering & Technology (2026)."
       ],
       "source_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-activities/"
     },
     {
       "name": "e-Yantra Robotics Club",
       "department": "All Engineering Departments",
-      "description": "Supported by the Ministry of Education (GoI) and IIT Bombay, the e-Yantra cell at AIKTC teaches students embedded systems, microcontrollers, and automation systems to compete in the national e-Yantra Robotics Competition (EYRC). Coordinator: Dr. Veena M.S. (Project Coordinator).",
+      "description": "Supported by the Ministry of Education (GoI) and IIT Bombay, the e-Yantra cell at AIKTC teaches s...",
       "activities": [
         "Hands-on robotics and IoT workshops",
         "National EYRC competition prep"
@@ -133,12 +98,11 @@
     {
       "name": "Elite Club",
       "department": "Department of Electronics & Computer Science (ECS)",
-      "description": "The departmental technical club for ECS engineering, focusing on promoting technology, hardware-software integration, and organizing student technical community engagement events.",
+      "description": "The departmental technical club for ECS engineering, focusing on promoting technology, hardware-s...",
       "activities": [
         "Hardware-software integration projects",
         "Tech talks and community meetups",
-        "Hands on Workshop on Web Development (October 11, 2024)",
-        "Data Structure and Algorithm Workshop (October 5, 2024)"
+        "Hands on Workshop on Web Development (October 11, 2024)"
       ],
       "events": [
         {
@@ -148,26 +112,6 @@
         {
           "name": "Software Engineering & Web Technologies (Bootstrap and Server side Scripting)",
           "date": "September 16, 2025"
-        },
-        {
-          "name": "Expert talk on Systems, Applications & Products in Data Processing (SAP)",
-          "date": "September 10, 2025"
-        },
-        {
-          "name": "Expert Talk on 'YOLO Variants for Medical Image Analysis'",
-          "date": "August 4, 2025"
-        },
-        {
-          "name": "Webinar on Career Opportunities in SALESFORCE",
-          "date": "July 24, 2025"
-        },
-        {
-          "name": "Value Added Course On 'DEEP LEARNING USING PYTHON'",
-          "date": "February 5, 2024"
-        },
-        {
-          "name": "Expert talk on IEEE initiatives and IOT applications",
-          "date": "June 26, 2023"
         }
       ],
       "achievements": [
@@ -182,7 +126,7 @@
     {
       "name": "SAEINDIA Collegiate Club",
       "department": "Department of Mechanical Engineering",
-      "description": "A professional collegiate club under SAE India, serving students interested in mobility engineering, automotive design, and transport technology.",
+      "description": "A professional collegiate club under SAE India, serving students interested in mobility engineeri...",
       "activities": [
         "Automotive design projects",
         "Mobility engineering seminars"
@@ -192,12 +136,11 @@
     {
       "name": "ACM Student Chapter (NeurOnyx Club)",
       "department": "Department of Computer Engineering & AIML",
-      "description": "A technical student chapter affiliated with the Association for Computing Machinery (ACM), focusing on advanced computing challenges, artificial intelligence, and machine learning projects. Officially inaugurated on September 12, 2025.",
+      "description": "A technical student chapter affiliated with the Association for Computing Machinery (ACM), focusi...",
       "activities": [
         "Coding contests",
         "Computer science research seminars",
-        "Peer mentoring programs",
-        "Build vs Break competitions"
+        "Peer mentoring programs"
       ],
       "events": [
         {
@@ -207,26 +150,6 @@
         {
           "name": "AI & VfX Tech Talk (Expert Session)",
           "date": "March 10, 2026"
-        },
-        {
-          "name": "Online React.js Session",
-          "date": "January 4, 2026"
-        },
-        {
-          "name": "Build vs Break 2025",
-          "date": "October 6, 2025"
-        },
-        {
-          "name": "Engineer's Day Celebration in AIML Department",
-          "date": "September 15, 2025"
-        },
-        {
-          "name": "Teacher's Day Celebration",
-          "date": "September 12, 2025"
-        },
-        {
-          "name": "Inauguration of NeurOnyx Club under the ACM Student Chapter",
-          "date": "September 12, 2025"
         }
       ],
       "source_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/"
@@ -234,12 +157,11 @@
     {
       "name": "IEI Student's Chapter (Electrical and Computer Engineering)",
       "department": "Department of Electrical & Computer Engineering",
-      "description": "Student chapter under the Institution of Engineers (India), focused on electrical systems, smart grid design, power electronics, and automation. Officially inaugurated on September 19, 2024.",
+      "description": "Student chapter under the Institution of Engineers (India), focused on electrical systems, smart ...",
       "activities": [
         "Workshops on Solar System Design",
         "Expert talks on AutoCAD Panel design and Electrical safety",
-        "Simulation training for Electric Vehicles (EV) using Typhoon HIL",
-        "PLC and SCADA programming workshops"
+        "Simulation training for Electric Vehicles (EV) using Typhoon HIL"
       ],
       "events": [
         {
@@ -249,78 +171,6 @@
         {
           "name": "Expert Session on Wave Theory",
           "date": "October 10, 2025"
-        },
-        {
-          "name": "Industrial Visit to Sunny World Solar Power Plant",
-          "date": "October 6, 2025"
-        },
-        {
-          "name": "Arduino Programming with TINKERCAD",
-          "date": "October 3, 2025"
-        },
-        {
-          "name": "Solar Energy : Advancement and Application",
-          "date": "September 30, 2025"
-        },
-        {
-          "name": "Alumni Talk – Frequency Domain Plotting",
-          "date": "September 25, 2025"
-        },
-        {
-          "name": "Industrial visit to Maharashtra State load dispatch Center",
-          "date": "September 22, 2025"
-        },
-        {
-          "name": "Advanced Control Technique in Induction Motor Drives",
-          "date": "September 17, 2025"
-        },
-        {
-          "name": "Industrial Visit to High Voltage Direct Current Grid",
-          "date": "September 13, 2025"
-        },
-        {
-          "name": "Expert Session on Short Circuit MVA calculation and Z bus Formulation",
-          "date": "August 12, 2025"
-        },
-        {
-          "name": "Expert Session on Notations in Data Structures and Algorithms",
-          "date": "August 12, 2025"
-        },
-        {
-          "name": "Battery Energy Storage System for Solar Project",
-          "date": "August 8, 2025"
-        },
-        {
-          "name": "Workshop on Power BI",
-          "date": "July 22, 2025"
-        },
-        {
-          "name": "Industrial Applications of Power Electronics along with ML",
-          "date": "March 25, 2025"
-        },
-        {
-          "name": "Expert Talk on 'Frequency Domain Compensation Techniques' by Esteemed Alumni Anas Khan",
-          "date": "February 25, 2025"
-        },
-        {
-          "name": "Industrial Visit to Reliance JIO",
-          "date": "January 30, 2025"
-        },
-        {
-          "name": "PLC and SCADA System Design & Programming",
-          "date": "January 18, 2025"
-        },
-        {
-          "name": "Three Days workshop on Solar System Design",
-          "date": "September 27, 2024"
-        },
-        {
-          "name": "Workshop on Basic training of SLD, Three Line Diagram and Panel",
-          "date": "August 3, 2024"
-        },
-        {
-          "name": "Development, modelling and simulation of electric vehicle and it’s charging station using typhoon hil",
-          "date": "January 15, 2024"
         }
       ],
       "source_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/"
@@ -328,7 +178,7 @@
     {
       "name": "School of Architecture Student Activities & Co-curricular",
       "department": "School of Architecture (B.Arch & D.Arch)",
-      "description": "Coordinates the creative, design, parents-teachers meets, orientation programs, study tours and architectural workshops for Bachelor of Architecture and Diploma in Architecture.",
+      "description": "Coordinates the creative, design, parents-teachers meets, orientation programs, study tours and a...",
       "activities": [
         "Hands-on design workshops (bamboo, concrete, metal, paper)",
         "Study tours and heritage walks",
@@ -336,80 +186,12 @@
       ],
       "events": [
         {
-          "name": "Heritage Walk – Zaveri Bazaar (D.Arch)",
+          "name": "Heritage Walk \u2013 Zaveri Bazaar (D.Arch)",
           "date": "September 11, 2025"
         },
         {
           "name": "Onam Celebration 2025-26 (D.Arch)",
           "date": "September 9, 2025"
-        },
-        {
-          "name": "Onam Celebration (B.Arch)",
-          "date": "September 8, 2025"
-        },
-        {
-          "name": "Parents – Teachers Meeting 1 -2025-26 (D.Arch)",
-          "date": "August 18, 2025"
-        },
-        {
-          "name": "Friendship Day Celebration (D.Arch)",
-          "date": "August 6, 2025"
-        },
-        {
-          "name": "D.ARCH Orientation Programme 2025-26",
-          "date": "August 4, 2025"
-        },
-        {
-          "name": "Study Tour to Bhuj Ahmedabad (B.Arch)",
-          "date": "January 8, 2025"
-        },
-        {
-          "name": "Dress to Impress",
-          "date": "October 4, 2024"
-        },
-        {
-          "name": "Film Making Workshop",
-          "date": "August 14, 2024"
-        },
-        {
-          "name": "Parents-Teachers Meet & Felicitation Program 2024 (B.Arch)",
-          "date": "August 7, 2024"
-        },
-        {
-          "name": "Orientation Program of DARS and GARC",
-          "date": "July 19, 2024"
-        },
-        {
-          "name": "Women’s Day Celebration’2024",
-          "date": "March 1, 2024"
-        },
-        {
-          "name": "Reimagining Gender Equality",
-          "date": "September 11, 2023"
-        },
-        {
-          "name": "Eco System- Paper Workshop",
-          "date": "January 2, 2023"
-        },
-        {
-          "name": "Eco System Concrete Workshop",
-          "date": "January 2, 2023"
-        },
-        {
-          "name": "Eco System Metal Workshop",
-          "date": "January 2, 2023"
-        },
-        {
-          "name": "Eco system Bamboo Workshop",
-          "date": "January 2, 2023"
-        },
-        {
-          "name": "Anatomy of Research",
-          "date": "September 22, 2022"
-        },
-        {
-          "name": "Observations + Filters + Actions",
-          "date": "July 8, 2022"
         }
       ],
       "source_url": "https://aiktc.ac.in/bachelor-of-architecture/events/"
@@ -417,12 +199,11 @@
     {
       "name": "School of Pharmacy Student Council & Placement Cell",
       "department": "School of Pharmacy (B.Pharm & D.Pharm)",
-      "description": "Coordinates placement drives, industrial training, health camps, workshops, and inter-collegiate technical competitions for B.Pharmacy and D.Pharmacy.",
+      "description": "Coordinates placement drives, industrial training, health camps, workshops, and inter-collegiate ...",
       "activities": [
         "TCS and Pharmeasy pool placement campus drives",
         "Expert talks on regulatory perspectives, marketing, and pharmacology",
-        "Industrial visits to ACG Capsules, Nulife, Mayer Organics, etc.",
-        "Social and personal health awareness checkup camps and rallies"
+        "Industrial visits to ACG Capsules, Nulife, Mayer Organics, etc."
       ],
       "events": [
         {
@@ -432,90 +213,6 @@
         {
           "name": "Pool Campus Drive of Pharmeasy-Thyrocare",
           "date": "September 19, 2025"
-        },
-        {
-          "name": "Expert Talk : Drug Laws Regulatory Perspective",
-          "date": "August 5, 2025"
-        },
-        {
-          "name": "Orientation Session on Pharmaceutical Marketing Management",
-          "date": "July 14, 2025"
-        },
-        {
-          "name": "Expert talk on Drug of Choice for ANS drugs",
-          "date": "April 4, 2025"
-        },
-        {
-          "name": "Visit to NRHM centre at MGM Hospital",
-          "date": "March 26, 2025"
-        },
-        {
-          "name": "TCS Mega Campus Pool Drive",
-          "date": "March 19, 2025"
-        },
-        {
-          "name": "CRT – TCS Mock Recruitment Session at AIKTC School of Pharmacy!",
-          "date": "March 10, 2025"
-        },
-        {
-          "name": "Campus Placement Drive (Zeno healthcare)",
-          "date": "February 27, 2025"
-        },
-        {
-          "name": "Workshop on 'Entrepreneurship and Innovation' as a Career Opportunity",
-          "date": "October 25, 2024"
-        },
-        {
-          "name": "D’MART CAMPUS POOL DRIVE",
-          "date": "October 5, 2024"
-        },
-        {
-          "name": "Industrial visit to ACG Capsules, Shirwal",
-          "date": "October 4, 2024"
-        },
-        {
-          "name": "Workshop on 'Insight on ACG oral solid dosage form'",
-          "date": "September 19, 2024"
-        },
-        {
-          "name": "FLMINGO PHARMACEUTICALS Recruitment Drive",
-          "date": "August 7, 2024"
-        },
-        {
-          "name": "PLACEMENT DRIVE AT WISTRIDE",
-          "date": "June 12, 2024"
-        },
-        {
-          "name": "PharmaZen: Project Poster Day AY 2023-24",
-          "date": "May 17, 2024"
-        },
-        {
-          "name": "B.Pharm Farewell 2024",
-          "date": "May 14, 2024"
-        },
-        {
-          "name": "Industrial visit to Nulife pharmaceuticals",
-          "date": "December 16, 2023"
-        },
-        {
-          "name": "18TH AVISHKAR: INTERCOLLEGIATE RESEARCH CONVENTION",
-          "date": "December 9, 2023"
-        },
-        {
-          "name": "PTM – First Year B Pharmacy",
-          "date": "November 25, 2023"
-        },
-        {
-          "name": "Industrial visit to Mayer Organics",
-          "date": "November 9, 2023"
-        },
-        {
-          "name": "AIKTC School of Pharmacy’s Health Check-Up Camp in Barapada",
-          "date": "September 29, 2023"
-        },
-        {
-          "name": "Social and Personal Health Awareness Rally",
-          "date": "September 29, 2023"
         }
       ],
       "achievements": [
@@ -669,7 +366,7 @@
       "events": [
         {
           "name": "NSS 7 days residential camp",
-          "date": "December 30, 2024 – January 5, 2025"
+          "date": "December 30, 2024 \u2013 January 5, 2025"
         },
         {
           "name": "Guest Lecture on Eye Donation (Veer Sawarkar Death Anniversary Awareness)",

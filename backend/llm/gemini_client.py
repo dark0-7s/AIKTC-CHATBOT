@@ -15,6 +15,16 @@ logger = logging.getLogger("aiktc.llm")
 GEMINI_CACHE_URL = "https://generativelanguage.googleapis.com/v1beta/cachedContents"
 
 
+async def call_gemini(prompt_data: dict, model_name: str = 'gemini-1.5-flash') -> dict:
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={settings.GEMINI_API_KEY}"
+    headers = {'Content-Type': 'application/json'}
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        resp = await client.post(url, headers=headers, json=prompt_data)
+        if resp.status_code != 200:
+            logger.error(f"Gemini API error: {resp.text}")
+            return None
+        return resp.json()
+
 async def create_cached_content(
     system_instruction_text: str,
     tools: list[dict],
