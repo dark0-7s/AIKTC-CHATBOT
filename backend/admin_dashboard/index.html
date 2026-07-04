@@ -615,7 +615,70 @@
 </head>
 <body>
 
-<div class="app-container">
+<style>
+  #login-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    z-index: 100;
+  }
+  .login-box {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .login-box h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+  }
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .login-btn:hover {
+    background: var(--accent-light);
+  }
+</style>
+
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size: 48px; color: var(--accent); margin-bottom: 16px;"><i class="ti ti-robot"></i></div>
+    <h2>AIKTC Admin Login</h2>
+    <input type="text" id="username" class="login-input" placeholder="Username" autocomplete="username">
+    <input type="password" id="password" class="login-input" placeholder="Password" autocomplete="current-password">
+    <button id="login-btn" class="login-btn">Sign In</button>
+    <p id="login-error" style="color:var(--danger); margin-top: 16px; display:none;">Invalid credentials</p>
+  </div>
+</div>
+
+<div class="app-container" id="app-container" style="display:none;">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
@@ -928,22 +991,71 @@
    AIKTC Admin Dashboard — JavaScript
    =================================================================== */
 
-// ---- Auth ----
-// Browser caches Basic Auth credentials after the initial prompt.
-// All same-origin fetch() calls with credentials:'include' will
-// automatically include the Authorization header. No manual header needed.
+let AUTH_HEADER = '';
 
-// KB Bearer token injected by the server when serving the page.
+document.getElementById('login-btn').addEventListener('click', async () => {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const credentials = btoa(`${user}:${pass}`);
+    AUTH_HEADER = `Basic ${credentials}`;
+
+    try {
+        const res = await fetch('/admin/dashboard/stats', {
+            headers: { 'Authorization': AUTH_HEADER }
+        });
+        if (res.ok) {
+            sessionStorage.setItem('aiktc_admin_auth', AUTH_HEADER);
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('app-container').style.display = 'flex';
+            // initDashboard will be called by DOMContentLoaded anyway, but we can call it manually
+            // wait, we'll let DOMContentLoaded handle initialization, or if already loaded, we manually fetch stats
+            fetchStats();
+            fetchTopics();
+            fetchQueries();
+        } else {
+            document.getElementById('login-error').style.display = 'block';
+        }
+    } catch (e) {
+        document.getElementById('login-error').style.display = 'block';
+    }
+});
+
 const KB_TOKEN = document.querySelector('meta[name="kb-token"]')?.content || '';
 
 async function apiFetch(url, options = {}) {
-  const resp = await fetch(url, { ...options, credentials: 'include' });
+  const headers = options.headers || {};
+  if (AUTH_HEADER) {
+      headers['Authorization'] = AUTH_HEADER;
+  }
+  const resp = await fetch(url, { ...options, headers, credentials: 'omit' });
   if (resp.status === 401) {
-    window.location.reload();
+    sessionStorage.removeItem('aiktc_admin_auth');
+    document.getElementById('login-screen').style.display = 'flex';
+    document.getElementById('app-container').style.display = 'none';
     throw new Error('Unauthorized');
   }
   return resp;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const stored = sessionStorage.getItem('aiktc_admin_auth');
+    if (stored) {
+        AUTH_HEADER = stored;
+        apiFetch('/admin/dashboard/stats')
+            .then(res => {
+                if (res.ok) {
+                    document.getElementById('login-screen').style.display = 'none';
+                    document.getElementById('app-container').style.display = 'flex';
+                } else {
+                    sessionStorage.removeItem('aiktc_admin_auth');
+                }
+            })
+            .catch(() => {
+                sessionStorage.removeItem('aiktc_admin_auth');
+            });
+    }
+});
+
 
 // ---- Topic colors ----
 const TOPIC_COLORS = {

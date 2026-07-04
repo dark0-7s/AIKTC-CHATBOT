@@ -35,52 +35,42 @@ def classify_topic(message: str, response_type: str) -> str:
     msg = message.lower()
     rt = (response_type or "").lower()
 
-    # Response-type based classification (strongest signal)
+    # Pre-check for explicit response types that strongly indicate a topic
     if rt in ("prediction", "multi_pred"):
         return "admission"
-
-    if rt == "table":
-        if "cutoff" in msg:
-            return "cutoff"
-        if "fee" in msg:
-            return "fee"
-        return "other"
-
     if rt == "faculty_grid":
         return "faculty"
-
-    if rt == "list":
-        if "lab" in msg:
-            return "lab"
-        return "other"
-
     if rt == "steps":
         return "process"
-
     if rt == "contact":
         return "contact"
 
-    if rt == "comparison":
-        if "fee" in msg:
-            return "fee"
-        return "other"
-
-    # Keyword fallback for text responses or unknown types
+    # Expanded Keyword dictionary for robust classification
     keywords = {
-        "admission": ["chance", "milega", "eligible", "admission", "admit"],
-        "cutoff":    ["cutoff", "cut off", "cut-off"],
-        "fee":       ["fees", "₹", "fee", "cost", "fee structure"],
-        "lab":       ["lab", "laboratory"],
-        "faculty":   ["faculty", "hod", "teacher", "professor"],
-        "placement": ["placement", "package", "recruiter", "placed"],
-        "hostel":    ["hostel"],
-        "process":   ["process", "procedure", "steps"],
-        "contact":   ["contact", "phone", "email", "call"],
+        "admission": ["chance", "milega", "eligible", "admission", "admit", "cap", "mhcet", "cet"],
+        "cutoff":    ["cutoff", "cut off", "cut-off", "merit", "closing rank"],
+        "fee":       ["fees", "₹", "fee", "cost", "fee structure", "amount"],
+        "lab":       ["lab", "laboratory", "workshop", "facilities"],
+        "faculty":   ["faculty", "hod", "teacher", "professor", "director", "principal"],
+        "placement": ["placement", "package", "recruiter", "placed", "internship"],
+        "hostel":    ["hostel", "mess", "accommodation"],
+        "process":   ["process", "procedure", "steps", "schedule", "timetable", "dates", "document"],
+        "contact":   ["contact", "phone", "email", "call", "helpline"],
     }
 
+    # First pass: Check keywords in the message
     for topic, kws in keywords.items():
         if any(kw in msg for kw in kws):
             return topic
+
+    # Fallbacks based on response type if keywords didn't match
+    if rt == "table":
+        # Tables usually show cutoffs or fees if not explicitly mentioned
+        return "cutoff" 
+    if rt == "list":
+        return "other"
+    if rt == "comparison":
+        return "fee"
 
     return "other"
 

@@ -139,6 +139,27 @@ def log_query(
         raise
 
 
+def log_feedback(session_id: str, rating: int, comment: Optional[str] = None, snippet: Optional[str] = None) -> None:
+    """
+    Persist user feedback for a chatbot response.
+    """
+    try:
+        conn = get_connection()
+        conn.execute(
+            """
+            INSERT INTO feedback (session_id, rating, comment, conversation_snippet)
+            VALUES (?, ?, ?, ?)
+            """,
+            (session_id, rating, comment, snippet),
+        )
+        conn.commit()
+        conn.close()
+        logger.debug(f"Feedback logged | session={session_id[:8]} | rating={rating}")
+    except sqlite3.DatabaseError:
+        logger.exception(f"Failed to log feedback for session={session_id[:8]}")
+        raise
+
+
 def get_unresolved_queries(limit: int = DEFAULT_LIMIT) -> list[dict[str, Any]]:
     """
     Return recent queries that produced a plain text (unresolved) response.

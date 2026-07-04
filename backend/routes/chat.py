@@ -44,7 +44,7 @@ from llm.gemini_client import (
     get_router_key,
     stream_with_cache,
 )
-from logger.query_logger import log_query
+from logger.query_logger import log_query, log_feedback
 from logger.analytics import classify_topic, extract_query_departments
 from prompt.builder import (
     build_prompt,
@@ -129,6 +129,18 @@ class ChatRequest(BaseModel):
         if not v or not str(v).strip():
             return str(uuid.uuid4())
         return str(v).strip()
+
+class FeedbackRequest(BaseModel):
+    session_id: str = Field(..., description="The session ID associated with the chat")
+    rating: int = Field(..., description="Rating must be 1 (thumbs up) or -1 (thumbs down)")
+    comment: str | None = Field(default=None, description="Optional text comment")
+    snippet: str | None = Field(default=None, description="Optional snippet of the response being rated")
+
+    @validator("rating")
+    def validate_rating(cls, v: int) -> int:
+        if v not in (1, -1):
+            raise ValueError("Rating must be 1 or -1")
+        return v
 
     class Config:
         json_schema_extra = {
@@ -448,3 +460,13 @@ async def chat_debug(request: Request):
             "X-Accel-Buffering": "no",
         },
     )
+
+
+@router.post("/chat/feedback")
+async def submit_feedback(request: FeedbackRequest):
+    """
+    Submit user feedback for a chatbot response.
+    rating: +1 (thumbs up) or -1 (thumbs down)
+    """
+    log_feedback(request.session_id, request.rating, request.comment, request.snippet)
+    return {"status": "ok"}
