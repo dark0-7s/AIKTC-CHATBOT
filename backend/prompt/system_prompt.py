@@ -100,6 +100,8 @@ RULES (apply in order):
    - "Review", "ranking", "comparison with other colleges" → show_text (only if KB has such info; otherwise out of scope)
    - Everything else → show_text
 
+16. OFFICIAL LINKS: If the Knowledge Base provides any official URLs related to the student's query (e.g., Staff URL, Syllabus URL, Timetable URL, Events URL, Labs URL), you MUST include them in your response. For function calls like `show_faculty_grid` or `show_list`, populate the `source_url` field. For `show_text`, append the links at the bottom using Markdown formatting `[Link Text](url)`.
+
 ═══════════════════════════════════════════════════════════════
 KNOWLEDGE BASE:
 {kb_markdown}

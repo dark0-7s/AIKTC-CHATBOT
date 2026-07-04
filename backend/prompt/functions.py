@@ -177,6 +177,10 @@ FUNCTION_DEFINITIONS = [
                     "type": "string",
                     "description": "Full department name e.g. Computer Science & Engineering"
                 },
+                "source_url": {
+                    "type": "string",
+                    "description": "Optional URL to the department's staff/faculty page."
+                },
                 "members": {
                     "type": "array",
                     "items": {
@@ -190,7 +194,10 @@ FUNCTION_DEFINITIONS = [
                             "designation": {"type": "string"},
                             "specialization": {"type": "string"},
                             "experience": {"type": "string"},
-                            "image_url": {"type": "string"}
+                            "image_url": {
+                                "type": "string",
+                                "description": "MUST include the Image URL if it is provided in the text."
+                            }
                         },
                         "required": ["name", "initials", "designation"]
                     }
@@ -239,6 +246,10 @@ FUNCTION_DEFINITIONS = [
             "type": "object",
             "properties": {
                 "title": {"type": "string"},
+                "source_url": {
+                    "type": "string",
+                    "description": "Optional official URL related to the list."
+                },
                 "items": {
                     "type": "array",
                     "items": {

@@ -1,12 +1,14 @@
 import MediaCard from "./MediaCard";
 
 export default function FacultyGrid({ data }) {
-  const { department, members } = data || {};
+  const { department, source_url, members } = data || {};
   return (
     <div style={{ marginBottom: 12 }}>
-      <p style={{ fontWeight: 600, marginBottom: 8, fontSize: "0.95rem", color: "var(--color-text-primary)" }}>
-        {department} Faculty
-      </p>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <p style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--color-text-primary)", margin: 0 }}>
+          {department} Faculty
+        </p>
+      </div>
       <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
         {members?.map((m, i) => {
           const cardData = {
@@ -22,6 +24,28 @@ export default function FacultyGrid({ data }) {
           return <MediaCard key={i} data={cardData} />;
         })}
       </div>
+      {source_url && (
+        <a 
+          href={source_url} 
+          target="_blank" 
+          rel="noreferrer" 
+          style={{ 
+            display: "inline-flex", 
+            alignItems: "center", 
+            gap: 6,
+            marginTop: 12,
+            padding: "8px 16px",
+            backgroundColor: "var(--color-primary)",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: 6,
+            fontWeight: 500,
+            fontSize: 14
+          }}
+        >
+          View Full Faculty Details <i className="ti ti-external-link" />
+        </a>
+      )}
     </div>
   );
 }

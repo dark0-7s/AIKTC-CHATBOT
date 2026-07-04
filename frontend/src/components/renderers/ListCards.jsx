@@ -21,6 +21,28 @@ export default function ListCards({ data }) {
           </div>
         ))}
       </div>
+      {data.source_url && (
+        <a 
+          href={data.source_url} 
+          target="_blank" 
+          rel="noreferrer" 
+          style={{ 
+            display: "inline-flex", 
+            alignItems: "center", 
+            gap: 6,
+            marginTop: 12,
+            padding: "8px 16px",
+            backgroundColor: "var(--color-primary)",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: 6,
+            fontWeight: 500,
+            fontSize: 14
+          }}
+        >
+          View Full Details <i className="ti ti-external-link" />
+        </a>
+      )}
     </div>
   );
 }
