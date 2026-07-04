@@ -548,11 +548,9 @@ async def get_stats(_: bool = Depends(verify_bearer)):
     "/dashboard",
     response_class = HTMLResponse,
     summary        = "Admin Dashboard",
-    description    = "Serves the admin dashboard single-page application. Requires Basic Auth.",
+    description    = "Serves the admin dashboard single-page application. Uses custom JS login.",
 )
-async def dashboard_page(
-    _: bool = Depends(verify_basic_auth),
-):
+async def dashboard_page():
     """Serve the admin dashboard HTML page with injected config."""
     dashboard_path = Path(__file__).parent.parent / "admin_dashboard" / "index.html"
     if not dashboard_path.exists():
@@ -844,7 +842,7 @@ async def dashboard_feedback(
 async def upload_smart_kb(
     type: str = Form(...),
     file: UploadFile = File(...),
-    _: HTTPAuthorizationCredentials = Depends(verify_bearer_token)
+    _: bool = Depends(verify_bearer)
 ):
     """
     1. Read raw text from the uploaded file.
