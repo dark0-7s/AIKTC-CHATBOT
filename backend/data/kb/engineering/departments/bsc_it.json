@@ -79,5 +79,7 @@
       "location": "Room 410, Third Floor",
       "description": "Dedicated to software engineering principles, testing methodologies, and project-based learning."
     }
-  ]
+  ],
+  "duration_years": 3,
+  "key_subjects": ["Web Technologies", "Object Oriented Programming", "Database Systems", "Software Engineering", "Cloud Computing"]
 }

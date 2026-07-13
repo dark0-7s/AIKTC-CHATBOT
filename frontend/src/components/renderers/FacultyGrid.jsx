@@ -16,6 +16,7 @@ export default function FacultyGrid({ data }) {
             designation: m.designation,
             initials: m.initials,
             image_url: m.image_url,
+            profile_url: m.profile_url,
             details: [
               m.specialization && { icon: "school", label: "Qual.", value: m.specialization },
               m.experience && { icon: "briefcase", label: "Exp.", value: m.experience }

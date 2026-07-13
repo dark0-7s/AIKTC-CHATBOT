@@ -150,5 +150,7 @@
   "co_curricular_url": "https://aiktc.ac.in/bachelor-of-architecture/barch-co-curricular/",
   "infrastructure_url": "https://aiktc.ac.in/bachelor-of-architecture/barch-infrastructure/",
   "studios_url": "https://aiktc.ac.in/bachelor-of-architecture/bachelor-of-architecture-studios/",
-  "events_url": "https://aiktc.ac.in/bachelor-of-architecture/events/"
+  "events_url": "https://aiktc.ac.in/bachelor-of-architecture/events/",
+  "duration_years": 5,
+  "key_subjects": ["Architectural Design", "Building Construction", "History of Architecture", "Building Services", "Town Planning"]
 }

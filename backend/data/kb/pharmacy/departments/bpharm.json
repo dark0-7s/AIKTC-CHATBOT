@@ -226,5 +226,13 @@
   "placements_url": "https://aiktc.ac.in/bachelor-of-pharmacy/training-and-placement-cell/",
   "co_curricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/co-curricular-bpharm/",
   "extracurricular_url": "https://aiktc.ac.in/bachelor-of-pharmacy/extracurricular-bpharm/",
-  "nss_url": "https://aiktc.ac.in/bachelor-of-pharmacy/nss-activities-bpharm/"
+  "nss_url": "https://aiktc.ac.in/bachelor-of-pharmacy/nss-activities-bpharm/",
+  "duration_years": 4,
+  "key_subjects": ["Pharmaceutics", "Pharmacology", "Pharmaceutical Chemistry", "Pharmacognosy", "Biotechnology"],
+  "placements": {
+    "highest_package": "₹3.36 LPA",
+    "average_package": "₹2.15 LPA",
+    "placement_rate": "82%",
+    "top_recruiters": ["Neelam Health Care Pvt Ltd", "Zeno Health"]
+  }
 }

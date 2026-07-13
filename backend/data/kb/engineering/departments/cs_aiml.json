@@ -8,7 +8,8 @@
     "designation": "HOD & Associate Professor",
     "qualification": "Ph.D. (Computer Engineering)",
     "experience": "17 years",
-    "image_url": "/images/engineering/aiml/salim_shaikh.avif"
+    "image_url": "/images/engineering/aiml/salim_shaikh.avif",
+    "profile_url": "https://soet.aiktc.ac.in/staff/salim-shaikh/"
   },
   "vision": "To be the most sought after academic, research and practice based department of Computer Science & Engineering (AIML) that others would wish to emulate.",
   "mission": "Creating Exuberant Computer Science & Engineering (AIML) Professionals.",
@@ -30,25 +31,29 @@
       "designation": "HOD & Associate Professor",
       "qualification": "Ph.D. (Com. Engg.)",
       "experience": "17 yrs",
-      "image_url": "/images/engineering/aiml/salim_shaikh.avif"
+      "image_url": "/images/engineering/aiml/salim_shaikh.avif",
+      "profile_url": "https://soet.aiktc.ac.in/staff/salim-shaikh/"
     },
     {
       "name": "Prof. Vishal Gotarane",
       "designation": "Assistant Professor",
       "qualification": "M.E. (Ph.D.)*",
-      "experience": "12 yrs"
+      "experience": "12 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-vishal-rekha-ramchandra-gotarane/"
     },
     {
       "name": "Prof. Saima Sayyed",
       "designation": "Assistant Professor",
       "qualification": "M.E. (Comp.)",
-      "experience": "6 yrs"
+      "experience": "6 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-saima-sayyed/"
     },
     {
       "name": "Prof. Kirti Thakur",
       "designation": "Assistant Professor",
       "qualification": "M.E. (IT)",
-      "experience": "14 yrs"
+      "experience": "14 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-kirti-rahul-thakur/"
     },
     {
       "name": "Prof. Shafique Shaikh",
@@ -68,5 +73,7 @@
   "timetable_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-time-table/",
   "academic_calendar_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-academic-calendar/",
   "events_url": "https://soet.aiktc.ac.in/computer-science-and-engineering-aiml/artificial-intelligence-machine-learning-events/",
-  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-aiml-admissions/"
+  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-aiml-admissions/",
+  "duration_years": 4,
+  "key_subjects": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Python Programming", "Neural Networks"]
 }

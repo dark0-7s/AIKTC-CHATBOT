@@ -109,5 +109,13 @@
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-events/",
   "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-and-computer-engineering/ee-alumni/",
   "admission_url": "https://soet.aiktc.ac.in/bachelor-of-electrical-engineering-admissions/",
-  "placements_url": "https://soet.aiktc.ac.in/ece-placement-details/"
+  "placements_url": "https://soet.aiktc.ac.in/ece-placement-details/",
+  "duration_years": 4,
+  "key_subjects": ["Electrical Machines", "Power Electronics", "Signals and Systems", "Digital System Design", "Control Systems"],
+  "placements": {
+    "highest_package": "₹2.5 LPA",
+    "average_package": "₹2.21 LPA",
+    "placement_rate": "78%",
+    "top_recruiters": ["Suchi Pvt Ltd", "Kosmics Engineer Ltd"]
+  }
 }

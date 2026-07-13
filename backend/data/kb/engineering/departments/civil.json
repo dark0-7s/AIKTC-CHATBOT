@@ -158,5 +158,13 @@
   "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-academic-calendar/",
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-events/",
   "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/civil-alumni/",
-  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-civil-engineering-admissions/"
+  "admission_url": "https://soet.aiktc.ac.in/bachelor-of-civil-engineering-admissions/",
+  "duration_years": 4,
+  "key_subjects": ["Structural Analysis", "Geotechnical Engineering", "Fluid Mechanics", "Surveying", "Transportation Engineering"],
+  "placements": {
+    "highest_package": "₹2.5 LPA",
+    "average_package": "₹1.64 LPA",
+    "placement_rate": "70%",
+    "top_recruiters": ["Green World", "Suchi Pvt Ltd"]
+  }
 }

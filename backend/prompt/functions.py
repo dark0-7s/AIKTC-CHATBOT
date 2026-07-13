@@ -145,6 +145,10 @@ FUNCTION_DEFINITIONS = [
                     "type": "string",
                     "description": "Optional. Relative path served from Vercel CDN."
                 },
+                "profile_url": {
+                    "type": "string",
+                    "description": "Optional. The official mapped URL to the person's profile page."
+                },
                 "details": {
                     "type": "array",
                     "items": {
@@ -197,6 +201,10 @@ FUNCTION_DEFINITIONS = [
                             "image_url": {
                                 "type": "string",
                                 "description": "MUST include the Image URL if it is provided in the text."
+                            },
+                            "profile_url": {
+                                "type": "string",
+                                "description": "Optional. The official mapped URL to the faculty's profile page."
                             }
                         },
                         "required": ["name", "initials", "designation"]

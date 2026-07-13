@@ -39,5 +39,7 @@
   "staff_url": "https://aiktc.ac.in/diploma-in-architecture/diploma-in-architecture-staff/",
   "events_url": "https://aiktc.ac.in/diploma-in-architecture/diploma-in-architecture-events/",
   "labs_url": "https://aiktc.ac.in/diploma-in-architecture/diploma-in-architecture-labs/",
-  "achievements_url": "https://aiktc.ac.in/diploma-in-architecture/diploma-in-architecture-achievements/"
+  "achievements_url": "https://aiktc.ac.in/diploma-in-architecture/diploma-in-architecture-achievements/",
+  "duration_years": 3,
+  "key_subjects": ["Architectural Graphics", "Building Materials", "Construction Technology", "Model Making", "Basic Design"]
 }

@@ -9,7 +9,8 @@
     "designation": "HOD",
     "qualification": "M.Tech (Digital Communication)",
     "experience": "24 years",
-    "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+    "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif",
+    "profile_url": "https://soet.aiktc.ac.in/staff/prof-bandanawaz-kotiyal/"
   },
   "vision": "To be the most sought after academic, research and practice based department of Electronics and Computer Science Engineering that others would wish to emulate.",
   "mission": "Creating Exuberant Electronics and Computer Science Engineering Professionals.",
@@ -51,25 +52,29 @@
       "designation": "HOD",
       "qualification": "M.Tech (Digital Comm.)",
       "experience": "24 yrs",
-      "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif"
+      "image_url": "/images/engineering/ecs/bandanawaz_kotiyal.avif",
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-bandanawaz-kotiyal/"
     },
     {
       "name": "Dr. Geeta Desai",
       "designation": "Associate Professor",
       "qualification": "M.E., Ph.D.",
-      "experience": "21 yrs"
+      "experience": "21 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/dr-geeta-tushar-desai/"
     },
     {
       "name": "Dr. Riyaz Pathan",
       "designation": "Assistant Professor",
       "qualification": "M.E. (EXTC), Ph.D.",
-      "experience": "17 yrs"
+      "experience": "17 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-riyaz-pathan/"
     },
     {
       "name": "Prof. Shahin Athavani",
       "designation": "Assistant Professor",
       "qualification": "M.E., Ph.D.*",
-      "experience": "24 yrs"
+      "experience": "24 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/27779-2/"
     },
     {
       "name": "Prof. Kashif Kazmi",
@@ -81,19 +86,22 @@
       "name": "Prof. Ganasekaran A.",
       "designation": "Assistant Professor",
       "qualification": "M.E. (PC & I)",
-      "experience": "13 yrs"
+      "experience": "13 yrs",
+      "profile_url": "https://soet.aiktc.ac.in/staff/gnansekaran/"
     },
     {
       "name": "Prof. Umar Masumdar",
       "designation": "Assistant Professor",
       "qualification": "M.E.",
-      "experience": null
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/umar-innusali-masumdar/"
     },
     {
       "name": "Prof. Ismaeel Shaikh",
       "designation": "Teaching Assistant",
       "qualification": "M.Tech.",
-      "experience": null
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/muhammed-ismaeel-ab-saeed-shaikh/"
     }
   ],
   "alumni_testimonial": {
@@ -109,5 +117,13 @@
   "academic_calendar_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-academic-calendar/",
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-events/",
   "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/ecs-alumni/",
-  "placements_url": "https://soet.aiktc.ac.in/ecs-placements/"
+  "placements_url": "https://soet.aiktc.ac.in/ecs-placements/",
+  "duration_years": 4,
+  "key_subjects": ["Analog Circuits", "Microcontrollers", "Embedded Systems", "Computer Networks", "Signal Processing"],
+  "placements": {
+    "highest_package": "₹4.8 LPA",
+    "average_package": "₹1.82 LPA",
+    "placement_rate": "80%",
+    "top_recruiters": ["Kosmics Engineer Ltd", "Vashe Integrated"]
+  }
 }

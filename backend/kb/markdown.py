@@ -30,15 +30,16 @@ def _faculty_table(faculty: list[dict], label: str = "Faculty") -> list[str]:
     """Render a faculty list as a Markdown table."""
     lines = [
         f"\n#### {label}",
-        "| Name | Designation | Qualification | Experience | Image URL |",
-        "|------|-------------|---------------|------------|-----------|",
+        "| Name | Designation | Qualification | Experience | Image URL | Profile URL |",
+        "|------|-------------|---------------|------------|-----------|-------------|",
     ]
     for f in faculty:
         img_url = f.get('image_url', '') or ''
+        prof_url = f.get('profile_url', '') or ''
         lines.append(
             f"| {f.get('name','')} | {f.get('designation','')} | "
             f"{f.get('qualification', f.get('specialization',''))} | "
-            f"{f.get('experience','')} | {img_url} |"
+            f"{f.get('experience','')} | {img_url} | {prof_url} |"
         )
     return lines
 
@@ -312,6 +313,28 @@ def _render_engineering(eng: dict) -> list[str]:
                 f"> — {alum.get('name','')}{batch_str}"
             )
 
+        # Placements (if department-specific)
+        placements = dept.get("placements")
+        if placements:
+            lines.append(f"\n#### {code} Placements")
+            lines.append(f"- Highest package: {placements.get('highest_package', '')}")
+            lines.append(f"- Average package: {placements.get('average_package', '')}")
+            lines.append(f"- Placement rate: {placements.get('placement_rate', '')}")
+            if placements.get("top_recruiters"):
+                lines.append(f"- Top recruiters: {', '.join(placements['top_recruiters'])}")
+
+        # Key Subjects
+        subjects = dept.get("key_subjects")
+        if subjects:
+            lines.append(f"\n#### {code} Key Subjects")
+            for subj in subjects:
+                lines.append(f"- {subj}")
+
+        # Duration
+        duration = dept.get("duration_years")
+        if duration:
+            lines.append(f"- **Duration:** {duration} years")
+
         # Department Links
         dept_urls = _render_urls(dept)
         if dept_urls:
@@ -419,6 +442,28 @@ def _render_pharmacy(pharm: dict) -> list[str]:
                 f"> — {alum.get('name','')} ({alum.get('designation','')})"
             )
 
+        # Placements (if department-specific)
+        placements = dept.get("placements")
+        if placements:
+            lines.append(f"\n#### {code} Placements")
+            lines.append(f"- Highest package: {placements.get('highest_package', '')}")
+            lines.append(f"- Average package: {placements.get('average_package', '')}")
+            lines.append(f"- Placement rate: {placements.get('placement_rate', '')}")
+            if placements.get("top_recruiters"):
+                lines.append(f"- Top recruiters: {', '.join(placements['top_recruiters'])}")
+
+        # Key Subjects
+        subjects = dept.get("key_subjects")
+        if subjects:
+            lines.append(f"\n#### {code} Key Subjects")
+            for subj in subjects:
+                lines.append(f"- {subj}")
+
+        # Duration
+        duration = dept.get("duration_years")
+        if duration:
+            lines.append(f"- **Duration:** {duration} years")
+
         # Department Links
         dept_urls = _render_urls(dept)
         if dept_urls:
@@ -516,6 +561,28 @@ def _render_architecture(arch: dict) -> list[str]:
                 f"\n> *\"{alum.get('quote','')}\"*  \n"
                 f"> — {alum.get('name','')} ({alum.get('designation','')})"
             )
+
+        # Placements (if department-specific)
+        placements = dept.get("placements")
+        if placements:
+            lines.append(f"\n#### {code} Placements")
+            lines.append(f"- Highest package: {placements.get('highest_package', '')}")
+            lines.append(f"- Average package: {placements.get('average_package', '')}")
+            lines.append(f"- Placement rate: {placements.get('placement_rate', '')}")
+            if placements.get("top_recruiters"):
+                lines.append(f"- Top recruiters: {', '.join(placements['top_recruiters'])}")
+
+        # Key Subjects
+        subjects = dept.get("key_subjects")
+        if subjects:
+            lines.append(f"\n#### {code} Key Subjects")
+            for subj in subjects:
+                lines.append(f"- {subj}")
+
+        # Duration
+        duration = dept.get("duration_years")
+        if duration:
+            lines.append(f"- **Duration:** {duration} years")
 
         # Department Links
         dept_urls = _render_urls(dept)

@@ -96,5 +96,7 @@
     "designation": "Pharmacist Customer Support, TrueMeds",
     "quote": "The solid academic foundation, hands-on training, and continuous mentorship I received during my D.Pharm program played a crucial role in shaping my career."
   },
-  "homepage_url": "https://aiktc.ac.in/diploma-in-pharmacy/"
+  "homepage_url": "https://aiktc.ac.in/diploma-in-pharmacy/",
+  "duration_years": 2,
+  "key_subjects": ["Pharmaceutics", "Pharmacology", "Pharmaceutical Chemistry", "Pharmacognosy", "Community Pharmacy"]
 }

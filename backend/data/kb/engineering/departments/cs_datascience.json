@@ -69,5 +69,7 @@
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-events/",
   "admission_url": "https://soet.aiktc.ac.in/bachelor-of-computer-science-engineering-data-science-admissions/",
   "activities_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-activities/",
-  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-achievements/"
+  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-science-and-engineering-data-science/data-science-achievements/",
+  "duration_years": 4,
+  "key_subjects": ["Big Data Analytics", "Data Mining", "Statistical Methods", "Data Visualization", "Python for Data Science"]
 }

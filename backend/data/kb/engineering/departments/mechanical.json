@@ -152,5 +152,13 @@
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-events/",
   "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/me-alumni/",
   "admission_url": "https://soet.aiktc.ac.in/bachelor-of-mechanical-engineering-admissions/",
-  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-achievements/"
+  "achievements_url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/mechanical-engineering-achievements/",
+  "duration_years": 4,
+  "key_subjects": ["Thermodynamics", "Fluid Mechanics", "Machine Design", "Manufacturing Processes", "CAD/CAM"],
+  "placements": {
+    "highest_package": "₹4.5 LPA",
+    "average_package": "₹2.13 LPA",
+    "placement_rate": "75%",
+    "top_recruiters": ["Kosmics Engineer Ltd", "Suchi Pvt Ltd"]
+  }
 }

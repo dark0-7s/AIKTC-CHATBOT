@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIKTC — Anjuman-I-Islam's Kalsekar Technical Campus | Navi Mumbai</title>
+  <meta name="description" content="AIKTC, affiliated with the University of Mumbai and approved by AICTE, the Council of Architecture, and the Pharmacy Council of India, is NAAC accredited.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       AIKTC Homepage Replica — Standalone CSS
+       ═══════════════════════════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #1a6b3c;
+      --green-dark: #155a32;
+      --green-light: #238b4e;
+      --gold: #DF9926;
+      --gold-light: #f5c35a;
+      --dark: #2f353b;
+      --text: #3f444a;
+      --bg: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; transition: color 0.2s; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    /* ── Top bar ───────────────────────────────────────────── */
+    .top-bar {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 6px 20px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Secondary nav ─────────────────────────────────────── */
+    .secondary-nav {
+      background: var(--dark);
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .secondary-nav a {
+      color: #ccc;
+      font-size: 11.5px;
+      padding: 8px 14px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .secondary-nav a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* ── Logo bar ──────────────────────────────────────────── */
+    .logo-bar {
+      background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .logo-bar img {
+      height: 52px;
+      width: auto;
+    }
+    .logo-bar .school-badge {
+      height: 40px;
+      padding: 4px 12px;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--dark);
+      transition: box-shadow 0.2s;
+    }
+    .logo-bar .school-badge:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .logo-bar .school-badge .ugc-tag {
+      background: var(--green);
+      color: #fff;
+      font-size: 8px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Main nav ──────────────────────────────────────────── */
+    .main-nav {
+      background: var(--green);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .main-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 14px 16px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: rgba(0,0,0,0.15);
+    }
+    .main-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ── News ticker ───────────────────────────────────────── */
+    .ticker-bar {
+      background: var(--gray-800);
+      color: #fff;
+      padding: 10px 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ticker-content {
+      display: flex;
+      gap: 60px;
+      animation: ticker-scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-content span {
+      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ticker-content span::before {
+      content: '📢';
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── Hero section ──────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #0a3d1f 0%, #1a6b3c 40%, #0d4a24 100%);
+      min-height: 500px;
+      display: flex;
+      overflow: hidden;
+    }
+    .hero-content {
+      flex: 1;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+      max-width: 600px;
+    }
+    .hero-content h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 span {
+      color: var(--gold);
+    }
+    .hero-content p {
+      color: rgba(255,255,255,0.8);
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hero-cta a {
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+    }
+    .btn-gold:hover {
+      background: #c5841f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223,153,38,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Hero side — latest events card */
+    .hero-events {
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      background: rgba(255,255,255,0.97);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      z-index: 3;
+    }
+    .hero-events-header {
+      background: var(--gold);
+      padding: 14px 20px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .hero-events-list {
+      padding: 8px 0;
+    }
+    .hero-events-list a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--dark);
+      border-bottom: 1px solid var(--gray-100);
+      transition: background 0.2s;
+    }
+    .hero-events-list a:last-child {
+      border-bottom: none;
+    }
+    .hero-events-list a:hover {
+      background: var(--gray-50);
+      color: var(--green);
+    }
+    .hero-events-footer {
+      padding: 10px 20px;
+      background: var(--gray-50);
+    }
+    .hero-events-footer a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    /* Hero decorative shapes */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(223,153,38,0.12), transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.04), transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* ── Section title ─────────────────────────────────────── */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .section-title .underline {
+      width: 50px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    /* ── Happenings / News grid ─────────────────────────────── */
+    .section-happenings {
+      padding: 70px 40px;
+      background: var(--gray-50);
+    }
+    .happenings-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .happening-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .happening-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    .happening-card-img {
+      height: 200px;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 48px;
+    }
+    .happening-card-body {
+      padding: 20px;
+    }
+    .happening-card-body .date {
+      font-size: 11.5px;
+      color: var(--gray-400);
+      margin-bottom: 6px;
+    }
+    .happening-card-body h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .happening-card-body .read-more {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid var(--green);
+      padding: 5px 14px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .happening-card-body .read-more:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    /* ── About section ─────────────────────────────────────── */
+    .section-about {
+      padding: 70px 40px;
+    }
+    .about-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-inner p {
+      font-size: 14.5px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+    .vision-mission {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .vm-card {
+      padding: 28px 24px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .vm-card.vision {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #bbf7d0;
+    }
+    .vm-card.mission {
+      background: linear-gradient(135deg, #fefce8, #fef9c3);
+      border: 1px solid #fde68a;
+    }
+    .vm-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .vm-card.vision h3 { color: var(--green-dark); }
+    .vm-card.mission h3 { color: #92400e; }
+    .vm-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ── Accreditation strip ───────────────────────────────── */
+    .section-accreditation {
+      padding: 50px 40px;
+      background: var(--gray-50);
+      text-align: center;
+    }
+    .accreditation-text {
+      max-width: 900px;
+      margin: 0 auto 24px;
+      font-size: 12.5px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .accreditation-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .accred-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ── Stats counter ─────────────────────────────────────── */
+    .section-stats {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      padding: 50px 40px;
+    }
+    .stats-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .stat-card {
+      text-align: center;
+      padding: 24px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .stat-card .stat-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-bottom: 8px;
+      padding: 4px 10px;
+      background: rgba(223,153,38,0.15);
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .stat-card .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .stat-card .stat-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── Placement partners ────────────────────────────────── */
+    .section-partners {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .partners-grid {
+      max-width: 900px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .partner-logo {
+      height: 36px;
+      padding: 8px 16px;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-600);
+      letter-spacing: 0.5px;
+      transition: box-shadow 0.2s;
+    }
+    .partner-logo:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    .footer {
+      background: var(--gray-800);
+      color: rgba(255,255,255,0.7);
+      padding: 50px 40px 20px;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer h4 {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .footer p, .footer li {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: var(--gold);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; min-height: auto; }
+      .hero-content { padding: 40px 24px; max-width: 100%; }
+      .hero-events {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: calc(100% - 48px);
+        margin: 0 24px 30px;
+      }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .vision-mission { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .logo-bar { padding: 10px 16px; gap: 10px; }
+      .logo-bar img { height: 36px; }
+      .main-nav a { font-size: 11.5px; padding: 12px 10px; }
+      .hero-content h1 { font-size: 24px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .section-happenings, .section-about, .section-partners { padding: 40px 20px; }
+    }
+
+    /* ── REPLICA BADGE (identifies this as a demo) ─────────── */
+    .replica-badge {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      background: #ef4444;
+      color: #fff;
+      padding: 6px 18px 6px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 0 6px 6px 0;
+      z-index: 10000;
+      box-shadow: 0 2px 10px rgba(239,68,68,0.3);
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Replica badge -->
+  <div class="replica-badge">⚠ DEMO REPLICA — Not the actual AIKTC website</div>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    An Autonomous Institute Affiliated to the University of Mumbai
+  </div>
+
+  <!-- Secondary nav -->
+  <nav class="secondary-nav">
+    <a href="#">Circular and Notices</a>
+    <a href="#">Incubation</a>
+    <a href="#">News</a>
+    <a href="#">Events</a>
+    <a href="#">Gallery</a>
+    <a href="#">Public Self-Disclosure</a>
+    <a href="#">UGC Undertaking</a>
+    <a href="#">Conference</a>
+  </nav>
+
+  <!-- Logo bar -->
+  <div class="logo-bar">
+    <img src="https://cdn.aiktc.ac.in/wp-content/uploads/2022/06/KTC-LOGO-1.png?strip=all" alt="AIKTC Logo">
+    <a href="#" class="school-badge">
+      SCHOOL OF ARCHITECTURE
+    </a>
+    <a href="#" class="school-badge">
+      SCHOOL OF ENGG & TECHNOLOGY
+      <span class="ugc-tag">UGC AUTONOMOUS</span>
+    </a>
+    <a href="#" class="school-badge">
+      SCHOOL OF PHARMACY
+      <span class="ugc-tag">UGC AUTONOMOUS</span>
+    </a>
+  </div>
+
+  <!-- Main navigation -->
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <a href="#" class="active">HOME</a>
+      <a href="#">ABOUT US ▾</a>
+      <a href="#">PROGRAMS ▾</a>
+      <a href="#">ADMISSION ▾</a>
+      <a href="#">FEES ▾</a>
+      <a href="#">SERVICES ▾</a>
+      <a href="#">STUDENTS ▾</a>
+      <a href="#">CENTRE ▾</a>
+      <a href="#">DISCLOSURE ▾</a>
+      <a href="#">PLACEMENT</a>
+      <a href="#">EXAM ▾</a>
+      <a href="#">NAAC ▾</a>
+    </div>
+  </nav>
+
+  <!-- News ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-content">
+      <span>B.Sc. IT 2026 Merit List Out Now – Click to View</span>
+      <span>AIKTC proudly presents the International Conference ICISEA 2026</span>
+      <span>Admission Open for B.E. / B.Tech / B.Arch / B.Pharm 2026-27</span>
+      <span>CAP Registration Last Date: 12 July 2026</span>
+      <span>B.Sc. IT 2026 Merit List Out Now – Click to View</span>
+      <span>AIKTC proudly presents the International Conference ICISEA 2026</span>
+      <span>Admission Open for B.E. / B.Tech / B.Arch / B.Pharm 2026-27</span>
+      <span>CAP Registration Last Date: 12 July 2026</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to<br><span>Kalsekar Technical Campus</span></h1>
+      <p>Empowering students since 2011 with world-class education in Engineering, Pharmacy, and Architecture. NAAC Accredited &amp; ISO Certified.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-gold">Explore Programs</a>
+        <a href="#" class="btn-outline">Admission 2026-27</a>
+      </div>
+    </div>
+    <div class="hero-events">
+      <div class="hero-events-header">📅 Latest Events</div>
+      <div class="hero-events-list">
+        <a href="#">Reading Inspiration Day (Vachan Prerna Diwas) 2025 on 15th October</a>
+        <a href="#">MGM Hospital visit to Pharmacy Department</a>
+        <a href="#">Pool Campus Drive of Pharmeasy-Thyrocare</a>
+        <a href="#">Smart India Hackathon 2025</a>
+        <a href="#">Innovation Leadership Summit 2026</a>
+      </div>
+      <div class="hero-events-footer">
+        <a href="#">FIND A PROGRAMME →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Happening -->
+  <section class="section-happenings">
+    <div class="section-title">
+      <h2>What's Happening @ Kalsekar Technical Campus</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="happenings-grid">
+      <div class="happening-card">
+        <div class="happening-card-img">🏛</div>
+        <div class="happening-card-body">
+          <div class="date">📅 March 23, 2026</div>
+          <h3>AIKTC and Kalsekar Incubation Centre represent Maharashtra at SAMPATH Initiative</h3>
+          <a href="#" class="read-more">Continue →</a>
+        </div>
+      </div>
+      <div class="happening-card">
+        <div class="happening-card-img">🎓</div>
+        <div class="happening-card-body">
+          <div class="date">📅 February 15, 2026</div>
+          <h3>Grand Product Launch Held at Pitch Carnival 2026</h3>
+          <a href="#" class="read-more">Continue →</a>
+        </div>
+      </div>
+      <div class="happening-card">
+        <div class="happening-card-img">🏆</div>
+        <div class="happening-card-body">
+          <div class="date">📅 January 10, 2026</div>
+          <h3>Pitch Carnival 2026 — A Landmark Celebration of Innovation & Investment</h3>
+          <a href="#" class="read-more">Continue →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Vision‑Mission -->
+  <section class="section-about">
+    <div class="about-inner">
+      <div class="section-title">
+        <h2>More About AIKTC Campus</h2>
+        <div class="underline"></div>
+      </div>
+      <p>It is an outstanding technological campus where students are trained & taught by qualified teachers and trainers to attain their full potential. AIKTC provides <strong>Best of Facilities for quality education, research and practice</strong> in all the professional <strong>Programmes in Engineering & Technology, Pharmacy and Architecture</strong>, ranging from Diploma to Degree to Post Graduate courses.</p>
+      <div class="vision-mission">
+        <div class="vm-card vision">
+          <h3>🏛 Institution Vision</h3>
+          <p>To be the most sought after Technical Campus that others would wish to emulate.</p>
+        </div>
+        <div class="vm-card mission">
+          <h3>🎯 Institution Mission</h3>
+          <p>Creating Exuberant Engineering Professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ranking & Recognition -->
+  <section class="section-accreditation">
+    <div class="section-title">
+      <h2>Ranking & Recognition and Affiliation</h2>
+      <div class="underline"></div>
+    </div>
+    <p class="accreditation-text">
+      AFFILIATED TO UNIVERSITY OF MUMBAI | APPROVED BY: ALL INDIA COUNCIL OF TECHNICAL EDUCATION, COUNCIL OF ARCHITECTURE AND PHARMACY COUNCIL OF INDIA | RECOGNISED BY DIRECTORATE OF TECHNICAL EDUCATION, GOVT OF MAHARASHTRA | <strong>ACCREDITED BY NAAC</strong> | <strong>ISO</strong> 9001:2015 & 14001:2015 <strong>CERTIFIED</strong>
+    </p>
+    <div class="accreditation-logos">
+      <div class="accred-logo" style="background:#c0392b;">AICTE</div>
+      <div class="accred-logo" style="background:#2980b9;">UoM</div>
+      <div class="accred-logo" style="background:#27ae60;">PCI</div>
+      <div class="accred-logo" style="background:#8e44ad;">NAAC</div>
+      <div class="accred-logo" style="background:#e67e22;">CoA</div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section-stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Years of Experience</div>
+        <div class="stat-value">15+</div>
+        <div class="stat-desc">Started in Year 2011</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Human Resource</div>
+        <div class="stat-value">300+</div>
+        <div class="stat-desc">Faculty and Staff</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Alumni</div>
+        <div class="stat-value">10000+</div>
+        <div class="stat-desc">Our polished Diamonds</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Placements</div>
+        <div class="stat-value">500+</div>
+        <div class="stat-desc">Students Placed Last Year</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placement Partners -->
+  <section class="section-partners">
+    <div class="section-title">
+      <h2>Key Placement Partners</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-logo">Infosys</div>
+      <div class="partner-logo">Endurance</div>
+      <div class="partner-logo">JUSPAY</div>
+      <div class="partner-logo">T-Systems</div>
+      <div class="partner-logo">Virtusa</div>
+      <div class="partner-logo">Hexaware</div>
+      <div class="partner-logo">TCS</div>
+      <div class="partner-logo">Wipro</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Anjuman-I-Islam's Kalsekar Technical Campus</h4>
+        <p>Plot No. 2 & 3, Sector 16, Near Thana Naka,<br>
+          New Panvel, Navi Mumbai – 410206<br>
+          Maharashtra, India</p>
+        <p style="margin-top:12px;">
+          📞 022-2745-0010<br>
+          📧 info@aiktc.ac.in
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Admission 2026-27</a></li>
+          <li><a href="#">Fee Structure</a></li>
+          <li><a href="#">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Schools</h4>
+        <ul>
+          <li><a href="#">School of Architecture</a></li>
+          <li><a href="#">School of Engineering & Technology</a></li>
+          <li><a href="#">School of Pharmacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Important</h4>
+        <ul>
+          <li><a href="#">Anti-Ragging</a></li>
+          <li><a href="#">NAAC</a></li>
+          <li><a href="#">NIRF</a></li>
+          <li><a href="#">Mandatory Disclosure</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Anjuman-I-Islam's Kalsekar Technical Campus. All rights reserved. | This is a demo replica for chatbot preview purposes.
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CHATBOT LAUNCHER — This is the only line you need to add
+       to embed the chatbot widget on any page!
+       ═══════════════════════════════════════════════════════ -->
+  <script src="/chatbot-launcher.js"
+          data-chatbot-url="http://localhost:5175"
+          defer></script>
+
+</body>
+</html>

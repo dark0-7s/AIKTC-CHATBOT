@@ -124,6 +124,62 @@
       "designation": "Teaching Assistant",
       "qualification": "(M.E. Comp. Engg.)*",
       "experience": "9 yrs"
+    },
+    {
+      "name": "Prof. Shagufta Baseer",
+      "designation": "Assistant Professor",
+      "qualification": "B.Tech., M.Tech.",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/shagufta-baseer-2/"
+    },
+    {
+      "name": "Prof. Aqsa Sarnaik",
+      "designation": "Teaching Assistant",
+      "qualification": "B.E., M.E. (Second Year Pursuing)",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/aqsa-sarnaik/"
+    },
+    {
+      "name": "Prof. Rohan Rajendra Patil",
+      "designation": "Teaching Assistant",
+      "qualification": "B.E. (CSE-AIML), M.E. (Comp. Engg.)",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/rohan-rajendra-patil/"
+    },
+    {
+      "name": "Prof. Maaz Aslam Chogle",
+      "designation": "Teaching Assistant",
+      "qualification": "B.E. (Comp. Engg.), M.Tech. (Comp. Engg.)*",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/maaz-aslam-chogle/"
+    },
+    {
+      "name": "Prof. Vrushali Pankaj Thakur",
+      "designation": "Assistant Professor",
+      "qualification": "B.E., M.E.",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/prof-vrushali-pankaj-thakur/"
+    },
+    {
+      "name": "Prof. Namrata Arya",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech. (CSE), Ph.D. (Pursuing)",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/namrata-arya/"
+    },
+    {
+      "name": "Prof. Jyoti Ashish Baviskar",
+      "designation": "Assistant Professor",
+      "qualification": "B.E., M.E.",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/jyoti-ashish-baviskar/"
+    },
+    {
+      "name": "Prof. Yasmeen Zakirhusen Attar",
+      "designation": "Assistant Professor",
+      "qualification": "B.E., M.E., Ph.D. (Pursuing)",
+      "experience": null,
+      "profile_url": "https://soet.aiktc.ac.in/staff/yasmeen-zakirhusen-attar/"
     }
   ],
   "alumni_testimonial": {
@@ -138,5 +194,13 @@
   "timetable_url": "https://soet.aiktc.ac.in/co-time-table/",
   "academic_calendar_url": "https://soet.aiktc.ac.in/co-academic-calendar/",
   "events_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/co-events/",
-  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-alumni/"
+  "alumni_url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/computer-engineering-alumni/",
+  "duration_years": 4,
+  "key_subjects": ["Data Structures", "Algorithms", "Operating Systems", "Database Management Systems", "Software Engineering"],
+  "placements": {
+    "highest_package": "₹6.0 LPA",
+    "average_package": "₹3.35 LPA",
+    "placement_rate": "85%",
+    "top_recruiters": ["Intellect Bizware", "Reliance Jio", "Tikona"]
+  }
 }
