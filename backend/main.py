@@ -14,6 +14,7 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
@@ -86,6 +87,7 @@ async def lifespan(app: FastAPI):
     try:
         kb_path = settings.resolved_kb_path
         merged = load_and_merge_kb(kb_path)
+        app.state.kb_dict = merged
         app.state.kb_markdown = kb_to_markdown(merged)
         logger.info(
             f"Knowledge base loaded | size={len(app.state.kb_markdown)} chars | path={kb_path}"
@@ -131,11 +133,20 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 # ==============================================================================
 # CORS MIDDLEWARE
 # ==============================================================================
+cors_origins = [
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+if settings.frontend_origin and settings.frontend_origin not in cors_origins:
+    cors_origins.append(settings.frontend_origin)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_origin],
+    allow_origins=cors_origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "DELETE"],
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -172,6 +183,17 @@ async def global_exception_handler(request: Request, exc: Exception):
         },
     )
 
+
+# ==============================================================================
+# STATIC FILES (Images for Director, Faculty, and Labs)
+# ==============================================================================
+images_dir = os.path.join(os.path.dirname(__file__), "data", "images")
+if not os.path.exists(images_dir):
+    images_dir = os.path.join(os.path.dirname(__file__), "..", "frontend", "public", "images")
+
+if os.path.exists(images_dir):
+    app.mount("/images", StaticFiles(directory=images_dir), name="images")
+    logger.info(f"Mounted static images directory from {images_dir}")
 
 # ==============================================================================
 # ROUTES

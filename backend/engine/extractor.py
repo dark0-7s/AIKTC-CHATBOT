@@ -78,13 +78,18 @@ def extract_person_intent(text: str):
 
 def extract_category(text: str) -> str | None:
     """
-    Extract canonical category from text.
+    Extract canonical category from text using word boundary matching.
     Returns canonical key ("Open", "OBC", etc.) or None.
     """
     text_lower = normalize_text(text).lower()
     for category, aliases in CATEGORY_ALIASES.items():
-        if any(alias in text_lower for alias in aliases):
-            return category
+        for alias in aliases:
+            if len(alias) <= 3:
+                if re.search(r'\b' + re.escape(alias) + r'\b', text_lower):
+                    return category
+            else:
+                if alias in text_lower:
+                    return category
     return None
 
 
@@ -171,28 +176,21 @@ def extract_entities(current_message: str, history: list[dict]) -> dict:
     # 2. Filter to admission-relevant turns only
     relevant_turns = filter_relevant_history(user_turns)
     
-    # 3. Extract departments — CURRENT MESSAGE ONLY
+    # 3. Extract departments — CURRENT MESSAGE ONLY (Design Principle P8)
     departments = extract_departments(current_message)
 
+    # 4. Extract person intent — CURRENT MESSAGE ONLY (no history carryover)
     person_intent = extract_person_intent(current_message)
-
-    # Recover person intent from previous user message
-    if person_intent is None:
-        for turn in reversed(user_turns):
-            if turn["content"] == current_message:
-                continue
-
-            previous_intent = extract_person_intent(turn["content"])
-            if previous_intent:
-                person_intent = previous_intent
-                break
 
     # --------------------------------------------------
     # Extract category from current message
     # --------------------------------------------------
     category = extract_category(current_message)
 
-    if category is None:
+    # Only recover category from history if the query is an admission / cutoff follow-up
+    current_norm = normalize_text(current_message).lower()
+    is_admission_msg = any(s in current_norm for s in ADMISSION_SIGNALS) or bool(RE_PERCENTILE.search(current_norm))
+    if category is None and is_admission_msg:
         for turn in reversed(relevant_turns):
             category = extract_category(turn["content"])
             if category:

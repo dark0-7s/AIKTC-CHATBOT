@@ -123,7 +123,7 @@ useEffect(() => {
           </div>
 
         <a
-  href={`${import.meta.env.VITE_API_URL}/api/admin/dashboard`}
+  href={`${import.meta.env.VITE_API_URL || "http://localhost:8001"}/api/admin/dashboard`}
   target="_blank"
   rel="noopener noreferrer"
             style={{

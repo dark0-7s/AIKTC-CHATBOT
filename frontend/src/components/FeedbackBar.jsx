@@ -14,8 +14,9 @@ async function sendFeedback(rating, comment = "", reason = "") {
   if (submitted) return;
 
   try {
+    const apiBase = import.meta.env.VITE_API_URL || "http://localhost:8001";
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/api/feedback/`,
+      `${apiBase}/api/feedback/`,
       {
         method: "POST",
         headers: {

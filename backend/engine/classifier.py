@@ -84,3 +84,172 @@ def classify_number(raw: str, context_text: str) -> tuple[float, str]:
         return value, "rank"
         
     return value, "ambiguous"
+
+
+# ==============================================================================
+# PREPROCESSING (Algorithm 1 — Step 1)
+# ==============================================================================
+DEVANAGARI_DIGITS = {
+    '०': '0', '१': '1', '२': '2', '३': '3', '४': '4',
+    '५': '5', '६': '6', '७': '7', '८': '8', '९': '9'
+}
+
+def preprocess(text: str) -> str:
+    """
+    Algorithm 1, Step 1: Preprocess user query.
+    Normalizes whitespace, converts Devanagari digits to ASCII, and strips whitespace.
+    """
+    if not text:
+        return ""
+    for dev, ascii_ in DEVANAGARI_DIGITS.items():
+        text = text.replace(dev, ascii_)
+    # Normalize multiple whitespace characters
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+# ==============================================================================
+# INTENT CLASSIFICATION (Algorithm 1 — Step 2)
+# ==============================================================================
+INTENT_PATTERNS = {
+    "out_of_scope": [
+        r'\b(?:weather|temperature|cricket|football|movie|song|joke|recipe|pm of india|president)\b',
+        r'\b(?:write code|python program|solve this math|who won the match)\b',
+        r'\b(?:vjti|spit|coep|ict|iit bombay|bits pilani|mit pune)\b'
+    ],
+    "admission_process": [
+        r'\b(?:admission process|how to apply|apply for admission|admission procedure|steps to apply|step by step process)\b',
+        r'\bdocuments?\b.*?\b(?:required|needed|checklist|list)\b',
+        r'\b(?:eligibility criteria|eligibility for|eligibility)\b',
+        r'\b(?:minority|domicile|income certificate|confirm seat|verification)\b',
+        r'\b(?:institutional quota|against cap seats|after getting cap allotment)\b'
+    ],
+    "admission_cutoff": [
+        r'\b(?:cutoff|cut off|cut-off|closing rank|closing score|percentile|कटऑफ|परसेंटाइल)\b',
+        r'\b(?:chances?|milega|mil sakta|qualify)\b'
+    ],
+    "hostel": [
+        r'\b(?:hostel|hostels|mess|accommodation|rooms|room rent|stay|pg|rental flats)\b'
+    ],
+    "fee": [
+        r'\b(?:refund|cancellation|deducted|deduction)\b',
+        r'\b(?:fee|fees|fee structure|tuition|cost|annual fee|total fee|payment|dd|demand draft|installment)\b',
+        r'\b(?:kitni fee|paisa|charges)\b'
+    ],
+    "scholarship": [
+        r'\b(?:scholarship|scholarships|mahadbt|ebc|freeship|financial aid|fee waiver|zakat)\b',
+        r'\b(?:tfws|concession)\b'
+    ],
+    "cap": [
+        r'\b(?:cap round|cap rounds|cet cell|mahacet|option form|allotment|e-scrutiny|physical scrutiny|merit list)\b',
+        r'\b(?:centralised admission process|centralized admission process|dte code|choice code|institute code)\b',
+        r'\bcap\b'
+    ],
+    "faculty": [
+        r'\b(?:who is the training and placement officer|who is tpo|who is the tpo)\b',
+        r'\b(?:faculty|teacher|teachers|professor|professors|lecturer|staff|hod|dean|director|principal)\b',
+        r'\b(?:head of|who is the hod|who is the director|who is the principal|who teaches|teach|instructor|kaun hai)\b'
+    ],
+    "placement": [
+        r'\b(?:placement|placements|package|highest package|average package|recruiter|recruiters|companies|company|internship|internships|placed|aptitude|tpo cell)\b'
+    ],
+    "facilities": [
+        r'\b(?:facility|facilities|lab|labs|laboratory|laboratories|library|canteen|sports|gym|ground|bus|transport|infrastructure)\b',
+        r'\b(?:krrc|incubation|workshop|equipment|auditorium|club|clubs|chapter|chapters|ieee|csi)\b'
+    ],
+    "contact": [
+        r'\b(?:contact|phone|email|address|location|helpline|how to reach|call|talk to|office|where is)\b'
+    ]
+}
+
+def classify_intent(text: str, context: list[dict] | None = None) -> str:
+    """
+    Algorithm 1, Step 2: Intent classification.
+    Determines query intent using deterministic keyword and pattern matching.
+    Returns canonical intent string.
+    """
+    text_lower = text.lower()
+
+    # 1. Out of scope
+    for pattern in INTENT_PATTERNS["out_of_scope"]:
+        if re.search(pattern, text_lower):
+            return "out_of_scope"
+
+    # 2. Specific refund / cancellation query has highest fee precedence
+    if re.search(r'\b(?:refund|cancellation|deducted|deduction)\b', text_lower):
+        return "fee"
+
+    # 3. Hostel (e.g., "hostel accommodation", "hostel fee", "apply for hostel")
+    for pattern in INTENT_PATTERNS["hostel"]:
+        if re.search(pattern, text_lower):
+            return "hostel"
+
+    # 4. Explicit "how to apply" or application steps
+    if re.search(r'\b(?:how to apply|apply for admission|admission process|steps to apply|step by step process)\b', text_lower):
+        return "admission_process"
+
+    # 4. Explicit fee queries (e.g., "concession in fees", "TFWS category fees")
+    if re.search(r'\b(?:concession in fees?|category fees?|fee(?:s)? for \w+ category)\b', text_lower):
+        return "fee"
+
+    # 5. Cutoff & chances (takes precedence over TFWS/scholarship mentions)
+    for pattern in INTENT_PATTERNS["admission_cutoff"]:
+        if re.search(pattern, text_lower):
+            return "admission_cutoff"
+
+    # 4. Hostel (e.g., "hostel accommodation", "hostel fee")
+    for pattern in INTENT_PATTERNS["hostel"]:
+        if re.search(pattern, text_lower):
+            return "hostel"
+
+    # 5. CAP rounds & state admission authorities (e.g. e-scrutiny, CAP verification)
+    for pattern in INTENT_PATTERNS["cap"]:
+        if re.search(pattern, text_lower):
+            return "cap"
+
+    # 6. Scholarship (e.g. MahaDBT, EBC, TFWS waiver, minority scholarship)
+    for pattern in INTENT_PATTERNS["scholarship"]:
+        if re.search(pattern, text_lower):
+            return "scholarship"
+
+    # 7. Admission Process & documentation & basic eligibility
+    for pattern in INTENT_PATTERNS["admission_process"]:
+        if re.search(pattern, text_lower):
+            return "admission_process"
+
+    # 8. Faculty / Personnel (checked before placement so "Who is TPO" maps to faculty)
+    for pattern in INTENT_PATTERNS["faculty"]:
+        if re.search(pattern, text_lower):
+            return "faculty"
+
+    # 9. Placements & recruiters
+    for pattern in INTENT_PATTERNS["placement"]:
+        if re.search(pattern, text_lower):
+            return "placement"
+
+    # 10. Fees & payment
+    for pattern in INTENT_PATTERNS["fee"]:
+        if re.search(pattern, text_lower):
+            return "fee"
+
+    # 11. Facilities, labs, infrastructure
+    for pattern in INTENT_PATTERNS["facilities"]:
+        if re.search(pattern, text_lower):
+            return "facilities"
+
+    # 12. Contact, phone, address, directions
+    for pattern in INTENT_PATTERNS["contact"]:
+        if re.search(pattern, text_lower):
+            return "contact"
+
+    # 13. Check follow-up context if present
+    if context:
+        for turn in reversed(context):
+            if turn.get("role") == "user":
+                prev_intent = classify_intent(turn.get("content", ""))
+                if prev_intent in ("faculty", "fee", "admission_cutoff", "hostel", "scholarship"):
+                    return prev_intent
+                break
+
+    return "general"
+

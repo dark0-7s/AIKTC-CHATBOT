@@ -1,0 +1,1406 @@
+﻿{
+    "description":  "Official evaluation benchmark dataset of 200 real student queries across 10 institutional domains",
+    "queries":  [
+                    {
+                        "query":  "What is the cutoff for Computer Engineering?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  1,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the MHT-CET cutoff for CSE in AIKTC?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  2,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Can I get CSE with 92 percentile Open category?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  3,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "CSE milega 92 percentile pe? Open category hoon.",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  4,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What was the cutoff for Information Technology last year?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  5,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "IT department cutoff for OBC category",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  6,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the cutoff score for Electronics and Computer Science?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  7,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "ECS branch cutoff percentile",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  8,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Mechanical Engineering cutoff for Open category",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  9,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Mechanical cutoff kitna hai?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  10,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Civil Engineering cutoff marks in MHT CET",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  11,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the Civil cutoff for SC category?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  12,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Pharmacy admission cutoff percentile",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  13,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "B.Pharm cutoff for OBC students",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  14,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "B.Arch cutoff NATA score requirement",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  15,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "NATA score 130 marks pe B.Arch milega kya?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  16,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "CSE, IT, ECS ke chances 88 percentile Open?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  17,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Mera 78 percentile hai, CSE mil sakta hai kya?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  18,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Will I get admission in AIKTC with 85 percentile?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  19,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Cutoff percentile for direct second year engineering",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  20,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "DSE cutoff for Computer Science",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  21,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the closing rank for Computer Engineering?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  22,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Closing percentile for IT branch in CAP Round 1",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  23,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What are the cutoff percentiles for TFWS seats in CSE?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  24,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "TFWS seat cutoff in Mechanical Engineering",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  25,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "EWS category cutoff for Electronics \u0026 Computer Science",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  26,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "OBC category cutoff for Civil Engineering",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  27,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "कंप्यूटर इंजीनियरिंग का कटऑफ कितना है?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  28,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "मैकेनिकल का कटऑफ बताओ",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  29,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "सिविल इंजीनियरिंग में कितने परसेंटाइल पर एडमिशन मिलेगा?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  30,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the minimum percentile required for pharmacy?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  31,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the cutoff for M.Pharm?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  32,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Can I get into CSE with 75 percentile in JEE Mains?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  33,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "JEE Main cutoff for AIKTC engineering",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  34,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "How much CET percentile is needed for ECS?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  35,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the merit cutoff for CAP round 2?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  36,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Will cutoff drop in CAP round 3 for CSE?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  37,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Chances of getting IT with 82 percentile in Open?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  38,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "Chances of getting Pharmacy with 80 percentile in OBC?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  39,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What was the highest cutoff branch in AIKTC?",
+                        "category":  "admission_cutoff",
+                        "is_dynamic":  true,
+                        "id":  40,
+                        "expected_intent":  "admission_cutoff"
+                    },
+                    {
+                        "query":  "What is the annual fee for first year engineering?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  41,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Engineering fees structure for first year",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  42,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "How much is the fee for Computer Science?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  43,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "What is the fee for B.Pharm?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  44,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Pharmacy annual tuition and development fee",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  45,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "What is the fee for B.Arch architecture?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  46,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Direct second year engineering fee structure",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  47,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Is there any concession in fees for OBC students?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  48,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "What is the fee for SC and ST students in engineering?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  49,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Fee structure for EWS students",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  50,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "TFWS category fees in AIKTC",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  51,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Fees kya hai CSE ke liye?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  52,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Mechanical engineering ki fee kitni hai?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  53,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Civil department ki annual fee batao",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  54,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "How can I pay the college fees? Online or Demand Draft?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  55,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "In whose favor should the Demand Draft for fees be made?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  56,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Can I pay college fees in installments?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  57,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "What is the refund policy if I cancel my admission?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  58,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "How much fee is deducted upon admission cancellation before cutoff date?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  59,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Are there any additional exam fees per semester?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  60,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "What is the gymkhana and library fee included in total?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  61,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Total fees for four years B.Tech?",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  62,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Total fee for 4 years Bachelor of Pharmacy",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  63,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "M.Tech post graduate course fee",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  64,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "M.Pharm course fee per year",
+                        "category":  "fee",
+                        "is_dynamic":  false,
+                        "id":  65,
+                        "expected_intent":  "fee"
+                    },
+                    {
+                        "query":  "Who is the Director of AIKTC?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  66,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Principal of the college?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  67,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the HOD of Computer Engineering?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  68,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "HOD of Computer Engineering kaun hai?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  69,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Head of Department for ECS?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  70,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the HOD of Information Technology?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  71,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the HOD of Mechanical Engineering?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  72,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Head of Civil Engineering department?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  73,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Dean of Pharmacy School?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  74,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Principal or Dean of Architecture School?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  75,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Show me the faculty of Computer Engineering",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  76,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "CSE department teachers list",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  77,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Faculty members in Electronics and Computer Science",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  78,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Mechanical Engineering professors list",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  79,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Civil Engineering department faculty list",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  80,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Pharmacy faculty profiles",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  81,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who teaches Machine Learning in CSE?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  82,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Faculty qualification in Computer Engineering",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  83,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Experience of Computer Engineering teachers",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  84,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "HOD of ECS contact details",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  85,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "HOD of Mechanical contact email",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  86,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "कंप्यूटर इंजीनियरिंग के HOD कौन हैं?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  87,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Who is the Training and Placement Officer?",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  88,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Dean of Academics details",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  89,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "Director\u0027s email address and qualification",
+                        "category":  "faculty",
+                        "is_dynamic":  false,
+                        "id":  90,
+                        "expected_intent":  "faculty"
+                    },
+                    {
+                        "query":  "What is the admission process for first year engineering?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  91,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "How to apply for B.Tech in AIKTC?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  92,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "What documents are required for engineering admission?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  93,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Document checklist for direct second year admission",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  94,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "What is the eligibility criteria for first year engineering?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  95,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Eligibility for Bachelor of Pharmacy admission",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  96,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Eligibility criteria for B.Arch architecture course",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  97,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "How does the minority quota admission work in AIKTC?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  98,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Is AIKTC a religious minority college?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  99,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "What is the percentage of seats reserved for Muslim minority?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  100,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Admission process kya hai engineering ke liye?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  101,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Documents needed for OBC category admission",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  102,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Is income certificate mandatory for EWS category?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  103,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Do I need domicile certificate for Maharashtra state admission?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  104,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Can OMS outside Maharashtra students apply for admission?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  105,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "How to apply under institutional quota or against CAP seats?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  106,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "How to apply for direct second year engineering?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  107,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "What is the step by step process after getting CAP allotment?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  108,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "Steps to confirm seat at AIKTC campus",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  109,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "What are the office timings for admission verification?",
+                        "category":  "admission_process",
+                        "is_dynamic":  false,
+                        "id":  110,
+                        "expected_intent":  "admission_process"
+                    },
+                    {
+                        "query":  "When will CAP Round 1 start?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  111,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the CAP round schedule for engineering?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  112,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "How does CAP round work?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  113,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "How to fill the option form for CAP rounds?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  114,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the DTE code of AIKTC for engineering?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  115,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the institute code of AIKTC Pharmacy in CET Cell?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  116,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "Architecture DTE choice code for AIKTC",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  117,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "How to choose freeze or float in CAP round?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  118,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What happens if I get allotted in CAP Round 1?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  119,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is e-scrutiny mode for document verification?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  120,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is physical scrutiny mode in CET Cell?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  121,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "When will merit list be displayed on mahacet portal?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  122,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "How to register on cetcell.mahacet.org portal?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  123,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the official CET Cell helpline number?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  124,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "CAP provisional merit list date",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  125,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "Can I change my category during CAP grievance period?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  126,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What documents are needed for CAP verification center?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  127,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "Is non-creamy layer certificate mandatory for OBC in CAP?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  128,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "How many CAP rounds are conducted by Maharashtra CET?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  129,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the official website for CAP rounds?",
+                        "category":  "cap",
+                        "is_dynamic":  true,
+                        "id":  130,
+                        "expected_intent":  "cap"
+                    },
+                    {
+                        "query":  "What is the highest package offered at AIKTC?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  131,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Highest salary package in Computer Engineering",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  132,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "What is the average package for engineering graduates?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  133,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Which companies visit AIKTC for campus placement?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  134,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Top recruiters for Computer and IT department",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  135,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Does TCS and Infosys visit AIKTC for placements?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  136,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Placement record for Electronics and Computer Science",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  137,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Mechanical Engineering placement percentage",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  138,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Civil Engineering placement opportunities",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  139,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Pharmacy school placement statistics",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  140,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "What are the placement activities conducted by TPO cell?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  141,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Does college provide internship opportunities?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  142,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Are internships compulsory for final year engineering students?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  143,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "How many students got placed last year in CSE?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  144,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Placement statistics 2023-24",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  145,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Placements ka data dikhao",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  146,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "What is the training provided for aptitude and coding?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  147,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Does college have MoUs with tech companies?",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  148,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Highest international or domestic package details",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  149,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Average placement salary in Pharmacy",
+                        "category":  "placement",
+                        "is_dynamic":  false,
+                        "id":  150,
+                        "expected_intent":  "placement"
+                    },
+                    {
+                        "query":  "Does AIKTC provide hostel facility?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  151,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Is hostel available for boys and girls?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  152,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "What is the hostel fee per year?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  153,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Hostel rooms and mess charges",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  154,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "How much is the mess fee per month?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  155,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "What facilities are provided in the hostel rooms?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  156,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Is Wi-Fi available in the hostel?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  157,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "What is the total capacity of boys hostel?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  158,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "What is the capacity of girls hostel?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  159,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Hostel rules and regulations kya hain?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  160,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Is there any curfew or timing restriction for hostel?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  161,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "How to apply for hostel accommodation?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  162,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Are outside PG or rental flats available near AIKTC campus?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  163,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Is food quality good in the hostel mess?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  164,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "Can first year students get hostel room easily?",
+                        "category":  "hostel",
+                        "is_dynamic":  false,
+                        "id":  165,
+                        "expected_intent":  "hostel"
+                    },
+                    {
+                        "query":  "What scholarships are available for students in AIKTC?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  166,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "How can I apply for MahaDBT scholarship?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  167,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "What is the eligibility for EBC scholarship concession?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  168,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "What is the income limit for EBC fee waiver?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  169,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Are there scholarships for minority community students?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  170,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Central government minority scholarship application process",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  171,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "TFWS tuition fee waiver scheme details",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  172,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Who is eligible for TFWS seats?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  173,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Does AIKTC offer institute level financial aid or zakat fund?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  174,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "What documents are required to apply on MahaDBT portal?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  175,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Is income certificate of father required for scholarship?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  176,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Scholarship form kab bharna hota hai?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  177,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Can I get 100 percent fee waiver under any scholarship?",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  178,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "Social welfare department scholarship for SC and ST students",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  179,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "OBC freeship vs scholarship difference",
+                        "category":  "scholarship",
+                        "is_dynamic":  false,
+                        "id":  180,
+                        "expected_intent":  "scholarship"
+                    },
+                    {
+                        "query":  "What are the laboratories in Computer Engineering department?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  181,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Show me the labs in ECS department",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  182,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "What equipment is available in Mechanical workshops?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  183,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Tell me about the library facilities at AIKTC",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  184,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "What is the name of the college library and KRRC?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  185,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "How many books and journals are available in the library?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  186,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Is there an incubation centre or innovation cell in campus?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  187,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Who heads the Innovation and Incubation Centre?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  188,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Does college have canteen facility and what is served?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  189,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Are there sports facilities and playground in AIKTC?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  190,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Does college have an auditorium for events?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  191,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "What are the technical student clubs active in college?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  192,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Does college have IEEE or CSI student chapters?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  193,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Is bus transportation available from Panvel station to campus?",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  194,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "Campus infrastructure and total built up area",
+                        "category":  "facilities",
+                        "is_dynamic":  false,
+                        "id":  195,
+                        "expected_intent":  "facilities"
+                    },
+                    {
+                        "query":  "What is the official phone number of AIKTC?",
+                        "category":  "contact",
+                        "is_dynamic":  false,
+                        "id":  196,
+                        "expected_intent":  "contact"
+                    },
+                    {
+                        "query":  "Admissions office contact number and helpline",
+                        "category":  "contact",
+                        "is_dynamic":  false,
+                        "id":  197,
+                        "expected_intent":  "contact"
+                    },
+                    {
+                        "query":  "What is the official email ID of AIKTC?",
+                        "category":  "contact",
+                        "is_dynamic":  false,
+                        "id":  198,
+                        "expected_intent":  "contact"
+                    },
+                    {
+                        "query":  "Where is AIKTC campus located?",
+                        "category":  "contact",
+                        "is_dynamic":  false,
+                        "id":  199,
+                        "expected_intent":  "contact"
+                    },
+                    {
+                        "query":  "What is the complete address of the college?",
+                        "category":  "contact",
+                        "is_dynamic":  false,
+                        "id":  200,
+                        "expected_intent":  "contact"
+                    }
+                ],
+    "total_queries":  200
+}

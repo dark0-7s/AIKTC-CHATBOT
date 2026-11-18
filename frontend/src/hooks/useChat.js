@@ -91,15 +91,25 @@ const clearAllChats = () => {
       await sendChatMessage(sessionId, text, (chunk) => {
         console.log("CHUNK RECEIVED:", chunk);
 
+        if (chunk.type === "text_chunk" || chunk.type === "text") {
+          botMessage.content = (botMessage.content || "") + (chunk.content || "");
+          setMessages(prev => [
+            ...prev.slice(0, -1),
+            { ...botMessage },
+          ]);
+        }
+
         if (chunk.type === "function_call") {
           botMessage.functionName = chunk.name;
           botMessage.args = chunk.args;
 
           if (chunk.name === "show_text") {
-            botMessage.content = chunk.args.message;
-          } else {
-            botMessage.content = "";
+            botMessage.content = chunk.args?.message || "";
           }
+          setMessages(prev => [
+            ...prev.slice(0, -1),
+            { ...botMessage },
+          ]);
         }
 
         if (chunk.type === "done") {

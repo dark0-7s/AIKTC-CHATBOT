@@ -116,7 +116,7 @@
     "girls": "100% tuition fees"
   },
   "contact": {
-    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai \u2013 410206",
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai – 410206",
     "phone": "+91 91371 23439",
     "admission_engineering": "+91 81043 63070",
     "email": "aiktc.newpanvel@aiktc.ac.in",
@@ -493,17 +493,18 @@
         {
           "name": "Machine Learning Lab",
           "location": "Room 401, Third Floor",
-          "description": "Area: 112 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+          "description": "Area: 112 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K × 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
         },
         {
           "name": "Data Engineering Lab",
           "location": "Room 402, Third Floor",
-          "description": "Area: 80 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K \u00d7 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
+          "description": "Area: 80 sq.m. | MSI MS-7D48 workstations, 12th Gen Intel Core i5-12600K × 16, 16 GB DDR4 Corsair 3200MHz RAM, Intel UHD Graphics 770, 500 GB Disk"
         },
         {
           "name": "Software Engineering Lab",
           "location": "Room 413, Third Floor",
-          "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+          "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk",
+          "image_url": "/images/labs/software_lab.jpg"
         },
         {
           "name": "Artificial Intelligence Lab",
@@ -518,7 +519,8 @@
         {
           "name": "Cloud Computing Lab",
           "location": "Room 416, Third Floor",
-          "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+          "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk",
+          "image_url": "/images/labs/computing_lab.jpg"
         },
         {
           "name": "Database and Analytics Lab",
@@ -780,32 +782,32 @@
         {
           "name": "Research & Project Lab",
           "location": "Room B-306, Second Floor",
-          "description": "Cost: \u20b92,74,040 | Equipped with advanced computer systems and projector for research, hardware design, and student capstone projects."
+          "description": "Cost: ₹2,74,040 | Equipped with advanced computer systems and projector for research, hardware design, and student capstone projects."
         },
         {
           "name": "Network Lab",
           "location": "Room B-307, Second Floor",
-          "description": "Cost: \u20b95,75,493 | Features 22 computer stations running Ubuntu, equipped with SCILAB, MATLAB, and open source PCB design software."
+          "description": "Cost: ₹5,75,493 | Features 22 computer stations running Ubuntu, equipped with SCILAB, MATLAB, and open source PCB design software."
         },
         {
           "name": "Digital Electronics Lab",
           "location": "Room B-309, Second Floor",
-          "description": "Cost: \u20b94,95,753 | Features bridge rectifiers, thyristors, light dimmers, muffle furnaces, m-c-s kits, and 555 timer timing circuit analyzers."
+          "description": "Cost: ₹4,95,753 | Features bridge rectifiers, thyristors, light dimmers, muffle furnaces, m-c-s kits, and 555 timer timing circuit analyzers."
         },
         {
           "name": "Electrical Machine Lab",
           "location": "Room B-103, Ground Floor",
-          "description": "Cost: \u20b929,33,548 | Equipped with VFD control panel, 3-phase lamp banks, thyristor DC supplies, resistive loads, and retardation test setups."
+          "description": "Cost: ₹29,33,548 | Equipped with VFD control panel, 3-phase lamp banks, thyristor DC supplies, resistive loads, and retardation test setups."
         },
         {
           "name": "Switch Gear & Protection Lab",
           "location": "Room B-305, Second Floor",
-          "description": "Cost: \u20b916,27,518 | State-of-the-art workstations for distance, differential, over-current, and motor protection systems demonstration."
+          "description": "Cost: ₹16,27,518 | State-of-the-art workstations for distance, differential, over-current, and motor protection systems demonstration."
         },
         {
           "name": "Basics of Electrical Engineering Lab",
           "location": "Room B-303, Second Floor",
-          "description": "Cost: \u20b911,16,380 | Contains Norton/Thevenin/Superposition theorem kits, AC circuits testing, and gate logic circuit boards."
+          "description": "Cost: ₹11,16,380 | Contains Norton/Thevenin/Superposition theorem kits, AC circuits testing, and gate logic circuit boards."
         }
       ],
       "faculty": [
@@ -894,32 +896,32 @@
         {
           "name": "Analog Circuit Design Lab",
           "location": "Room 318, Second Floor",
-          "description": "Cost: \u20b914.22 Lakh | Equipped with Aplab 38038 CROs, function generators, and analog components for circuit analysis and testing."
+          "description": "Cost: ₹14.22 Lakh | Equipped with Aplab 38038 CROs, function generators, and analog components for circuit analysis and testing."
         },
         {
           "name": "Signal Processing and Computation Lab",
           "location": "Room 317, Second Floor",
-          "description": "Cost: \u20b923.9 Lakh | Powered by Lenovo workstations running software tools for signal processing, modeling, and simulation."
+          "description": "Cost: ₹23.9 Lakh | Powered by Lenovo workstations running software tools for signal processing, modeling, and simulation."
         },
         {
           "name": "Embedded Lab",
           "location": "Room 313, Second Floor",
-          "description": "Cost: \u20b918.5 Lakh | Equipped with Falcon 16-channel logic analyzers, microcontroller kits, and IDE interfaces for system design."
+          "description": "Cost: ₹18.5 Lakh | Equipped with Falcon 16-channel logic analyzers, microcontroller kits, and IDE interfaces for system design."
         },
         {
           "name": "Communication Lab",
           "location": "Room 312, Second Floor",
-          "description": "Cost: \u20b914.6 Lakh | Equipped with Aplab 3MHz function generators, modulation/demodulation kits, and RF testing equipment."
+          "description": "Cost: ₹14.6 Lakh | Equipped with Aplab 3MHz function generators, modulation/demodulation kits, and RF testing equipment."
         },
         {
           "name": "Network and Simulation Lab",
           "location": "Room 311, Second Floor",
-          "description": "Cost: \u20b926.9 Lakh | Features Dell Optiplex workstations running networking and simulation tools (Cisco Packet Tracer, NS2)."
+          "description": "Cost: ₹26.9 Lakh | Features Dell Optiplex workstations running networking and simulation tools (Cisco Packet Tracer, NS2)."
         },
         {
           "name": "Microwave Engineering Lab",
           "location": "Room 310, Second Floor",
-          "description": "Cost: \u20b915.03 Lakh | Equipped with Hameg Germany HMS3010 Spectrum Analyzers, waveguide setups, and microwave trainers."
+          "description": "Cost: ₹15.03 Lakh | Equipped with Hameg Germany HMS3010 Spectrum Analyzers, waveguide setups, and microwave trainers."
         }
       ],
       "faculty": [
@@ -1007,32 +1009,32 @@
         {
           "name": "Drawing Hall",
           "location": "Room B-211, First Floor",
-          "description": "Cost: \u20b98,69,706 | Equipped with Godrej drawing tables and drawing drafting boards for engineering graphics courses."
+          "description": "Cost: ₹8,69,706 | Equipped with Godrej drawing tables and drawing drafting boards for engineering graphics courses."
         },
         {
           "name": "Heat Transfer and Refrigeration and Air Conditioning Lab",
           "location": "Room B-112, Ground Floor",
-          "description": "Cost: \u20b99,14,712 | Features air conditioning test rigs, heat exchanger apparatus, and thermal conduction setups."
+          "description": "Cost: ₹9,14,712 | Features air conditioning test rigs, heat exchanger apparatus, and thermal conduction setups."
         },
         {
           "name": "Theory of Machines and Mechanical Vibrations Lab",
           "location": "Room B-216, First Floor",
-          "description": "Cost: \u20b93,13,829 | Contains kinematic pair models, gyroscope setups, governor apparatus, and vibration analyzers."
+          "description": "Cost: ₹3,13,829 | Contains kinematic pair models, gyroscope setups, governor apparatus, and vibration analyzers."
         },
         {
           "name": "CAD/CAM Lab",
           "location": "Room B-209, First Floor",
-          "description": "Cost: \u20b928,51,507 | Equipped with HP laserjet printers, CAD workstations, and design software (ANSYS, SolidWorks, AutoCAD)."
+          "description": "Cost: ₹28,51,507 | Equipped with HP laserjet printers, CAD workstations, and design software (ANSYS, SolidWorks, AutoCAD)."
         },
         {
           "name": "Thermal Engineering and I.C. Engine Lab",
           "location": "Room B-110, Ground Floor",
-          "description": "Cost: \u20b917,23,479 | Features sectional working models of 2-stroke diesel engines and multi-cylinder petrol engine test rigs."
+          "description": "Cost: ₹17,23,479 | Features sectional working models of 2-stroke diesel engines and multi-cylinder petrol engine test rigs."
         },
         {
           "name": "Mechatronics Lab",
           "location": "Room B-113, Ground Floor",
-          "description": "Cost: \u20b915,78,308 | Equipped with hydraulic/pneumatic trainer kits, PLC modules, and sensors integration boards."
+          "description": "Cost: ₹15,78,308 | Equipped with hydraulic/pneumatic trainer kits, PLC modules, and sensors integration boards."
         }
       ],
       "faculty": [

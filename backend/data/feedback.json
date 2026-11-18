@@ -302,5 +302,29 @@
         "reason": "",
         "comment": "",
         "created_at": "2026-07-31T03:07:42.743444"
+    },
+    {
+        "id": 27,
+        "session_id": "proxy-test-4",
+        "chat_id": null,
+        "message_id": null,
+        "question": "cutoffs",
+        "answer": "here are links",
+        "rating": "1",
+        "reason": "",
+        "comment": "Great accurate response",
+        "created_at": "2026-11-17T21:34:32.379538"
+    },
+    {
+        "id": 28,
+        "session_id": "07660ede-a029-4ec0-9662-e23166ff4f24",
+        "chat_id": "",
+        "message_id": "5",
+        "question": "How do I apply for admission to AIKTC?",
+        "answer": "### How to Apply for Admission to AIKTC - Centralised Admission Process (CAP) & Required Documents\nHow to Apply for Admission to AIKTC (Centralised Admission Process - CAP):\nTo apply for admission to Engineering, Pharmacy, or Architecture at AIKTC:\n  1. Online Registration: Register online on Maharashtra State CET Cell portal (cetcell.mahacet.org) and submit the application form.\n  2. Document Verification: Complete document verification online (e-Scrutiny) or at a physical Scrutiny Center (FC).\n  3. Merit List: Verify your name and details on the provisional and final State Merit Lists.\n  4. Option Form & Choice Filling: Fill option forms for CAP Rounds. Enter AIKTC Institute Choice Code (DTE Code: 3217 for Engineering).\n  5. Seat Allotment & Reporting: Accept allotted seat, download allotment letter, and report to AIKTC Campus with original documents and fees.\nInstitute-Level & Vacant Seats: For vacant seats after CAP rounds, apply directly at the AIKTC Admissions Office (Helpline: +91 8104363070).\nRequired Documents: MHT-CET/JEE Scorecard, 10th & 12th Marks Memo, School Leaving / Transfer Certificate, Domicile / Nationality Certificate, Minority Affidavit (for Muslim minority quota), Caste & Income Certificate (if applicable).\n\n### 🌐 Official AIKTC Admissions & CAP Application Portals:\n- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)\n- [Maharashtra CET Cell Official Portal](https://cetcell.mahacet.org/)\n- [Directorate of Technical Education (DTE Maharashtra)](https://www.dtemaharashtra.gov.in/)\n- [AIKTC Official Website](https://aiktc.ac.in/)\n\n---\n*Source: AIKTC Verified Institutional Knowledge Base* ",
+        "rating": "helpful",
+        "reason": "",
+        "comment": "",
+        "created_at": "2026-11-17T23:04:29.636424"
     }
 ]

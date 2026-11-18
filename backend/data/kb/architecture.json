@@ -44,7 +44,7 @@
     "Parents-Teachers Meet & Felicitation (August 2024)",
     "Literature and Music Club Jamming Session (August 2024)",
     "Professional Practice Visit to UASPL, Belapur (August 2024)",
-    "Theatre and Fashion Club \u2013 Styling Session (October 2024)",
+    "Theatre and Fashion Club – Styling Session (October 2024)",
     "Tie & Dye Workshop (September 2024)",
     "First Year Induction Program (September 2024)",
     "SMC Sessions on Exam Stress & Interpersonal Skills",
@@ -62,7 +62,7 @@
   "contact": {
     "admission_architecture": "+91 81047 79747",
     "email": "aiktc.newpanvel@aiktc.ac.in",
-    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai \u2013 410206"
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai – 410206"
   },
   "fees": {
     "academic_year": "2025-26",
@@ -140,7 +140,7 @@
       "name": "Bachelor of Architecture",
       "duration": "5 years",
       "intake": 40,
-      "description": "Architecture is the art and science of designing buildings and structures. The 5-year course includes Basic Course (1st\u20133rd year) and Advanced Course (4th\u20135th year).",
+      "description": "Architecture is the art and science of designing buildings and structures. The 5-year course includes Basic Course (1st–3rd year) and Advanced Course (4th–5th year).",
       "eligibility": "H.S.C. in PCM / Diploma with Mathematics & Qualifying score in NATA / JEE (Paper 2).",
       "vision": "To be the most sought after academic, research and practice based school of Architecture that others would wish to emulate.",
       "mission": "Creating Exuberant Architectural Professionals.",
@@ -148,7 +148,8 @@
         {
           "name": "Design Studio",
           "location": "SOA Building",
-          "description": "Spacious drafting rooms equipped with professional drawing boards, parallel rulers, and ergonomically designed seating."
+          "description": "Spacious drafting rooms equipped with professional drawing boards, parallel rulers, and ergonomically designed seating.",
+          "image_url": "/images/labs/arch_studio.jpg"
         },
         {
           "name": "Building Construction Lab",
@@ -302,7 +303,8 @@
         {
           "name": "Design Studio",
           "location": "SOA Building",
-          "description": "Equipped with standard drawing desks, parallel rulers, and drafting boards for basic architectural graphics."
+          "description": "Equipped with standard drawing desks, parallel rulers, and drafting boards for basic architectural graphics.",
+          "image_url": "/images/labs/arch_studio.jpg"
         },
         {
           "name": "Material Museum",

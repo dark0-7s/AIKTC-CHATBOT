@@ -26,7 +26,8 @@
     {
       "name": "Software Engineering Lab",
       "location": "Room 413, Third Floor",
-      "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+      "description": "Area: 81 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk",
+      "image_url": "/images/labs/software_lab.jpg"
     },
     {
       "name": "Artificial Intelligence Lab",
@@ -41,7 +42,8 @@
     {
       "name": "Cloud Computing Lab",
       "location": "Room 416, Third Floor",
-      "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk"
+      "description": "Area: 105 sq.m. | DELL OptiPlex 3046, 3.7 GHz Intel Core i3, 4 GB RAM, 500 GB Disk",
+      "image_url": "/images/labs/computing_lab.jpg"
     },
     {
       "name": "Database and Analytics Lab",

@@ -26,9 +26,32 @@ function sanitize(text) {
 // ── Inline parser ─────────────────────────────────────────────────
 export function parseInline(text) {
   if (!text) return '';
-  const tokenRegex = /(\*\*.*?\*\*|\*.*?\*|\[.*?\]\(.*?\))/g;
+  const tokenRegex = /(!\[.*?\]\(.*?\)|\*\*.*?\*\*|\*.*?\*|\[.*?\]\(.*?\))/g;
   const parts = text.split(tokenRegex);
   return parts.map((part, i) => {
+    if (part.startsWith('![') && part.includes('](') && part.endsWith(')')) {
+      const closingBracketIndex = part.indexOf('](');
+      const altText = part.slice(2, closingBracketIndex);
+      const url = part.slice(closingBracketIndex + 2, -1);
+      return (
+        <span key={i} style={{ display: 'block', margin: '8px 0' }}>
+          <img
+            src={url}
+            alt={altText}
+            style={{
+              maxWidth: '100%',
+              maxHeight: 220,
+              borderRadius: 12,
+              objectFit: 'cover',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+              border: '1px solid rgba(0,0,0,0.06)'
+            }}
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
+          {altText && <span style={{ display: 'block', fontSize: 11, color: '#64748b', marginTop: 3 }}>{altText}</span>}
+        </span>
+      );
+    }
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
     }

@@ -38,6 +38,9 @@ from slowapi.util import get_remote_address
 from config import settings
 from cache.cache_manager import cache_manager
 from engine.context_builder import build_context_note
+from engine.workflow import execute_algorithm_1
+from engine.rag_synthesizer import synthesize_grounded_answer
+from engine.structured_resolver import resolve_structured_response
 from llm.gemini_client import (
     call_gemini_stream,
     create_cached_content,
@@ -212,14 +215,51 @@ async def _stream_response(
     history  = session["history"]
     anchor   = session["anchor"]
 
-    # -- Build prompt --
-    context_note = build_context_note(message, history)
-    prompt       = build_prompt(
-        kb_markdown  = request.app.state.kb_markdown,
-        context_note = context_note,
-        history      = history,
-        message      = message,
+    # -- Execute Algorithm 1 Workflow (Steps 1–5) --
+    kb_dict = getattr(request.app.state, "kb_dict", {})
+    full_kb_markdown = getattr(request.app.state, "kb_markdown", "")
+    
+    algo_result = execute_algorithm_1(
+        message=message,
+        history=history,
+        kb_dict=kb_dict,
+        full_kb_markdown=full_kb_markdown
     )
+    
+    intent = algo_result["intent"]
+    entities = algo_result["entities"]
+    is_dyn = algo_result["is_dynamic"]
+    official_source = algo_result["official_source"]
+    context_note = algo_result["context_note"]
+    prompt = algo_result["prompt"]
+
+    # -- Algorithm 1 Step 3: Fast deterministic resolution for dynamic info --
+    if is_dyn and official_source:
+        logger.info(f"[Algorithm 1 Step 3] Instant dynamic resolution for {intent}")
+        yield _sse_function("show_links", official_source)
+        
+        try:
+            topic = classify_topic(message, "links")
+            departments = extract_query_departments(message, "links", official_source)
+            log_query(
+                session_id            = session_id,
+                message               = message,
+                response_type         = "links",
+                raw_llm_output        = json.dumps(official_source, ensure_ascii=False),
+                deterministic_context = "Dynamic Information Resolver (Algorithm 1 Step 3)",
+                topic                 = topic,
+                departments           = departments,
+            )
+        except Exception as e:
+            logger.error(f"Failed to log dynamic query: {e}")
+
+        new_history = history + [
+            {"role": "user", "content": message},
+            {"role": "assistant", "content": json.dumps({"function": "show_links", "args": official_source}, ensure_ascii=False)}
+        ]
+        save_session(session_id, new_history, anchor, is_type_a=False)
+        yield _sse_done(session_id)
+        return
 
     # -- Determine caching path --
     use_cache = settings.gemini_cache_enabled
@@ -272,7 +312,7 @@ async def _stream_response(
     final_function : str | None     = None
     final_args     : dict | None    = None
 
-    # -- Stream from Gemini (cached path with fallback) --
+    # -- Stream from Gemini (cached path with fallback) or Grounded RAG --
     try:
         used_cache = False
         fell_back  = False
@@ -283,6 +323,27 @@ async def _stream_response(
             response_type = "contact"
             final_function = "show_contact"
             final_args = FALLBACK_CONTACT_ARGS
+        elif not settings.gemini_api_key:
+            # Offline / local RAG mode without external Gemini API key requirement
+            logger.info("GEMINI_API_KEY not configured — using grounded institutional RAG synthesizer")
+            
+            # Algorithm 1 Step 6: Typed structured resolution (MediaCard, FacultyGrid, ListCards)
+            structured_res = resolve_structured_response(message, intent, entities, kb_dict)
+            if structured_res:
+                fn_name, fn_args = structured_res
+                final_function = fn_name
+                final_args = fn_args
+                response_type = get_router_key(fn_name)
+                logger.info(f"[Algorithm 1 Step 6] Emitting structured function call: {fn_name}")
+                yield _sse_function(fn_name, fn_args)
+
+            rag_answer = synthesize_grounded_answer(message, algo_result, has_structured_card=bool(structured_res))
+            raw_output = rag_answer
+            words = rag_answer.split(" ")
+            for i in range(0, len(words), 5):
+                chunk = " ".join(words[i:i+5]) + " "
+                yield _sse_text(chunk)
+                await asyncio.sleep(0.02)
         elif cache_name and cached_contents is not None:
             used_cache = True
             async for chunk in stream_with_cache(cache_name, cached_contents):
@@ -313,7 +374,7 @@ async def _stream_response(
                     logger.warning(f"Unknown chunk type: {chunk_type}")
 
         # Full-prompt path (original behaviour or fallback from cache failure)
-        if not used_cache or fell_back:
+        if settings.gemini_api_key and (not used_cache or fell_back):
             async for chunk in call_gemini_stream(prompt):
                 chunk_type = chunk.get("type")
 
@@ -329,11 +390,15 @@ async def _stream_response(
                     yield _sse_text(content)
 
                 elif chunk_type == "error":
-                    logger.error(f"LLM error: {chunk.get('message', 'Unknown error')}")
-                    yield _sse_function("show_contact", FALLBACK_CONTACT_ARGS)
-                    response_type  = "contact"
-                    final_function = "show_contact"
-                    final_args     = FALLBACK_CONTACT_ARGS
+                    logger.warning(f"LLM error ({chunk.get('message')}) — falling back to grounded RAG synthesizer")
+                    rag_answer = synthesize_grounded_answer(message, algo_result, has_structured_card=bool(structured_res))
+                    raw_output = rag_answer
+                    response_type = "text"
+                    words = rag_answer.split(" ")
+                    for i in range(0, len(words), 5):
+                        chunk = " ".join(words[i:i+5]) + " "
+                        yield _sse_text(chunk)
+                        await asyncio.sleep(0.02)
                     break
 
                 else:

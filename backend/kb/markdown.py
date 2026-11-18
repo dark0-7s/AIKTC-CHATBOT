@@ -103,7 +103,8 @@ def _labs_list(labs) -> list[str]:
             loc  = f" ({lab['location']})" if lab.get("location") else ""
             desc = f" — {lab['description']}" if lab.get("description") else ""
             cap  = f" · Capacity: {lab['capacity']}" if lab.get("capacity") else ""
-            lines.append(f"- **{lab.get('name','')}**{loc}{desc}{cap}")
+            img  = f" · Image URL: {lab['image_url']}" if lab.get("image_url") else ""
+            lines.append(f"- **{lab.get('name','')}**{loc}{desc}{cap}{img}")
     return lines
 
 

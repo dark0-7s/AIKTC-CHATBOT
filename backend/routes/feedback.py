@@ -15,10 +15,10 @@ class FeedbackRequest(BaseModel):
     chat_id: str | None = None
     message_id: str | None = None
 
-    question: str
-    answer: str
+    question: str = ""
+    answer: str = ""
 
-    rating: str
+    rating: str | int = "positive"
     reason: str = ""
     comment: str = ""
 

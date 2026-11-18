@@ -64,11 +64,11 @@
     "area_acres": 10.5,
     "established_year": 2011
   },
-  "scholarships": "Same as engineering school \u2013 DTE Minority, EBC, Central Govt, State Reserved, Girls scholarship (page 52).",
+  "scholarships": "Same as engineering school – DTE Minority, EBC, Central Govt, State Reserved, Girls scholarship (page 52).",
   "contact": {
     "admission_pharmacy": "+91 70219 29084",
     "email": "aiktc.newpanvel@aiktc.ac.in",
-    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai \u2013 410206"
+    "address": "Plot # 2 & 3, Sector-16, Near Thana Naka, Khandagaon, New Panvel, Navi Mumbai – 410206"
   },
   "fees": {
     "academic_year": "2025-26",
@@ -170,17 +170,19 @@
         {
           "name": "Machine Room",
           "location": "Room A-104, SOP Ground Floor",
-          "description": "Area: 84 sq.m. | Cost: \u20b930 Lakhs | Industrial pilot plant section equipped for mixing, sieving, milling, granulating, and QC testing."
+          "description": "Area: 84 sq.m. | Cost: ₹30 Lakhs | Industrial pilot plant section equipped for mixing, sieving, milling, granulating, and QC testing."
         },
         {
           "name": "Pharmaceutics Lab-II",
           "location": "Room A-303, SOP Second Floor",
-          "description": "Area: 83 sq.m. | Cost: \u20b91.5 Lakhs | Equipped with hot air oven, electrical balances, microscopes, hot plates, and mechanical stirrers."
+          "description": "Area: 83 sq.m. | Cost: ₹1.5 Lakhs | Equipped with hot air oven, electrical balances, microscopes, hot plates, and mechanical stirrers.",
+          "image_url": "/images/labs/pharmaceutics_lab.jpg"
         },
         {
           "name": "Pharmaceutics Lab",
           "location": "Room A-103, SOP Ground Floor",
-          "description": "Area: 83 sq.m. | Fully equipped with instruments required for core pharmaceutics and cosmetics practicals."
+          "description": "Area: 83 sq.m. | Fully equipped with instruments required for core pharmaceutics and cosmetics practicals.",
+          "image_url": "/images/labs/pharmaceutics_lab.jpg"
         },
         {
           "name": "Pharmaceutical Analysis Lab",
@@ -407,7 +409,8 @@
         {
           "name": "Pharmaceutics Lab",
           "location": "SOP Building",
-          "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs."
+          "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs.",
+          "image_url": "/images/labs/pharmaceutics_lab.jpg"
         },
         {
           "name": "Pharmaceutical Chemistry Lab",
@@ -467,7 +470,7 @@
       ],
       "achievements": [
         "Organized National-Level Quiz Competition.",
-        "Two student groups awarded \u20b92 Lakhs in Maharashtra State Students Innovation Challenge.",
+        "Two student groups awarded ₹2 Lakhs in Maharashtra State Students Innovation Challenge.",
         "Three students started their own start-up."
       ],
       "alumni_testimonial": {

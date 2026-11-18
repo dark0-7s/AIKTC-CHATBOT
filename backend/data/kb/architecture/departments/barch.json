@@ -11,7 +11,8 @@
     {
       "name": "Design Studio",
       "location": "SOA Building",
-      "description": "Spacious drafting rooms equipped with professional drawing boards, parallel rulers, and ergonomically designed seating."
+      "description": "Spacious drafting rooms equipped with professional drawing boards, parallel rulers, and ergonomically designed seating.",
+      "image_url": "/images/labs/arch_studio.jpg"
     },
     {
       "name": "Building Construction Lab",
