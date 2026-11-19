@@ -1,12 +1,12 @@
 export const CHIPS = [
-  { label: "Predict my chances", message: "I want to check my admission chances", badge: "prediction" },
-  { label: "Latest cutoffs", message: "Show me the latest MHT-CET cutoff table for CSE", badge: "table" },
-  { label: "Faculty directory", message: "Show me the faculty of the CSE department", badge: "faculty" },
-  { label: "Fee structure", message: "What is the annual fee for engineering at AIKTC?", badge: "text" },
-  { label: "Placements 2024", message: "Tell me about placements at AIKTC for 2024", badge: "text" },
-  { label: "Hostel info", message: "Tell me about hostel facilities and fees", badge: "text" },
-  { label: "Director info", message: "Who is the director of AIKTC?", badge: "media_card" },
-  { label: "Admission process", message: "How do I apply for admission to AIKTC?", badge: "steps" },
-  { label: "Contact admissions", message: "I want to contact the AIKTC admissions office", badge: "contact" },
-  { label: "Labs — CSE", message: "Show me the labs for Computer Science Engineering", badge: "list" }
+  { label: "🎓 Available courses", message: "What are the courses offered at AIKTC?", badge: "text" },
+  { label: "📊 MHT-CET cutoffs", message: "What is the MHT-CET cutoff for admission?", badge: "links" },
+  { label: "💰 Fee structure", message: "What is the annual fee for engineering at AIKTC?", badge: "text" },
+  { label: "🏆 Sports & activities", message: "Tell me about sports and cultural activities", badge: "text" },
+  { label: "🏢 Faculty directory", message: "Show me the faculty of the Computer Engineering department", badge: "faculty" },
+  { label: "🚀 Placements & packages", message: "Tell me about campus placements and top recruiters", badge: "text" },
+  { label: "🏠 Hostel & mess", message: "Tell me about hostel facilities, fees and capacity", badge: "text" },
+  { label: "📋 How to apply (CAP)", message: "How do I apply for admission to AIKTC?", badge: "steps" },
+  { label: "🔬 CSE Laboratories", message: "Show me the laboratories for Computer Engineering", badge: "list" },
+  { label: "📞 Contact admissions", message: "How can I contact the AIKTC admissions office?", badge: "contact" }
 ];

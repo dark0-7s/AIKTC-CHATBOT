@@ -20,7 +20,7 @@ useEffect(() => {
     top: messagesRef.current.scrollHeight,
     behavior: "smooth",
   });
-}, [messages.length, loading]);
+}, [messages, loading]);
   // Use a base64 encoded fallback watermark if image doesn't load
   const logoFallback = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23667eea' opacity='0.3'/%3E%3Ctext x='50%25' y='50%25' font-size='40' font-weight='bold' fill='%23667eea' text-anchor='middle' dy='.3em' opacity='0.5'%3EAIKTC%3C/text%3E%3C/svg%3E";
 
@@ -123,7 +123,7 @@ useEffect(() => {
           </div>
 
         <a
-  href={`${import.meta.env.VITE_API_URL || "http://localhost:8001"}/api/admin/dashboard`}
+  href={import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/admin/dashboard` : "/api/admin/dashboard"}
   target="_blank"
   rel="noopener noreferrer"
             style={{
