@@ -230,6 +230,117 @@ def format_greeting(lang: str = "en") -> str:
     )
 
 
+def format_central_courses_table() -> str:
+    lines = [
+        "### 🎓 Academic Programs, Degrees & Approved Intake at AIKTC\n",
+        "Anjuman-I-Islam's Kalsekar Technical Campus (AIKTC) offers undergraduate, postgraduate, and diploma degree programs across three specialized schools affiliated with the **University of Mumbai** and approved by **AICTE, PCI, COA, and DTE Maharashtra**:\n",
+        "#### 🏛️ 1. School of Engineering & Technology (SOET) — DTE Code: 3418\n",
+        "**Undergraduate B.Tech Programs (4 Years, Total Approved Intake: 510 Seats):**",
+        "| Program / Branch | Dept Code | Degree | Duration | Approved Intake | Key Career Roles |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |",
+        "| **Computer Engineering** | `COMP` | B.Tech | 4 Years | **120 Seats** | Software Dev, Cloud Architect, Cybersecurity |",
+        "| **CSE (AI & Machine Learning)** | `CSAIML` | B.Tech | 4 Years | **120 Seats** | AI Engineer, Deep Learning, Computer Vision |",
+        "| **CSE (Data Science)** | `CSDS` | B.Tech | 4 Years | **60 Seats** | Data Scientist, Big Data Engineer, BI Analyst |",
+        "| **Electronics & Computer Science** | `ECS` | B.Tech | 4 Years | **60 Seats** | IoT Architect, Embedded Systems, VLSI Design |",
+        "| **Electrical & Computer Engineering** | `ECE` | B.Tech | 4 Years | **60 Seats** | Smart Grid, Embedded Hardware, Power Electronics |",
+        "| **Mechanical Engineering** | `MECH` | B.Tech | 4 Years | **60 Seats** | Automotive Design, Robotics, HVAC, CAD/CAM |",
+        "| **Civil Engineering** | `CIVIL` | B.Tech | 4 Years | **30 Seats** | Structural Design, Geotechnical, Smart Cities |",
+        "| **B.Sc Information Technology** | `BSIT` | B.Sc | 3 Years | **60 Seats** | Web Dev, IT Operations, Network Admin |\n",
+        "**Postgraduate & Doctoral Programs (SOET):**",
+        "| Program / Specialization | Dept Code | Degree | Duration | Approved Intake | Focus Areas |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |",
+        "| **Computer Engineering** | `COMP` | M.Tech | 2 Years | **18 Seats** | High Performance Computing, Data Systems |",
+        "| **Construction Engineering & Management** | `CIVIL` | M.Tech | 2 Years | **24 Seats** | Infrastructure Planning, Project Economics |",
+        "| **Structural Engineering** | `CIVIL` | M.Tech | 2 Years | **18 Seats** | Advanced Seismic Analysis, Concrete Tech |",
+        "| **Civil Engineering (Ph.D.)** | `CIVIL` | Ph.D. | 3–5 Years | **10 Seats** | Structural Materials, Geo-Environmental |\n",
+        "#### 💊 2. School of Pharmacy (SOP) — DTE Code: 3418\n",
+        "| Program / Degree | Level | Duration | Approved Intake | Affiliation / Approvals | Key Career Pathways |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Pharmacy (D.Pharm)** | Diploma | 2 Years | **60 Seats** | MSBTE, PCI Approved | Community Pharmacist, Hospital Dispensary |",
+        "| **Bachelor of Pharmacy (B.Pharm)** | Undergraduate | 4 Years | **100 Seats** | Univ. of Mumbai, PCI | Formulation R&D, QC/QA, Clinical Research |",
+        "| **Master of Pharmacy (M.Pharm)** | Postgraduate | 2 Years | **10 Seats** | Univ. of Mumbai, PCI | Pharmacology, Drug Discovery, Toxicology |\n",
+        "#### 📐 3. School of Architecture (SOA) — DTE / COA Code: MH-57\n",
+        "| Program / Degree | Level | Duration | Approved Intake | Affiliation / Approvals | Key Career Pathways |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Architecture (D.Arch)** | Diploma | 3 Years | **40 Seats** | MSBTE, COA Approved | Architectural Assistant, Draftsman, Interior |",
+        "| **Bachelor of Architecture (B.Arch)** | Undergraduate | 5 Years | **40 Seats** | Univ. of Mumbai, COA | Principal Architect, Urban Planner, BIM Manager |\n",
+        "### 🌐 Official AIKTC Academic & Admissions Portals:",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [Computer Engineering Official Department Page](https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/)",
+        "- [School of Pharmacy Official Portal](https://aiktc.ac.in/bachelor-of-pharmacy/)",
+        "- [School of Architecture Official Portal](https://aiktc.ac.in/bachelor-of-architecture/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
+def format_engineering_courses_table() -> str:
+    lines = [
+        "### 🎓 School of Engineering & Technology (SOET) — Academic Programs\n",
+        "**Affiliated with the University of Mumbai | Approved by AICTE & DTE Maharashtra (DTE Code: 3418)**\n",
+        "#### 📌 Undergraduate Degree Programs (B.Tech — 4 Years, Total Approved Intake: 510 Seats)",
+        "| Program / Branch | Dept Code | Duration | Approved Intake | Key Career Pathways |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Computer Engineering** | `COMP` | 4 Years | **120 Seats** | Software Dev, Cloud Architect, Cybersecurity |",
+        "| **CSE (AI & Machine Learning)** | `CSAIML` | 4 Years | **120 Seats** | AI Engineer, Deep Learning, Computer Vision |",
+        "| **CSE (Data Science)** | `CSDS` | 4 Years | **60 Seats** | Data Scientist, Big Data Engineer, BI Analyst |",
+        "| **Electronics & Computer Science** | `ECS` | 4 Years | **60 Seats** | IoT Architect, Embedded Systems, VLSI Design |",
+        "| **Electrical & Computer Engineering** | `ECE` | 4 Years | **60 Seats** | Smart Grid, Embedded Hardware, Power Electronics |",
+        "| **Mechanical Engineering** | `MECH` | 4 Years | **60 Seats** | Automotive Design, Robotics, HVAC, CAD/CAM |",
+        "| **Civil Engineering** | `CIVIL` | 4 Years | **30 Seats** | Structural Design, Geotechnical, Smart Cities |",
+        "| **B.Sc Information Technology** | `BSIT` | 3 Years | **60 Seats** | Web Dev, IT Operations, Network Admin |\n",
+        "#### 📌 Postgraduate & Doctoral Programs (M.Tech / Ph.D)",
+        "| Program / Specialization | Level | Duration | Approved Intake | Focus Areas |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Computer Engineering** | M.Tech | 2 Years | **18 Seats** | High Performance Computing, Data Systems |",
+        "| **Construction Engineering & Management** | M.Tech | 2 Years | **24 Seats** | Infrastructure Planning, Project Economics |",
+        "| **Structural Engineering** | M.Tech | 2 Years | **18 Seats** | Advanced Seismic Analysis, Concrete Tech |",
+        "| **Civil Engineering (Ph.D.)** | Doctoral | 3–5 Years | **10 Seats** | Structural Materials, Geo-Environmental |\n",
+        "### 🌐 Official School of Engineering Portals:",
+        "- [Computer Engineering Official Department Page](https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/)",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
+def format_pharmacy_courses_table() -> str:
+    lines = [
+        "### 🎓 School of Pharmacy (SOP) — Academic Programs\n",
+        "**Affiliated with the University of Mumbai & MSBTE | Approved by Pharmacy Council of India (PCI) & DTE Maharashtra (DTE Code: 3418)**\n",
+        "| Program / Degree | Level | Duration | Approved Intake | Key Career Pathways |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Pharmacy (D.Pharm)** | Diploma | 2 Years | **60 Seats** | Community Pharmacist, Hospital Dispensary, Drug Retail |",
+        "| **Bachelor of Pharmacy (B.Pharm)** | Undergraduate | 4 Years | **100 Seats** | Formulation R&D, QC/QA, Clinical Research, Regulatory Affairs |",
+        "| **Master of Pharmacy in Pharmacology (M.Pharm)** | Postgraduate | 2 Years | **10 Seats** | Clinical Pharmacology, Toxicological Screening, Drug Discovery |\n",
+        "### 🌐 Official School of Pharmacy Portals:",
+        "- [School of Pharmacy Official Portal](https://aiktc.ac.in/bachelor-of-pharmacy/)",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
+def format_architecture_courses_table() -> str:
+    lines = [
+        "### 🎓 School of Architecture (SOA) — Academic Programs\n",
+        "**Affiliated with the University of Mumbai & MSBTE | Approved by Council of Architecture (COA Code: MH-57) & DTE Maharashtra**\n",
+        "| Program / Degree | Level | Duration | Approved Intake | Key Career Pathways |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Architecture (D.Arch)** | Diploma | 3 Years | **40 Seats** | Architectural Assistant, Draftsman, Interior Construction |",
+        "| **Bachelor of Architecture (B.Arch)** | Undergraduate | 5 Years | **40 Seats** | Principal Architect, Urban Planner, Sustainable Design, BIM Manager |\n",
+        "### 🌐 Official School of Architecture Portals:",
+        "- [School of Architecture Official Portal](https://aiktc.ac.in/bachelor-of-architecture/)",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
 def format_department_comparison(dept_codes: list[str]) -> str:
     """
     Format a rich, executive, side-by-side comparative analysis between two departments.
@@ -362,6 +473,22 @@ def synthesize_grounded_answer(
             response_parts.append("\n".join(link_lines))
         response_parts.append("---\n*Source: AIKTC Verified Institutional Knowledge Base*")
         return "\n\n".join(response_parts)
+
+    # 5. Handle Academic Programs & Courses Offered Queries (Rich Interactive Tables)
+    q_lower = q_prep.lower()
+    is_courses_query = (
+        intent == "courses_offered"
+        or bool(re.search(r'\b(?:courses?|coursed|programs?|programmes?|degrees?|branches?|specializations?)\b', q_lower))
+    )
+    if is_courses_query:
+        if any(k in q_lower for k in ("pharm", "bpharm", "dpharm", "mpharm", "pharma")):
+            return format_pharmacy_courses_table()
+        elif any(k in q_lower for k in ("arch", "barch", "darch", "architecture")):
+            return format_architecture_courses_table()
+        elif any(k in q_lower for k in ("eng", "enginerring", "engineering", "btech", "b.tech", "soet")):
+            return format_engineering_courses_table()
+        else:
+            return format_central_courses_table()
 
     retrieved_context = (algo_result.get("retrieved_context") or "").strip()
 
