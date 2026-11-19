@@ -28,30 +28,23 @@ def _get_initials(name: str) -> str:
 def find_department(dept_code_or_name: str, kb_dict: dict[str, Any]) -> dict[str, Any] | None:
     """Look up a department dictionary across Engineering, Pharmacy, and Architecture."""
     target = (dept_code_or_name or "").strip().upper()
+    if not target or target in ("ENGINEERING", "SOET", "PHARMACY", "ARCHITECTURE", "ALL"):
+        return None
     
-    # 1. Check Engineering
-    eng_depts = kb_dict.get("engineering", {}).get("departments", [])
-    for d in eng_depts:
-        code = d.get("code", "").upper()
-        name = d.get("name", "").upper()
-        if target == code or target in code or code in target or target in name:
-            return d
-            
-    # 2. Check Pharmacy
-    pharm_depts = kb_dict.get("pharmacy", {}).get("departments", [])
-    for d in pharm_depts:
-        code = d.get("code", "").upper()
-        name = d.get("name", "").upper()
-        if target == code or target in code or code in target or target in name:
-            return d
+    # 1. Exact code match first
+    for school in ("engineering", "pharmacy", "architecture"):
+        for d in kb_dict.get(school, {}).get("departments", []):
+            code = d.get("code", "").upper()
+            if target == code:
+                return d
 
-    # 3. Check Architecture
-    arch_depts = kb_dict.get("architecture", {}).get("departments", [])
-    for d in arch_depts:
-        code = d.get("code", "").upper()
-        name = d.get("name", "").upper()
-        if target == code or target in code or code in target or target in name:
-            return d
+    # 2. Substring in code or name
+    for school in ("engineering", "pharmacy", "architecture"):
+        for d in kb_dict.get(school, {}).get("departments", []):
+            code = d.get("code", "").upper()
+            name = d.get("name", "").upper()
+            if target in code or code in target or target in name:
+                return d
 
     return None
 
@@ -103,8 +96,8 @@ def resolve_structured_response(
     # ─────────────────────────────────────────────────────────────────────────
     is_lab_query = (
         intent in ("facilities", "labs") or
-        any(k in msg_lower for k in ["lab", "labs", "laboratory", "laboratories", "workshop", "studios"])
-    )
+        bool(re.search(r'\b(?:labs?|laborator(?:y|ies)|workshops?|studios?)\b', msg_lower))
+    ) and not any(k in msg_lower for k in ["course", "courses", "degree", "degrees", "branch", "branches", "program", "programs"])
     if is_lab_query and target_dept_code:
         dept = find_department(target_dept_code, kb_dict)
         if dept:

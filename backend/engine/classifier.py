@@ -172,9 +172,9 @@ INTENT_PATTERNS = {
         r'\b(?:computer engineering|mechanical engineering|civil engineering|ecs|ece|csds|aiml|cs-aiml|data science|information technology)\b.*?\b(?:department|dept|overview|scope|details|curriculum|branch)\b'
     ],
     "courses_offered": [
-        r'\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?|undergraduate|postgraduate|diploma|b\.?tech|m\.?tech|ph\.?d|b\.?pharm|d\.?pharm|m\.?pharm|b\.?arch|d\.?arch|bsc\.? ?it)\b.*?\b(?:available|offered|offer|have|list|intake|options?|provide|padhate|shakha|pathyakram)\b',
-        r'\b(?:what|which|list|show|tell me|available|all)\b.*?\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?)\b',
-        r'\b(?:course|courses|degree|degrees|programs?|programmes?|branch|branches)\b.*?\b(?:offere?d?|offer|hai|hote|milte|available)\b',
+        r'\b(?:courses?|coursed|programmes?|programs?|degrees?|branches?|specializations?|undergraduate|postgraduate|diploma|b\.?tech|m\.?tech|ph\.?d|b\.?pharm|d\.?pharm|m\.?pharm|b\.?arch|d\.?arch|bsc\.? ?it)\b.*?\b(?:available|offered|offer|have|list|intake|options?|provide|padhate|shakha|pathyakram)\b',
+        r'\b(?:what|which|list|show|tell me|available|all)\b.*?\b(?:courses?|coursed|programmes?|programs?|degrees?|branches?|specializations?)\b',
+        r'\b(?:course|courses|coursed|degree|degrees|programs?|programmes?|branch|branches)\b.*?\b(?:offere?d?|offer|hai|hote|milte|available)\b',
         r'\b(?:which branches|which courses|available courses?|courses available|branches available|courses offered|programs offered|what does aiktc offer)\b',
         r'^\s*(?:in\s+)?(?:engineering|enginerring|pharmacy|architecture|b\.?tech|diploma)\s*$'
     ]
@@ -276,9 +276,9 @@ def classify_intent(text: str, context: list[dict] | None = None) -> str:
             return "department_overview"
 
     # 13. Check follow-up context if present
-    if context:
+    if context and isinstance(context, list):
         for turn in reversed(context):
-            if turn.get("role") == "user":
+            if isinstance(turn, dict) and turn.get("role") == "user":
                 prev_intent = classify_intent(turn.get("content", ""))
                 if prev_intent in ("faculty", "fee", "admission_cutoff", "hostel", "scholarship", "courses_offered", "compare_departments", "department_overview"):
                     return prev_intent

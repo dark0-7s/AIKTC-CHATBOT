@@ -95,7 +95,7 @@ def retrieve_knowledge(
     if query:
         vs = get_vector_store()
         target_depts = list(entities.get("departments", [])) if entities else []
-        if len(target_depts) >= 2 or intent == "compare_departments":
+        if intent == "compare_departments" and len(target_depts) >= 2:
             matches = []
             seen_chunk_ids = set()
             for d in target_depts[:2]:
