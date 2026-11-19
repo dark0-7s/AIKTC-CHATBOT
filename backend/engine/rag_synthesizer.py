@@ -79,6 +79,30 @@ def synthesize_grounded_answer(
     if is_greeting(q_prep):
         return format_greeting(lang)
 
+    # 2. Handle Out-of-Scope Queries
+    if intent == "out_of_scope":
+        if lang in ("hi", "mr"):
+            return (
+                "मैं केवल **अंजुमन-ए-इस्लाम के कालसेकर टेक्निकल कैंपस (AIKTC)** से संबंधित कॉलेज, प्रवेश, पाठ्यक्रम, शुल्क, संकाय और परिसर सुविधाओं के प्रश्नों में सहायता कर सकता हूँ।\n\n"
+                "कृपया AIKTC प्रवेश, छात्रवृत्ति, प्रयोगशालाओं या विभागों के बारे में पूछें।\n\n"
+                "### 🌐 आधिकारिक AIKTC पोर्टल:\n"
+                "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)\n"
+                "- [AIKTC Official Website](https://aiktc.ac.in/)\n\n"
+                "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+            )
+        return (
+            "I am the **AIKTC Institutional AI Assistant**, dedicated exclusively to providing verified information regarding **Anjuman-I-Islam's Kalsekar Technical Campus (AIKTC)**.\n\n"
+            "Your question appears to be outside my institutional scope. You can ask me about:\n"
+            "- **Admissions & Eligibility:** B.Tech, Pharmacy, B.Arch, and CAP round schedules\n"
+            "- **Academic Fees & Scholarships:** FRA-approved fee structures and MahaDBT / EBC schemes\n"
+            "- **Departments & Faculty:** Faculty profiles, department leadership, and research laboratories\n"
+            "- **Campus Facilities:** Hostels, Central Library, Incubation Centre, and Placement Cell\n\n"
+            "### 🌐 Official Institutional Portals:\n"
+            "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)\n"
+            "- [AIKTC Official Website](https://aiktc.ac.in/)\n\n"
+            "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+        )
+
     retrieved_context = (algo_result.get("retrieved_context") or "").strip()
 
     # 2. Extract Document sections from retrieved_context

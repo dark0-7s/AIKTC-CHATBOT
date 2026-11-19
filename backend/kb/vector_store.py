@@ -350,9 +350,9 @@ class VectorStore:
             if re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks)\b', q_lower_clean):
                 if "_admission_eligibility" in chunk.chunk_id:
                     score *= 3.0
-            elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps)\b', q_lower_clean):
+            elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps|admission kaise|kaise apply|kaise le|kaise lena|steps to apply)\b', q_lower_clean):
                 if chunk.chunk_id == "cap_admission_process":
-                    score *= 2.5
+                    score *= 3.0
 
             if score >= min_score:
                 results.append((chunk, score))

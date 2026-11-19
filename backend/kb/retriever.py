@@ -91,6 +91,9 @@ def retrieve_knowledge(
     grounded source citations to eliminate hallucination.
     Falls back gracefully to section-level JSON filtering if query is absent.
     """
+    if intent == "out_of_scope":
+        return ""
+
     # ── Phase A: Vector RAG Semantic Retrieval ─────────────────────────────
     if query:
         vs = get_vector_store()

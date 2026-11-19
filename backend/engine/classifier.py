@@ -113,12 +113,15 @@ def preprocess(text: str) -> str:
 # ==============================================================================
 INTENT_PATTERNS = {
     "out_of_scope": [
-        r'\b(?:weather|temperature|cricket|football|movie|song|joke|recipe|pm of india|president)\b',
-        r'\b(?:write code|python program|solve this math|who won the match)\b',
-        r'\b(?:vjti|spit|coep|ict|iit bombay|bits pilani|mit pune)\b'
+        r'\b(?:weather|temperature|forecast|cricket|football|movie|song|jokes?|riddles?|recipe|pm of india|president of india)\b',
+        r'\b(?:write (?:a |me )?(?:code|python|java|program|essay|poem)|solve (?:this )?math|who won the match)\b',
+        r'\b(?:vjti|spit|coep|ict|iit bombay|bits pilani|mit pune)\b',
+        r'\b(?:elon musk|bill gates|mark zuckerberg|narendra modi|donald trump|messi|ronaldo|virat kohli)\b',
+        r'\b(?:capital of \w+|stock market|bitcoin|crypto|how to cook|bake a cake)\b'
     ],
     "admission_process": [
         r'\b(?:admission process|how to apply|apply for admission|admission procedure|steps to apply|step by step process)\b',
+        r'\b(?:admission kaise|kaise apply|admission lena|form kaise|apply kaise|dakhila|pravesh prakriya)\b',
         r'\bdocuments?\b.*?\b(?:required|needed|checklist|list)\b',
         r'\b(?:eligibility criteria|eligibility for|eligibility)\b',
         r'\b(?:minority|domicile|income certificate|confirm seat|verification)\b',
