@@ -1001,7 +1001,7 @@ document.getElementById('login-btn').addEventListener('click', async () => {
     AUTH_HEADER = `Basic ${credentials}`;
 
     try {
-        const res = await fetch('/admin/dashboard/stats', {
+        const res = await fetch('/api/admin/dashboard/stats', {
             headers: { 'Authorization': AUTH_HEADER }
         });
         if (res.ok) {
@@ -1042,7 +1042,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const stored = sessionStorage.getItem('aiktc_admin_auth');
     if (stored) {
         AUTH_HEADER = stored;
-        apiFetch('/admin/dashboard/stats')
+        apiFetch('/api/admin/dashboard/stats')
             .then(res => {
                 if (res.ok) {
                     document.getElementById('login-screen').style.display = 'none';
@@ -1474,11 +1474,9 @@ async function handleFileUpload(file) {
   formData.append('folder', managerCurrentFolder);
   
   try {
-    const resp = await fetch('/api/admin/kb/upload', {
+    const resp = await apiFetch('/api/admin/kb/upload', {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${KB_TOKEN}` },
-      body: formData,
-      credentials: 'include'
+      body: formData
     });
     const d = await resp.json();
     if (resp.ok) {
@@ -1570,10 +1568,8 @@ async function reloadKB() {
   btn.innerHTML = '<span class="loading-spinner"></span> Reloading…';
 
   try {
-    const resp = await fetch('/api/admin/reload-kb', {
-      method: 'POST',
-      headers: { 'Authorization': `Bearer ${KB_TOKEN}` },
-      credentials: 'include',
+    const resp = await apiFetch('/api/admin/reload-kb', {
+      method: 'POST'
     });
     const d = await resp.json();
     if (resp.ok) {
@@ -1845,11 +1841,10 @@ async function saveFile() {
   btn.innerHTML = '<span class="loading-spinner" style="width:12px;height:12px;border-width:1px"></span> Saving...';
   
   try {
-    const resp = await fetch('/api/admin/kb/file', {
+    const resp = await apiFetch('/api/admin/kb/file', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: currentFilePath, content: content }),
-      credentials: 'include'
+      body: JSON.stringify({ path: currentFilePath, content: content })
     });
     
     const d = await resp.json();
@@ -1981,10 +1976,9 @@ async function processSmartUpload() {
   btn.innerHTML = '<span class="loading-spinner"></span> Extracting...';
   
   try {
-    const resp = await fetch('/api/admin/upload/smart', {
+    const resp = await apiFetch('/api/admin/upload/smart', {
       method: 'POST',
-      body: formData,
-      credentials: 'include'
+      body: formData
     });
     
     const data = await resp.json();
@@ -2051,11 +2045,10 @@ async function approveSmartUpload() {
   btn.innerHTML = '<span class="loading-spinner"></span> Saving...';
   
   try {
-    const resp = await fetch('/api/admin/kb/file', {
+    const resp = await apiFetch('/api/admin/kb/file', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: path, content: content }),
-      credentials: 'include'
+      body: JSON.stringify({ path: path, content: content })
     });
     
     if (resp.ok) {

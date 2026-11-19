@@ -64,6 +64,24 @@ def submit_feedback(payload: FeedbackRequest):
 
     save_feedback(feedback)
 
+    # Synchronize to SQLite feedback table
+    try:
+        from session.manager import get_connection
+        conn = get_connection()
+        int_rating = 1 if payload.rating in ("helpful", "positive", 1, "1") else -1
+        full_comment = f"[{payload.reason}] {payload.comment}" if payload.reason else payload.comment
+        conn.execute(
+            """
+            INSERT INTO feedback (session_id, rating, comment, conversation_snippet)
+            VALUES (?, ?, ?, ?)
+            """,
+            (payload.session_id or "", int_rating, full_comment, payload.question or payload.answer or "")
+        )
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print("SQLite Feedback sync error:", e)
+
     return {
         "success": True,
         "message": "Feedback saved successfully."

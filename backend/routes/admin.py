@@ -71,51 +71,60 @@ bearer_scheme = HTTPBearer(auto_error=False)
 basic_scheme  = HTTPBasic(auto_error=False)
 
 
-def verify_bearer(
-    credentials: Optional[HTTPAuthorizationCredentials] = Depends(bearer_scheme),
+def verify_admin_access(
+    request: Request,
+    bearer: Optional[HTTPAuthorizationCredentials] = Depends(bearer_scheme),
+    basic: Optional[HTTPBasicCredentials] = Depends(basic_scheme),
 ) -> bool:
     """
-    Verify Bearer token for upload and reload endpoints.
-    Token must match settings.kb_reload_token.
+    Verify admin credentials. Accepts either:
+    1. Valid HTTP Basic Auth (admin_user : admin_pass)
+    2. Valid Bearer Token (kb_reload_token)
     """
-    if not credentials or credentials.scheme.lower() != "bearer":
-        raise HTTPException(
-            status_code = status.HTTP_401_UNAUTHORIZED,
-            detail      = "Bearer token required",
-            headers     = {"WWW-Authenticate": "Bearer"},
-        )
-    if credentials.credentials != settings.kb_reload_token:
-        raise HTTPException(
-            status_code = status.HTTP_401_UNAUTHORIZED,
-            detail      = "Invalid token",
-            headers     = {"WWW-Authenticate": "Bearer"},
-        )
-    return True
+    if bearer and bearer.scheme.lower() == "bearer" and bearer.credentials == settings.kb_reload_token:
+        return True
+
+    if basic and basic.username == settings.admin_user and basic.password == settings.admin_pass:
+        return True
+
+    # Check Authorization header manually (useful for custom frontends and scripts)
+    auth_hdr = request.headers.get("Authorization", "")
+    if auth_hdr.startswith("Basic "):
+        import base64
+        try:
+            decoded = base64.b64decode(auth_hdr[6:]).decode("utf-8")
+            u, p = decoded.split(":", 1)
+            if u == settings.admin_user and p == settings.admin_pass:
+                return True
+        except Exception:
+            pass
+    elif auth_hdr.startswith("Bearer "):
+        if auth_hdr[7:].strip() == settings.kb_reload_token:
+            return True
+
+    raise HTTPException(
+        status_code = status.HTTP_401_UNAUTHORIZED,
+        detail      = "Admin authentication required",
+        headers     = {"WWW-Authenticate": "Basic, Bearer"},
+    )
+
+
+def verify_bearer(
+    request: Request,
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(bearer_scheme),
+    basic: Optional[HTTPBasicCredentials] = Depends(basic_scheme),
+) -> bool:
+    """Verify Bearer token or Basic Auth for upload and reload endpoints."""
+    return verify_admin_access(request, credentials, basic)
 
 
 def verify_basic_auth(
+    request: Request,
     credentials: Optional[HTTPBasicCredentials] = Depends(basic_scheme),
+    bearer: Optional[HTTPAuthorizationCredentials] = Depends(bearer_scheme),
 ) -> bool:
-    """
-    Verify HTTP Basic Auth for review/dashboard endpoints.
-    Credentials must match settings.admin_user and settings.admin_pass.
-    """
-    if not credentials:
-        raise HTTPException(
-            status_code = status.HTTP_401_UNAUTHORIZED,
-            detail      = "Basic authentication required",
-            headers     = {"WWW-Authenticate": "Basic"},
-        )
-    if (
-        credentials.username != settings.admin_user
-        or credentials.password != settings.admin_pass
-    ):
-        raise HTTPException(
-            status_code = status.HTTP_401_UNAUTHORIZED,
-            detail      = "Invalid credentials",
-            headers     = {"WWW-Authenticate": "Basic"},
-        )
-    return True
+    """Verify HTTP Basic Auth or Bearer token for review/dashboard endpoints."""
+    return verify_admin_access(request, bearer, credentials)
 
 
 # ==============================================================================
