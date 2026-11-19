@@ -341,6 +341,96 @@ def format_architecture_courses_table() -> str:
     return "\n".join(lines)
 
 
+def format_engineering_fees_table(dept_code: str = "") -> str:
+    dept_note = f" (including **{dept_code}**, Computer, CSAIML, CSDS, ECE, Mechanical, and Civil)" if dept_code else ""
+    lines = [
+        "### 💳 Approved Fee Structure for School of Engineering & Technology (SOET)",
+        "**Academic Year 2025–26 | Approved by Fees Regulating Authority (FRA), Maharashtra (DTE Code: 3418)**\n",
+        f"> **Note on Department Fees:** At AIKTC, all **B.Tech (Engineering)** programs{dept_note} follow the uniform FRA-approved fee structure detailed below:\n",
+        "#### 📌 B.Tech (Undergraduate Degree — 4 Years) Fee Breakdown:",
+        "| Academic Year | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- |",
+        "| **First Year (FE)** | ₹96,444 | ₹12,056 | **₹1,08,500** |",
+        "| **Direct Second Year (DSE / SE)** | ₹87,556 | ₹10,944 | **₹98,500** |",
+        "| **Third Year (TE)** | ₹79,859 | ₹10,141 | **₹90,000** |",
+        "| **Final Year (BE)** | ₹79,859 | ₹10,141 | **₹90,000** |\n",
+        "#### 📌 Other Programs in School of Engineering:",
+        "| Program | Level / Duration | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **B.Sc Information Technology (B.Sc IT)** | 3 Years | ₹43,000 | ₹0 | **₹43,000** |",
+        "| **M.Tech (Computer / Civil)** | 2 Years | ₹95,574 | ₹12,426 | **₹1,08,000** |",
+        "| **Ph.D. (Civil Engineering)** | 3–5 Years | ₹1,00,000 | ₹0 | **₹1,00,000** |\n",
+        "#### 💡 Government Scholarships & Concessions Applicable:",
+        "- **EBC / Open Economically Weaker:** 50% Tuition Fee concession via MahaDBT.",
+        "- **OBC / EWS:** 50% Tuition Fee reimbursement.",
+        "- **SC / ST / VJNT / SBC / TFWS:** 100% Tuition Fee waiver (only Development & Exam fees payable).\n",
+        "### 🌐 Official Portals & Contact:",
+        "- [AIKTC Central Admissions & Fees Portal](https://aiktc.ac.in/admissions/)",
+        "- [MahaDBT Official Scholarship Portal](https://mahadbt.maharashtra.gov.in/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
+def format_pharmacy_fees_table() -> str:
+    lines = [
+        "### 💳 Approved Fee Structure for School of Pharmacy (SOP)",
+        "**Academic Year 2025–26 | Approved by Fees Regulating Authority (FRA), Maharashtra (DTE Code: 3418)**\n",
+        "#### 📌 Bachelor of Pharmacy (B.Pharm — 4 Years) Fee Breakdown:",
+        "| Academic Year | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- |",
+        "| **First Year (First Year B.Pharm)** | ₹94,942 | ₹12,058 | **₹1,07,000** |",
+        "| **Direct Second Year (DSE / Second Year)** | ₹86,222 | ₹10,778 | **₹97,000** |",
+        "| **Third Year** | ₹68,323 | ₹8,677 | **₹77,000** |",
+        "| **Final Year** | ₹68,323 | ₹8,677 | **₹77,000** |\n",
+        "#### 📌 Other Programs in School of Pharmacy:",
+        "| Program | Duration | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Pharmacy (D.Pharm)** | 2 Years | ₹60,000 | ₹0 | **₹60,000** |",
+        "| **Master of Pharmacy in Pharmacology (M.Pharm)** | 2 Years | ₹1,00,000 | ₹10,000 | **₹1,10,000** |\n",
+        "#### 💡 Government Scholarships & Concessions Applicable:",
+        "- **EBC / Open Economically Weaker:** 50% Tuition Fee concession via MahaDBT.",
+        "- **OBC / EWS:** 50% Tuition Fee reimbursement.",
+        "- **SC / ST / VJNT / SBC / TFWS:** 100% Tuition Fee waiver.\n",
+        "### 🌐 Official Portals & Contact:",
+        "- [School of Pharmacy Official Portal](https://aiktc.ac.in/bachelor-of-pharmacy/)",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
+def format_architecture_fees_table() -> str:
+    lines = [
+        "### 💳 Approved Fee Structure for School of Architecture (SOA)",
+        "**Academic Year 2025–26 | Approved by Fees Regulating Authority (FRA), Maharashtra (COA Code: MH-57)**\n",
+        "#### 📌 Bachelor of Architecture (B.Arch — 5 Years) Fee Breakdown:",
+        "| Academic Year | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- |",
+        "| **First Year** | ₹81,105 | ₹9,895 | **₹91,000** |",
+        "| **Second Year** | ₹88,731 | ₹11,269 | **₹1,00,000** |",
+        "| **Third Year** | ₹88,731 | ₹11,269 | **₹1,00,000** |",
+        "| **Fourth Year** | ₹1,25,110 | ₹15,890 | **₹1,41,000** |",
+        "| **Fifth Year** | ₹1,25,110 | ₹15,890 | **₹1,41,000** |\n",
+        "#### 📌 Diploma Program in Architecture:",
+        "| Program | Duration | Tuition Fees | Development Fees | Total Annual Fees |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+        "| **Diploma in Architecture (D.Arch)** | 3 Years | ₹45,000 | ₹0 | **₹45,000** |\n",
+        "#### 💡 Government Scholarships & Concessions Applicable:",
+        "- **EBC / Open Economically Weaker:** 50% Tuition Fee concession via MahaDBT.",
+        "- **OBC / EWS:** 50% Tuition Fee reimbursement.",
+        "- **SC / ST / VJNT / SBC / TFWS:** 100% Tuition Fee waiver.\n",
+        "### 🌐 Official Portals & Contact:",
+        "- [School of Architecture Official Portal](https://aiktc.ac.in/bachelor-of-architecture/)",
+        "- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        "- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
 def format_department_comparison(dept_codes: list[str]) -> str:
     """
     Format a rich, executive, side-by-side comparative analysis between two departments.
@@ -490,6 +580,21 @@ def synthesize_grounded_answer(
         else:
             return format_central_courses_table()
 
+    # 6. Handle Fee Structure Queries (Rich Interactive Tables)
+    is_fee_query = (
+        intent == "fee"
+        or bool(re.search(r'\b(?:fees?|tuition|shulk|feestructure|fee structure)\b', q_lower))
+    ) and not any(k in q_lower for k in ("refund", "cancellation", "canceling", "cancel", "hostel", "mess"))
+    if is_fee_query:
+        first_dept = target_depts[0] if target_depts else ""
+        if any(k in q_lower for k in ("pharm", "bpharm", "dpharm", "mpharm", "pharma")):
+            return format_pharmacy_fees_table()
+        elif any(k in q_lower for k in ("arch", "barch", "darch", "architecture")):
+            return format_architecture_fees_table()
+        else:
+            # Default or Engineering departments (ECS, COMP, MECH, CIVIL, etc.)
+            return format_engineering_fees_table(first_dept)
+
     retrieved_context = (algo_result.get("retrieved_context") or "").strip()
 
     # 5. Extract Document sections from retrieved_context
@@ -542,9 +647,7 @@ def synthesize_grounded_answer(
                 response_parts.append("\n".join(summary_lines))
     else:
         if doc_sections:
-            # If overview chunk is present among retrieved documents, prioritize it
-            overview_doc = next((d for d in doc_sections if "_overview" in d['title'].lower() or "overview" in d['title'].lower()), None)
-            chosen_doc = overview_doc or doc_sections[0]
+            chosen_doc = doc_sections[0]
             clean_body = re.sub(r"!\[.*?\]\(.*?\)", "", chosen_doc['body'])
             clean_body = re.sub(r"(?:Lab|HOD|Director)?\s*Photo:\s*", "", clean_body)
             clean_body = re.sub(r"\s*\|\s*Photo:.*", "", clean_body)
