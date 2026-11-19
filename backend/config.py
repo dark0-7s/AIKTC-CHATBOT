@@ -36,11 +36,20 @@ class Settings(BaseSettings):
 
     @property
     def resolved_kb_path(self) -> Path:
-        return Path(self.kb_path)
+        p = Path(self.kb_path)
+        if not p.is_absolute():
+            base = Path(__file__).resolve().parent
+            if (base / p).exists():
+                return base / p
+        return p
 
     @property
     def resolved_database_path(self) -> Path:
-        return Path(self.database_path)
+        p = Path(self.database_path)
+        if not p.is_absolute():
+            base = Path(__file__).resolve().parent
+            return base / p
+        return p
 
     model_config = SettingsConfigDict(
         env_file=".env",

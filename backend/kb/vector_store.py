@@ -57,7 +57,7 @@ DEPT_SCHOOL_MAP = {
 }
 
 def tokenize(text: str) -> list[str]:
-    """Tokenize and filter stopwords for vector generation."""
+    """Tokenize, stem common inflections, and filter stopwords for vector generation."""
     t_clean = text.lower()
     # Normalize common department aliases for consistent lexical matching
     if "computer science" in t_clean or "computer engg" in t_clean or "computer engineering" in t_clean:
@@ -70,7 +70,36 @@ def tokenize(text: str) -> list[str]:
         t_clean += " ecs"
 
     tokens = re.findall(r'[a-zA-Z0-9_\u0900-\u097f]+', t_clean)
-    return [t for t in tokens if t not in STOPWORDS and len(t) > 1]
+    normalized: list[str] = []
+    for t in tokens:
+        if t in STOPWORDS or len(t) <= 1:
+            continue
+        # Stem common plural / inflected forms
+        if t in ("fees", "feez"):
+            normalized.append("fee")
+        elif t in ("labs", "laboratories"):
+            normalized.append("lab")
+        elif t in ("courses", "cours"):
+            normalized.append("course")
+        elif t in ("departments", "depts"):
+            normalized.append("department")
+        elif t in ("faculties", "professors", "teachers"):
+            normalized.append("faculty")
+        elif t in ("hostels",):
+            normalized.append("hostel")
+        elif t in ("placements", "packages"):
+            normalized.append("placement")
+        elif t in ("scholarships",):
+            normalized.append("scholarship")
+        elif t in ("cutoffs",):
+            normalized.append("cutoff")
+        elif t in ("admissions",):
+            normalized.append("admission")
+        elif t.endswith("s") and len(t) > 4 and not t.endswith(("ss", "us", "is")):
+            normalized.append(t[:-1])
+        else:
+            normalized.append(t)
+    return normalized
 
 
 class VectorStore:
@@ -181,6 +210,15 @@ class VectorStore:
         target_depts: set[str] = set()
         target_schools: set[str] = set()
         person_intent: str | None = None
+
+        q_lower = query.lower()
+        if "engineering" in q_lower or "engg" in q_lower or "btech" in q_lower or "b.tech" in q_lower:
+            target_schools.add("engineering")
+        if "pharmacy" in q_lower or "pharm" in q_lower or "bpharm" in q_lower or "b.pharm" in q_lower or "mpharm" in q_lower:
+            target_schools.add("pharmacy")
+        if "architecture" in q_lower or "arch" in q_lower or "barch" in q_lower or "b.arch" in q_lower:
+            target_schools.add("architecture")
+
         if entities:
             raw_depts = entities.get("departments", [])
             for d in raw_depts:
@@ -212,16 +250,13 @@ class VectorStore:
                     category_matched = True
 
             # 2. Entity / Department & School metadata boost
-            if target_depts:
-                chunk_dept = str(chunk.metadata.get("dept", "")).upper()
-                chunk_school = str(chunk.metadata.get("school", "")).lower()
+            chunk_dept = str(chunk.metadata.get("dept", "")).upper()
+            chunk_school = str(chunk.metadata.get("school", "")).lower()
 
-                # If query has a general, faculty, or facilities intent OR chunk category matched intent:
-                if not category or category in ("faculty", "facilities", "general") or category_matched:
-                    if chunk_dept and chunk_dept in target_depts:
-                        score *= 2.5
-                    elif not chunk_dept and chunk_school and chunk_school in target_schools:
-                        score *= 1.5
+            if target_depts and chunk_dept and chunk_dept in target_depts:
+                score *= 2.5
+            elif target_schools and chunk_school and chunk_school in target_schools:
+                score *= 2.0
 
             # 3. Person Intent boost: 2.5x boost for leadership queries
             if person_intent:
@@ -229,6 +264,17 @@ class VectorStore:
                     score *= 2.5
                 elif person_intent == "dean" and "dean" in chunk.chunk_id:
                     score *= 2.5
+
+            # 4. Fee Structure vs Refund Policy Disambiguation
+            is_refund_query = bool(re.search(r'\b(?:refund|cancellation|canceling|cancel|deduct|deduction)\b', query.lower()))
+            if is_refund_query:
+                if "refund" in chunk.chunk_id:
+                    score *= 3.0
+            else:
+                if "refund" in chunk.chunk_id:
+                    score *= 0.2
+                elif "_fees" in chunk.chunk_id:
+                    score *= 2.0
 
             if score >= min_score:
                 results.append((chunk, score))

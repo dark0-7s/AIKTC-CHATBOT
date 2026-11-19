@@ -245,22 +245,25 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
         # Fees
         fees_data = _load_json_safe(school_dir / "fees.json")
         if isinstance(fees_data, dict):
-            lines = [f"Fee Structure for School of {school.capitalize()} (Academic Year {fees_data.get('academic_year', '2025-26')}):"]
+            lines = [
+                f"Fee Structure and Annual Fees for School of {school.capitalize()} (Academic Year {fees_data.get('academic_year', '2025-26')}):",
+                f"Approved by Fees Regulating Authority (FRA), Maharashtra. Annual Tuition Fees, Development Fees, and Total College Fees:"
+            ]
             programs = fees_data.get("programs", {})
             for prog_key, prog in programs.items():
                 pname = prog.get("program_type", prog_key.upper())
-                lines.append(f"\nProgram: {pname} (Duration: {prog.get('duration_years', '')} yrs)")
+                lines.append(f"\n### Program: {pname} (Duration: {prog.get('duration_years', '')} yrs)")
                 for y in prog.get("annual_fees", []):
                     lines.append(
-                        f"  Year {y.get('year')}: Tuition ₹{y.get('tuition_fees', 0):,}, "
-                        f"Development ₹{y.get('development_fees', 0):,}, Total Annual Fee: ₹{y.get('total_fees', 0):,}"
+                        f"- Year {y.get('year')}: Tuition Fees: ₹{y.get('tuition_fees', 0):,}, "
+                        f"Development Fees: ₹{y.get('development_fees', 0):,}, Total Annual Fees: ₹{y.get('total_fees', 0):,}"
                     )
             notes = fees_data.get("notes")
             if notes:
-                lines.append(f"Notes: {notes}")
+                lines.append(f"\nNotes: {notes}")
             chunks.append(TextChunk(
                 chunk_id=f"{school}_fees",
-                title=f"{school.capitalize()} Annual Tuition & Total Fee Structure",
+                title=f"{school.capitalize()} Annual Fees, Tuition & Total Fee Structure",
                 category="fee",
                 content="\n".join(lines),
                 metadata={"school": school}

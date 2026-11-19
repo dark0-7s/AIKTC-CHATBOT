@@ -6,8 +6,15 @@ Initializes the FastAPI app, middleware, routes,
 knowledge base, and database on startup.
 """
 
-import logging
 import os
+import sys
+
+# Ensure backend root is on sys.path
+backend_dir = os.path.dirname(os.path.abspath(__file__))
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
+
+import logging
 from contextlib import asynccontextmanager
 
 import uvicorn
@@ -96,8 +103,8 @@ async def lifespan(app: FastAPI):
         logger.error(f"Knowledge base loading failed: {e}")
         app.state.kb_markdown = ""
 
-    logger.info("Server ready — http://localhost:8000")
-    logger.info("API docs — http://localhost:8000/docs")
+    logger.info(f"Server ready — http://localhost:{settings.port}")
+    logger.info(f"API docs — http://localhost:{settings.port}/docs")
     logger.info("=" * 60)
 
     yield  # Application runs here
