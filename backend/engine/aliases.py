@@ -9,6 +9,28 @@ DEPARTMENT_ALIASES = {
         "कंप्यूटर", "कंप्यूटर इंजीनियरिंग", "कंप्यूटर साइंस",
         "computer hai", "cse chahiye", "cs milega"
     ],
+    "CSAIML": [
+        "cs aiml", "cs-aiml", "aiml", "ai ml", "ai & ml", "ai and ml", "ai",
+        "artificial intelligence", "machine learning", "cs aiml branch", "cse aiml",
+        "आर्टिफिशियल इंटेलिजेंस", "एआई", "मशीन लर्निंग"
+    ],
+    "CSDS": [
+        "cs ds", "cs-ds", "csds", "data science", "datascience", "cse data science",
+        "cse ds", "ds branch", "डेटा साइंस"
+    ],
+    "ECE": [
+        "ece", "electrical computer", "electrical and computer", "electrical",
+        "इलेक्ट्रिकल", "इलेक्ट्रिकल इंजीनियरिंग"
+    ],
+    "BSIT": [
+        "bsc it", "bsc-it", "b.sc. it", "b.sc it", "bscit", "bachelor of science in information technology"
+    ],
+    "DARCH": [
+        "darch", "d arch", "d.arch", "diploma in architecture", "diploma architecture", "डिप्लोमा आर्किटेक्चर"
+    ],
+    "DPHARM": [
+        "dpharm", "d pharm", "d.pharm", "diploma in pharmacy", "diploma pharmacy", "डिप्लोमा फार्मेसी"
+    ],
     "IT": [
         "it", "information technology", "info tech", "i.t.",
         "सूचना प्रौद्योगिकी", "आईटी", "it chahiye", "it milega"
