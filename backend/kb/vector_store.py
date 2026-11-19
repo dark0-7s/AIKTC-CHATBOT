@@ -249,32 +249,110 @@ class VectorStore:
                     score *= 1.8
                     category_matched = True
 
-            # 2. Entity / Department & School metadata boost
+            # 2. Entity / Department & School metadata boost & isolation
             chunk_dept = str(chunk.metadata.get("dept", "")).upper()
             chunk_school = str(chunk.metadata.get("school", "")).lower()
 
-            if target_depts and chunk_dept and chunk_dept in target_depts:
-                score *= 2.5
-            elif target_schools and chunk_school and chunk_school in target_schools:
-                score *= 2.0
+            if target_depts:
+                if chunk_dept and chunk_dept in target_depts:
+                    score *= 3.0
+                elif chunk_dept and chunk_dept not in target_depts:
+                    score *= 0.3  # Isolate requested department from other departments
+            elif target_schools:
+                if chunk_school and chunk_school in target_schools:
+                    score *= 2.0
 
             # 3. Person Intent boost: 2.5x boost for leadership queries
             if person_intent:
                 if person_intent in ("director", "principal") and chunk.chunk_id == "inst_leadership":
-                    score *= 2.5
+                    score *= 3.0
                 elif person_intent == "dean" and "dean" in chunk.chunk_id:
-                    score *= 2.5
+                    score *= 3.0
 
-            # 4. Fee Structure vs Refund Policy Disambiguation
-            is_refund_query = bool(re.search(r'\b(?:refund|cancellation|canceling|cancel|deduct|deduction)\b', query.lower()))
-            if is_refund_query:
+            # 4. Fee Structure vs Refund Policy vs Hostel Disambiguation
+            q_lower_clean = query.lower()
+            is_refund_query = bool(re.search(r'\b(?:refund|cancellation|canceling|cancel|deduct|deduction)\b', q_lower_clean))
+            is_hostel_query = bool(re.search(r'\b(?:hostel|hostels|mess|accommodation|rooms?|stay)\b', q_lower_clean))
+
+            if is_hostel_query:
+                if chunk.chunk_id == "inst_hostel":
+                    score *= 3.0
+                elif "_fees" in chunk.chunk_id:
+                    score *= 0.2
+            elif is_refund_query:
                 if "refund" in chunk.chunk_id:
                     score *= 3.0
+                elif "_fees" in chunk.chunk_id:
+                    score *= 0.2
             else:
                 if "refund" in chunk.chunk_id:
                     score *= 0.2
                 elif "_fees" in chunk.chunk_id:
                     score *= 2.0
+
+            # 5. Faculty vs Laboratories / Facilities Disambiguation
+            is_faculty_query = bool(re.search(r'\b(?:faculty|faculties|prof|professor|professors|teacher|teachers|hod|staff|sir|madam|dr)\b', q_lower_clean))
+            is_lab_query = bool(re.search(r'\b(?:lab|labs|laboratory|laboratories|equipment|machines?|hardware|specs?)\b', q_lower_clean))
+
+            if is_faculty_query:
+                if "_faculty" in chunk.chunk_id or chunk.chunk_id == "inst_leadership" or "dean" in chunk.chunk_id:
+                    score *= 2.5
+                elif "_labs" in chunk.chunk_id:
+                    score *= 0.2
+            elif is_lab_query:
+                if "_labs" in chunk.chunk_id:
+                    score *= 2.5
+                elif "_faculty" in chunk.chunk_id:
+                    score *= 0.2
+
+            # 6. Scholarships Disambiguation (General vs Specific Categories vs Documents/Process)
+            if "scholarship" in chunk.chunk_id:
+                is_doc_query = bool(re.search(r'\b(?:documents?|docs?|certificate|papers?|proof)\b', q_lower_clean))
+                is_apply_query = bool(re.search(r'\b(?:how to apply|apply|application|procedure|steps|portal)\b', q_lower_clean))
+                has_caste_category = bool(re.search(r'\b(?:obc|sc|st|minority|muslim|merit|ebc|tfws|mahadbt)\b', q_lower_clean))
+
+                if is_doc_query and not has_caste_category:
+                    if chunk.chunk_id == "scholarship_documents":
+                        score *= 3.0
+                    else:
+                        score *= 0.4
+                elif is_apply_query and not has_caste_category:
+                    if chunk.chunk_id == "scholarship_application_process":
+                        score *= 3.0
+                    else:
+                        score *= 0.5
+                elif not has_caste_category:
+                    if chunk.chunk_id == "scholarship_overview":
+                        score *= 2.5
+                    elif chunk.chunk_id in ("scholarship_obc", "scholarship_sc_st", "scholarship_minority", "scholarship_merit"):
+                        score *= 0.3
+
+            # 7. Central Facilities Disambiguation (Library, Incubation, Activities)
+            if re.search(r'\b(?:library|books?|reading room|krrc|journals?)\b', q_lower_clean):
+                if chunk.chunk_id == "engineering_library":
+                    score *= 3.0
+            if re.search(r'\b(?:incubation|innovation|startup|entrepreneur|edc)\b', q_lower_clean):
+                if chunk.chunk_id == "engineering_incubation":
+                    score *= 3.0
+            if re.search(r'\b(?:clubs?|activities|activity|events?|fests?|ieee|csi|cultural|sports)\b', q_lower_clean):
+                if chunk.chunk_id == "campus_activities":
+                    score *= 3.0
+
+            # 8. Contact vs Overview Disambiguation
+            if re.search(r'\b(?:contact|phone|telephone|email|mail|call|reach|address|location|map)\b', q_lower_clean):
+                if chunk.chunk_id == "inst_contact":
+                    score *= 2.5
+            if re.search(r'\b(?:about|overview|history|established|affiliation|approved|dte code)\b', q_lower_clean):
+                if chunk.chunk_id == "inst_overview":
+                    score *= 2.5
+
+            # 9. Admission Eligibility vs CAP Application Process
+            if re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks)\b', q_lower_clean):
+                if "_admission_eligibility" in chunk.chunk_id:
+                    score *= 3.0
+            elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps)\b', q_lower_clean):
+                if chunk.chunk_id == "cap_admission_process":
+                    score *= 2.5
 
             if score >= min_score:
                 results.append((chunk, score))

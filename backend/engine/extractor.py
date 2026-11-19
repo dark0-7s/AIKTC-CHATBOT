@@ -54,23 +54,29 @@ def normalize_text(text: str) -> str:
 
 def extract_departments(text: str) -> list[str]:
     """
-    Extract canonical department codes from text.
+    Extract canonical department codes from text with strict word boundary enforcement.
     Only searches within the given text — never called on history.
-    Returns list of unique canonical codes (e.g., ["CSE", "IT"]).
+    Prevents false substring matches (e.g., 'it' in 'eligibility', 'co' in 'college').
     """
     text_lower = normalize_text(text).lower()
     found = []
     for code, aliases in DEPARTMENT_ALIASES.items():
-        if any(alias in text_lower for alias in aliases):
-            if code not in found:
-                found.append(code)
+        for alias in aliases:
+            if len(alias) <= 4:
+                pattern = r'\b' + re.escape(alias) + r'\b'
+            else:
+                pattern = r'\b' + re.escape(alias)
+            if re.search(pattern, text_lower):
+                if code not in found:
+                    found.append(code)
+                break
     return found
 
 def extract_person_intent(text: str):
     text = normalize_text(text).lower()
 
     for intent, aliases in PERSON_INTENTS.items():
-        if any(a in text for a in aliases):
+        if any(re.search(r'\b' + re.escape(a) + r'\b', text) for a in aliases):
             return intent
 
     return None
