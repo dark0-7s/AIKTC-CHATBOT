@@ -13,17 +13,8 @@ import {
 
 export function useChat(sessionId) {
   const [messages, setMessages] = useState([]);
-  const [history, setHistory] = useState(() => {
-  const saved = localStorage.getItem("chat-history");
-  return saved ? JSON.parse(saved) : [];
-});
-useEffect(() => {
-    setHistory(getChats());
-}, []);
-useEffect(() => {
-  localStorage.setItem("chat-history", JSON.stringify(history));
-}, [history]);
-const [currentChatId, setCurrentChatId] = useState(null);
+  const [history, setHistory] = useState(() => getChats());
+  const [currentChatId, setCurrentChatId] = useState(null);
   const [loading, setLoading] = useState(false);
 const newChat = () => {
     setMessages([]);

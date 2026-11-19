@@ -1,13 +1,21 @@
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8001";
+const API_BASE = import.meta.env.VITE_API_URL || "";
+
 export async function sendChatMessage(sessionId, message, onChunk) {
-   const response = await fetch(`${API_BASE}/api/chat`, {
+  const url = API_BASE ? `${API_BASE}/api/chat` : '/api/chat';
+  const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ session_id: sessionId, message })
   });
+
+  if (!response.ok) {
+    throw new Error(`Server returned HTTP ${response.status}`);
+  }
+
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let buffer = '';
+
   while (true) {
     const { done, value } = await reader.read();
     if (done) break;
@@ -16,8 +24,12 @@ export async function sendChatMessage(sessionId, message, onChunk) {
     buffer = lines.pop();
     for (const line of lines) {
       if (line.startsWith('data: ')) {
-        const data = JSON.parse(line.slice(6));
-        onChunk(data);
+        try {
+          const data = JSON.parse(line.slice(6));
+          onChunk(data);
+        } catch (e) {
+          console.warn('SSE JSON parse warning:', e, line);
+        }
       }
     }
   }

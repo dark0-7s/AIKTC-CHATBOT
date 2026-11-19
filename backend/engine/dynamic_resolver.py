@@ -546,6 +546,17 @@ def get_official_source(
             ]
         }
 
+    # 6b. Sports, Cultural, Student Clubs & Campus Activities
+    elif any(k in msg_lower for k in ("sport", "sports", "cultural", "activity", "activities", "club", "clubs", "fest", "fests", "bonhomie", "fuerza", "nss")):
+        return {
+            "title": "Official AIKTC Campus Life, Sports & Activities Portals",
+            "links": [
+                OFFICIAL_SOURCES["aiktc_sports"],
+                OFFICIAL_SOURCES["aiktc_activities"],
+                OFFICIAL_SOURCES["aiktc_main"]
+            ]
+        }
+
     # 7. Default (Cutoffs, Admissions & General Dynamic Navigation)
     else:
         return {

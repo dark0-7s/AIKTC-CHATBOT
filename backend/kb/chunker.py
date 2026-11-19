@@ -419,12 +419,74 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
     # 6. Activities & Campus Life
     activities = _load_json_safe(kb_path / "activities.json")
     if isinstance(activities, dict):
-        act_lines = ["Campus Life, Student Chapters & Technical Activities:"]
-        for k, v in activities.items():
-            if isinstance(v, list):
-                act_lines.append(f"- {k.replace('_', ' ').capitalize()}: {', '.join(str(i) for i in v)}")
-            elif isinstance(v, dict):
-                act_lines.append(f"- {k.replace('_', ' ').capitalize()}: {json.dumps(v)}")
+        act_lines = ["Campus Life, Sports, Cultural & Student Activities:"]
+        
+        # Festivals & Cultural Events
+        festivals = activities.get("festivals", [])
+        if festivals:
+            act_lines.append("\n### Annual Festivals & Cultural Events:")
+            for f in festivals:
+                name = f.get("name", "Festival")
+                ftype = f.get("type", "")
+                desc = f.get("description", "")
+                cats = f.get("categories", {})
+                act_lines.append(f"- **{name}** ({ftype}): {desc}")
+                if isinstance(cats, dict):
+                    if cats.get("sports"):
+                        act_lines.append(f"  - **Sports Events:** {', '.join(cats['sports'])}")
+                    if cats.get("cultural_creative"):
+                        act_lines.append(f"  - **Cultural & Creative:** {', '.join(cats['cultural_creative'])}")
+                    if cats.get("technical"):
+                        act_lines.append(f"  - **Technical Events:** {', '.join(cats['technical'])}")
+
+        # Sports and Fitness & Committees
+        committees = activities.get("committees", [])
+        sports_comm = [c for c in committees if "sports" in c.get("name", "").lower() or "fitness" in c.get("name", "").lower()]
+        other_comm = [c for c in committees if c not in sports_comm]
+
+        if sports_comm:
+            act_lines.append("\n### Sports & Physical Fitness Centre:")
+            for s in sports_comm:
+                name = s.get("name", "Sports Centre")
+                desc = s.get("description", "")
+                act_lines.append(f"- **{name}**: {desc}")
+                achievements = s.get("achievements", [])
+                if achievements:
+                    act_lines.append("  - **Key Achievements:**")
+                    for a in achievements[:6]:
+                        act_lines.append(f"    - {a}")
+                events = s.get("events", [])
+                if events:
+                    act_lines.append("  - **Annual Sports Meets:** " + ", ".join(e.get("name", "") for e in events if e.get("name")))
+
+        # Technical Clubs & Chapters
+        clubs = activities.get("clubs", [])
+        if clubs:
+            act_lines.append("\n### Student Technical Clubs & Chapters:")
+            for c in clubs:
+                cname = c.get("name", "Club")
+                dept = c.get("department", "")
+                cdesc = c.get("description", "")
+                dept_str = f" ({dept})" if dept else ""
+                act_lines.append(f"- **{cname}**{dept_str}: {cdesc}")
+
+        # Hackathons & Competitions
+        competitions = activities.get("competitions", [])
+        if competitions:
+            act_lines.append("\n### Competitions & Hackathons:")
+            for comp in competitions:
+                comp_name = comp.get("name", "Competition")
+                comp_desc = comp.get("description", "")
+                act_lines.append(f"- **{comp_name}**: {comp_desc}")
+
+        # Student Committees & Cells (NSS, WDGC, COST, etc.)
+        if other_comm:
+            act_lines.append("\n### Student Committees & Social Extension Cells:")
+            for comm in other_comm:
+                comm_name = comm.get("name", "Committee")
+                comm_desc = comm.get("description", "")
+                act_lines.append(f"- **{comm_name}**: {comm_desc}")
+
         chunks.append(TextChunk(
             chunk_id="campus_activities",
             title="Student Clubs, Professional Chapters (IEEE, CSI) & Technical Events",

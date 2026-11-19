@@ -52,10 +52,12 @@ def get_connection() -> sqlite3.Connection:
     """
     Create and return a SQLite connection with Row factory enabled.
     Row factory allows accessing columns by name (row["column_name"]).
+    Configured with 20s timeout and WAL mode for high concurrency.
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, timeout=20.0)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")   # Better concurrent write performance
+    conn.execute("PRAGMA busy_timeout=20000")  # Wait up to 20s for locks to clear
     conn.execute("PRAGMA foreign_keys=ON")
     return conn
 
