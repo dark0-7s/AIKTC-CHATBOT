@@ -33,6 +33,10 @@ PERSON_INTENTS = {
 
     "principal": [
         "principal",
+    ],
+
+    "dean": [
+        "dean",
     ]
 }
 
@@ -77,27 +81,45 @@ IT_ACADEMIC_CONTEXT = re.compile(
 def extract_departments(text: str) -> list[str]:
     """
     Extract canonical department codes from text with strict word boundary enforcement.
-    Only searches within the given text — never called on history.
+    Uses longest-match greedy resolution so composite phrases like 'CSE AIML' or
+    'CSE Data Science' match their specific department without falsely matching 'CSE'.
     Prevents false substring matches (e.g., 'it' in 'eligibility', 'co' in 'college').
     """
     text_lower = normalize_text(text).lower()
-    found = []
+    
+    # Flatten and sort all (code, alias) pairs by length descending for greedy matching
+    all_aliases = []
     for code, aliases in DEPARTMENT_ALIASES.items():
         for alias in aliases:
-            if len(alias) <= 4:
-                pattern = r'\b' + re.escape(alias) + r'\b'
-            else:
-                pattern = r'\b' + re.escape(alias)
-            if re.search(pattern, text_lower):
-                # Disambiguate pronoun 'it' from Information Technology department
-                if code == "IT" and alias == "it":
-                    is_pronoun = bool(PRONOUN_IT_PATTERN.search(text_lower))
-                    is_academic = bool(IT_ACADEMIC_CONTEXT.search(text_lower))
-                    if is_pronoun and not is_academic:
-                        continue  # Do not count pronoun 'it' as IT department
-                if code not in found:
-                    found.append(code)
-                break
+            all_aliases.append((code, alias))
+    all_aliases.sort(key=lambda x: len(x[1]), reverse=True)
+
+    found = []
+    claimed_spans = []
+
+    for code, alias in all_aliases:
+        if len(alias) <= 4:
+            pattern = r'\b' + re.escape(alias) + r'\b'
+        else:
+            pattern = r'\b' + re.escape(alias)
+            
+        for match in re.finditer(pattern, text_lower):
+            start, end = match.span()
+            # If this character span was already claimed by a longer alias, skip it
+            if any(s <= start < e or s < end <= e for s, e in claimed_spans):
+                continue
+                
+            # Disambiguate pronoun 'it' from Information Technology department
+            if code == "IT" and alias == "it":
+                is_pronoun = bool(PRONOUN_IT_PATTERN.search(text_lower))
+                is_academic = bool(IT_ACADEMIC_CONTEXT.search(text_lower))
+                if is_pronoun and not is_academic:
+                    continue  # Do not count pronoun 'it' as IT department
+                    
+            claimed_spans.append((start, end))
+            if code not in found:
+                found.append(code)
+                
     return found
 
 def extract_person_intent(text: str):

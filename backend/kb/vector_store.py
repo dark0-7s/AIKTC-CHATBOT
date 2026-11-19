@@ -33,27 +33,33 @@ DEPT_CANONICAL_MAP = {
     "COMP": {"CSE", "COMP", "CO"},
     "CO": {"CSE", "COMP", "CO"},
     "IT": {"IT", "INFT", "BSIT", "BSCIT"},
+    "BSIT": {"IT", "INFT", "BSIT", "BSCIT"},
+    "BSCIT": {"IT", "INFT", "BSIT", "BSCIT"},
     "ECS": {"ECS", "EXTC", "ETRX"},
+    "ECE": {"ECE"},
     "MECH": {"MECH"},
     "CIVIL": {"CIVIL"},
     "CHEM": {"CHEM"},
     "CSDS": {"CSDS", "DS", "DATA_SCIENCE"},
     "AIML": {"AIML", "CSAIML", "AI"},
-    "BPHARM": {"BPHARM", "PHARMACY"},
+    "CSAIML": {"AIML", "CSAIML", "AI"},
+    "BPHARM": {"BPHARM"},
+    "DPHARM": {"DPHARM"},
     "MPHARM": {"MPHARM"},
-    "BARCH": {"BARCH", "ARCHITECTURE"}
+    "BARCH": {"BARCH"},
+    "DARCH": {"DARCH"}
 }
 
 DEPT_SCHOOL_MAP = {
     "CSE": "engineering", "COMP": "engineering", "CO": "engineering",
     "IT": "engineering", "INFT": "engineering", "BSIT": "engineering", "BSCIT": "engineering",
     "ECS": "engineering", "EXTC": "engineering", "ETRX": "engineering",
+    "ECE": "engineering",
     "MECH": "engineering", "CIVIL": "engineering", "CHEM": "engineering",
     "CSDS": "engineering", "DS": "engineering", "DATA_SCIENCE": "engineering",
     "AIML": "engineering", "CSAIML": "engineering", "AI": "engineering",
-    "BPHARM": "pharmacy", "PHARMACY": "pharmacy",
-    "MPHARM": "pharmacy",
-    "BARCH": "architecture", "ARCHITECTURE": "architecture"
+    "BPHARM": "pharmacy", "DPHARM": "pharmacy", "MPHARM": "pharmacy", "PHARMACY": "pharmacy",
+    "BARCH": "architecture", "DARCH": "architecture", "ARCHITECTURE": "architecture"
 }
 
 def tokenize(text: str) -> list[str]:
@@ -222,11 +228,11 @@ class VectorStore:
         person_intent: str | None = None
 
         q_lower = query.lower()
-        if "engineering" in q_lower or "engg" in q_lower or "btech" in q_lower or "b.tech" in q_lower:
+        if any(k in q_lower for k in ("engineering", "engg", "btech", "b.tech", "mtech", "m.tech", "bsc", "b.sc")):
             target_schools.add("engineering")
-        if "pharmacy" in q_lower or "pharm" in q_lower or "bpharm" in q_lower or "b.pharm" in q_lower or "mpharm" in q_lower:
+        if any(k in q_lower for k in ("pharmacy", "pharm", "bpharm", "b.pharm", "dpharm", "d.pharm", "mpharm", "m.pharm")):
             target_schools.add("pharmacy")
-        if "architecture" in q_lower or "arch" in q_lower or "barch" in q_lower or "b.arch" in q_lower:
+        if any(k in q_lower for k in ("architecture", "arch", "barch", "b.arch", "darch", "d.arch")):
             target_schools.add("architecture")
 
         if entities:
@@ -255,7 +261,7 @@ class VectorStore:
                 if chunk.category == category:
                     score *= 1.8
                     category_matched = True
-                elif category == "admission_process" and chunk.category in ("admission_process", "cap"):
+                elif category in ("admission_process", "cap") and chunk.category in ("admission_process", "cap"):
                     score *= 1.8
                     category_matched = True
                 elif category in ("facilities", "labs") and chunk.category == "facilities":
@@ -278,12 +284,18 @@ class VectorStore:
                 elif chunk_school and chunk_school not in target_schools and chunk_school in ("engineering", "pharmacy", "architecture"):
                     score *= 0.3  # Isolate requested school from other schools
 
-            # 3. Person Intent boost: 2.5x boost for leadership queries
+            # 3. Person Intent boost: boost for leadership queries
             if person_intent:
-                if person_intent in ("director", "principal") and chunk.chunk_id == "inst_leadership":
-                    score *= 3.0
-                elif person_intent == "dean" and "dean" in chunk.chunk_id:
-                    score *= 3.0
+                if person_intent in ("director", "principal"):
+                    if chunk.chunk_id == "inst_leadership":
+                        score *= 5.0
+                    elif "_faculty" in chunk.chunk_id or "_overview" in chunk.chunk_id:
+                        score *= 0.1
+                elif person_intent == "dean":
+                    if "dean" in chunk.chunk_id:
+                        score *= 5.0
+                    elif "_faculty" in chunk.chunk_id or "_overview" in chunk.chunk_id:
+                        score *= 0.1
 
             # 4. Fee Structure vs Refund Policy vs Hostel Disambiguation
             q_lower_clean = query.lower()
@@ -303,18 +315,34 @@ class VectorStore:
                     score *= 0.2
             elif is_fee_query:
                 if "_fees" in chunk.chunk_id:
-                    score *= 3.0
-                elif "_overview" in chunk.chunk_id:
-                    score *= 0.2
+                    score *= 5.0
+                    has_engg = "engineering" in target_schools or any(d in target_depts for d in ("CSE", "COMP", "CO", "IT", "BSIT", "BSCIT", "ECS", "EXTC", "ETRX", "ECE", "MECH", "CIVIL", "CHEM", "CSDS", "DS", "AIML", "CSAIML", "AI")) or any(k in q_lower_clean for k in ("eng", "btech", "mtech", "phd", "bsc", "b.tech", "m.tech", "b.sc"))
+                    has_pharm = "pharmacy" in target_schools or any(d in target_depts for d in ("BPHARM", "DPHARM", "MPHARM")) or any(k in q_lower_clean for k in ("pharm", "bpharm", "dpharm", "mpharm", "b.pharm", "d.pharm", "m.pharm"))
+                    has_arch = "architecture" in target_schools or any(d in target_depts for d in ("BARCH", "DARCH")) or any(k in q_lower_clean for k in ("arch", "barch", "darch", "b.arch", "d.arch"))
+
+                    if has_engg and chunk.chunk_id == "engineering_fees":
+                        score *= 4.0
+                    elif has_engg and chunk.chunk_id in ("pharmacy_fees", "architecture_fees"):
+                        score *= 0.1
+                    elif has_pharm and chunk.chunk_id == "pharmacy_fees":
+                        score *= 4.0
+                    elif has_pharm and chunk.chunk_id in ("engineering_fees", "architecture_fees"):
+                        score *= 0.1
+                    elif has_arch and chunk.chunk_id == "architecture_fees":
+                        score *= 4.0
+                    elif has_arch and chunk.chunk_id in ("engineering_fees", "pharmacy_fees"):
+                        score *= 0.1
+                else:
+                    score *= 0.1
             else:
                 if "refund" in chunk.chunk_id:
                     score *= 0.2
                 elif "_fees" in chunk.chunk_id:
-                    score *= 2.0
+                    score *= 0.2
 
             # 5. Faculty vs Laboratories / Facilities Disambiguation
-            is_faculty_query = bool(re.search(r'\b(?:faculty|faculties|prof|professor|professors|teacher|teachers|hod|staff|sir|madam|dr|dean)\b', q_lower_clean))
-            is_lab_query = bool(re.search(r'\b(?:lab|labs|laboratory|laboratories|equipment|machines?|hardware|specs?)\b', q_lower_clean))
+            is_faculty_query = bool(re.search(r'\b(?:faculty|faculties|prof|professor|professors|teacher|teachers|teaches|teach|teaching|staff|hod|head|dean|director|principal|sir|madam|dr)\b', q_lower_clean))
+            is_lab_query = bool(re.search(r'\b(?:lab|labs|laboratory|laboratories|equipment|machines?|hardware|specs?|facilities|facility)\b', q_lower_clean))
 
             if is_faculty_query:
                 if "_faculty" in chunk.chunk_id or chunk.chunk_id == "inst_leadership" or "dean" in chunk.chunk_id:
@@ -330,39 +358,68 @@ class VectorStore:
                     score *= 0.2
                 elif "_overview" in chunk.chunk_id:
                     score *= 0.1
+                elif "_programs_courses" in chunk.chunk_id:
+                    score *= 0.1
+
+            # 5b. Placements & Recruiters Disambiguation
+            is_placement_query = (
+                category == "placement"
+                or bool(re.search(r'\b(?:placements?|package|highest package|average package|recruiters?|recruiting|companies|company|internships?|placed|tpo cell|tpo)\b', q_lower_clean))
+            )
+            if is_placement_query:
+                if chunk.chunk_id == "campus_placements":
+                    score *= 8.0
+                elif "_faculty" in chunk.chunk_id or "_labs" in chunk.chunk_id or "_overview" in chunk.chunk_id:
+                    score *= 0.1
+                elif "incubation" in chunk.chunk_id:
+                    score *= 0.1
 
             # 6. Scholarships Disambiguation (General vs Specific Categories vs Documents/Process)
-            if "scholarship" in chunk.chunk_id:
-                is_doc_query = bool(re.search(r'\b(?:documents?|docs?|certificate|papers?|proof)\b', q_lower_clean))
-                is_apply_query = bool(re.search(r'\b(?:how to apply|apply|application|procedure|steps|portal)\b', q_lower_clean))
-                has_caste_category = bool(re.search(r'\b(?:obc|sc|st|minority|muslim|merit|ebc|tfws|mahadbt)\b', q_lower_clean))
+            is_scholarship_query = category == "scholarship" or bool(re.search(r'\b(?:scholarships?|mahadbt|ebc|freeship)\b', q_lower_clean))
+            if is_scholarship_query:
+                if "scholarship" not in chunk.chunk_id:
+                    score *= 0.1
+                else:
+                    is_doc_query = bool(re.search(r'\b(?:documents?|docs?|certificate|papers?|proof|income limit)\b', q_lower_clean))
+                    is_apply_query = bool(re.search(r'\b(?:how to apply|apply for scholarship|application process|steps to apply)\b', q_lower_clean))
+                    has_mahadbt = bool(re.search(r'\b(?:mahadbt|maha dbt|government scholarship portal|government portal)\b', q_lower_clean)) and not bool(re.search(r'\b(?:how to apply|steps to apply)\b', q_lower_clean))
+                    is_contact_query = bool(re.search(r'\b(?:contact|desk|helpline|verification|incharge)\b', q_lower_clean))
+                    has_obc = bool(re.search(r'\b(?:obc|ebc)\b', q_lower_clean))
+                    has_sc_st = bool(re.search(r'\b(?:sc|st|caste)\b', q_lower_clean))
+                    has_minority = bool(re.search(r'\b(?:minority|muslim)\b', q_lower_clean))
+                    has_merit = bool(re.search(r'\b(?:merit|topper)\b', q_lower_clean))
 
-                if is_doc_query and not has_caste_category:
-                    if chunk.chunk_id == "scholarship_documents":
-                        score *= 3.0
+                    if has_mahadbt:
+                        score *= 6.0 if chunk.chunk_id == "scholarship_mahadbt" else 0.2
+                    elif has_obc:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_obc" else 0.2
+                    elif has_sc_st:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_sc_st" else 0.2
+                    elif has_minority:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_minority" else 0.2
+                    elif has_merit:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_merit" else 0.2
+                    elif is_contact_query:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_contacts" else 0.2
+                    elif is_doc_query:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_documents" else 0.2
+                    elif is_apply_query:
+                        score *= 5.0 if chunk.chunk_id == "scholarship_application_process" else 0.2
                     else:
-                        score *= 0.4
-                elif is_apply_query and not has_caste_category:
-                    if chunk.chunk_id == "scholarship_application_process":
-                        score *= 3.0
-                    else:
-                        score *= 0.5
-                elif not has_caste_category:
-                    if chunk.chunk_id == "scholarship_overview":
-                        score *= 2.5
-                    elif chunk.chunk_id in ("scholarship_obc", "scholarship_sc_st", "scholarship_minority", "scholarship_merit"):
-                        score *= 0.3
+                        score *= 4.0 if chunk.chunk_id == "scholarship_overview" else 0.3
 
             # 7. Central Facilities Disambiguation (Library, Incubation, Activities)
             if re.search(r'\b(?:library|books?|reading room|krrc|journals?)\b', q_lower_clean):
                 if chunk.chunk_id == "engineering_library":
-                    score *= 3.0
-            if re.search(r'\b(?:incubation|innovation|startup|entrepreneur|edc)\b', q_lower_clean):
+                    score *= 4.0
+            if re.search(r'\b(?:incubation|innovation|startup|entrepreneur|edc)\b', q_lower_clean) and not is_placement_query:
                 if chunk.chunk_id == "engineering_incubation":
-                    score *= 3.0
-            if re.search(r'\b(?:clubs?|activities|activity|events?|fests?|ieee|csi|cultural|sports)\b', q_lower_clean):
+                    score *= 4.0
+            if re.search(r'\b(?:clubs?|activities|activity|events?|fests?|festival|ieee|csi|cultural|sports|bonhomie|fuerza|tournaments?|hackathons?|nexathon|algorithm|competitions?)\b', q_lower_clean):
                 if chunk.chunk_id == "campus_activities":
-                    score *= 3.0
+                    score *= 10.0
+                elif "_faculty" in chunk.chunk_id or "_overview" in chunk.chunk_id or "_labs" in chunk.chunk_id or "_fees" in chunk.chunk_id:
+                    score *= 0.1
 
             # 8. Contact vs Overview Disambiguation
             if re.search(r'\b(?:contact|phone|telephone|email|mail|call|reach|address|location|map)\b', q_lower_clean):
@@ -374,6 +431,9 @@ class VectorStore:
 
             # 9. Admission Eligibility vs CAP Application Process vs Cutoffs
             is_cutoff_search = bool(re.search(r'\b(?:cutoff|cut off|cut-off|percentile|closing rank|closing score)\b', q_lower_clean))
+            is_elig_search = bool(re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks|qualification|requirements?|score requirement|pcm percentage|pcm)\b', q_lower_clean))
+            is_cap_search = bool(re.search(r'\b(?:cet cell|cap round|cap|option form|seat allotment|reporting center|arc|institutional round|vacant seat|admission process|steps to register|register on cet)\b', q_lower_clean)) or category == "cap"
+
             if is_cutoff_search:
                 if "_faculty" in chunk.chunk_id or "_labs" in chunk.chunk_id:
                     score *= 0.1
@@ -381,12 +441,22 @@ class VectorStore:
                     score *= 2.5
                 elif "_admission_eligibility" in chunk.chunk_id:
                     score *= 2.0
-            elif re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks)\b', q_lower_clean):
-                if "_admission_eligibility" in chunk.chunk_id:
-                    score *= 3.0
-            elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps|admission kaise|kaise apply|kaise le|kaise lena|steps to apply)\b', q_lower_clean):
+            elif is_cap_search and not is_elig_search and not is_scholarship_query:
                 if chunk.chunk_id == "cap_admission_process":
+                    score *= 5.0
+                elif "scholarship" in chunk.chunk_id or "_faculty" in chunk.chunk_id:
+                    score *= 0.1
+            elif is_elig_search:
+                if "_faculty" in chunk.chunk_id or "_labs" in chunk.chunk_id or "_overview" in chunk.chunk_id:
+                    score *= 0.1
+                elif "_admission_eligibility" in chunk.chunk_id:
                     score *= 3.0
+                    if any(k in q_lower_clean for k in ("pharm", "bpharm", "dpharm")):
+                        score *= 3.0 if chunk.chunk_id == "pharmacy_admission_eligibility" else 0.1
+                    elif any(k in q_lower_clean for k in ("arch", "barch", "darch", "nata")):
+                        score *= 3.0 if chunk.chunk_id == "architecture_admission_eligibility" else 0.1
+                    elif any(k in q_lower_clean for k in ("eng", "btech", "mtech", "pcm", "mht cet", "direct second")):
+                        score *= 3.0 if chunk.chunk_id == "engineering_admission_eligibility" else 0.1
 
             # 10. Courses, Degrees, Programs & Branches Disambiguation
             is_course_query = (
@@ -418,11 +488,18 @@ class VectorStore:
             is_comparison_query = (
                 category == "compare_departments"
                 or bool(re.search(r'\b(?:difference|differ|diff|compare|comparison|versus|vs\.?|distinguish|which is better|choose between|prefer)\b', q_lower_clean))
-                or len(target_depts) >= 2
+                or (entities and len(entities.get("departments", [])) >= 2)
             )
             is_dept_overview = (
                 category == "department_overview"
-                or bool(re.search(r'\b(?:about|tell me about|describe|overview|scope|details of|introduction to|information about)\b.*?\b(?:department|dept|branch|engineering|pharmacy|architecture)\b', q_lower_clean))
+                or (
+                    bool(re.search(r'\b(?:about|tell me about|describe|overview|scope|details of|introduction to|information about|what is|curriculum of)\b', q_lower_clean))
+                    and not is_faculty_query
+                    and not is_lab_query
+                    and not is_course_query
+                    and not is_fee_query
+                    and not is_placement_query
+                )
             )
 
             if is_comparison_query:
@@ -438,7 +515,9 @@ class VectorStore:
                 if "_overview" in chunk.chunk_id:
                     score *= 4.0
                 elif "_faculty" in chunk.chunk_id:
-                    score *= 0.4
+                    score *= 0.3
+                elif "_labs" in chunk.chunk_id:
+                    score *= 0.3
 
             if score >= min_score:
                 results.append((chunk, score))

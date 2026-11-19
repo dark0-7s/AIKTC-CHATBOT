@@ -495,7 +495,7 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
             f"- Highest Package: {overall.get('highest_package_lpa', 6.0)} LPA",
             f"- Average Package: {overall.get('average_package_lpa', 2.2)} LPA",
             f"- Top Recruiting Companies: {', '.join(rec_list) if rec_list else 'Suchi Pvt Ltd, Kosmics, Reliance Jio, Tikona'}",
-            "- Placement Activities: Aptitude training, soft skills workshops, mock technical interviews, campus drives."
+            "- Placement & Internship Activities: Corporate internship opportunities with industry partners, aptitude training, soft skills workshops, mock technical interviews, campus placement drives."
         ]
         chunks.append(TextChunk(
             chunk_id="campus_placements",

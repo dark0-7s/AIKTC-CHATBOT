@@ -123,7 +123,7 @@ INTENT_PATTERNS = {
         r'\b(?:admission process|how to apply|apply for admission|admission procedure|steps to apply|step by step process)\b',
         r'\b(?:admission kaise|kaise apply|admission lena|form kaise|apply kaise|dakhila|pravesh prakriya)\b',
         r'\bdocuments?\b.*?\b(?:required|needed|checklist|list)\b',
-        r'\b(?:eligibility criteria|eligibility for|eligibility)\b',
+        r'\b(?:eligibility criteria|eligibility for|eligibility|qualification required|minimum marks|percentage required|score requirement)\b',
         r'\b(?:minority|domicile|income certificate|confirm seat|verification)\b',
         r'\b(?:institutional quota|against cap seats|after getting cap allotment)\b'
     ],
@@ -202,8 +202,8 @@ def classify_intent(text: str, context: list[dict] | None = None) -> str:
         if re.search(pattern, text_lower):
             return "hostel"
 
-    # 4. Explicit "how to apply" or application steps
-    if re.search(r'\b(?:how to apply|apply for admission|admission process|steps to apply|step by step process)\b', text_lower):
+    # 4. Explicit "how to apply" or application steps (excluding scholarships)
+    if re.search(r'\b(?:how to apply|apply for admission|admission process|steps to apply|step by step process)\b', text_lower) and not re.search(r'\b(?:scholarship|scholarships|mahadbt|ebc|freeship)\b', text_lower):
         return "admission_process"
 
     # 4. Explicit fee queries (e.g., "concession in fees", "TFWS category fees")
