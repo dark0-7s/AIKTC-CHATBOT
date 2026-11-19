@@ -8,21 +8,22 @@ export default function App() {
   const labels = getLabels();
   return (
     <LangContext.Provider value={{ lang, setLang, labels }}>
- <div
-  style={{
-    width: "100%",
-    height: "100dvh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "stretch",
-    padding: window.innerWidth < 768 ? 0 : 20,
-    overflow: "hidden",
-    background: "#eef2f7",
-    minHeight: 0,
-  }}
->
-    <ChatShell />
-</div>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "stretch",
+          padding: 0,
+          margin: 0,
+          overflow: "hidden",
+          background: "#ffffff",
+          minHeight: 0,
+        }}
+      >
+        <ChatShell />
+      </div>
     </LangContext.Provider>
   );
 }

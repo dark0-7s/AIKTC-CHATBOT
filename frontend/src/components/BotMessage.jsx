@@ -17,11 +17,11 @@ export default function BotMessage({ content, functionName, args }) {
     <div
       style={{
         alignSelf: "flex-start",
-        maxWidth: isMobile ? "96%" : "90%",
+        maxWidth: isMobile ? "98%" : "96%",
         width: "fit-content",
         background: "#ffffff",
         borderRadius: 16,
-        padding: isMobile ? 12 : 16,
+        padding: isMobile ? 12 : 18,
         boxShadow: "0 2px 10px rgba(0,0,0,.08)",
         marginBottom: 10,
       }}
