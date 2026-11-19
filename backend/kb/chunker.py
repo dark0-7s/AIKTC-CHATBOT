@@ -125,6 +125,22 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
                 metadata={"source": "common.json"}
             ))
 
+        # Campus Canteen & Cafeteria Facilities
+        canteen_text = (
+            "Campus Canteen, Cafeteria & Food Facilities:\n"
+            "- Campus Cafeteria: AIKTC has a spacious, hygienic campus canteen serving freshly prepared vegetarian and non-vegetarian (Halal) meals, snacks, breakfast items, thalis, sandwiches, beverages, and tea/coffee at affordable, subsidized student prices.\n"
+            "- Operating Timings: Monday to Saturday from 8:00 AM to 6:00 PM.\n"
+            "- Hostel Mess: Dedicated dining facility for hostel residents serving nutritious breakfast, lunch, evening tea with snacks, and dinner. Monthly mess charges are ₹4,500/month.\n"
+            "- Hygiene & Food Safety: Strict standards of cleanliness, RO purified drinking water stations, and regular inspection by campus administration."
+        )
+        chunks.append(TextChunk(
+            chunk_id="inst_canteen",
+            title="Campus Canteen, Cafeteria, Dining & Food Facilities",
+            category="facilities",
+            content=canteen_text,
+            metadata={"source": "common.json", "school": "central"}
+        ))
+
         # Contact & Directions
         contacts = common.get("contacts", {})
         contact_text = (

@@ -113,17 +113,17 @@ def preprocess(text: str) -> str:
 # ==============================================================================
 INTENT_PATTERNS = {
     "out_of_scope": [
-        r'\b(?:weather|temperature|forecast|cricket|football|movie|song|jokes?|riddles?|recipe|pm of india|president of india)\b',
-        r'\b(?:write (?:a |me )?(?:code|python|java|program|essay|poem)|solve (?:this )?math|who won the match)\b',
+        r'\b(?:weather|temperature|forecast|cricket|football|movie|song|jokes?|riddles?|recipe|pm of india|president of india|president of \w+|president of the \w+|president)\b',
+        r'\b(?:write (?:a |me )?(?:an? )?(?:code|python|java|program|essay|poem)|solve (?:this )?math|who won the match)\b',
         r'\b(?:vjti|spit|coep|ict|iit bombay|bits pilani|mit pune)\b',
         r'\b(?:elon musk|bill gates|mark zuckerberg|narendra modi|donald trump|messi|ronaldo|virat kohli)\b',
         r'\b(?:capital of \w+|stock market|bitcoin|crypto|how to cook|bake a cake)\b'
     ],
     "admission_process": [
         r'\b(?:admission process|how to apply|apply for admission|admission procedure|steps to apply|step by step process)\b',
-        r'\b(?:admission kaise|kaise apply|admission lena|form kaise|apply kaise|dakhila|pravesh prakriya)\b',
-        r'\bdocuments?\b.*?\b(?:required|needed|checklist|list)\b',
-        r'\b(?:eligibility criteria|eligibility for|eligibility|qualification required|minimum marks|percentage required|score requirement)\b',
+        r'\b(?:admission kaise|kaise apply|admission lena|admission lene|admission sathi|form kaise|apply kaise|dakhila|pravesh prakriya|praveshasathi|प्रवेश|प्रवेशासाठी|दाखिला)\b',
+        r'\bdocuments?\b.*?\b(?:required|needed|checklist|list|lagtat|lagte|pahije|chahiye)\b',
+        r'\b(?:eligibility criteria|eligibility for|eligibility|qualification required|minimum marks|percentage required|score requirement|आवश्यक)\b',
         r'\b(?:minority|domicile|income certificate|confirm seat|verification)\b',
         r'\b(?:institutional quota|against cap seats|after getting cap allotment)\b'
     ],
@@ -136,11 +136,11 @@ INTENT_PATTERNS = {
     ],
     "fee": [
         r'\b(?:refund|cancellation|deducted|deduction)\b',
-        r'\b(?:fee|fees|fee structure|tuition|cost|annual fee|total fee|payment|dd|demand draft|installment)\b',
-        r'\b(?:kitni fee|paisa|charges)\b'
+        r'\b(?:fee|fees|fee structure|tuition|cost|annual fee|total fee|payment|dd|demand draft|installment|फीस|फी|शुल्क)\b',
+        r'\b(?:kitni fee|kiti fee|paisa|charges)\b'
     ],
     "scholarship": [
-        r'\b(?:scholarship|scholarships|mahadbt|ebc|freeship|financial aid|fee waiver|zakat)\b',
+        r'\b(?:scholarship|scholarships|mahadbt|ebc|freeship|financial aid|fee waiver|zakat|छात्रवृत्ति|शिष्यवृत्ती)\b',
         r'\b(?:tfws|concession)\b'
     ],
     "cap": [
@@ -150,18 +150,18 @@ INTENT_PATTERNS = {
     ],
     "faculty": [
         r'\b(?:who is the training and placement officer|who is tpo|who is the tpo)\b',
-        r'\b(?:faculty|teacher|teachers|professor|professors|lecturer|staff|hod|dean|director|principal)\b',
+        r'\b(?:faculty|teacher|teachers|professor|professors|prof|dr|doctor|lecturer|staff|hod|dean|director|principal)\b',
         r'\b(?:head of|who is the hod|who is the director|who is the principal|who teaches|teach|instructor|kaun hai)\b'
     ],
     "placement": [
         r'\b(?:placement|placements|package|highest package|average package|recruiter|recruiters|companies|company|internship|internships|placed|aptitude|tpo cell)\b'
     ],
     "facilities": [
-        r'\b(?:facility|facilities|lab|labs|laboratory|laboratories|library|canteen|sports|gym|ground|bus|transport|infrastructure)\b',
+        r'\b(?:facility|facilities|lab|labs|laboratory|laboratories|library|canteen|cafeteria|food|dining|sports|gym|ground|bus|transport|infrastructure|कॅन्टीन|जेवण|सोय)\b',
         r'\b(?:krrc|incubation|workshop|equipment|auditorium|club|clubs|chapter|chapters|ieee|csi)\b'
     ],
     "contact": [
-        r'\b(?:contact|phone|email|address|location|helpline|how to reach|call|talk to|office|where is)\b'
+        r'\b(?:contact|phone|email|address|location|helpline|how to reach|call|talk to|office|where is|kahan pe hai|kahan hai|kaise pahunche|kaise jaye|kute ahe|kuth ahe|kase jayche)\b'
     ],
     "compare_departments": [
         r'\b(?:difference|differ|diff|compare|comparison|versus|vs\.?|distinguish|difference between|difference in|compare between)\b',
@@ -188,9 +188,12 @@ def classify_intent(text: str, context: list[dict] | None = None) -> str:
     """
     text_lower = text.lower()
 
-    # 1. Out of scope
+    # 1. Out of scope (allow campus sports & festival events to pass through)
+    is_campus_event = bool(re.search(r'\b(?:bonhomie|fuerza|campus|college|aiktc|tournament|tournaments|sports?|fest|festival|event|events|inter-collegiate|ground|club|clubs)\b', text_lower))
     for pattern in INTENT_PATTERNS["out_of_scope"]:
         if re.search(pattern, text_lower):
+            if is_campus_event and re.search(r'\b(?:cricket|football|volleyball|sports?|tournament|match|film|movie)\b', text_lower):
+                continue
             return "out_of_scope"
 
     # 2. Specific refund / cancellation query has highest fee precedence

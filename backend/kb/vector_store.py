@@ -65,6 +65,26 @@ DEPT_SCHOOL_MAP = {
 def tokenize(text: str) -> list[str]:
     """Tokenize, stem common inflections, and filter stopwords for vector generation."""
     t_clean = text.lower()
+    # Normalize Devanagari / Hindi / Marathi terms to English concepts for cross-lingual vector matching
+    dev_map = {
+        "कम्प्यूटर": "computer cse comp", "कंप्यूटर": "computer cse comp",
+        "इंजीनियरिंग": "engineering", "अभियांत्रिकी": "engineering",
+        "फीस": "fee tuition", "शुल्क": "fee tuition", "फी": "fee tuition",
+        "दाखिला": "admission cap", "प्रवेश": "admission cap", "पात्रता": "eligibility",
+        "छात्रवृत्ति": "scholarship", "शिष्यवृत्ती": "scholarship",
+        "छात्रावास": "hostel", "वसतिगृह": "hostel",
+        "प्लेसमेंट": "placement package", "नौकरी": "placement",
+        "प्रयोगशाला": "lab", "सुविधाएं": "facilities", "सुविधा": "facilities",
+        "फार्मेसी": "pharmacy bpharm", "औषधनिर्माण": "pharmacy",
+        "आर्किटेक्चर": "architecture barch", "वास्तुशास्त्र": "architecture",
+        "कटऑफ": "cutoff", "कैंटीन": "canteen food", "कॅन्टीन": "canteen food", "मेस": "mess food hostel",
+        "जेवण": "canteen food", "जेवणाची": "canteen food", "सोय": "facilities",
+        "पुस्तकालय": "library", "ग्रंथालय": "library"
+    }
+    for dev_word, eng_word in dev_map.items():
+        if dev_word in t_clean:
+            t_clean += f" {eng_word}"
+
     # Normalize common department aliases for consistent lexical matching
     if "computer science" in t_clean or "computer engg" in t_clean or "computer engineering" in t_clean:
         t_clean += " cse comp co"
@@ -301,7 +321,7 @@ class VectorStore:
             q_lower_clean = query.lower()
             is_refund_query = bool(re.search(r'\b(?:refund|cancellation|canceling|cancel|deduct|deduction)\b', q_lower_clean))
             is_hostel_query = bool(re.search(r'\b(?:hostel|hostels|mess|accommodation|rooms?|stay)\b', q_lower_clean))
-            is_fee_query = bool(re.search(r'\b(?:fees?|cost|tuition|shulk|feestructure)\b', q_lower_clean))
+            is_fee_query = category == "fee" or bool(re.search(r'\b(?:fees?|cost|tuition|shulk|feestructure|फीस|शुल्क|फी|charges)\b', q_lower_clean))
 
             if is_hostel_query:
                 if chunk.chunk_id == "inst_hostel":
@@ -408,7 +428,16 @@ class VectorStore:
                     else:
                         score *= 4.0 if chunk.chunk_id == "scholarship_overview" else 0.3
 
-            # 7. Central Facilities Disambiguation (Library, Incubation, Activities)
+            # 7. Central Facilities Disambiguation (Library, Incubation, Activities, Canteen)
+            if re.search(r'\b(?:canteen|cafeteria|food|dining|snacks|lunch|breakfast|tea|coffee|refreshment|meals?|beverages?|कैंटीन|खाना|भोजन)\b', q_lower_clean):
+                if is_hostel_query or "hostel" in q_lower_clean:
+                    if chunk.chunk_id == "inst_hostel":
+                        score *= 5.0
+                else:
+                    if chunk.chunk_id == "inst_canteen":
+                        score *= 5.0
+                    elif chunk.chunk_id == "inst_hostel":
+                        score *= 2.0
             if re.search(r'\b(?:library|books?|reading room|krrc|journals?)\b', q_lower_clean):
                 if chunk.chunk_id == "engineering_library":
                     score *= 4.0
