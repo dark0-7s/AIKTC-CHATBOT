@@ -18,10 +18,12 @@ import uuid
 from typing import Any, AsyncGenerator
 
 def clean_cjk(value: Any) -> Any:
-    """Recursively strip CJK (Chinese/Japanese/Korean) characters from strings/dicts/lists."""
+    """Recursively strip CJK (Chinese/Japanese/Korean) characters and replace archaic jargon."""
     if isinstance(value, str):
         pattern = re.compile(r'[\u4e00-\u9fff\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af\uff00-\uffef]')
-        return pattern.sub('', value)
+        res = pattern.sub('', value)
+        res = re.sub(r'\berstwhile\b', 'formerly', res, flags=re.IGNORECASE)
+        return res
     elif isinstance(value, dict):
         return {k: clean_cjk(v) for k, v in value.items()}
     elif isinstance(value, list):
@@ -160,8 +162,9 @@ ChatRequest.model_rebuild()
 # SSE HELPERS
 # ==============================================================================
 def _sse(data: dict) -> str:
-    """Format a dict as a Server-Sent Event string."""
-    return f"data: {json.dumps(data, ensure_ascii=False)}\n\n"
+    """Format a dict as a Server-Sent Event string, ensuring archaic jargon is replaced."""
+    sanitized = clean_cjk(data)
+    return f"data: {json.dumps(sanitized, ensure_ascii=False)}\n\n"
 
 
 def _sse_text(content: str) -> str:
@@ -311,6 +314,7 @@ async def _stream_response(
     raw_output     : str            = ""
     final_function : str | None     = None
     final_args     : dict | None    = None
+    structured_res : tuple | None   = None
 
     # -- Stream from Gemini (cached path with fallback) or Grounded RAG --
     try:

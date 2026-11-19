@@ -91,13 +91,30 @@ def retrieve_knowledge(
     grounded source citations to eliminate hallucination.
     Falls back gracefully to section-level JSON filtering if query is absent.
     """
-    if intent == "out_of_scope":
-        return ""
-
     # ── Phase A: Vector RAG Semantic Retrieval ─────────────────────────────
     if query:
         vs = get_vector_store()
-        matches = vs.search(query, top_k=3, category=intent, entities=entities, min_score=0.03)
+        target_depts = list(entities.get("departments", [])) if entities else []
+        if len(target_depts) >= 2 or intent == "compare_departments":
+            matches = []
+            seen_chunk_ids = set()
+            for d in target_depts[:2]:
+                d_entities = dict(entities) if entities else {}
+                d_entities["departments"] = [d]
+                d_matches = vs.search(f"{d} department overview curriculum scope", top_k=2, category="department", entities=d_entities)
+                for chunk, score in d_matches:
+                    if chunk.chunk_id not in seen_chunk_ids:
+                        seen_chunk_ids.add(chunk.chunk_id)
+                        matches.append((chunk, score))
+            # Supplement with general query matches
+            gen_matches = vs.search(query, top_k=2, category=intent, entities=entities)
+            for chunk, score in gen_matches:
+                if chunk.chunk_id not in seen_chunk_ids and len(matches) < 4:
+                    seen_chunk_ids.add(chunk.chunk_id)
+                    matches.append((chunk, score))
+        else:
+            matches = vs.search(query, top_k=3, category=intent, entities=entities, min_score=0.03)
+
         if matches:
             logger.info(f"RAG Vector Search retrieved {len(matches)} relevant chunks for query: '{query}'")
             rag_lines = [

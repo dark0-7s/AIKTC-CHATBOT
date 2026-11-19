@@ -3,6 +3,14 @@
   "name": "Civil Engineering",
   "intake": 30,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Civil Engineering at AIKTC is a premier center of excellence for infrastructure education, sustainable construction engineering, and advanced materials research. Offering undergraduate (B.Tech), postgraduate (M.Tech in Structural Engineering and Construction Engineering & Management), and doctoral (Ph.D.) programs, the department equips engineers to design, analyze, and construct resilient mega-structures, smart transit systems, and water resource networks. The curriculum covers Structural Analysis, Concrete Technology, Soil Mechanics & Foundation Engineering, Environmental Engineering, Transportation Engineering, Remote Sensing/GIS, and Building Information Modeling (BIM).",
+  "highlights": [
+    "Comprehensive academic ladder: B.Tech (30 seats), M.Tech (42 seats across Structural Engineering & Construction Management), and Ph.D. Research Center.",
+    "NABL-aligned testing and research labs including Concrete Technology Lab, Soil Mechanics Lab, Fluid Mechanics & Hydraulic Machinery Lab, Environmental Engineering Lab, and Total Station Advanced Surveying Suite.",
+    "Direct industry collaboration with infrastructure developers, municipal corporations, and structural engineering consultancies for field projects.",
+    "Placements with top construction and infrastructure conglomerates (L&T Construction, Shapoorji Pallonji, Afcons, Tata Projects, Mumbai Metro)."
+  ],
+  "career_opportunities": "Structural Design Engineer, Construction Project Manager, Geotechnical Engineer, Transportation & Highway Planner, Environmental Consultant, BIM Coordinator, and Site Engineer.",
   "postgraduate": {
     "mtech_specializations": [
       "Construction Engineering & Management",

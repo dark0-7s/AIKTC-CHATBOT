@@ -3,6 +3,14 @@
   "name": "Electrical & Computer Engineering (formerly Electrical Engineering)",
   "intake": 60,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Electrical & Computer Engineering synthesizes electrical energy systems, power electronics, and renewable technologies with contemporary digital control and computational engineering. As industries transition to Electric Vehicles (EV), Smart Power Grids, and Automated Manufacturing, this program trains students in Power Systems, Renewable Energy Integration, Microprocessor-Based Control, Programmable Logic Controllers (PLC/SCADA), Industrial Automation, and Embedded Firmware Programming. Students master both the heavy electrical power distribution systems and the micro-level computer controllers that automate them.",
+  "highlights": [
+    "Approved intake of 60 seats affiliated with the University of Mumbai, catering to the clean energy transition and EV revolution.",
+    "Robust lab ecosystem exceeding ₹50 Lakhs in equipment including Power Electronics Lab, Control Systems Lab, Network Lab (SCILAB/MATLAB/Ubuntu), Electrical Machines Lab, and High Voltage Testing setups.",
+    "Specialized focus on Electric Vehicle (EV) powertrains, smart grid controllers, solar/wind renewable integration, and industrial IoT.",
+    "Placement avenues spanning power generation/distribution giants (Tata Power, Adani, Reliance Energy), automation leaders (Siemens, Schneider, ABB), and embedded software firms."
+  ],
+  "career_opportunities": "Electrical Design Engineer, EV Systems Engineer, Industrial Automation Specialist, Smart Grid Analyst, Control Systems Engineer, Power Electronics Designer, and Embedded Systems Engineer.",
   "hod": {
     "name": "Dr. Shaikh Afzal N. A.",
     "designation": "HOD & Associate Professor",

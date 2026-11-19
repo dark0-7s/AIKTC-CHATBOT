@@ -4,6 +4,7 @@ import React from 'react';
 export function sanitize(text) {
   if (!text) return '';
   return text
+    .replace(/\berstwhile\b/gi, 'formerly')
     .replace(/\*/g, '\u200B*\u200B')
     .replace(/\u200B\*\u200B\u200B\*\u200B/g, '**')
     .replace(/\u200B\*\u200B/g, '*');

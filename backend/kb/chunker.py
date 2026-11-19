@@ -368,18 +368,61 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
                 dname = ddata.get("name", df.stem.upper())
                 dcode = ddata.get("code", df.stem.upper())
 
-                # Dept Overview & Faculty
-                hod = ddata.get("hod", {})
+                # Dept Leadership
+                hod = ddata.get("hod") or ddata.get("dean") or ddata.get("programme_coordinator") or {}
                 hod_name = hod.get('name', 'N/A') if isinstance(hod, dict) else str(hod)
                 hod_qual = hod.get('qualification', '') if isinstance(hod, dict) else ''
                 hod_desig = hod.get('designation', 'HOD') if isinstance(hod, dict) else 'HOD'
                 hod_exp = hod.get('experience', 'N/A') if isinstance(hod, dict) else 'N/A'
                 hod_img = hod.get('image_url') if isinstance(hod, dict) else None
 
+                # Dept Comprehensive Overview
+                desc = ddata.get("description", "")
+                highlights = ddata.get("highlights", [])
+                career = ddata.get("career_opportunities", "")
+                vision = ddata.get("vision", "")
+                mission = ddata.get("mission", "")
+                homepage_url = ddata.get("homepage_url", "")
+                labs = ddata.get("labs", [])
+
+                overview_lines = [
+                    f"### Department Overview: {dname} ({dcode}) - School of {school.capitalize()}",
+                    f"- **Degree Program & Duration:** {ddata.get('duration', '4 years')}",
+                    f"- **Approved Intake:** {ddata.get('intake', 'N/A')} seats",
+                    f"- **Affiliation & Approvals:** Affiliated with University of Mumbai, Approved by AICTE, PCI, COA, and DTE Maharashtra",
+                ]
+                if desc:
+                    overview_lines.append(f"\n**About the Department:**\n{desc}")
+                if vision:
+                    overview_lines.append(f"\n**Vision:**\n{vision}")
+                if mission:
+                    overview_lines.append(f"**Mission:**\n{mission}")
+                if highlights:
+                    overview_lines.append("\n**Key Program Highlights & Academic Strengths:**")
+                    for h in highlights:
+                        overview_lines.append(f"- {h}")
+                if career:
+                    overview_lines.append(f"\n**Career Scope & Industry Roles:**\n{career}")
+                if labs:
+                    lab_names = [l.get("name", "") for l in labs if l.get("name")]
+                    if lab_names:
+                        overview_lines.append(f"\n**State-of-the-Art Laboratories:** {', '.join(lab_names)}")
+                if hod_name and hod_name != 'N/A':
+                    overview_lines.append(f"\n**Department Leadership:** {hod_name} ({hod_qual}), {hod_desig} - Experience: {hod_exp}")
+
+                chunks.append(TextChunk(
+                    chunk_id=f"{school}_{df.stem}_overview",
+                    title=f"{dname} ({dcode}) - Department Overview, Curriculum, Highlights & Career Scope",
+                    category="department",
+                    content="\n".join(overview_lines),
+                    metadata={"school": school, "dept": dcode, "image_url": hod_img, "homepage_url": homepage_url}
+                ))
+
+                # Dept Faculty Profile
                 fac_lines = [
                     f"Department: {dname} ({dcode}) - School of {school.capitalize()}",
                     f"Intake: {ddata.get('intake', 'N/A')} seats | Duration: {ddata.get('duration', '4 years')}",
-                    f"Head of Department (HOD): {hod_name} ({hod_qual}), Designation: {hod_desig}, Experience: {hod_exp}",
+                    f"Head of Department (HOD) / Leadership: {hod_name} ({hod_qual}), Designation: {hod_desig}, Experience: {hod_exp}",
                 ]
                 if hod_img:
                     fac_lines.append(f"HOD Photo: ![{hod_name}]({hod_img})")

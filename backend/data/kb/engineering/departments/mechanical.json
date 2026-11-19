@@ -3,6 +3,14 @@
   "name": "Mechanical Engineering",
   "intake": 60,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Mechanical Engineering at AIKTC delivers an intensive, hands-on engineering education that integrates core principles of mechanics, thermodynamics, fluid dynamics, and materials science with modern computational design (CAD/CAM/CAE), mechatronics, and advanced manufacturing. The department is renowned for experiential engineering, where students actively design, fabricate, and test racing vehicles (Formula Student / FSAE), autonomous robotics, and sustainable HVAC energy systems. Students acquire strong competencies in 3D Modeling (SolidWorks, CATIA), Finite Element Analysis (ANSYS), and precision CNC manufacturing.",
+  "highlights": [
+    "Approved intake of 60 seats affiliated with the University of Mumbai, emphasizing hands-on design and mechanical prototyping.",
+    "Comprehensive laboratory infrastructure spanning 12+ specialized labs including CNC Milling/Lathe Workshop, Heat Transfer & RAC Lab, Fluid Mechanics & Hydraulic Machinery Lab, IC Engines Lab, and CAD/CAM Simulation Suite.",
+    "Active student racing team representing AIKTC in Formula Bharat, BAJA SAE, and national robotic competitions.",
+    "Broad career placements across automotive (Mahindra, Tata Motors), heavy engineering (L&T, Godrej), HVAC/energy systems, and aerospace supply chains."
+  ],
+  "career_opportunities": "Mechanical Design Engineer (CAD/CAE), Thermal Systems Engineer, Manufacturing/Production Engineer, Automotive Engineer, Mechatronics Specialist, Quality Control (QC/QA) Engineer, and Project Engineer.",
   "hod": {
     "name": "Prof. Zakir Ansari",
     "designation": "HOD",

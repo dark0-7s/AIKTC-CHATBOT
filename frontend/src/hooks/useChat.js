@@ -116,22 +116,27 @@ const clearAllChats = () => {
       });
     } catch (err) {
       console.error('Chat error:', err);
-      botMessage.functionName = 'show_contact';
-      botMessage.args = {
-        reason: 'Unable to connect to the server. Please check your network or try again later.',
-        contacts: [
-          {
-            label: "Admissions Office (Engineering)",
-            phone: "+91 8104363070",
-            email: "admissions@aiktc.ac.in",
-          },
-          {
-            label: "General Enquiry",
-            phone: "+91 91371 23439",
-            email: "aiktc.newpanvel@aiktc.ac.in",
-          },
-        ],
-      };
+      if (botMessage.content && botMessage.content.trim().length > 0) {
+        botMessage.content += '\n\n*(Connection was momentarily interrupted. Please ask again if details are missing.)*';
+        botMessage.completed = true;
+      } else {
+        botMessage.functionName = 'show_contact';
+        botMessage.args = {
+          reason: 'Unable to connect to the AIKTC server. Please ensure the server is active or try again in a few moments.',
+          contacts: [
+            {
+              label: "Admissions Office (Engineering)",
+              phone: "+91 8104363070",
+              email: "admissions@aiktc.ac.in",
+            },
+            {
+              label: "General Enquiry",
+              phone: "+91 91371 23439",
+              email: "aiktc.newpanvel@aiktc.ac.in",
+            },
+          ],
+        };
+      }
       setMessages(prev => [...prev.slice(0, -1), { ...botMessage }]);
     } finally {
       setLoading(false);

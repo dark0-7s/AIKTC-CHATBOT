@@ -140,7 +140,14 @@
       "name": "Bachelor of Architecture",
       "duration": "5 years",
       "intake": 40,
-      "description": "Architecture is the art and science of designing buildings and structures. The 5-year course includes Basic Course (1st–3rd year) and Advanced Course (4th–5th year).",
+      "description": "The Bachelor of Architecture (B.Arch) at AIKTC School of Architecture is a distinguished 5-year professional program approved by the Council of Architecture (COA Code: MH-57), DTE Maharashtra, and affiliated with the University of Mumbai. The program synthesizes art, environmental sustainability, structural technology, and socio-cultural context to cultivate visionary architects. The pedagogy centers on hands-on design studios spanning Architectural Design, Urban Planning, Sustainable Environmental Design, Landscape Architecture, History of Architecture, and Building Construction. Students learn traditional manual graphic drafting and advanced parametric digital design (AutoCAD, Revit BIM, Rhino, SketchUp, Photoshop).",
+      "highlights": [
+        "Approved intake of 40 seats recognized by the Council of Architecture (COA) and affiliated with the University of Mumbai.",
+        "Comprehensive creative infrastructure including spacious naturally-lit Design Studios, Building Construction Lab, Climatology Lab (solar scopes, lux meters), 3D Model-Making Workshop, and Carpentry/Material Museum.",
+        "Active participation in national NASA (National Association of Students of Architecture) conventions, exhibitions, and regional design competitions.",
+        "Mandatory practical architectural training/internship with prominent architectural studios, urban planning firms, and design agencies across India."
+      ],
+      "career_opportunities": "Principal Architect, Urban Designer, Interior Architect, Landscape Architect, Sustainable Design Consultant, Heritage Conservation Specialist, and BIM Manager.",
       "eligibility": "H.S.C. in PCM / Diploma with Mathematics & Qualifying score in NATA / JEE (Paper 2).",
       "vision": "To be the most sought after academic, research and practice based school of Architecture that others would wish to emulate.",
       "mission": "Creating Exuberant Architectural Professionals.",
@@ -295,7 +302,14 @@
       "name": "Diploma in Architecture",
       "duration": "3 years",
       "intake": 40,
-      "description": "The D.Arch course equips students with essential knowledge and skills for designing simple structures, understanding construction methods, materials, and technical drawings.",
+      "description": "The Diploma in Architecture (D.Arch) program at AIKTC is a 3-year technical foundation course approved by the Directorate of Technical Education (DTE Maharashtra). The program equips students with essential drafting, digital modeling, construction technology, and basic architectural design competencies. Students learn architectural drawing, construction materials, site surveying, basic CAD drafting, and scale model assembly, preparing them to assist professional architects or advance directly into degree programs.",
+      "highlights": [
+        "Approved intake of 40 seats recognized by DTE Maharashtra for SSC (10th) passed candidates.",
+        "Access to specialized architecture studios, building material museums, computer CAD labs, and physical model-making workshops.",
+        "Comprehensive grounding in residential planning, working drawings, municipal approval drawing standards, and basic 3D rendering.",
+        "Lateral entry eligibility into professional degree courses (B.Arch) or immediate employment in architectural and civil design offices."
+      ],
+      "career_opportunities": "Architectural Assistant, CAD/BIM Draftsman, 3D Architectural Visualizer, Site Supervisor, and Junior Interior Designer.",
       "eligibility": "S.S.C or its equivalent with at least 35% aggregate marks.",
       "vision": "To be the most sought after academic, research and practice based school of Architecture that others would wish to emulate.",
       "mission": "Creating Exuberant Architectural Professionals.",
@@ -303,8 +317,7 @@
         {
           "name": "Design Studio",
           "location": "SOA Building",
-          "description": "Equipped with standard drawing desks, parallel rulers, and drafting boards for basic architectural graphics.",
-          "image_url": "/images/labs/arch_studio.jpg"
+          "description": "Equipped with standard drawing desks, parallel rulers, and drafting boards for basic architectural graphics."
         },
         {
           "name": "Material Museum",

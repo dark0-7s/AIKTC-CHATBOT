@@ -4,6 +4,14 @@
   "intake": 60,
   "duration": "4 years (B.Tech)",
   "established_year": "2020-21",
+  "description": "The Department of Electronics and Computer Science represents a cutting-edge synergy of hardware engineering and advanced computer software. Transitioned from legacy telecommunications to address the boom in smart connected devices and Edge computing, the program seamlessly integrates Embedded Systems, Internet of Things (IoT), VLSI Circuit Design, Microcontroller Programming, and Advanced Communication Systems with modern Computer Science disciplines such as Algorithms, Object-Oriented Software, Operating Systems, and Computer Networks. Students gain a formidable dual advantage, mastering the physical silicon, low-level firmware, and enterprise application software.",
+  "highlights": [
+    "Approved intake of 60 seats affiliated with the University of Mumbai, positioned at the vital intersection of hardware and software.",
+    "Comprehensive lab infrastructure exceeding ₹1 Crore in equipment including Analog Circuit Design Lab, Signal Processing Lab, Embedded Lab (Falcon 16-channel logic analyzers), and Advanced Communication Lab.",
+    "Bridges IoT sensors, Edge AI, FPGA/VLSI design, and Linux device drivers with high-level software development.",
+    "Dual-track placement opportunities across core electronics/semiconductor companies (Intel, Qualcomm, Texas Instruments) and software majors (Cisco, TCS, L&T Infotech)."
+  ],
+  "career_opportunities": "Embedded Systems Engineer, IoT Solutions Architect, VLSI Design Engineer, Firmware Developer, Network & Communications Engineer, and Full-Stack Software Developer.",
   "hod": {
     "name": "Prof. Bandanawaz Kotiyal",
     "designation": "HOD",

@@ -4,6 +4,14 @@
   "intake": 60,
   "duration": "3 years",
   "eligibility": "H.S.C. (XII Std.) with Mathematics & Statistics",
+  "description": "The Department of Bachelor of Science in Information Technology (B.Sc IT) offers a fast-paced, high-demand 3-year undergraduate degree affiliated with the University of Mumbai. The program is designed to deliver immediate IT industry readiness, emphasizing software application development, database management systems, network infrastructure, web technologies, and mobile app creation. Students learn modern programming stacks (Python, Java, PHP, JavaScript, SQL), operating system fundamentals (Linux/Unix), and cloud paradigms, bridging theoretical logic with rapid software construction.",
+  "highlights": [
+    "Approved intake of 60 seats affiliated with the University of Mumbai, tailored for rapid entry into software and IT services.",
+    "Access to state-of-the-art computing laboratories equipped with modern IDEs, database servers, and web development stacks.",
+    "Focus on practical project development, software testing, agile workflows, and full-stack web engineering.",
+    "Seamless pathways into technical careers or higher education including MCA (Master of Computer Applications) and M.Sc IT degrees."
+  ],
+  "career_opportunities": "Software Developer, Web Application Developer, Database Administrator, Junior IT Analyst, Network Support Engineer, QA/Testing Associate, and System Administrator.",
   "programme_coordinator": {
     "name": "Prof. Tabrez Khan",
     "designation": "Programme Coordinator",

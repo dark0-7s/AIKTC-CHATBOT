@@ -3,6 +3,14 @@
   "name": "Computer Engineering",
   "intake": 120,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Computer Engineering at AIKTC offers a comprehensive, industry-aligned engineering education that seamlessly combines algorithmic foundations with hands-on modern software and systems engineering. The department focuses on high-impact computing paradigms including Artificial Intelligence, Machine Learning, Cloud Architecture, Full-Stack Web Development, Cyber Security, Database Systems, and Distributed Computing. Through experiential learning, collaborative hackathons (like Algorithm 8.0), and industry internships, students acquire both deep theoretical problem-solving capabilities and industry-ready engineering skills.",
+  "highlights": [
+    "Approved intake of 120 seats affiliated with the University of Mumbai and approved by AICTE & DTE Maharashtra.",
+    "State-of-the-art specialized labs including Machine Learning Lab, Data Engineering Lab, Cloud Computing Lab, and Systems Programming Lab with 12th Gen Intel Core i5 workstations.",
+    "Active student professional chapters including ACM, CSI (Computer Society of India), and Developer Student Clubs organizing nationwide coding hackathons and workshops.",
+    "Strong placement track record with top recruiters including TCS, Infosys, Capgemini, Jio, Accenture, L&T Infotech, and tech startups."
+  ],
+  "career_opportunities": "Software Development Engineer (SDE), Full-Stack Developer, Cloud Solutions Architect, Machine Learning Engineer, Systems Analyst, Cyber Security Specialist, and Database Administrator.",
   "hod": {
     "name": "Prof. Tabrez Khan",
     "designation": "HOD",

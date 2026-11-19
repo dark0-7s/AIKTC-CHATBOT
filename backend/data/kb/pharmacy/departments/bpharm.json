@@ -3,6 +3,14 @@
   "name": "Bachelor of Pharmacy",
   "duration": "4 years",
   "intake": 100,
+  "description": "The Bachelor of Pharmacy (B.Pharm) program at AIKTC School of Pharmacy is a premier 4-year undergraduate professional degree approved by the Pharmacy Council of India (PCI), AICTE, and affiliated with the University of Mumbai. The program integrates pharmaceutical sciences, drug design, biotechnology, pharmacology, pharmacognosy, and pharmaceutical analysis with practical industrial exposure. Students gain hands-on clinical and formulation mastery, operating in an industrial pilot plant machine room, state-of-the-art analytical labs, and sterile biotechnology suites.",
+  "highlights": [
+    "Approved intake of 100 seats recognized by PCI, AICTE, DTE Maharashtra, and affiliated with the University of Mumbai.",
+    "World-class infrastructure including an Industrial Pilot Machine Room (₹30+ Lakhs), Biotechnology Lab with Laminar Air Flow, and Advanced Pharmaceutical Analysis Suite.",
+    "Rigorous curriculum covering Pharmacology, Pharmaceutics, Medicinal Chemistry, Pharmacognosy, Biopharmaceutics, and Drug Regulatory Affairs.",
+    "Strong placement partnerships with global pharmaceutical leaders including Cipla, Sun Pharma, Abbott, Lupin, Glenmark, and TCS Life Sciences."
+  ],
+  "career_opportunities": "Formulation R&D Scientist, Quality Assurance (QA/QC) Specialist, Clinical Research Associate, Regulatory Affairs Officer, Drug Inspector, Production Manager, and Hospital Pharmacist.",
   "dean": {
     "name": "Dr. Shariq Syed",
     "designation": "Dean, School of Pharmacy",

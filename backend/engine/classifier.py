@@ -163,6 +163,14 @@ INTENT_PATTERNS = {
     "contact": [
         r'\b(?:contact|phone|email|address|location|helpline|how to reach|call|talk to|office|where is)\b'
     ],
+    "compare_departments": [
+        r'\b(?:difference|differ|diff|compare|comparison|versus|vs\.?|distinguish|difference between|difference in|compare between)\b',
+        r'\b(?:which is better|which one should i choose|which to choose|should i choose|better between|prefer)\b'
+    ],
+    "department_overview": [
+        r'\b(?:about|tell me about|describe|overview|scope|details of|introduction to|info on|information about)\b.*?\b(?:department|dept|branch|engineering|pharmacy|architecture|b\.?tech|b\.?pharm|b\.?arch|bsc\.? ?it)\b',
+        r'\b(?:computer engineering|mechanical engineering|civil engineering|ecs|ece|csds|aiml|cs-aiml|data science|information technology)\b.*?\b(?:department|dept|overview|scope|details|curriculum|branch)\b'
+    ],
     "courses_offered": [
         r'\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?|undergraduate|postgraduate|diploma|b\.?tech|m\.?tech|ph\.?d|b\.?pharm|d\.?pharm|m\.?pharm|b\.?arch|d\.?arch|bsc\.? ?it)\b.*?\b(?:available|offered|offer|have|list|intake|options?|provide|padhate|shakha|pathyakram)\b',
         r'\b(?:what|which|list|show|tell me|available|all)\b.*?\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?)\b',
@@ -257,12 +265,22 @@ def classify_intent(text: str, context: list[dict] | None = None) -> str:
         if re.search(pattern, text_lower):
             return "courses_offered"
 
+    # 12c. Department Comparison
+    for pattern in INTENT_PATTERNS.get("compare_departments", []):
+        if re.search(pattern, text_lower):
+            return "compare_departments"
+
+    # 12d. Department Overview & Curriculum Details
+    for pattern in INTENT_PATTERNS.get("department_overview", []):
+        if re.search(pattern, text_lower):
+            return "department_overview"
+
     # 13. Check follow-up context if present
     if context:
         for turn in reversed(context):
             if turn.get("role") == "user":
                 prev_intent = classify_intent(turn.get("content", ""))
-                if prev_intent in ("faculty", "fee", "admission_cutoff", "hostel", "scholarship", "courses_offered"):
+                if prev_intent in ("faculty", "fee", "admission_cutoff", "hostel", "scholarship", "courses_offered", "compare_departments", "department_overview"):
                     return prev_intent
                 break
 

@@ -152,6 +152,14 @@
       "name": "Bachelor of Pharmacy",
       "duration": "4 years",
       "intake": 100,
+      "description": "The Bachelor of Pharmacy (B.Pharm) program at AIKTC School of Pharmacy is a premier 4-year undergraduate professional degree approved by the Pharmacy Council of India (PCI), AICTE, and affiliated with the University of Mumbai. The program integrates pharmaceutical sciences, drug design, biotechnology, pharmacology, pharmacognosy, and pharmaceutical analysis with practical industrial exposure. Students gain hands-on clinical and formulation mastery, operating in an industrial pilot plant machine room, state-of-the-art analytical labs, and sterile biotechnology suites.",
+      "highlights": [
+        "Approved intake of 100 seats recognized by PCI, AICTE, DTE Maharashtra, and affiliated with the University of Mumbai.",
+        "World-class infrastructure including an Industrial Pilot Machine Room (₹30+ Lakhs), Biotechnology Lab with Laminar Air Flow, and Advanced Pharmaceutical Analysis Suite.",
+        "Rigorous curriculum covering Pharmacology, Pharmaceutics, Medicinal Chemistry, Pharmacognosy, Biopharmaceutics, and Drug Regulatory Affairs.",
+        "Strong placement partnerships with global pharmaceutical leaders including Cipla, Sun Pharma, Abbott, Lupin, Glenmark, and TCS Life Sciences."
+      ],
+      "career_opportunities": "Formulation R&D Scientist, Quality Assurance (QA/QC) Specialist, Clinical Research Associate, Regulatory Affairs Officer, Drug Inspector, Production Manager, and Hospital Pharmacist.",
       "dean": {
         "name": "Dr. Shariq Syed",
         "designation": "Dean, School of Pharmacy",
@@ -384,6 +392,14 @@
       "name": "Diploma in Pharmacy",
       "duration": "2 years",
       "intake": 60,
+      "description": "The Diploma in Pharmacy (D.Pharm) program at AIKTC is an intensive 2-year technical curriculum recognized by the Pharmacy Council of India (PCI) and the Directorate of Technical Education (DTE Maharashtra). Designed for rapid entry into clinical healthcare and retail pharmacy, the program emphasizes patient counseling, drug compounding, pharmacology fundamentals, pharmacognosy, community pharmacy management, and hospital pharmacy workflows. Graduates register directly as licensed pharmacists under the Pharmacy Act.",
+      "highlights": [
+        "Approved intake of 60 seats with direct eligibility for state pharmacy council registration as a Registered Pharmacist (R.Ph).",
+        "Specialized training in dispensing pharmacy, drug dosage calculation, sterile technique, and inventory control.",
+        "Comprehensive hands-on laboratory practicals across Pharmaceutics, Pharmaceutical Chemistry, and Pharmacology.",
+        "Seamless lateral entry option directly into the 2nd Year (Semester 3) of B.Pharm via Direct Second Year Pharmacy (DSP) admissions."
+      ],
+      "career_opportunities": "Registered Community Pharmacist, Hospital Pharmacy In-Charge, Medical Representative, Healthcare Assistant, and Pharmaceutical Sales Executive.",
       "hod": {
         "name": "Dr. Abusufyan Shaikh",
         "designation": "HOD & Associate Professor",
@@ -409,8 +425,7 @@
         {
           "name": "Pharmaceutics Lab",
           "location": "SOP Building",
-          "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs.",
-          "image_url": "/images/labs/pharmaceutics_lab.jpg"
+          "description": "Equipped with compounding apparatus, tablet machines, and quality control test rigs."
         },
         {
           "name": "Pharmaceutical Chemistry Lab",
@@ -485,6 +500,14 @@
       "name": "Master of Pharmacy in Pharmacology",
       "duration": "2 years",
       "intake": 10,
+      "description": "The Master of Pharmacy in Pharmacology (M.Pharm) is an elite 2-year postgraduate research specialization affiliated with the University of Mumbai and approved by the Pharmacy Council of India (PCI). The program focuses on advanced cellular and molecular pharmacology, clinical pharmacokinetics, toxicological screening, neuropharmacology, cardiovascular research, and novel drug discovery models. Postgraduate researchers conduct experimental and in-silico pharmacodynamic investigations under senior faculty guides.",
+      "highlights": [
+        "Approved intake of 10 seats dedicated to advanced pharmacological research for GPAT-qualified graduates.",
+        "Access to the Advanced Pharmacology Research Lab equipped with organ bath systems, micro-centrifuges, UV spectrophotometers, and computerized simulation software.",
+        "Curriculum integrates Molecular Pharmacology, Clinical Research Methodologies, Regulatory Toxicology, and Bioethics.",
+        "Prepares postgraduates for leadership roles in clinical trial management, drug safety (pharmacovigilance), and university doctoral (Ph.D.) research."
+      ],
+      "career_opportunities": "Clinical Pharmacology Scientist, Pharmacovigilance Associate, Toxicologist, Drug Discovery Researcher, Clinical Data Manager, and Assistant Professor / Academic Guide.",
       "hod_reference": "Under the purview of Dr. Abusufyan Shaikh and Dr. Shariq Syed (Dean)",
       "eligibility": "B.Pharm with at least 55% marks and Non-Zero Positive GPAT Score.",
       "labs": [

@@ -289,6 +289,7 @@ class VectorStore:
             q_lower_clean = query.lower()
             is_refund_query = bool(re.search(r'\b(?:refund|cancellation|canceling|cancel|deduct|deduction)\b', q_lower_clean))
             is_hostel_query = bool(re.search(r'\b(?:hostel|hostels|mess|accommodation|rooms?|stay)\b', q_lower_clean))
+            is_fee_query = bool(re.search(r'\b(?:fees?|cost|tuition|shulk|feestructure)\b', q_lower_clean))
 
             if is_hostel_query:
                 if chunk.chunk_id == "inst_hostel":
@@ -300,6 +301,11 @@ class VectorStore:
                     score *= 3.0
                 elif "_fees" in chunk.chunk_id:
                     score *= 0.2
+            elif is_fee_query:
+                if "_fees" in chunk.chunk_id:
+                    score *= 3.0
+                elif "_overview" in chunk.chunk_id:
+                    score *= 0.2
             else:
                 if "refund" in chunk.chunk_id:
                     score *= 0.2
@@ -307,19 +313,23 @@ class VectorStore:
                     score *= 2.0
 
             # 5. Faculty vs Laboratories / Facilities Disambiguation
-            is_faculty_query = bool(re.search(r'\b(?:faculty|faculties|prof|professor|professors|teacher|teachers|hod|staff|sir|madam|dr)\b', q_lower_clean))
+            is_faculty_query = bool(re.search(r'\b(?:faculty|faculties|prof|professor|professors|teacher|teachers|hod|staff|sir|madam|dr|dean)\b', q_lower_clean))
             is_lab_query = bool(re.search(r'\b(?:lab|labs|laboratory|laboratories|equipment|machines?|hardware|specs?)\b', q_lower_clean))
 
             if is_faculty_query:
                 if "_faculty" in chunk.chunk_id or chunk.chunk_id == "inst_leadership" or "dean" in chunk.chunk_id:
-                    score *= 2.5
+                    score *= 3.0
                 elif "_labs" in chunk.chunk_id:
+                    score *= 0.2
+                elif "_overview" in chunk.chunk_id:
                     score *= 0.2
             elif is_lab_query:
                 if "_labs" in chunk.chunk_id:
-                    score *= 2.5
+                    score *= 4.0
                 elif "_faculty" in chunk.chunk_id:
                     score *= 0.2
+                elif "_overview" in chunk.chunk_id:
+                    score *= 0.1
 
             # 6. Scholarships Disambiguation (General vs Specific Categories vs Documents/Process)
             if "scholarship" in chunk.chunk_id:
@@ -381,9 +391,9 @@ class VectorStore:
             # 10. Courses, Degrees, Programs & Branches Disambiguation
             is_course_query = (
                 category == "courses_offered"
-                or bool(re.search(r'\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?|b\.?tech|m\.?tech|ph\.?d|b\.?pharm|d\.?pharm|b\.?arch|d\.?arch|bsc\.? ?it)\b', q_lower_clean))
+                or bool(re.search(r'\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?)\b', q_lower_clean))
                 or bool(re.search(r'\b(?:what does aiktc offer|what course|which course|what are available course|what courses|courses offered|programs offered)\b', q_lower_clean))
-            )
+            ) and not is_fee_query
             if is_course_query:
                 if "_labs" in chunk.chunk_id or "_faculty" in chunk.chunk_id:
                     score *= 0.05
@@ -403,6 +413,32 @@ class VectorStore:
                     else:
                         if chunk.chunk_id == "inst_programs_courses":
                             score *= 3.0
+
+            # 11. Department Comparisons & Department Overviews
+            is_comparison_query = (
+                category == "compare_departments"
+                or bool(re.search(r'\b(?:difference|differ|diff|compare|comparison|versus|vs\.?|distinguish|which is better|choose between|prefer)\b', q_lower_clean))
+                or len(target_depts) >= 2
+            )
+            is_dept_overview = (
+                category == "department_overview"
+                or bool(re.search(r'\b(?:about|tell me about|describe|overview|scope|details of|introduction to|information about)\b.*?\b(?:department|dept|branch|engineering|pharmacy|architecture)\b', q_lower_clean))
+            )
+
+            if is_comparison_query:
+                if "_overview" in chunk.chunk_id:
+                    score *= 5.0
+                elif "_programs_courses" in chunk.chunk_id:
+                    score *= 2.0
+                elif "_faculty" in chunk.chunk_id:
+                    score *= 0.2
+                elif "_labs" in chunk.chunk_id:
+                    score *= 0.2
+            elif is_dept_overview and target_depts:
+                if "_overview" in chunk.chunk_id:
+                    score *= 4.0
+                elif "_faculty" in chunk.chunk_id:
+                    score *= 0.4
 
             if score >= min_score:
                 results.append((chunk, score))

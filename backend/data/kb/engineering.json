@@ -236,6 +236,14 @@
       "intake": 60,
       "duration": "3 years",
       "eligibility": "H.S.C. (XII Std.) with Mathematics & Statistics",
+      "description": "The Department of Bachelor of Science in Information Technology (B.Sc IT) offers a fast-paced, high-demand 3-year undergraduate degree affiliated with the University of Mumbai. The program is designed to deliver immediate IT industry readiness, emphasizing software application development, database management systems, network infrastructure, web technologies, and mobile app creation. Students learn modern programming stacks (Python, Java, PHP, JavaScript, SQL), operating system fundamentals (Linux/Unix), and cloud paradigms, bridging theoretical logic with rapid software construction.",
+      "highlights": [
+        "Approved intake of 60 seats affiliated with the University of Mumbai, tailored for rapid entry into software and IT services.",
+        "Access to state-of-the-art computing laboratories equipped with modern IDEs, database servers, and web development stacks.",
+        "Focus on practical project development, software testing, agile workflows, and full-stack web engineering.",
+        "Seamless pathways into technical careers or higher education including MCA (Master of Computer Applications) and M.Sc IT degrees."
+      ],
+      "career_opportunities": "Software Developer, Web Application Developer, Database Administrator, Junior IT Analyst, Network Support Engineer, QA/Testing Associate, and System Administrator.",
       "programme_coordinator": {
         "name": "Prof. Tabrez Khan",
         "designation": "Programme Coordinator",
@@ -318,6 +326,14 @@
       "name": "Civil Engineering",
       "intake": 30,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Civil Engineering at AIKTC is a premier center of excellence for infrastructure education, sustainable construction engineering, and advanced materials research. Offering undergraduate (B.Tech), postgraduate (M.Tech in Structural Engineering and Construction Engineering & Management), and doctoral (Ph.D.) programs, the department equips engineers to design, analyze, and construct resilient mega-structures, smart transit systems, and water resource networks. The curriculum covers Structural Analysis, Concrete Technology, Soil Mechanics & Foundation Engineering, Environmental Engineering, Transportation Engineering, Remote Sensing/GIS, and Building Information Modeling (BIM).",
+      "highlights": [
+        "Comprehensive academic ladder: B.Tech (30 seats), M.Tech (42 seats across Structural Engineering & Construction Management), and Ph.D. Research Center.",
+        "NABL-aligned testing and research labs including Concrete Technology Lab, Soil Mechanics Lab, Fluid Mechanics & Hydraulic Machinery Lab, Environmental Engineering Lab, and Total Station Advanced Surveying Suite.",
+        "Direct industry collaboration with infrastructure developers, municipal corporations, and structural engineering consultancies for field projects.",
+        "Placements with top construction and infrastructure conglomerates (L&T Construction, Shapoorji Pallonji, Afcons, Tata Projects, Mumbai Metro)."
+      ],
+      "career_opportunities": "Structural Design Engineer, Construction Project Manager, Geotechnical Engineer, Transportation & Highway Planner, Environmental Consultant, BIM Coordinator, and Site Engineer.",
       "postgraduate": {
         "mtech_specializations": [
           "Construction Engineering & Management",
@@ -480,6 +496,14 @@
       "name": "Computer Engineering",
       "intake": 120,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Computer Engineering at AIKTC offers a comprehensive, industry-aligned engineering education that seamlessly combines algorithmic foundations with hands-on modern software and systems engineering. The department focuses on high-impact computing paradigms including Artificial Intelligence, Machine Learning, Cloud Architecture, Full-Stack Web Development, Cyber Security, Database Systems, and Distributed Computing. Through experiential learning, collaborative hackathons (like Algorithm 8.0), and industry internships, students acquire both deep theoretical problem-solving capabilities and industry-ready engineering skills.",
+      "highlights": [
+        "Approved intake of 120 seats affiliated with the University of Mumbai and approved by AICTE & DTE Maharashtra.",
+        "State-of-the-art specialized labs including Machine Learning Lab, Data Engineering Lab, Cloud Computing Lab, and Systems Programming Lab with 12th Gen Intel Core i5 workstations.",
+        "Active student professional chapters including ACM, CSI (Computer Society of India), and Developer Student Clubs organizing nationwide coding hackathons and workshops.",
+        "Strong placement track record with top recruiters including TCS, Infosys, Capgemini, Jio, Accenture, L&T Infotech, and tech startups."
+      ],
+      "career_opportunities": "Software Development Engineer (SDE), Full-Stack Developer, Cloud Solutions Architect, Machine Learning Engineer, Systems Analyst, Cyber Security Specialist, and Database Administrator.",
       "hod": {
         "name": "Prof. Tabrez Khan",
         "designation": "HOD",
@@ -624,6 +648,14 @@
       "name": "Computer Science & Engineering (Artificial Intelligence and Machine Learning)",
       "intake": 120,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning) is designed to cultivate future-ready engineers skilled in creating intelligent, autonomous, and cognitive computational systems. The curriculum offers deep immersion into Deep Learning, Natural Language Processing (NLP), Computer Vision, Reinforcement Learning, Generative AI, Heuristic Search, Knowledge Representation, and Robotic Process Automation, anchored by rigorous computing principles. Students work on cutting-edge capstone projects tackling real-world problems in medical imaging, natural language understanding, fintech fraud detection, and autonomous navigation.",
+      "highlights": [
+        "Approved intake of 120 seats affiliated with the University of Mumbai, catering to the exponential global demand for AI & ML specialists.",
+        "Cutting-edge AI/ML Lab and High Performance Computing Lab equipped with multi-core parallel processing architectures and high-compute workstations.",
+        "Comprehensive hands-on training using modern AI frameworks including PyTorch, TensorFlow, Keras, OpenCV, Hugging Face, and Scikit-Learn.",
+        "Exciting hackathon culture and project showcases like Nexathon, fostering competitive AI model engineering and interdisciplinary research."
+      ],
+      "career_opportunities": "Artificial Intelligence Engineer, Machine Learning Specialist, Deep Learning Engineer, Computer Vision Developer, NLP Specialist, Data Scientist, and Cognitive Systems Architect.",
       "hod": {
         "name": "Dr. Salim Shaikh",
         "designation": "HOD & Associate Professor",
@@ -696,6 +728,14 @@
       "name": "Computer Science & Engineering (Data Science)",
       "intake": 60,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Computer Science & Engineering (Data Science) bridges statistical mathematics, big data engineering, and modern computing architectures to extract valuable predictive insights from complex, high-velocity datasets. The curriculum encompasses Big Data Frameworks (Apache Hadoop, Spark), Data Mining, Predictive Analytics, Applied Probability & Statistics, Data Warehousing, Business Intelligence, Data Wrangling, and Data Visualization tools (Tableau, PowerBI). Students develop end-to-end data pipelines from ingestion to production model serving, supporting evidence-based decision-making across e-commerce, banking, logistics, and healthcare.",
+      "highlights": [
+        "Approved intake of 60 seats affiliated with the University of Mumbai, focusing on end-to-end data engineering and statistical modeling.",
+        "Dedicated Data Engineering Lab, Machine Learning Lab, and Big Data Analytics Lab configured for distributed databases and high-volume data lakes.",
+        "Extensive exposure to Python data stacks (Pandas, NumPy, Scikit-learn, Spark MLlib) and enterprise cloud analytics environments.",
+        "Hands-on participation in campus hackathons such as Nexathon, building predictive pipelines from massive datasets."
+      ],
+      "career_opportunities": "Data Scientist, Big Data Engineer, Data Analyst, Business Intelligence Consultant, Quantitative Analyst, Data Architect, and Machine Learning Engineer.",
       "hod": {
         "name": "Dr. Tabassum Maktum",
         "designation": "HOD & Assistant Professor",
@@ -769,6 +809,14 @@
       "name": "Electrical & Computer Engineering (formerly Electrical Engineering)",
       "intake": 60,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Electrical & Computer Engineering synthesizes electrical energy systems, power electronics, and renewable technologies with contemporary digital control and computational engineering. As industries transition to Electric Vehicles (EV), Smart Power Grids, and Automated Manufacturing, this program trains students in Power Systems, Renewable Energy Integration, Microprocessor-Based Control, Programmable Logic Controllers (PLC/SCADA), Industrial Automation, and Embedded Firmware Programming. Students master both the heavy electrical power distribution systems and the micro-level computer controllers that automate them.",
+      "highlights": [
+        "Approved intake of 60 seats affiliated with the University of Mumbai, catering to the clean energy transition and EV revolution.",
+        "Robust lab ecosystem exceeding ₹50 Lakhs in equipment including Power Electronics Lab, Control Systems Lab, Network Lab (SCILAB/MATLAB/Ubuntu), Electrical Machines Lab, and High Voltage Testing setups.",
+        "Specialized focus on Electric Vehicle (EV) powertrains, smart grid controllers, solar/wind renewable integration, and industrial IoT.",
+        "Placement avenues spanning power generation/distribution giants (Tata Power, Adani, Reliance Energy), automation leaders (Siemens, Schneider, ABB), and embedded software firms."
+      ],
+      "career_opportunities": "Electrical Design Engineer, EV Systems Engineer, Industrial Automation Specialist, Smart Grid Analyst, Control Systems Engineer, Power Electronics Designer, and Embedded Systems Engineer.",
       "hod": {
         "name": "Dr. Shaikh Afzal N. A.",
         "designation": "HOD & Associate Professor",
@@ -883,6 +931,14 @@
       "intake": 60,
       "duration": "4 years (B.Tech)",
       "established_year": "2020-21",
+      "description": "The Department of Electronics and Computer Science represents a cutting-edge synergy of hardware engineering and advanced computer software. Transitioned from legacy telecommunications to address the boom in smart connected devices and Edge computing, the program seamlessly integrates Embedded Systems, Internet of Things (IoT), VLSI Circuit Design, Microcontroller Programming, and Advanced Communication Systems with modern Computer Science disciplines such as Algorithms, Object-Oriented Software, Operating Systems, and Computer Networks. Students gain a formidable dual advantage, mastering the physical silicon, low-level firmware, and enterprise application software.",
+      "highlights": [
+        "Approved intake of 60 seats affiliated with the University of Mumbai, positioned at the vital intersection of hardware and software.",
+        "Comprehensive lab infrastructure exceeding ₹1 Crore in equipment including Analog Circuit Design Lab, Signal Processing Lab, Embedded Lab (Falcon 16-channel logic analyzers), and Advanced Communication Lab.",
+        "Bridges IoT sensors, Edge AI, FPGA/VLSI design, and Linux device drivers with high-level software development.",
+        "Dual-track placement opportunities across core electronics/semiconductor companies (Intel, Qualcomm, Texas Instruments) and software majors (Cisco, TCS, L&T Infotech)."
+      ],
+      "career_opportunities": "Embedded Systems Engineer, IoT Solutions Architect, VLSI Design Engineer, Firmware Developer, Network & Communications Engineer, and Full-Stack Software Developer.",
       "hod": {
         "name": "Prof. Bandanawaz Kotiyal",
         "designation": "HOD",
@@ -995,6 +1051,14 @@
       "name": "Mechanical Engineering",
       "intake": 60,
       "duration": "4 years (B.Tech)",
+      "description": "The Department of Mechanical Engineering at AIKTC delivers an intensive, hands-on engineering education that integrates core principles of mechanics, thermodynamics, fluid dynamics, and materials science with modern computational design (CAD/CAM/CAE), mechatronics, and advanced manufacturing. The department is renowned for experiential engineering, where students actively design, fabricate, and test racing vehicles (Formula Student / FSAE), autonomous robotics, and sustainable HVAC energy systems. Students acquire strong competencies in 3D Modeling (SolidWorks, CATIA), Finite Element Analysis (ANSYS), and precision CNC manufacturing.",
+      "highlights": [
+        "Approved intake of 60 seats affiliated with the University of Mumbai, emphasizing hands-on design and mechanical prototyping.",
+        "Comprehensive laboratory infrastructure spanning 12+ specialized labs including CNC Milling/Lathe Workshop, Heat Transfer & RAC Lab, Fluid Mechanics & Hydraulic Machinery Lab, IC Engines Lab, and CAD/CAM Simulation Suite.",
+        "Active student racing team representing AIKTC in Formula Bharat, BAJA SAE, and national robotic competitions.",
+        "Broad career placements across automotive (Mahindra, Tata Motors), heavy engineering (L&T, Godrej), HVAC/energy systems, and aerospace supply chains."
+      ],
+      "career_opportunities": "Mechanical Design Engineer (CAD/CAE), Thermal Systems Engineer, Manufacturing/Production Engineer, Automotive Engineer, Mechatronics Specialist, Quality Control (QC/QA) Engineer, and Project Engineer.",
       "hod": {
         "name": "Prof. Zakir Ansari",
         "designation": "HOD",

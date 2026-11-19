@@ -3,6 +3,14 @@
   "name": "Master of Pharmacy in Pharmacology",
   "duration": "2 years",
   "intake": 10,
+  "description": "The Master of Pharmacy in Pharmacology (M.Pharm) is an elite 2-year postgraduate research specialization affiliated with the University of Mumbai and approved by the Pharmacy Council of India (PCI). The program focuses on advanced cellular and molecular pharmacology, clinical pharmacokinetics, toxicological screening, neuropharmacology, cardiovascular research, and novel drug discovery models. Postgraduate researchers conduct experimental and in-silico pharmacodynamic investigations under senior faculty guides.",
+  "highlights": [
+    "Approved intake of 10 seats dedicated to advanced pharmacological research for GPAT-qualified graduates.",
+    "Access to the Advanced Pharmacology Research Lab equipped with organ bath systems, micro-centrifuges, UV spectrophotometers, and computerized simulation software.",
+    "Curriculum integrates Molecular Pharmacology, Clinical Research Methodologies, Regulatory Toxicology, and Bioethics.",
+    "Prepares postgraduates for leadership roles in clinical trial management, drug safety (pharmacovigilance), and university doctoral (Ph.D.) research."
+  ],
+  "career_opportunities": "Clinical Pharmacology Scientist, Pharmacovigilance Associate, Toxicologist, Drug Discovery Researcher, Clinical Data Manager, and Assistant Professor / Academic Guide.",
   "hod_reference": "Under the purview of Dr. Abusufyan Shaikh and Dr. Shariq Syed (Dean)",
   "eligibility": "B.Pharm with at least 55% marks and Non-Zero Positive GPAT Score.",
   "labs": [

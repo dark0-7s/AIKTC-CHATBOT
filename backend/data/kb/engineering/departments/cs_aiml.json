@@ -3,6 +3,14 @@
   "name": "Computer Science & Engineering (Artificial Intelligence and Machine Learning)",
   "intake": 120,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning) is designed to cultivate future-ready engineers skilled in creating intelligent, autonomous, and cognitive computational systems. The curriculum offers deep immersion into Deep Learning, Natural Language Processing (NLP), Computer Vision, Reinforcement Learning, Generative AI, Heuristic Search, Knowledge Representation, and Robotic Process Automation, anchored by rigorous computing principles. Students work on cutting-edge capstone projects tackling real-world problems in medical imaging, natural language understanding, fintech fraud detection, and autonomous navigation.",
+  "highlights": [
+    "Approved intake of 120 seats affiliated with the University of Mumbai, catering to the exponential global demand for AI & ML specialists.",
+    "Cutting-edge AI/ML Lab and High Performance Computing Lab equipped with multi-core parallel processing architectures and high-compute workstations.",
+    "Comprehensive hands-on training using modern AI frameworks including PyTorch, TensorFlow, Keras, OpenCV, Hugging Face, and Scikit-Learn.",
+    "Exciting hackathon culture and project showcases like Nexathon, fostering competitive AI model engineering and interdisciplinary research."
+  ],
+  "career_opportunities": "Artificial Intelligence Engineer, Machine Learning Specialist, Deep Learning Engineer, Computer Vision Developer, NLP Specialist, Data Scientist, and Cognitive Systems Architect.",
   "hod": {
     "name": "Dr. Salim Shaikh",
     "designation": "HOD & Associate Professor",

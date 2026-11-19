@@ -19,6 +19,177 @@ GREETING_WORDS = {
     "sup", "who are you", "what can you do", "help"
 }
 
+DEPT_COMPARISON_PROFILES = {
+    "COMP": {
+        "name": "Computer Engineering",
+        "school": "Engineering",
+        "intake": "120 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Algorithms, Full-Stack Software Engineering, Cloud Architecture, Database Systems, Cyber Security, Distributed Systems",
+        "labs": "Machine Learning Lab, Data Engineering Lab, Cloud Computing Lab, Systems Programming Lab",
+        "projects": "Algorithm 8.0 Hackathons, Full-Stack Web Portals, Cloud Computing Architecture, Scalable Databases",
+        "industry": "Enterprise Software, Cloud Computing, FinTech, Cybersecurity & SaaS Platforms",
+        "careers": "Software Development Engineer (SDE), Cloud Solutions Architect, Full-Stack Developer, Cyber Security Specialist",
+        "recruiters": "TCS, Infosys, Capgemini, Jio, Accenture, L&T Infotech",
+        "suitability": "Ideal if you enjoy programming, building web/cloud systems, software architecture, and algorithmic problem-solving.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/"
+    },
+    "CSE": {
+        "name": "Computer Engineering",
+        "school": "Engineering",
+        "intake": "120 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Algorithms, Full-Stack Software Engineering, Cloud Architecture, Database Systems, Cyber Security, Distributed Systems",
+        "labs": "Machine Learning Lab, Data Engineering Lab, Cloud Computing Lab, Systems Programming Lab",
+        "projects": "Algorithm 8.0 Hackathons, Full-Stack Web Portals, Cloud Computing Architecture, Scalable Databases",
+        "industry": "Enterprise Software, Cloud Computing, FinTech, Cybersecurity & SaaS Platforms",
+        "careers": "Software Development Engineer (SDE), Cloud Solutions Architect, Full-Stack Developer, Cyber Security Specialist",
+        "recruiters": "TCS, Infosys, Capgemini, Jio, Accenture, L&T Infotech",
+        "suitability": "Ideal if you enjoy programming, building web/cloud systems, software architecture, and algorithmic problem-solving.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/"
+    },
+    "CSAIML": {
+        "name": "CSE (AI & Machine Learning)",
+        "school": "Engineering",
+        "intake": "120 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Deep Learning, Natural Language Processing (NLP), Computer Vision, Generative AI, Reinforcement Learning, Autonomous Systems",
+        "labs": "AI/ML Lab, High Performance Computing Lab, Multi-core GPU Workstation Cluster",
+        "projects": "Predictive Healthcare Diagnostics, Autonomous Vehicle Systems, NLP Voice Assistants, Computer Vision Inspection",
+        "industry": "Artificial Intelligence, Robotic Automation, Healthcare Analytics, FinTech Predictive Modeling",
+        "careers": "AI Engineer, Machine Learning Specialist, Deep Learning Engineer, Computer Vision Developer, Data Scientist",
+        "recruiters": "TCS, Capgemini, Reliance Jio, Tech Mahindra, Specialized AI Startups",
+        "suitability": "Ideal if you love neural networks, predictive algorithms, cognitive computing, and creating intelligent systems.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/"
+    },
+    "CSDS": {
+        "name": "CSE (Data Science)",
+        "school": "Engineering",
+        "intake": "60 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Big Data Engineering (Hadoop/Spark), Predictive Analytics, Applied Statistics, Data Warehousing, Business Intelligence (Tableau)",
+        "labs": "Data Engineering Lab, Big Data Analytics Lab, Machine Learning Lab",
+        "projects": "Nexathon Hackathons, Enterprise ETL Pipelines, Customer Churn Prediction, Financial Time-Series Forecasting",
+        "industry": "Big Data Engineering, E-Commerce Analytics, Investment Banking, Supply Chain Intelligence",
+        "careers": "Data Scientist, Big Data Engineer, BI Consultant, Quantitative Analyst, Data Architect",
+        "recruiters": "Jio, TCS, Cognizant, Analytics Consultancies, FinTech Firms",
+        "suitability": "Ideal if you are passionate about statistical patterns, mathematical modeling, and enterprise data analytics.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/computer-engineering/"
+    },
+    "ECS": {
+        "name": "Electronics & Computer Science",
+        "school": "Engineering",
+        "intake": "60 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Embedded Systems, Internet of Things (IoT), VLSI Circuit Design, Microcontrollers, Edge AI, Computer Networks, C++/Python Software",
+        "labs": "Analog Circuit Design Lab, Embedded Systems Lab, Signal Processing Lab, Advanced Communication Lab",
+        "projects": "Smart IoT Sensor Nodes, Microcontroller Firmware, Edge AI Prototyping, FPGA Digital Systems",
+        "industry": "Semiconductors, IoT Smart Devices, Consumer Electronics, Enterprise Networking, Software Development",
+        "careers": "Embedded Systems Engineer, IoT Architect, VLSI Design Engineer, Firmware Developer, Software Developer",
+        "recruiters": "Intel, Qualcomm, Cisco, Texas Instruments, TCS, L&T Infotech",
+        "suitability": "Ideal if you want the dual advantage of hardware circuit mastery, microcontroller robotics, and software programming.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/electronics-and-computer-science/"
+    },
+    "ECE": {
+        "name": "Electrical & Computer Engineering",
+        "school": "Engineering",
+        "intake": "60 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Smart Grid Systems, Electric Vehicle (EV) Powertrains, Power Electronics, Industrial Automation (PLC/SCADA), Microprocessors",
+        "labs": "Power Electronics & Drives Lab, Control Systems Lab, Network Lab (SCILAB/MATLAB), Electrical Machines Lab",
+        "projects": "EV Battery Management Systems, Solar Inverter Automation, Industrial SCADA Networks, Smart Microgrid Controllers",
+        "industry": "Electric Mobility (EV), Renewable Energy Utilities, Power Distribution, Industrial Robotics",
+        "careers": "EV Systems Engineer, Electrical Design Engineer, Industrial Automation Specialist, Control Systems Engineer",
+        "recruiters": "Tata Power, Siemens, Schneider Electric, ABB, Adani Electricity, L&T",
+        "suitability": "Ideal if you want to power the green energy transition, smart electric vehicles, and automated factory robotics.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/electrical-engineering/"
+    },
+    "MECH": {
+        "name": "Mechanical Engineering",
+        "school": "Engineering",
+        "intake": "60 Seats",
+        "duration": "4 Years (B.Tech)",
+        "focus": "Thermodynamics, Fluid Dynamics, CAD/CAM/CAE Design (SolidWorks/ANSYS), Manufacturing Processes, Mechatronics, Automotive Engineering",
+        "labs": "CNC Milling & Lathe Workshop, Heat Transfer & RAC Lab, Fluid Mechanics Lab, Dynamics of Machinery Lab, IC Engines Lab",
+        "projects": "Formula Student / FSAE Racing Cars, BAJA All-Terrain Vehicles, Robotics Prototyping, HVAC Energy Optimization",
+        "industry": "Automotive, Aerospace, Heavy Machinery, Precision Manufacturing, HVAC & Energy Plants",
+        "careers": "Mechanical Design Engineer, Thermal Systems Engineer, Automotive Engineer, Production & Quality Engineer, Project Engineer",
+        "recruiters": "Mahindra & Mahindra, Tata Motors, L&T, Godrej, Thermax, HVAC Consultancies",
+        "suitability": "Ideal if you love physical machines, hands-on fabrication, vehicle engineering, thermal science, and structural robotics.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/mechanical-engineering/"
+    },
+    "CIVIL": {
+        "name": "Civil Engineering",
+        "school": "Engineering",
+        "intake": "30 Seats (B.Tech) + 42 (M.Tech)",
+        "duration": "4 Years (B.Tech) / 2 Years (M.Tech)",
+        "focus": "Structural Analysis, Concrete Technology, Geotechnical Engineering, Transportation Systems, Environmental Engineering, BIM & GIS",
+        "labs": "Concrete Technology Lab, Soil Mechanics Lab, Fluid Mechanics Lab, Total Station Advanced Surveying Suite, CAD Structural Lab",
+        "projects": "Earthquake-Resistant Building Analysis, Smart Transit Planning, Water Treatment Systems, BIM 3D Construction Scheduling",
+        "industry": "Infrastructure Mega-Projects, Urban Transit (Metro), Real Estate, Structural Consultancy, Environmental Engineering",
+        "careers": "Structural Design Engineer, Construction Project Manager, Geotechnical Consultant, Highway Planner, BIM Engineer",
+        "recruiters": "L&T Construction, Shapoorji Pallonji, Afcons, Tata Projects, Municipal Corporations",
+        "suitability": "Ideal if you want to design and construct landmark buildings, bridges, metro transit networks, and water sustainability systems.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/civil-engineering/"
+    },
+    "BSIT": {
+        "name": "B.Sc Information Technology",
+        "school": "Engineering",
+        "intake": "60 Seats",
+        "duration": "3 Years (B.Sc)",
+        "focus": "Software Development (Java, Python, PHP), Database Management, Web & Mobile Development, Linux Administration, Computer Networks",
+        "labs": "IT Programming Lab, Database Lab, Software Development Lab",
+        "projects": "Full-Stack Web Portals, Database-Driven E-Commerce Sites, Mobile Apps, Network Security Auditing",
+        "industry": "IT Services, Web Development Agencies, Corporate Software Support, Database Operations",
+        "careers": "Web Developer, Junior Software Engineer, Database Administrator, QA/Software Tester, Network Associate",
+        "recruiters": "TCS, Wipro, Infosys, Tech Startups, IT Consultancies",
+        "suitability": "Ideal if you seek a fast-track 3-year degree focused on immediate software programming and web development.",
+        "url": "https://soet.aiktc.ac.in/school-of-engineering/bachelor-of-science-i-t/"
+    },
+    "BPHARM": {
+        "name": "Bachelor of Pharmacy (B.Pharm)",
+        "school": "Pharmacy",
+        "intake": "100 Seats",
+        "duration": "4 Years (B.Pharm)",
+        "focus": "Pharmaceutics, Pharmacology, Medicinal Chemistry, Pharmacognosy, Pharmaceutical Analysis, Biopharmaceutics",
+        "labs": "Industrial Machine Room (₹30L Pilot Plant), Biotechnology Lab (LAF), Pharmaceutics Labs, Analytical Chemistry Lab",
+        "projects": "Formulation Development, In-vitro Drug Release Studies, Phytochemical Extraction, Quality Control Testing",
+        "industry": "Pharmaceutical Manufacturing, Clinical Research, Regulatory Affairs, Hospital & Retail Pharmacy",
+        "careers": "Formulation R&D Scientist, QA/QC Chemist, Clinical Research Associate, Drug Inspector, Production Manager",
+        "recruiters": "Cipla, Sun Pharma, Abbott, Lupin, Glenmark, TCS Life Sciences",
+        "suitability": "Ideal if you are passionate about medicine, drug development, healthcare sciences, and clinical research.",
+        "url": "https://aiktc.ac.in/bachelor-of-pharmacy/"
+    },
+    "DPHARM": {
+        "name": "Diploma in Pharmacy (D.Pharm)",
+        "school": "Pharmacy",
+        "intake": "60 Seats",
+        "duration": "2 Years (Diploma)",
+        "focus": "Pharmaceutics, Pharmacology, Pharmacognosy, Community Pharmacy, Hospital Pharmacy, Drug Store Management",
+        "labs": "Pharmaceutics Lab, Pharmaceutical Chemistry Lab, Biotechnology Lab",
+        "projects": "Prescription Compounding, Patient Counseling Simulations, Drug Inventory Control",
+        "industry": "Retail Pharmacy, Hospital Dispensary, Medical Distribution",
+        "careers": "Registered Pharmacist (R.Ph), Hospital Pharmacist, Medical Representative, Pharmacy Store Owner",
+        "recruiters": "Apollo Pharmacy, Wellness Forever, Hospital Pharmacies, Pharmaceutical Distributors",
+        "suitability": "Ideal if you want rapid 2-year qualification to become a licensed pharmacist or enter community/hospital practice.",
+        "url": "https://aiktc.ac.in/diploma-in-pharmacy/"
+    },
+    "BARCH": {
+        "name": "Bachelor of Architecture (B.Arch)",
+        "school": "Architecture",
+        "intake": "40 Seats",
+        "duration": "5 Years (B.Arch)",
+        "focus": "Architectural Design, Sustainable Building Design, Building Construction & Materials, Urban Planning, History of Architecture",
+        "labs": "Design Studios, Building Construction Lab, Climatology Lab, Model Making Workshop, CAD/BIM Lab",
+        "projects": "NASA Design Competitions, Sustainable Campus Master Planning, Climate-Responsive Habitat Design, Scale Models",
+        "industry": "Architectural Design Studios, Urban Planning Consultancies, Real Estate Developers, Interior Architecture",
+        "careers": "Principal Architect, Urban Designer, Landscape Architect, Sustainable Building Consultant, BIM Manager",
+        "recruiters": "Leading Architectural Firms, Bin Khot Architects, Design Studios, Urban Authorities",
+        "suitability": "Ideal if you have creative artistic talent, spatial visualization, and a passion for shaping the built environment.",
+        "url": "https://aiktc.ac.in/bachelor-of-architecture/"
+    }
+}
+
 def is_greeting(query: str) -> bool:
     q = query.strip().lower()
     q_clean = re.sub(r"[^\w\s]", "", q).strip()
@@ -58,6 +229,49 @@ def format_greeting(lang: str = "en") -> str:
         "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
     )
 
+
+def format_department_comparison(dept_codes: list[str]) -> str:
+    """
+    Format a rich, executive, side-by-side comparative analysis between two departments.
+    """
+    p1 = DEPT_COMPARISON_PROFILES.get(dept_codes[0])
+    p2 = DEPT_COMPARISON_PROFILES.get(dept_codes[1])
+    if not p1 or not p2:
+        return ""
+
+    n1, n2 = p1["name"], p2["name"]
+    c1, c2 = dept_codes[0], dept_codes[1]
+
+    lines = [
+        f"### ⚖️ Academic Program Comparison: {n1} ({c1}) vs. {n2} ({c2})\n",
+        f"Choosing between **{n1}** and **{n2}** represents two distinct engineering and career pathways. Below is an authoritative, parameter-by-parameter comparison grounded in AIKTC's curriculum, lab infrastructure, and industry placement tracks:\n",
+        f"| Comparison Parameter | {n1} ({c1}) | {n2} ({c2}) |",
+        f"| :--- | :--- | :--- |",
+        f"| **School & Affiliation** | School of {p1['school']} (Univ. of Mumbai) | School of {p2['school']} (Univ. of Mumbai) |",
+        f"| **Degree & Duration** | {p1['duration']} | {p2['duration']} |",
+        f"| **Approved Intake** | {p1['intake']} | {p2['intake']} |",
+        f"| **Core Technical Focus** | {p1['focus']} | {p2['focus']} |",
+        f"| **Specialized Laboratories** | {p1['labs']} | {p2['labs']} |",
+        f"| **Hands-on Projects & Fests** | {p1['projects']} | {p2['projects']} |",
+        f"| **Industry Sectors** | {p1['industry']} | {p2['industry']} |",
+        f"| **Key Career Roles** | {p1['careers']} | {p2['careers']} |",
+        f"| **Top Recruiters** | {p1['recruiters']} | {p2['recruiters']} |\n",
+        f"### 🔍 Detailed Discipline Profiles:",
+        f"- **{n1} ({c1}):** Blends {p1['focus']}. Hands-on experiential training is conducted across state-of-the-art facilities like the {p1['labs']}.",
+        f"- **{n2} ({c2}):** Centers around {p2['focus']}. Practical prototyping takes place in cutting-edge facilities including the {p2['labs']}.\n",
+        f"### 🎯 Which One Should You Choose? (Decision Guide):",
+        f"- 👉 **Choose {n1} ({c1})** if: {p1['suitability']}",
+        f"- 👉 **Choose {n2} ({c2})** if: {p2['suitability']}\n",
+        f"### 🌐 Official Department Portals:",
+        f"- [{n1} Official Department Page]({p1['url']})",
+        f"- [{n2} Official Department Page]({p2['url']})",
+        f"- [AIKTC Central Admissions Portal](https://aiktc.ac.in/admissions/)",
+        f"- [AIKTC Official Website](https://aiktc.ac.in/)\n",
+        f"---\n*Source: AIKTC Verified Institutional Knowledge Base*"
+    ]
+    return "\n".join(lines)
+
+
 def synthesize_grounded_answer(
     message: str,
     algo_result: dict[str, Any],
@@ -66,15 +280,13 @@ def synthesize_grounded_answer(
     """
     Synthesize an authoritative, grounded response from Algorithm 1 RAG retrieval
     with verified official web navigation references.
-
-    If has_structured_card is True, concise non-duplicated supplementary context is
-    provided alongside official links, preventing duplicate text rosters and images.
     """
     lang = algo_result.get("lang", "en")
     q_prep = algo_result.get("q_prep", message)
     intent = algo_result.get("intent", "general")
     entities = algo_result.get("entities", {})
-    
+    target_depts = entities.get("departments", []) if entities else []
+
     # 1. Handle Greetings
     if is_greeting(q_prep):
         return format_greeting(lang)
@@ -103,7 +315,17 @@ def synthesize_grounded_answer(
             "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
         )
 
-    # 2b. Handle Cutoff & Percentile Queries (Dynamic State CET Cell First Year Admissions)
+    # 3. Handle Department Comparison Queries (e.g., "difference in ecs and mech", "compare CSE and AIML")
+    is_comparison = (
+        intent == "compare_departments"
+        or (len(target_depts) >= 2 and any(w in q_prep.lower() for w in ("difference", "differ", "diff", "compare", "comparison", "vs", "versus", "between", "better", "choose", "and")))
+    )
+    if is_comparison and len(target_depts) >= 2:
+        d1, d2 = target_depts[0], target_depts[1]
+        if d1 in DEPT_COMPARISON_PROFILES and d2 in DEPT_COMPARISON_PROFILES:
+            return format_department_comparison([d1, d2])
+
+    # 4. Handle Cutoff & Percentile Queries (Dynamic State CET Cell First Year Admissions)
     is_cutoff_query = (
         intent == "admission_cutoff"
         or any(kw in q_prep.lower() for kw in ("cutoff", "cut-off", "cut off", "percentile", "closing rank", "closing score", "कटऑफ", "परसेंटाइल"))
@@ -143,7 +365,7 @@ def synthesize_grounded_answer(
 
     retrieved_context = (algo_result.get("retrieved_context") or "").strip()
 
-    # 2. Extract Document sections from retrieved_context
+    # 5. Extract Document sections from retrieved_context
     doc_sections: list[dict[str, Any]] = []
     if retrieved_context:
         parts = re.split(r"###\s*\[DOCUMENT\s*\d+:\s*", retrieved_context)
@@ -151,7 +373,6 @@ def synthesize_grounded_answer(
             lines = part.strip().split("\n")
             title_header = lines[0].split("]")[0].strip()
             
-            # Extract domain if present
             domain = ""
             for l in lines[1:4]:
                 if l.startswith("Domain:"):
@@ -173,8 +394,6 @@ def synthesize_grounded_answer(
     response_parts: list[str] = []
 
     if has_structured_card:
-        # When a structured card (MediaCard, FacultyGrid, ListCards) is rendered,
-        # provide a concise supplementary overview without duplicating the card data or repeating images.
         if doc_sections:
             primary_doc = doc_sections[0]
             clean_body = re.sub(r"!\[.*?\]\(.*?\)", "", primary_doc['body'])
@@ -196,11 +415,18 @@ def synthesize_grounded_answer(
                 response_parts.append("\n".join(summary_lines))
     else:
         if doc_sections:
-            primary_doc = doc_sections[0]
-            clean_body = re.sub(r"!\[.*?\]\(.*?\)", "", primary_doc['body'])
+            # If overview chunk is present among retrieved documents, prioritize it
+            overview_doc = next((d for d in doc_sections if "_overview" in d['title'].lower() or "overview" in d['title'].lower()), None)
+            chosen_doc = overview_doc or doc_sections[0]
+            clean_body = re.sub(r"!\[.*?\]\(.*?\)", "", chosen_doc['body'])
             clean_body = re.sub(r"(?:Lab|HOD|Director)?\s*Photo:\s*", "", clean_body)
             clean_body = re.sub(r"\s*\|\s*Photo:.*", "", clean_body)
-            response_parts.append(f"### {primary_doc['title']}\n{clean_body.strip()}")
+            clean_body = re.sub(r"\berstwhile\b", "formerly", clean_body, flags=re.IGNORECASE)
+            
+            if not clean_body.startswith("###"):
+                response_parts.append(f"### {chosen_doc['title']}\n{clean_body.strip()}")
+            else:
+                response_parts.append(clean_body.strip())
         else:
             response_parts.append(
                 "For detailed information regarding your inquiry, please refer to the **AIKTC Admissions & Administration Office**:\n\n"
@@ -209,7 +435,7 @@ def synthesize_grounded_answer(
                 "- **Campus Address:** Plot No. 2 & 3, Sector-16, Near Thana Naka, Khandagao, New Panvel, Navi Mumbai, Maharashtra 410206"
             )
 
-    # 3. Always append Verified Official Web Navigation Links
+    # 6. Always append Verified Official Web Navigation Links
     official_source = get_official_source(intent, entities, message)
     if official_source and official_source.get("links"):
         source_title = official_source.get("title", "Official Web Navigation Portals")
@@ -220,7 +446,8 @@ def synthesize_grounded_answer(
             link_lines.append(f"- [{link_title}]({link_url})")
         response_parts.append("\n".join(link_lines))
 
-    # 4. Source citation footer
+    # 7. Source citation footer
     response_parts.append("---\n*Source: AIKTC Verified Institutional Knowledge Base*")
 
-    return "\n\n".join(response_parts)
+    final_resp = "\n\n".join(response_parts)
+    return re.sub(r"\berstwhile\b", "formerly", final_resp, flags=re.IGNORECASE)

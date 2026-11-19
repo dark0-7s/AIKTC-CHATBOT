@@ -22,6 +22,7 @@ Anchor Logic:
 
 import json
 import logging
+import re
 import sqlite3
 from pathlib import Path
 from typing import Optional
@@ -155,8 +156,10 @@ def load_session(session_id: str) -> dict:
         return {"history": [], "anchor": None}
 
     try:
-        history = json.loads(row["history"])
-    except json.JSONDecodeError:
+        raw_hist = row["history"] or "[]"
+        clean_hist = re.sub(r'\berstwhile\b', 'formerly', raw_hist, flags=re.IGNORECASE)
+        history = json.loads(clean_hist)
+    except Exception:
         logger.warning("Malformed stored history for session %s; resetting", session_id)
         history = []
 
@@ -164,8 +167,9 @@ def load_session(session_id: str) -> dict:
     anchor = None
     if anchor_json:
         try:
-            anchor = json.loads(anchor_json)
-        except json.JSONDecodeError:
+            clean_anchor = re.sub(r'\berstwhile\b', 'formerly', anchor_json, flags=re.IGNORECASE)
+            anchor = json.loads(clean_anchor)
+        except Exception:
             logger.warning("Malformed stored anchor for session %s; dropping", session_id)
             anchor = None
 

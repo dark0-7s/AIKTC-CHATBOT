@@ -52,6 +52,28 @@ def normalize_text(text: str) -> str:
     return text
 
 
+PRONOUN_IT_PATTERN = re.compile(
+    r'\b(?:'
+    r'(?:compare|with|about|for|to|of|tell|show|explain)\s+it\b|'
+    r'\bit\s+(?:with|to|and\s+also|is|has|does|offers?)\b|'
+    r'\b(?:what|how)\s+about\s+it\b|'
+    r'\bhow\s+is\s+it\b'
+    r')',
+    re.IGNORECASE
+)
+
+IT_ACADEMIC_CONTEXT = re.compile(
+    r'\b(?:'
+    r'(?:between|vs\.?|versus)\s+it\s+and\b|'
+    r'\bit\s+and\s+(?:cs|comp|mech|civil|extc|ecs|pharma|arch)\b|'
+    r'\b(?:cs|comp|mech|civil|extc|ecs|pharma|arch)\s+and\s+it\b|'
+    r'\bit\s+(?:dept|department|branch|course|engineering|program|placements?|syllabus|curriculum|faculty)\b|'
+    r'\bbsc\s*it\b'
+    r')',
+    re.IGNORECASE
+)
+
+
 def extract_departments(text: str) -> list[str]:
     """
     Extract canonical department codes from text with strict word boundary enforcement.
@@ -67,6 +89,12 @@ def extract_departments(text: str) -> list[str]:
             else:
                 pattern = r'\b' + re.escape(alias)
             if re.search(pattern, text_lower):
+                # Disambiguate pronoun 'it' from Information Technology department
+                if code == "IT" and alias == "it":
+                    is_pronoun = bool(PRONOUN_IT_PATTERN.search(text_lower))
+                    is_academic = bool(IT_ACADEMIC_CONTEXT.search(text_lower))
+                    if is_pronoun and not is_academic:
+                        continue  # Do not count pronoun 'it' as IT department
                 if code not in found:
                     found.append(code)
                 break
@@ -159,6 +187,26 @@ def is_false_positive(raw_val: str, match_start: int, match_end: int, text: str)
     return False
 
 
+def get_recent_department_from_history(history: list[dict]) -> list[str]:
+    """Search backward through history turns to find the most recent active department."""
+    # First search user turns (most accurate signal of student interest)
+    for turn in reversed(history):
+        if turn.get("role") == "user":
+            depts = extract_departments(str(turn.get("content", "")))
+            if depts:
+                return depts[:2]
+    # Fallback to assistant turns if user turn had no explicit department
+    for turn in reversed(history):
+        content = str(turn.get("content", ""))
+        m = re.findall(r'\b(COMP|CSE|CSAIML|CSDS|ECS|ECE|MECH|CIVIL|BSIT|BPHARM|DPHARM|MPHARM|BARCH|DARCH)\b', content)
+        if m:
+            return [m[0]]
+        depts = extract_departments(content)
+        if depts:
+            return depts[:1]
+    return []
+
+
 def extract_entities(current_message: str, history: list[dict]) -> dict:
     """
     Main extraction function. Called by context_builder on every request.
@@ -169,7 +217,7 @@ def extract_entities(current_message: str, history: list[dict]) -> dict:
     
     Returns:
         {
-            "departments": list[str],      # from current message ONLY
+            "departments": list[str],      # current message + context window inheritance
             "number": float | None,
             "number_type": str | None,     # percentile/rank/marks/ambiguous
             "category": str | None,        # canonical key or None
@@ -182,8 +230,24 @@ def extract_entities(current_message: str, history: list[dict]) -> dict:
     # 2. Filter to admission-relevant turns only
     relevant_turns = filter_relevant_history(user_turns)
     
-    # 3. Extract departments — CURRENT MESSAGE ONLY (Design Principle P8)
+    # 3. Extract departments from current message
     departments = extract_departments(current_message)
+
+    # Context window inheritance for complex multi-turn and comparison queries
+    current_norm_dept = normalize_text(current_message).lower()
+    is_comparison = bool(re.search(r'\b(?:difference|differ|diff|compare|comparison|versus|vs\.?|distinguish|better|between|prefer)\b', current_norm_dept))
+    has_pronoun_reference = bool(re.search(r'\b(?:it|this|that|the department|this branch|that branch|the course|this program)\b', current_norm_dept))
+    is_dept_aspect_followup = bool(re.search(r'\b(?:faculty|hod|dean|prof|teacher|labs?|laborator(?:y|ies)|placements?|package|fees?|eligibility|syllabus|subjects?|scope|career)\b', current_norm_dept))
+
+    if not departments and (has_pronoun_reference or is_dept_aspect_followup or is_comparison):
+        hist_depts = get_recent_department_from_history(history)
+        if hist_depts:
+            departments = list(hist_depts)
+    elif departments and (is_comparison or has_pronoun_reference):
+        hist_depts = get_recent_department_from_history(history)
+        for hd in hist_depts:
+            if hd not in departments:
+                departments.insert(0, hd)
 
     # 4. Extract person intent — CURRENT MESSAGE ONLY (no history carryover)
     person_intent = extract_person_intent(current_message)

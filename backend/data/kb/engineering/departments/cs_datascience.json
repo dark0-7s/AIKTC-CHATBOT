@@ -3,6 +3,14 @@
   "name": "Computer Science & Engineering (Data Science)",
   "intake": 60,
   "duration": "4 years (B.Tech)",
+  "description": "The Department of Computer Science & Engineering (Data Science) bridges statistical mathematics, big data engineering, and modern computing architectures to extract valuable predictive insights from complex, high-velocity datasets. The curriculum encompasses Big Data Frameworks (Apache Hadoop, Spark), Data Mining, Predictive Analytics, Applied Probability & Statistics, Data Warehousing, Business Intelligence, Data Wrangling, and Data Visualization tools (Tableau, PowerBI). Students develop end-to-end data pipelines from ingestion to production model serving, supporting evidence-based decision-making across e-commerce, banking, logistics, and healthcare.",
+  "highlights": [
+    "Approved intake of 60 seats affiliated with the University of Mumbai, focusing on end-to-end data engineering and statistical modeling.",
+    "Dedicated Data Engineering Lab, Machine Learning Lab, and Big Data Analytics Lab configured for distributed databases and high-volume data lakes.",
+    "Extensive exposure to Python data stacks (Pandas, NumPy, Scikit-learn, Spark MLlib) and enterprise cloud analytics environments.",
+    "Hands-on participation in campus hackathons such as Nexathon, building predictive pipelines from massive datasets."
+  ],
+  "career_opportunities": "Data Scientist, Big Data Engineer, Data Analyst, Business Intelligence Consultant, Quantitative Analyst, Data Architect, and Machine Learning Engineer.",
   "hod": {
     "name": "Dr. Tabassum Maktum",
     "designation": "HOD & Assistant Professor",

@@ -3,6 +3,14 @@
   "name": "Diploma in Pharmacy",
   "duration": "2 years",
   "intake": 60,
+  "description": "The Diploma in Pharmacy (D.Pharm) program at AIKTC is an intensive 2-year technical curriculum recognized by the Pharmacy Council of India (PCI) and the Directorate of Technical Education (DTE Maharashtra). Designed for rapid entry into clinical healthcare and retail pharmacy, the program emphasizes patient counseling, drug compounding, pharmacology fundamentals, pharmacognosy, community pharmacy management, and hospital pharmacy workflows. Graduates register directly as licensed pharmacists under the Pharmacy Act.",
+  "highlights": [
+    "Approved intake of 60 seats with direct eligibility for state pharmacy council registration as a Registered Pharmacist (R.Ph).",
+    "Specialized training in dispensing pharmacy, drug dosage calculation, sterile technique, and inventory control.",
+    "Comprehensive hands-on laboratory practicals across Pharmaceutics, Pharmaceutical Chemistry, and Pharmacology.",
+    "Seamless lateral entry option directly into the 2nd Year (Semester 3) of B.Pharm via Direct Second Year Pharmacy (DSP) admissions."
+  ],
+  "career_opportunities": "Registered Community Pharmacist, Hospital Pharmacy In-Charge, Medical Representative, Healthcare Assistant, and Pharmaceutical Sales Executive.",
   "hod": {
     "name": "Dr. Abusufyan Shaikh",
     "designation": "HOD & Associate Professor",

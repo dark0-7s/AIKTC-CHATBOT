@@ -7,7 +7,12 @@ export default defineConfig({
     port: 3001,
     strictPort: true,
     proxy: {
-      '/api': 'http://localhost:8001'
+      '/api': {
+        target: 'http://127.0.0.1:8001',
+        changeOrigin: true,
+        secure: false,
+        timeout: 30000,
+      }
     }
   }
 })
