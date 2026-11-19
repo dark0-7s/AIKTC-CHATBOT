@@ -1,7 +1,7 @@
 // frontend/src/components/renderers/StepFlow.jsx
 
 import React from 'react';
-import { parseInline } from "./TextBubble";
+import { parseInline } from "./markdownUtils";
 
 export default function StepFlow({ data }) {
   const { title, steps } = data || {};

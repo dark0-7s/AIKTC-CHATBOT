@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ImageWithFallback from "./ImageWithFallback";
-import { parseInline } from "./TextBubble";
+import { parseInline } from "./markdownUtils";
 
 export default function ListCards({ data }) {
   const { title, items } = data || {};

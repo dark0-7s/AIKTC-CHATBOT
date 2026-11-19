@@ -2,7 +2,7 @@
 
 import React, { useCallback } from "react";
 import { useLabel } from "../../utils/labels";
-import { parseInline } from "./TextBubble";
+import { parseInline } from "./markdownUtils";
 
 export default function TableResponse({ data, lang }) {
   const { title, columns, rows } = data || {};
