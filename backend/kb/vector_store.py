@@ -346,8 +346,16 @@ class VectorStore:
                 if chunk.chunk_id == "inst_overview":
                     score *= 2.5
 
-            # 9. Admission Eligibility vs CAP Application Process
-            if re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks)\b', q_lower_clean):
+            # 9. Admission Eligibility vs CAP Application Process vs Cutoffs
+            is_cutoff_search = bool(re.search(r'\b(?:cutoff|cut off|cut-off|percentile|closing rank|closing score)\b', q_lower_clean))
+            if is_cutoff_search:
+                if "_faculty" in chunk.chunk_id or "_labs" in chunk.chunk_id:
+                    score *= 0.1
+                elif chunk.chunk_id == "cap_admission_process":
+                    score *= 2.5
+                elif "_admission_eligibility" in chunk.chunk_id:
+                    score *= 2.0
+            elif re.search(r'\b(?:eligibility|eligible|criteria|percentage required|minimum marks)\b', q_lower_clean):
                 if "_admission_eligibility" in chunk.chunk_id:
                     score *= 3.0
             elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps|admission kaise|kaise apply|kaise le|kaise lena|steps to apply)\b', q_lower_clean):

@@ -103,6 +103,44 @@ def synthesize_grounded_answer(
             "---\n*Source: AIKTC Verified Institutional Knowledge Base*"
         )
 
+    # 2b. Handle Cutoff & Percentile Queries (Dynamic State CET Cell First Year Admissions)
+    is_cutoff_query = (
+        intent == "admission_cutoff"
+        or any(kw in q_prep.lower() for kw in ("cutoff", "cut-off", "cut off", "percentile", "closing rank", "closing score", "कटऑफ", "परसेंटाइल"))
+    )
+    if is_cutoff_query:
+        if lang in ("hi", "mr"):
+            cutoff_text = (
+                "### 📊 MHT-CET / JEE प्रवेश कटऑफ और परसेंटाइल\n\n"
+                "AIKTC (इंजीनियरिंग, फार्मेसी और आर्किटेक्चर) के सभी डिग्री पाठ्यक्रमों के लिए आधिकारिक **कटऑफ (Cutoff Percentile)** और **क्लोजिंग रैंक** महाराष्ट्र राज्य कॉमन एंट्रेंस टेस्ट सेल (State CET Cell) द्वारा **केंद्रीकृत प्रवेश प्रक्रिया (CAP Rounds)** के माध्यम से जारी किए जाते हैं।\n\n"
+                "- **आधिकारिक कटऑफ और सीट आवंटन पोर्टल:**\n"
+                "  राउंड-वाइज कटऑफ और मेरिट सूची देखने के लिए कृपया आधिकारिक **[Maharashtra State CET First Year Admissions & Cutoffs Portal](https://fe2026.mahacet.org/StaticPages/HomePage)** पर जाएँ।\n"
+                "- **AIKTC प्रवेश सहायता केंद्र:**\n"
+                "  📞 +91 8104363070 | ✉️ admissions@aiktc.ac.in | [AIKTC Central Admissions](https://aiktc.ac.in/admissions/)"
+            )
+        else:
+            cutoff_text = (
+                "### 📊 MHT-CET / JEE Admission Cutoff & Percentiles\n\n"
+                "Official admission **cutoff percentiles** and **closing merit ranks** for Engineering (B.Tech), Pharmacy (B.Pharm), and Architecture (B.Arch) at AIKTC are determined dynamically by the **Maharashtra State Common Entrance Test Cell (CET Cell)** across multiple **CAP Rounds**.\n\n"
+                "- **Official Cutoffs & Allotment Portal:**\n"
+                "  To check live round-wise cutoff percentiles, merit ranks, and seat matrix, please visit the official **[Maharashtra State CET First Year Admissions & Cutoffs Portal](https://fe2026.mahacet.org/StaticPages/HomePage)**.\n"
+                "- **AIKTC Central Admissions Helpline:**\n"
+                "  📞 +91 8104363070 | ✉️ admissions@aiktc.ac.in | [AIKTC Central Admissions](https://aiktc.ac.in/admissions/)"
+            )
+        
+        response_parts = [cutoff_text]
+        official_source = get_official_source(intent, entities, message)
+        if official_source and official_source.get("links"):
+            source_title = official_source.get("title", "Official Web Navigation Portals")
+            link_lines = [f"### 🌐 {source_title}:"]
+            for link in official_source["links"]:
+                link_title = link.get("title", "Official Link")
+                link_url = link.get("url", "https://fe2026.mahacet.org/StaticPages/HomePage")
+                link_lines.append(f"- [{link_title}]({link_url})")
+            response_parts.append("\n".join(link_lines))
+        response_parts.append("---\n*Source: AIKTC Verified Institutional Knowledge Base*")
+        return "\n\n".join(response_parts)
+
     retrieved_context = (algo_result.get("retrieved_context") or "").strip()
 
     # 2. Extract Document sections from retrieved_context

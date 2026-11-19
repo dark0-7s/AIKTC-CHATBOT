@@ -17,6 +17,11 @@ from typing import Any
 # ==============================================================================
 OFFICIAL_SOURCES = {
     # ── Government & Examination Authorities ──────────────────────────────────
+    "fe_cet_cutoff": {
+        "title": "Maharashtra State CET First Year Admissions & Cutoffs Portal",
+        "url": "https://fe2026.mahacet.org/StaticPages/HomePage",
+        "icon": "ti-chart-bar"
+    },
     "cet_cell": {
         "title": "Maharashtra CET Cell Official Portal",
         "url": "https://cetcell.mahacet.org/",
@@ -283,6 +288,22 @@ def get_official_source(
     """
     depts = set(entities.get("departments", [])) if entities else set()
     msg_lower = message.lower()
+
+    # 0a. Cutoff & Percentile Queries (MHT-CET / JEE Cutoffs, Percentiles, Closing Ranks)
+    is_cutoff_query = (
+        intent == "admission_cutoff"
+        or any(kw in msg_lower for kw in ("cutoff", "cut-off", "cut off", "percentile", "closing rank", "closing score", "कटऑफ", "परसेंटाइल"))
+    )
+    if is_cutoff_query:
+        return {
+            "title": "Official First Year Cutoff & MHT-CET Admission Portal",
+            "links": [
+                OFFICIAL_SOURCES["fe_cet_cutoff"],
+                OFFICIAL_SOURCES["aiktc_admissions"],
+                OFFICIAL_SOURCES["cet_cell"],
+                OFFICIAL_SOURCES["dte_maharashtra"]
+            ]
+        }
 
     # 0. College Leadership / Administration (Director, Principal, Campus)
     if "director" in msg_lower or "principal" in msg_lower or "leadership" in msg_lower:
