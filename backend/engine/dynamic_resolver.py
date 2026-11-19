@@ -305,6 +305,51 @@ def get_official_source(
             ]
         }
 
+    # 0b. Academic Programs & Courses Offered
+    is_course_query = (
+        intent == "courses_offered"
+        or any(kw in msg_lower for kw in ("course", "courses", "programme", "programmes", "program", "programs", "degree", "degrees", "branch", "branches", "what does aiktc offer"))
+    )
+    if is_course_query and not any(k in msg_lower for k in ("fee", "fees", "cutoff", "faculty", "placement", "refund")):
+        if any(k in msg_lower for k in ("pharm", "bpharm", "dpharm")):
+            return {
+                "title": "Official School of Pharmacy Academic Portals",
+                "links": [
+                    OFFICIAL_SOURCES["pharmacy_homepage"],
+                    OFFICIAL_SOURCES["aiktc_admissions"],
+                    OFFICIAL_SOURCES["aiktc_main"]
+                ]
+            }
+        elif any(k in msg_lower for k in ("arch", "barch", "darch")):
+            return {
+                "title": "Official School of Architecture Academic Portals",
+                "links": [
+                    OFFICIAL_SOURCES["architecture_homepage"],
+                    OFFICIAL_SOURCES["aiktc_admissions"],
+                    OFFICIAL_SOURCES["aiktc_main"]
+                ]
+            }
+        elif any(k in msg_lower for k in ("eng", "enginerring", "btech", "b.tech", "soet")):
+            return {
+                "title": "Official School of Engineering Academic Portals",
+                "links": [
+                    OFFICIAL_SOURCES["cse_homepage"],
+                    OFFICIAL_SOURCES["aiktc_admissions"],
+                    OFFICIAL_SOURCES["aiktc_main"]
+                ]
+            }
+        else:
+            return {
+                "title": "Official AIKTC Academic & Admissions Portals",
+                "links": [
+                    OFFICIAL_SOURCES["aiktc_admissions"],
+                    OFFICIAL_SOURCES["cse_homepage"],
+                    OFFICIAL_SOURCES["pharmacy_homepage"],
+                    OFFICIAL_SOURCES["architecture_homepage"],
+                    OFFICIAL_SOURCES["aiktc_main"]
+                ]
+            }
+
     # 0. College Leadership / Administration (Director, Principal, Campus)
     if "director" in msg_lower or "principal" in msg_lower or "leadership" in msg_lower:
         return {

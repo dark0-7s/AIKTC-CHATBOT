@@ -48,6 +48,9 @@ DEPARTMENT_ALIASES = {
         "architecture", "arch",
         "आर्किटेक्चर", "वास्तुकला", "बी आर्क",
         "arch chahiye", "architecture milega"
+    ],
+    "ENGINEERING": [
+        "engineering", "enginerring", "engg", "eng", "soet", "btech", "b.tech", "इंजीनियरिंग"
     ]
 }
 

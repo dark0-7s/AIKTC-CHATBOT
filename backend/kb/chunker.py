@@ -142,6 +142,41 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
             metadata={"source": "common.json"}
         ))
 
+        # Academic Programs & Courses Offered (All Schools Central Overview)
+        programs_text = (
+            "Academic Programs, Degrees & Courses Offered at AIKTC (Central Overview):\n"
+            "Anjuman-I-Islam's Kalsekar Technical Campus (AIKTC) offers undergraduate, postgraduate, and diploma degree programs across three specialized schools approved by AICTE, PCI, COA, DTE Maharashtra, and affiliated with the University of Mumbai:\n\n"
+            "1. School of Engineering & Technology (SOET) - DTE Code: 3418:\n"
+            "- Undergraduate Programs (B.Tech - 4 Years, Total Approved Intake: 510 Seats):\n"
+            "  * Computer Engineering (COMP): 120 Seats\n"
+            "  * Computer Science & Engineering (Artificial Intelligence and Machine Learning - CSAIML): 120 Seats\n"
+            "  * Computer Science & Engineering (Data Science - CSDS): 60 Seats\n"
+            "  * Electronics and Computer Science (ECS): 60 Seats\n"
+            "  * Electrical & Computer Engineering (ECE): 60 Seats\n"
+            "  * Mechanical Engineering (MECH): 60 Seats\n"
+            "  * Civil Engineering (CIVIL): 30 Seats\n"
+            "- Bachelor of Science in Information Technology (B.Sc IT - 3 Years): 60 Seats\n"
+            "- Postgraduate Programs (M.Tech - 2 Years, Total Intake: 60 Seats):\n"
+            "  * Computer Engineering: 18 Seats\n"
+            "  * Construction Engineering & Management (Civil): 24 Seats\n"
+            "  * Structural Engineering (Civil): 18 Seats\n"
+            "- Doctoral Program (Ph.D.): Civil Engineering (10 Seats)\n\n"
+            "2. School of Pharmacy (SOP) - DTE Code: 3418:\n"
+            "- Diploma in Pharmacy (D.Pharm - 2 Years): 60 Seats\n"
+            "- Bachelor of Pharmacy (B.Pharm - 4 Years): 100 Seats\n"
+            "- Master of Pharmacy in Pharmacology (M.Pharm - 2 Years): 10 Seats\n\n"
+            "3. School of Architecture (SOA) - DTE / COA Code: MH-57:\n"
+            "- Diploma in Architecture (D.Arch - 3 Years): 40 Seats\n"
+            "- Bachelor of Architecture (B.Arch - 5 Years): 40 Seats"
+        )
+        chunks.append(TextChunk(
+            chunk_id="inst_programs_courses",
+            title="Academic Programs, Degrees & Courses Offered at AIKTC (Engineering, Pharmacy, Architecture)",
+            category="courses_offered",
+            content=programs_text,
+            metadata={"source": "common.json", "school": "central"}
+        ))
+
     # 2. Scholarships & Financial Aid
     scholarships_dir = kb_path / "scholarships"
     if scholarships_dir.is_dir():
@@ -206,6 +241,39 @@ def create_chunks_from_kb(kb_dir: str | Path) -> list[TextChunk]:
                     category="admission_process",
                     content="\n".join(adm_lines),
                     metadata={"school": school}
+                ))
+
+            # Programs and Courses Offered for this school
+            prog_offered = overview_data.get("programs_offered", {})
+            if prog_offered and isinstance(prog_offered, dict):
+                p_lines = [f"Academic Programs, Degrees & Courses Offered in School of {school.capitalize()}:"]
+                if school == "engineering":
+                    p_lines.append("- Undergraduate B.Tech Programs (4 Years, Total Approved Intake: 510 Seats):")
+                    p_lines.append("  * Computer Engineering (COMP): 120 Seats")
+                    p_lines.append("  * Computer Science & Engineering (AI & Machine Learning - CSAIML): 120 Seats")
+                    p_lines.append("  * Computer Science & Engineering (Data Science - CSDS): 60 Seats")
+                    p_lines.append("  * Electronics and Computer Science (ECS): 60 Seats")
+                    p_lines.append("  * Electrical & Computer Engineering (ECE): 60 Seats")
+                    p_lines.append("  * Mechanical Engineering (MECH): 60 Seats")
+                    p_lines.append("  * Civil Engineering (CIVIL): 30 Seats")
+                    p_lines.append("- Bachelor of Science in Information Technology (B.Sc IT, 3 Years): 60 Seats")
+                    p_lines.append("- Postgraduate M.Tech Programs (2 Years, Total Intake: 60 Seats):")
+                    p_lines.append("  * Computer Engineering (18 Seats), Construction Engg & Management (24 Seats), Structural Engg (18 Seats)")
+                    p_lines.append("- Ph.D. in Civil Engineering (10 Seats)")
+                elif school == "pharmacy":
+                    p_lines.append("- Diploma in Pharmacy (D.Pharm): 2 Years, Approved Intake: 60 Seats")
+                    p_lines.append("- Bachelor of Pharmacy (B.Pharm): 4 Years, Approved Intake: 100 Seats")
+                    p_lines.append("- Master of Pharmacy in Pharmacology (M.Pharm): 2 Years, Approved Intake: 10 Seats")
+                elif school == "architecture":
+                    p_lines.append("- Diploma in Architecture (D.Arch): 3 Years, Approved Intake: 40 Seats")
+                    p_lines.append("- Bachelor of Architecture (B.Arch): 5 Years, Approved Intake: 40 Seats")
+
+                chunks.append(TextChunk(
+                    chunk_id=f"{school}_programs_courses",
+                    title=f"School of {school.capitalize()} — Courses, Degree Programs, Branches & Intake",
+                    category="courses_offered",
+                    content="\n".join(p_lines),
+                    metadata={"school": school, "source": f"{school}.json"}
                 ))
 
             # Library & KRRC

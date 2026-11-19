@@ -54,6 +54,13 @@ test_queries = [
     # Contact & Placements
     ('how to reach aiktc contact number', 'inst_contact'),
     ('placement packages and top recruiters', 'campus_placements'),
+
+    # Academic Programs & Courses Offered
+    ('what are available course', 'inst_programs_courses'),
+    ('what course does aiktc offere', 'inst_programs_courses'),
+    ('courses in engineering', 'engineering_programs_courses'),
+    ('courses in pharmacy', 'pharmacy_programs_courses'),
+    ('courses in architecture', 'architecture_programs_courses'),
 ]
 
 print(f"Testing {len(test_queries)} queries for exact top-1 chunk match...")

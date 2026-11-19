@@ -95,6 +95,16 @@ def tokenize(text: str) -> list[str]:
             normalized.append("cutoff")
         elif t in ("admissions",):
             normalized.append("admission")
+        elif t in ("enginerring", "engineering", "engg"):
+            normalized.append("engineering")
+        elif t in ("offere", "offers", "offered"):
+            normalized.append("offer")
+        elif t in ("programs", "programmes", "programme", "programm"):
+            normalized.append("program")
+        elif t in ("branches",):
+            normalized.append("branch")
+        elif t in ("degrees",):
+            normalized.append("degree")
         elif t.endswith("s") and len(t) > 4 and not t.endswith(("ss", "us", "is")):
             normalized.append(t[:-1])
         else:
@@ -223,9 +233,12 @@ class VectorStore:
             raw_depts = entities.get("departments", [])
             for d in raw_depts:
                 d_str = str(d).upper()
-                target_depts.update(DEPT_CANONICAL_MAP.get(d_str, {d_str}))
-                if d_str in DEPT_SCHOOL_MAP:
-                    target_schools.add(DEPT_SCHOOL_MAP[d_str])
+                if d_str in ("ENGINEERING", "PHARMACY", "ARCHITECTURE"):
+                    target_schools.add(d_str.lower())
+                else:
+                    target_depts.update(DEPT_CANONICAL_MAP.get(d_str, {d_str}))
+                    if d_str in DEPT_SCHOOL_MAP:
+                        target_schools.add(DEPT_SCHOOL_MAP[d_str])
             person_intent = entities.get("person_intent")
 
         q_vec = self._compute_normalized_vector(q_tokens)
@@ -258,9 +271,12 @@ class VectorStore:
                     score *= 3.0
                 elif chunk_dept and chunk_dept not in target_depts:
                     score *= 0.3  # Isolate requested department from other departments
-            elif target_schools:
+
+            if target_schools:
                 if chunk_school and chunk_school in target_schools:
-                    score *= 2.0
+                    score *= 3.0
+                elif chunk_school and chunk_school not in target_schools and chunk_school in ("engineering", "pharmacy", "architecture"):
+                    score *= 0.3  # Isolate requested school from other schools
 
             # 3. Person Intent boost: 2.5x boost for leadership queries
             if person_intent:
@@ -361,6 +377,32 @@ class VectorStore:
             elif re.search(r'\b(?:how to apply|admission process|cap round|admission steps|admission kaise|kaise apply|kaise le|kaise lena|steps to apply)\b', q_lower_clean):
                 if chunk.chunk_id == "cap_admission_process":
                     score *= 3.0
+
+            # 10. Courses, Degrees, Programs & Branches Disambiguation
+            is_course_query = (
+                category == "courses_offered"
+                or bool(re.search(r'\b(?:courses?|programmes?|programs?|degrees?|branches?|specializations?|b\.?tech|m\.?tech|ph\.?d|b\.?pharm|d\.?pharm|b\.?arch|d\.?arch|bsc\.? ?it)\b', q_lower_clean))
+                or bool(re.search(r'\b(?:what does aiktc offer|what course|which course|what are available course|what courses|courses offered|programs offered)\b', q_lower_clean))
+            )
+            if is_course_query:
+                if "_labs" in chunk.chunk_id or "_faculty" in chunk.chunk_id:
+                    score *= 0.05
+                elif "scholarship" in chunk.chunk_id:
+                    score *= 0.05
+                elif "_programs_courses" in chunk.chunk_id or chunk.chunk_id == "inst_programs_courses":
+                    score *= 4.0
+                    if any(k in q_lower_clean for k in ("eng", "enginerring", "btech", "b.tech")):
+                        if chunk.chunk_id == "engineering_programs_courses":
+                            score *= 3.0
+                    elif any(k in q_lower_clean for k in ("pharm", "bpharm", "dpharm")):
+                        if chunk.chunk_id == "pharmacy_programs_courses":
+                            score *= 3.0
+                    elif any(k in q_lower_clean for k in ("arch", "barch", "darch")):
+                        if chunk.chunk_id == "architecture_programs_courses":
+                            score *= 3.0
+                    else:
+                        if chunk.chunk_id == "inst_programs_courses":
+                            score *= 3.0
 
             if score >= min_score:
                 results.append((chunk, score))
